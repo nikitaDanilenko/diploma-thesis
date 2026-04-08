@@ -2,7 +2,7 @@
             {AbzaehlbareDarstellungUndSupremumVonSuprema}
 Seien $I, J$ nichtleere, abzählbare Mengen,
 $X, Y: I\times J \rightarrow \mcm(\Omega, \mfa, \R)$, sowie
-$\mci := \Pot_{ne}(I)$ und $\mcj := \Pot_{ne}(J)$.\\
+$\mci \coloneqq  \Pot_{ne}(I)$ und $\mcj \coloneqq  \Pot_{ne}(J)$.\\
 Es gelte:
 \begin{enumerate}[(a)]
 \item $\forall\,\omega\in\Omega\,\forall\, Z\in \meng{X, Y}: 
@@ -23,7 +23,7 @@ Dann gilt
   \E\left(\sup_{i \in I}\sup_{j \in J}X(i, j) \right)\text.\]
 \end{satz}
 \begin{proof}
-Seien $\mcp:= \Pot_{ne}(I \times J)$ und $(i_0, j_0) \in I \times J$.\\
+Seien $\mcp\coloneqq  \Pot_{ne}(I \times J)$ und $(i_0, j_0) \in I \times J$.\\
 Dann sind $Y(i_0, j_0)$ und
 \[\sup_{(i, j) \in I \times J}Y(i, j)= \sup_{i \in I} \sup_{j \in J}Y(i, j)
 \text{ nach (b) integrierbar.}\]
@@ -31,7 +31,7 @@ Da $I$ und $J$ abzählbar sind, ist auch $I \times J$ abzählbar.
 Zusammen mit (a) sind damit die Voraussetzungen von
 \ref{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen} für die Familie
 $(Y(i,j))_{(i,j) \in I \times J}$ erfüllt. Also ist
-\[M_1:=\menge{\E\left(\sup_{(i, j) \in P}Y(i,j) \right)}{P \in \mcp}\]
+\[M_1\coloneqq \menge{\E\left(\sup_{(i, j) \in P}Y(i,j) \right)}{P \in \mcp}\]
 nach \refclaim{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen}
 {EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen1} nichtleer und nach
 oben beschränkt und es gilt
@@ -42,7 +42,7 @@ oben beschränkt und es gilt
 = \E\left(\sup_{i \in I}\sup_{j \in J}Y(i,j)\right)\text. \label{feeeiieq:1}
 \end{align}
 Sei nun 
-\[M_2 := \menge{\E\left(\sup_{i \in A}\sup_{j \in B}Y(i,j) \right)}
+\[M_2 \coloneqq  \menge{\E\left(\sup_{i \in A}\sup_{j \in B}Y(i,j) \right)}
                {A \in \mci, B \in \mcj}\text.\]
 Offenbar ist $M_2 \subseteq M_1$ und wegen $I \neq \emptyset\neq J$ auch
 nichtleer.

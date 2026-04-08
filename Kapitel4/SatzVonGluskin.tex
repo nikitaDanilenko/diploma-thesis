@@ -1,6 +1,6 @@
 \begin{satz}{Satz von Gluskin}{SatzVonGluskin}
-Seien $m \in \N$, $\eps \in\!\ ]0, 1[$, $N:= \ceil{(1-\eps)m}$ und
-\[c := 2\sqrt \pi (\sqrt 2 +1) \sqrt{2 + \frac 4{\log(4)}}
+Seien $m \in \N$, $\eps \in\!\ ]0, 1[$, $N\coloneqq  \ceil{(1-\eps)m}$ und
+\[c \coloneqq  2\sqrt \pi (\sqrt 2 +1) \sqrt{2 + \frac 4{\log(4)}}
 \sqrt{\frac{\log\left(\pi(\sqrt 2+1)^2\left(1+\frac 2{\log(4)}\right) \right)}
 {\log(2)} + 1}\text.\]
 Dann existiert $F \le \ell_1^m$ mit $\dim F = m - N$ und
@@ -8,9 +8,9 @@ Dann existiert $F \le \ell_1^m$ mit $\dim F = m - N$ und
 c\sqrt{\frac 1{1-\eps}\log\left(\frac 2{1-\eps}\right)}\text.\]
 \end{satz}
 \begin{proof}
-Seien $\rho := (\sqrt 2 +1)^2\left(2+\frac 4{\log(4)} \right)$,
-$\eta := \frac 2 \pi \frac 1 \rho (1-\eps)$ und
-$t_\eta := \frac 4 \eta \log\left(\frac 2 \eta \right)$.\\
+Seien $\rho \coloneqq  (\sqrt 2 +1)^2\left(2+\frac 4{\log(4)} \right)$,
+$\eta \coloneqq  \frac 2 \pi \frac 1 \rho (1-\eps)$ und
+$t_\eta \coloneqq  \frac 4 \eta \log\left(\frac 2 \eta \right)$.\\
 Dann ist $c^2=4\pi\rho \left(\frac{\log\left(\frac{\pi\rho}2\right)}{\log(2)}+1\right)$ und damit:
 \begin{align}
 &2t_\eta = \frac{4\pi\rho}{1-\eps}\log\left(\frac{\pi\rho}{1-\eps} \right)
@@ -31,7 +31,7 @@ Dann ist $c^2=4\pi\rho \left(\frac{\log\left(\frac{\pi\rho}2\right)}{\log(2)}+1\
 \end{align}
 Falls $N=m$ gilt, ist die Aussage trivial, sodass wir $N<m$ annehmen kˆnnen.\\
 \underline{1. Fall:} $m \le 2 t_\eta$.\\
-Sei $F := \left\langle \menge{e_i^m}{i \in \haken {m-N}}\right\rangle$.\\
+Sei $F \coloneqq  \left\langle \menge{e_i^m}{i \in \haken {m-N}}\right\rangle$.\\
 Offenbar ist dann $(F,\norm\cdot_1\vert_{F})$ isometrisch isomorph zu
 $\ell_1^{m-N}$ und damit nach \refclaim{EigenschaftenDesBanachMazurAbstands}
 {EigenschaftenDesBanachMazurAbstands2}:
@@ -63,8 +63,8 @@ damit $\N \cap \left[\frac 1 2 \frac m {t_\eta}, \frac m {t_\eta}\right]
 Sei $k\in\N\cap\left[\frac12\frac m{t_\eta},\frac m{t_\eta}\right]$.\\
 Offenbar ist $\eta < 1$ und damit $t_\eta > 4 \log(2) = \log(16) > 2$.\\
 Also ist $k \le \frac m {t_\eta} < \frac m 2$.\\
-Seien $(E,\norm\cdot_E):=\ell_2^N$, $T:=S^{m-1}\cap\kabg{\ell_1^m} 0{\sqrt k}$,
-$x := (e_i)_{i = 1}^N$,
+Seien $(E,\norm\cdot_E)\coloneqq \ell_2^N$, $T\coloneqq S^{m-1}\cap\kabg{\ell_1^m} 0{\sqrt k}$,
+$x \coloneqq  (e_i)_{i = 1}^N$,
 \[\bigg((\Omega, \mfa, \Prim), (\gamma,\delta,\widetilde g),(N, m, mN)\bigg)
 \text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach
 \ref{ExistenzNormalNTupel}) und $(Z_{\gamma, x}, M_{\delta,T})$ das

@@ -10,9 +10,9 @@ und es gilt \[
 \]
 \end{satz}
 \begin{proof}
-Sei $G:=T(E)$.\\
+Sei $G\coloneqq T(E)$.\\
 Dann ist $G$ wegen der Linearität von $T$ ein Vektorraum.\\
-Offenbar ist $\norm\cdot_G:=\restrict{\norm\cdot_F}G$ eine Norm auf $G$.\\
+Offenbar ist $\norm\cdot_G\coloneqq \restrict{\norm\cdot_F}G$ eine Norm auf $G$.\\
 Da $G$ nach Voraussetzung abgeschlossen in $F$ ist, ist $G$ als abgeschlossene
 Menge eines vollständigen metrischen Raums selbst vollständig und damit
 insgesamt ein Banachraum.\\
@@ -24,7 +24,7 @@ Nun ist $S$ aber auch invertierbar, sodass damit auch $S\inv$ stetig ist.\\
 Da $T$ als Relation links-- und rechtseindeutig ist, ist es auch $T\inv$.\\
 Damit ist $T\inv$ eine injektive Abbildung von $T(E)$ nach $E$ und stimmt als
 solche mit $S\inv$ überein, ist also inbesondere linear und stetig.\\
-Seien $c:= \opnorm {S\inv} G E$ und $x \in \kran E 0 1$.\\
+Seien $c\coloneqq  \opnorm {S\inv} G E$ und $x \in \kran E 0 1$.\\
 Dann ist $c > 0$ und es gilt:
 \[1 =\norm x _E = \norm{S\inv(Sx)}_E \le \opnorm{S\inv} G E \norm{Tx}_G 
              = c \norm{Tx}_G\text.\]
@@ -34,7 +34,7 @@ $\inf\menge{\norm{Tz}_F}{z\in\kran E01} \ge \frac 1 c > 0$ gilt.\\
 Offenbar ist 
 $\menge{\frac{Tz}{\norm{Tz}_F}}{z \in \kran E 0 1} \subseteq \kran G01$,
 während für $w \in \kran G01$ mit der Setzung 
-$v:=\frac{S\inv w}{\norm{S\inv w}_E}$ gilt:
+$v\coloneqq \frac{S\inv w}{\norm{S\inv w}_E}$ gilt:
 $\norm v_E = 1$ und
 \[\frac{Tv}{\norm{Tv}_F} = \frac{T\left(\frac{S\inv w}{\norm{S\inv w}_E} \right)}{\norma{T\left(\frac{S\inv w}{\norm{S\inv w}_E}\right)}_F}
 = \frac{\frac 1 {\norm{S\inv w}_E} w}{\frac{\norm w_F}{\norm{S\inv w}_E}}

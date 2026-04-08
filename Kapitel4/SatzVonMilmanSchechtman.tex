@@ -22,8 +22,8 @@ $\widetilde M > \frac n 2$ und ein $\widetilde y \in E^{\widetilde M}$ mit
 $\norm\cdot_{\infty,\widetilde M}
 \le\norm\cdot_E\circ\bprod\cdot {\widetilde y}_{\widetilde M}
 \le C_{BS}\norm\cdot_{2,\widetilde M}$.\\
-Sei $N := \floor{\frac n 2}$. Dann ist $N \le \frac n 2 < \widetilde M$ und
-daher $x:=\left(\frac 1{C_{BS}}\widetilde y_i \right)_{i=1}^N$ wohldefiniert
+Sei $N \coloneqq  \floor{\frac n 2}$. Dann ist $N \le \frac n 2 < \widetilde M$ und
+daher $x\coloneqq \left(\frac 1{C_{BS}}\widetilde y_i \right)_{i=1}^N$ wohldefiniert
 und es gilt (durch Auffüllung mit Nullen auf den Indizes ab $N+1$):
 \begin{align}\frac 1{C_{BS}}
 \norm\cdot_{\infty, N} \le \norm\cdot_E \circ \bprod\cdot x_N \le
@@ -31,15 +31,15 @@ und es gilt (durch Auffüllung mit Nullen auf den Indizes ab $N+1$):
 Damit ist $x \neq 0$, sogar $x_i \neq 0$, da
 $\frac 1 {C_{BS}} = \frac 1 {C_{BS}} \norm{e_i^N}_{\infty,N} \le \norm{x_i}_E$
 für alle $i \in \haken N$.\\
-Seien nun $T:=S^{m-1}$,
+Seien nun $T\coloneqq S^{m-1}$,
 \[\bigg((\Omega, \mfa, \Prim), (\gamma,\delta,\widetilde g),(N, m, mN)\bigg)
 \text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach
-\ref{ExistenzNormalNTupel}), $G_x := \bprod \cdot x_N \circ g$ und $(Z_{\gamma, x}, M_{\delta,T})$ das
+\ref{ExistenzNormalNTupel}), $G_x \coloneqq  \bprod \cdot x_N \circ g$ und $(Z_{\gamma, x}, M_{\delta,T})$ das
 Auswertungspaar zu $(\gamma, \delta, x, T)$.\\
 Seien weiter
 \[f: = \inf_{t \in T} \, \norm\cdot_E \circ \bprod \cdot x _N \circ G_x,
 \quad
-h:= \sup_{t \in T} \, \norm\cdot_E \circ \bprod \cdot x _N \circ G_x\text.\]
+h\coloneqq  \sup_{t \in T} \, \norm\cdot_E \circ \bprod \cdot x _N \circ G_x\text.\]
 Nach \ref{IntegrierbarkeitVonExtremaInGordonschenPaaren} sind
 \begin{align}
 f, h\text{ integrierbar und es ist } f \le h\text.\label{svmseq:2}
@@ -50,7 +50,7 @@ Seien $\mu_{j, N}$ für alle $j \in \haken N$ gemäß \ref{ktesMaximum},
 \[\norm\cdot_{(m)}:\R^N \rightarrow [0, \infty[, v \mapsto
 \frac 1 m \sum_{i=1}^m \mu_{i, N}\left(\pfeil {\abs\cdot}N (v)\right)\]
 und
-\[ V:= \mengea{z \in \R^N\setminus\meng 0}
+\[ V\coloneqq  \mengea{z \in \R^N\setminus\meng 0}
     {\left(\forall\, i \in \haken N: \abs{z_i} \in\meng{0,\nicefrac 1m} \right)
     \wedge \left(\abs{\menge{i \in \haken N}{\abs{z_i} \neq 0}}\le m \right)}
     \text.\]
@@ -113,11 +113,11 @@ $1+\frac{N+1}m \ge 1+\frac{13}2 = \frac{15}2$ gilt weiter:
 \frac{15}2 > \exp(1)}
 \sqrt{\log\left(1 + \frac {n}m \right)} =: \alpha \text.\label{svmseq:6}
 \end{align}
-Seien $E_1:= \R^N$, $\norm\cdot_{E_1}:= \norm\cdot_{(m)}$,
-$x_1 := (e_i^N)_{i=1}^N$ und $G_{x_1}:= \bprod \cdot {x_1}_N \circ g = g$.\\
+Seien $E_1\coloneqq  \R^N$, $\norm\cdot_{E_1}\coloneqq  \norm\cdot_{(m)}$,
+$x_1 \coloneqq  (e_i^N)_{i=1}^N$ und $G_{x_1}\coloneqq  \bprod \cdot {x_1}_N \circ g = g$.\\
 Wegen $(a), (b), (c)$ sind die Voraussetzungen von
 \ref{GordonschePaareUndNormiterierendeMengen} für $(E_1, \norm\cdot_{E_1})$,
-$x_1$, $T$, $V$ und $c:=\frac 1 {\sqrt{m}}$ erfüllt und damit gilt:
+$x_1$, $T$, $V$ und $c\coloneqq \frac 1 {\sqrt{m}}$ erfüllt und damit gilt:
 \begin{align}
 \E\left(\norm\cdot_{(m)} \circ \gamma \right) - \frac {a_m}{\sqrt m}
 & \overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}
@@ -180,14 +180,14 @@ Wir erhalten also insgesamt:
 Da $f \ge 0, h \ge 0$ und beide integrierbar sind, gibt es nach
 \ref{Erwartungswertlemma} ein $\omega_0 \in \Omega$ mit
 $f(\omega_0)>0$ und $\frac{h(\omega_0)}{f(\omega_0)} \le \frac{3a_m}\alpha$.\\
-Sei $A:= G_x(\omega_0)$. Dann ist $A \in L(\ell_2^m, E)$ und es gilt:
+Sei $A\coloneqq  G_x(\omega_0)$. Dann ist $A \in L(\ell_2^m, E)$ und es gilt:
 \[\inf_{t \in S^{m-1}}\norm{At}_E =
   \inf_{t \in T} \norm{G_x(\omega_0)t}_E =
   \left(\inf_{t \in T} \norm\cdot_E \circ ev(t, \cdot) \circ G_x\right)
   (\omega_0) = f(\omega_0) > 0\]
 und damit ist $A$ nach
 \ref{InjektivitätLinearerAbbildungenZwischenNormiertenRäumen} injektiv.\\
-Sei $F:= \Bild A$. Da $A$ injektiv ist, ist $\dim F = m$ und da jeder
+Sei $F\coloneqq  \Bild A$. Da $A$ injektiv ist, ist $\dim F = m$ und da jeder
 endlichdimensionale normierte Raum vollständig ist, gilt:
 \begin{align*}
 &\,d_{BM}\bigg((F, \norm\cdot_E\vert_F), \ell_2^m \bigg)
@@ -215,7 +215,7 @@ endlichdimensionale normierte Raum vollständig ist, gilt:
 \end{align*}
 Damit ist der Fall dieser Fall abgeschlossen.\absatz
 \underline{1.2. Fall:} $\E(Z_{\gamma, x}) \ge 2 a_m$\absatz
-Sei dann zusätzlich $\eps := \frac 1 2$.\\
+Sei dann zusätzlich $\eps \coloneqq  \frac 1 2$.\\
 Wegen \eqref{svmseq:1} ist $x \neq 0$ und 
 $\norm\cdot_E\circ \bprod \cdot x_N \le \norm\cdot_{2,N}$. \hfill $(a')$\\
 Ferner ist $T\neq \emptyset$, $T \subseteq S^{m-1}$ und $T=-T$. \hfill $(b')$\\
@@ -248,7 +248,7 @@ Ferner gilt:
 {\sqrt{\log\left(\frac {15}2 \right)} - 1}
 \sqrt{\frac 1 {10}\frac{\log(2)}{\log(3)}} > 1\text. \label{svmseq:11}
 \end{align}
-Sei nun $F:= \Bild A$. Dann gilt:
+Sei nun $F\coloneqq  \Bild A$. Dann gilt:
 \begin{align*}
 d_{BM}\bigg((F, \norm\cdot_E\vert_F), \ell_2^m \bigg)
 &\le \opnorm A {\ell_2^m} F \opnorm{A\inv}{F}{\ell_2^m} 

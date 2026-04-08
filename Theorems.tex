@@ -9,7 +9,7 @@
 {10pt}                  % Space below
 {\itshape}              % Body font
 {}                      % indent amount
-{\bf}                   % Theorem head font
+{\textbf}               % Theorem head font
 {}                      % Punctuation after theorem head
 {\newline}              % space after theorem head
 {}                      % Theorem head spec
@@ -19,7 +19,7 @@
 {10pt}                  % Space below
 {}                      % Body font
 {}                      % indent amount
-{\bf}                   % Theorem head font
+{\textbf}               % Theorem head font
 {}                      % Punctuation after theorem head
 {\newline}              % space after theorem head
 {}                      % Theorem head spec
@@ -30,15 +30,12 @@
 % Do NOT use this, if you don't use chapters. Swap the comments below.        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand{\qedsymbol}{\slashes}
 \swapnumbers
 \theoremstyle{thm}
 \newtheorem{sat}{Satz}[chapter]
-%\newtheorem{sat}{Satz}[section]
 
 \theoremstyle{def}
 \newtheorem{bem}{Bemerkung}[section]
-%\newtheorem{bem}[section]{Bemerkung}
 
 \theoremstyle{def}
 \newtheorem{dfn}[sat]{Definition}

@@ -24,6 +24,7 @@
 \usepackage{stmaryrd}
 \usepackage{nicefrac}
 \usepackage{ifsym}
+\usepackage{mathtools}
 
 \include{MathKernel}
 \include{Theorems}
@@ -174,7 +175,7 @@ weitere nützliche Rolle spielt.
 
 Die Umkehrung dieses Lemmas ist leider falsch.
 Als Beispiel betrachte man die Räume
-$(E,\norm\cdot_E):=\ell_2(\N,\K)$, $(F,\norm\cdot_F):=(E,\norm\cdot_E)$ und
+$(E,\norm\cdot_E)\coloneqq \ell_2(\N,\K)$, $(F,\norm\cdot_F)\coloneqq (E,\norm\cdot_E)$ und
 \[T:E\rightarrow F, \folge x n \N \mapsto \left(\frac{x_n}n\right)_{n\in \N}
 \text.\]
 Dann ist $T$ offenbar linear, stetig und injektiv.\\
@@ -222,8 +223,8 @@ kann dazu verwendet werden, optimale untere Normäquivalenzkonstanten zu
 erhalten, sofern die obere bereits 1 ist.\\
 In der Definition wird ein Infimum einer Menge verwendet, die zunächst leer
 sein könnte -- in diesem Fall vereinbaren wir, dass $\inf \emptyset = \infty$
-gelten möge, um keine weitere Forderung stellen zu müssen. In sämtlichen späteren Anwendungen (vor allem im endlichdimensionalen Fall) wird die erwähnte
-Menge stets nichtleer sein.
+gelten möge, um keine weitere Forderung stellen zu müssen.
+In sämtlichen späteren Anwendungen (vor allem im endlichdimensionalen Fall) wird die erwähnte Menge stets nichtleer sein.
 
 \input{Kapitel1/DefinitionBanachMazurAbstand}
 \parag
@@ -339,13 +340,13 @@ Wahrscheinlichkeitstheorie vorzustellen.
 Sei dazu für dieses Kapitel $(\Omega, \mfa, \Prim)$
 ein Wahrscheinlichkeitsraum. Für alle $n \in \N$ setzen wir auf dem $\R^n$
 die Borel'sche $\sigma$--Algebra $\mfb_n$ voraus, wobei wir speziell
-$\mfb := \mfb_1$ schreiben.\\
+$\mfb \coloneqq  \mfb_1$ schreiben.\\
 Weiter setzen wir für alle $n \in \N$:
 \[\mcm_n(\Omega, \mfa, \R^n)
- :=\menge{f\in\mcf(\Omega,\R^n)}{f\quad \mfa - \mfb_n - \text{messbar}}\text.\]
+ \coloneqq \menge{f\in\mcf(\Omega,\R^n)}{f\quad \mfa - \mfb_n - \text{messbar}}\text.\]
 Schließlich sei für alle $n \in \N$:
 \[\mct_n(\Omega, \mfa, \R^n)
-:= \menge{f \in \mcm_n(\Omega, \mfa, \R^n)}{\Bild f \text{ endlich}}\text.\]
+\coloneqq  \menge{f \in \mcm_n(\Omega, \mfa, \R^n)}{\Bild f \text{ endlich}}\text.\]
 Auch hier treffen wir die Vereinbarung, dass für $n = 1$ der Index weggelassen
 werden möge.
 
@@ -559,7 +560,7 @@ Seien $\gamma: \Omega \rightarrow \R^N$, $\delta: \Omega \rightarrow \R^m$
 und $\widetilde g: \Omega \rightarrow \R^{mN}$ jeweils $N(0,1)$--verteilt,
 $\widetilde g$ sei unabhängig und $\gamma, \delta$ seien vollständig
 unabhängig.
-Sei weiter $g:= \Mat_{m,N} \circ \widetilde g$.\\
+Sei weiter $g\coloneqq  \Mat_{m,N} \circ \widetilde g$.\\
 Wir werden in diesem Kapitel für $\omega \in \Omega$ die Matrix $g(\omega)$
 stets mit der linearen Abbildung $t \mapsto g(\omega)t$ identifizieren.
 
@@ -594,8 +595,8 @@ Als nächstes notieren einige elementare Eigenschaften Gordon'scher Paare.
 \input{Kapitel3/EigenschaftenGordonscherPaare}
 \parag
 Für die Prüfung der Voraussetzungen im Gauß'schen Min--Max--Satz sind die
-$L_2$--Abstände innerhalb Gordon'scher Paare von besonderem Interesse. Mit dem
-eben bewiesenen Lemma können diese einfach bestimmt werden.
+$L_2$--Abstände innerhalb Gordon'scher Paare von besonderem Interesse.
+Mit dem eben bewiesenen Lemma können diese einfach bestimmt werden.
 Diese Abstände wurden bereits von Gordon in \cite{Gor}, \cite{Gor2} in modifizierter Weise bestimmt.
 \newpage
 \input{Kapitel3/AbstaendeInGordonschenPaaren}
@@ -619,8 +620,8 @@ Infima bzw. Suprema stimmen darauf mit denen der ganzen Menge überein.
 \parag
 Das eben bewiesene Lemma ermöglicht es uns bei gegebenen $T\subseteq \R^m$
 und $V \subseteq \R^N$ die im Gauß'schen Min--Max--Satz vorkommenden
-Infima und Suprema zunächst als abzählbare Extrema darzustellen. Daher können
-wir nun einfach die Messbarkeit dieser Extrema im Falle beschränkter
+Infima und Suprema zunächst als abzählbare Extrema darzustellen.
+Daher können wir nun einfach die Messbarkeit dieser Extrema im Falle beschränkter
 $T,V$ einsehen.
 
 \input{Kapitel3/MessbarkeitVonExtremaInGordonschenPaaren}
@@ -631,7 +632,7 @@ einzusehen.
 
 \input{Kapitel3/IntegrierbarkeitVonExtremaInGordonschenPaaren}
 \parag
-Als nächstes stellen wir fest, dass endliche Teilfamilien Gordon'scher Paare
+Als Nächstes stellen wir fest, dass endliche Teilfamilien Gordon'scher Paare
 den Voraussetzungen des Gauß'schen Min--Max--Satzes genügen.
 
 \input{Kapitel3/GordonschePaareUndDerGaussscheMinMaxSatzEndlich}
@@ -645,8 +646,8 @@ Ist allerdings $0$ auch ein
 Häufungspunkt von $V$, so kann man zu einer dichten Teilmenge übergehen, die
 $0$ nicht enthält.
 Auf die Voraussetzung an die $0$ als Häufungspunkt kann
-nicht verzichtet werden, weil z. B. für $V := \meng 0$, $T:=\meng{e_1^m}$ und
-$c := 1$ die anderen Voraussetzungen offensichtlich gegegeben sind, aber
+nicht verzichtet werden, weil z. B. für $V \coloneqq  \meng 0$, $T\coloneqq \meng{e_1^m}$ und
+$c \coloneqq  1$ die anderen Voraussetzungen offensichtlich gegeben sind, aber
 die Bilinearität von $Y$ bereits liefert, dass der zweite Erwartungswert in
 der ersten Aussage $0$ ist, während der erste Erwartungswert allerdings $1$
 ist.
@@ -716,7 +717,7 @@ In den späteren Anwendungen werden die ersten beiden Voraussetzungen dieses
 Satzes ($(a),(b)$) sehr einfach zu prüfen sein und die Arbeit wird im Verifizieren von $(c)$ stecken.
 
 Interessiert man sich nur für injektive Abbildungen, so kann man direkt
-$T := S^{m-1}$ setzen.
+$T \coloneqq  S^{m-1}$ setzen.
 Es stellt sich allerdings heraus, dass die
 Voraussetzungen an das $x$ und das Auswertungspaar mit Hilfe des
 Banach--Mazur--Abstandes implizit ausgedrückt werden können.
@@ -735,17 +736,17 @@ elegant die Existenz gewisser Unterräume von $\ell_p^n$ zusichern.
 Bereits in Kapitel 1 hatten wir in \ref{AequivalenzkonstantenFuerPNormen}
 verschiedene $p$--Normen verglichen und später das Dvoretzky--Rogers--Lemma
 als (in gewisser Hinsicht) Verschärfung dieser Vergleiche kennengelernt.
-Der auf dem Dvoretzky--Rogers--Lemma beruhende Satz von Dvoretzky ermöglicht es nun, unter einer sehr ähnlichen Bedingung wie in \refclaim{AbstaendeBezueglichDerPnorm}{AbstaendeBezueglichDerPnorm2} den
+Der auf dem Dvoretzky--Rogers--Lemma beruhende Satz von Dvoretzky ermöglicht es nun,
+unter einer sehr ähnlichen Bedingung wie in \refclaim{AbstaendeBezueglichDerPnorm}{AbstaendeBezueglichDerPnorm2} den
 vorher verwendeten Raum $\ell_\infty^n$ durch einen beliebigen normierten Raum
 zu ersetzen und das gleiche Resultat zu erhalten.
 
 \input{Kapitel4/SatzVonDvoretzky}
 \parag
 Der wesentliche Aspekt des Beweises ist die Existenz eines $x \in E^n$ mit
-der verwendeten Abschätzung nach oben und unten. In der
-Dvoretzky--Rogers--Variante kann diese Abschätzung nicht weiter verbessert
-werden, weil die Voraussetzung an das $n$ bzw. $N$ wesentlich in die
-Abschätzung eingeht.
+der verwendeten Abschätzung nach oben und unten.
+In der Dvoretzky--Rogers--Variante kann diese Abschätzung nicht weiter verbessert werden,
+weil die Voraussetzung an das $n$ bzw. $N$ wesentlich in die Abschätzung eingeht.
 Allerdings gibt es abstraktere Verbesserungen, wie die
 sogenannte proportionale Dvoretzky--Rogers--Faktorisierung (vgl. \cite{BS}).
 Die dort verwendete Konstante für die Abschätzung nach unten
@@ -767,7 +768,8 @@ notwendigerweise spezieller Differenzen) ähnlich abgebildet werden.
 \input{Kapitel4/RIP}
 \parag
 Die "`Ausdünnung"' der Vektoren in diesem Satz lässt höchstens ein Drittel der
-Komponenten von $0$ verschieden. Auch wenn dies zunächst sehr schwach erscheint
+Komponenten von $0$ verschieden.
+Auch wenn dies zunächst sehr schwach erscheint
 (tatsächlich wird die Anzahl der von $0$ verschiedenen Komponenten noch stärker
 eingeschränkt), ist die Angabe einer linearen Abbildung mit den besagten
 Eigenschaften mit klassischen Methoden nicht ohne weiteres möglich.\parag
@@ -791,10 +793,10 @@ Eine konkrete (wenn auch recht grobe) Abschätzung ist mit unseren Methoden eben
 
 \input{Kapitel4/SatzVonGluskin}
 
-Die Konstante $c$ in dem Satz ist in etwa $48.2$. Beachtet man, dass die
-Abschätzungen für die Ordnungsstatistiken eher kanonisch als filigran waren, so
-ist es naheliegend anzunehmen, dass diese Konstante etwas verbessert werden
-kann. Ferner ist auch die Abschätzung des $t_\eta$ aus dem Numeriklemma (vgl.
+Die Konstante $c$ in dem Satz ist in etwa $48.2$.
+Beachtet man, dass die Abschätzungen für die Ordnungsstatistiken eher kanonisch als filigran waren,
+so ist es naheliegend anzunehmen, dass diese Konstante etwas verbessert werden kann.
+Ferner ist auch die Abschätzung des $t_\eta$ aus dem Numeriklemma (vgl.
 \ref{Numeriklemma}) nur im Hinblick auf die Größenordnung genau -- mit weiteren
 numerischen Methoden könnte auch diese noch verbessert werden.
 
@@ -802,7 +804,7 @@ Trotz der augenscheinlichen Größe von $c$ ist auch hier allerdings eher die
 Wachstumsordnung des Abstandes interessant, welche, wie schon zu Beginn erwähnt, $d_{BM}(F, \ell_2^{m-N}) \in \mco(\nicefrac m N \mapsto \sqrt{(\nicefrac m N) \cdot \log(\nicefrac {2m}N)})$ erfüllt.
 
 Interessant an diesem Beweis ist auch, dass im Gegensatz zu allen bisher
-mit Hilfe von \ref{ExistenzEingeschraenkterFastIsometrien} bewiesenen Sätzen
+mithilfe von \ref{ExistenzEingeschraenkterFastIsometrien} bewiesenen Sätzen
 nur \refclaim{ExistenzEingeschraenkterFastIsometrien}
 {ExistenzEingeschraenkterFastIsometrien1} verwendet wird und nicht etwa die
 sonst nützliche Abschätzung aus
@@ -890,7 +892,7 @@ $c_0 < \nicefrac 1 2$, denn $h(\nicefrac 1 2) > 0$ und $c_0 > 0$, denn
 $h(0) < 0$.\\
 Zudem gilt $f(c_0) = g(c_0)$. Das bedeutet, dass die Kenntnis von $c_0$ ein
 bezüglich obiger Berechnungen minimales $n \in \N$ liefert.\\
-Um eine Größenordnung des $n$ zu erhalten, betrachten wir $c_1:=\frac 9{20}$.\\
+Um eine Größenordnung des $n$ zu erhalten, betrachten wir $c_1\coloneqq \frac 9{20}$.\\
 Es gilt $h(c_1) = \frac{59049}{3200000}+ \frac 9 {20}- \frac 1 2 =
 - \frac{100951}{3200000}$ (also $c_1$ "`nahe bei"' $c_0$).\\
 Sei $N \in \N$ minimal mit der Eigenschaft $(\ast)$ bezüglich $c_1$.\\
@@ -898,7 +900,7 @@ Durch $(1)$ hat man $N \ge 400$, während $(2)$ liefert
 \[N \ge \left(\frac {20}9 \right)^{10} = \frac{10240000000000}{3486784401}
 \in\!\  ]2936, 2937[\text.\]
 Somit ergänzen sich die Sätze bereits mindestens auf $\N_{\ge 2937}$ (mit
-$c_2:= \frac{476}{1000}$ erhält man sogar $\N_{\ge 1737}$).
+$c_2\coloneqq  \frac{476}{1000}$ erhält man sogar $\N_{\ge 1737}$).
 
 \bibliographystyle{plain}
 \bibliography{Literatur}

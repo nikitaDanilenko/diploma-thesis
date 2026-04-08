@@ -8,14 +8,14 @@ Dann existiert ein $A\in L(\ell_2^m, \ell_2^N)$ mit
 \le 1 + \eps\]
 \end{satz}
 \begin{proof}
-Seien $(E, \norm\cdot_E):= \ell_2^N$, $x := (e_i^N)_{i=1}^N$ und
-\[T:= \mengea{\frac{v(i)-v(j)}{\norm{v(i)-v(j)}_{2,m}}}{i, j \in \haken n,
+Seien $(E, \norm\cdot_E)\coloneqq  \ell_2^N$, $x \coloneqq  (e_i^N)_{i=1}^N$ und
+\[T\coloneqq  \mengea{\frac{v(i)-v(j)}{\norm{v(i)-v(j)}_{2,m}}}{i, j \in \haken n,
 \, i \neq j}\text{.}\]
 Dann ist $\bprod \cdot x_N = \id_{\R^N}$ und damit $x \neq 0$ und
 $\norm\cdot_E\circ \bprod \cdot x _N = \norm\cdot_{2, N}$. \hfill $(a)$\\
 Wegen $n\ge 2$ ist $T\neq \emptyset$, $T \subseteq S^{m-1}$ und $T=-T$. 
 \hfill$(b)$\\
-Seien $k := \abs T$, $\alpha := (N, m, mN, k)$,
+Seien $k \coloneqq  \abs T$, $\alpha \coloneqq  (N, m, mN, k)$,
 \begin{align*}
 \bigg((\Omega,\mfa,\Prim),(\gamma,\delta,\widetilde g,\eta),\alpha\bigg)
 \text{ ein }(N(0,1), 4)\text{--Tupel zu }(4,\alpha)\end{align*}
@@ -27,7 +27,7 @@ F¸r jedes $s \in T$ ist die Abbildung $\bprod s \delta_m$ nach
 {IntegrierbarkeitUndVerteilungVonLinearkombinationen4} wegen $s \in S^{m-1}$
 ebenfalls $N(0,1)$--verteilt.\\
 Wegen \ref{MaximumZentrierterNormalverteilterZufallsgroessen} (mit
-$\sigma_i:=1$ f¸r alle $i \in \haken k$) gilt daher
+$\sigma_i\coloneqq 1$ f¸r alle $i \in \haken k$) gilt daher
 \begin{align}\E\left(\sup_{t \in T} \bprod t \delta_m \right) \le
 \sqrt 2 \E\left(\max_{i \in \haken k}\eta_i \right)\text. \label{jlleq:1}
 \end{align}
@@ -76,14 +76,14 @@ $\emptyset \neq \mcb \subseteq L(\ell_2^m, \ell_2^N)$ mit:
 \le \frac{1+\eps}{1-\eps}\text. \label{jlleq:4}
 \end{align}
 Sei nun
-$\mca := \menge{\frac{1-\eps}{\inf\menge{\norm{Bt}_{2,N}}{t \in T}}B}
+$\mca \coloneqq  \menge{\frac{1-\eps}{\inf\menge{\norm{Bt}_{2,N}}{t \in T}}B}
 {B \in \mcb}$.\\
 Offensichtlich ist auch $\emptyset \neq \mca \subseteq L(\ell_2^m,\ell_2^N)$.\\
 Sei $A \in \mca$. Dann gibt es ein $B \in \mcb$ mit
 $A = (\nicefrac{(1-\eps)}{\inf\menge{\norm{Bt}_{2,N}}{t \in T}})B$.\\
-Seien $\alpha:= \inf\menge{\norm{Bt}_{2,N}}{t \in T}$ und $i, j \in \haken n$
+Seien $\alpha\coloneqq  \inf\menge{\norm{Bt}_{2,N}}{t \in T}$ und $i, j \in \haken n$
 mit $i \neq j$.\\
-Dann ist $t_{ij}:= \frac{v(i)-v(j)}{\norm{v(i)-v(j)}_{2,m}} \in T$ und es gilt:
+Dann ist $t_{ij}\coloneqq  \frac{v(i)-v(j)}{\norm{v(i)-v(j)}_{2,m}} \in T$ und es gilt:
 \begin{align*}
 &\,\frac{\norm{A(v(i)) - A(v(j))}_{2,N}}{\norm{v(i)-v(j)}_{2,m}}=
 \norma{A\left(\frac{v(i)-v(j)}{\norm{v(i)-v(j)}_{2,m}} \right)}_{2, N}

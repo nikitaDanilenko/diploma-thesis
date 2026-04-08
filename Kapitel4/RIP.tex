@@ -5,7 +5,7 @@ Sei $k \in \N$ mit $k \le \frac m {\exp(1)}$ und
 $k\log\left(\frac m k \right) \le \frac 1 {4 \left(1+ \frac 2{\log(2)}
  \right)}\eta^2 \frac {N^2}{N+1}$.\\
 Sei schließlich
-\[\Sigma_k^m := \menge{x \in\R^m}{\abs{\menge{i\in\haken m}{x_i\neq 0}}\le k}\]
+\[\Sigma_k^m \coloneqq  \menge{x \in\R^m}{\abs{\menge{i\in\haken m}{x_i\neq 0}}\le k}\]
 Dann gibt es $A \in L(\ell_2^m, \ell_2^N)$ mit
 \begin{enumerate}[(1)]
 	\item \label{RIP1}
@@ -16,8 +16,8 @@ Dann gibt es $A \in L(\ell_2^m, \ell_2^N)$ mit
 \end{enumerate}
 \end{satz}
 \begin{proof}
-Seien $(E, \norm\cdot_E):= \ell_2^N$, $T:= \Sigma_k^m\cap S^{m-1}$ und
-$x := \left(e_i^N\right)_{i=1}^N$.\\
+Seien $(E, \norm\cdot_E)\coloneqq  \ell_2^N$, $T\coloneqq  \Sigma_k^m\cap S^{m-1}$ und
+$x \coloneqq  \left(e_i^N\right)_{i=1}^N$.\\
 Dann ist $\bprod\cdot x_N = \id_{\R^N}$ und damit $x \neq 0$ und
 $\norm\cdot_E\circ\bprod \cdot x_N  = \norm\cdot_{2, N}$.
 \hfill $(a)$\\
@@ -66,8 +66,8 @@ sodass ein $\emptyset \neq\mca\subseteq L(\ell_2^m, \ell_2^N)$ existiert mit
 \[\forall\, A \in \mca:\,\inf\menge{\norm{At}_{2,N}}{t \in T} > 0\,\wedge
 \,\frac{\sup\menge{\norm{At}_{2,N}}{t\in T}}
        {\inf\menge{\norm{At}_{2,N}}{t\in T}}\le\frac {1+ \eta}{1-\eta}\text.\]
-Seien $A\in \mca$, $u_A := \inf\menge{\norm{At}_{2,N}}{t \in T}$ und
-$o_A:=\sup\menge{\norm{At}_{2,N}}{t \in T}$.\\
+Seien $A\in \mca$, $u_A \coloneqq  \inf\menge{\norm{At}_{2,N}}{t \in T}$ und
+$o_A\coloneqq \sup\menge{\norm{At}_{2,N}}{t \in T}$.\\
 Seien $x, y \in T = \Sigma_k^m\cap S^{m-1}$.\\
 Da $u_A>0$ ist insbesondere $\norm{Ay}_{2,N}>0$, also $Ay\neq 0$, womit (1)
 gezeigt ist.\\

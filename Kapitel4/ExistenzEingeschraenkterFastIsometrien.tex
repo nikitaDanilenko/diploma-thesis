@@ -3,7 +3,7 @@
 Seien $m, N \in \N$,
 $((\Omega, \mfa, \Prim), (\gamma, \delta, \widetilde g), (N, m, mN))$
 ein unabhängiges $(N(0,1),3)$--Tupel (zu $(3, (N, m, mN))$) und
-$g:=\Mat_{m,N} \circ \widetilde g$.\\
+$g\coloneqq \Mat_{m,N} \circ \widetilde g$.\\
 Seien $(E, \norm\cdot_E)$ ein normierter $\R$--Vektorraum,
 $0\neq x \in E^n$ und $\emptyset \neq T \subseteq S^{m-1}$.\\
 Seien $G_x$ der Gauß'sche Operator zum Tupel $(x,g)$ 
@@ -54,9 +54,9 @@ $\forall\, A \in \mca:
 Zunächst sind offenbar die Voraussetzungen von
 \ref{GordonschePaareUndSubeuklidischeBildhalbnormen} erfüllt.\\
 Seien
-\[f:= \inf_{t \in T} \, \norm \cdot_E \circ ev(t, \cdot) \circ G_x
+\[f\coloneqq  \inf_{t \in T} \, \norm \cdot_E \circ ev(t, \cdot) \circ G_x
 \quad \text{ und }\quad
-  h:= \sup_{t \in T} \, \norm \cdot_E \circ ev(t, \cdot) \circ G_x.\]
+  h\coloneqq  \sup_{t \in T} \, \norm \cdot_E \circ ev(t, \cdot) \circ G_x.\]
 Nach \refclaim{IntegrierbarkeitVonExtremaInGordonschenPaaren}
 {IntegrierbarkeitVonExtremaInGordonschenPaaren2} sind $f, h$ integrierbar.\\
 Wegen (b) und \refclaim{GordonschePaareUndSubeuklidischeBildhalbnormen}
@@ -80,15 +80,15 @@ Somit gilt wegen der Integrierbarkeit von $Z_{\gamma, x}$ und $M_{\delta, T}$
 Somit $\E(Z_{\gamma,x}) - \E(M_{\delta, T}) \le
 \E(Z_{\gamma,x}) + \E(M_{\delta, T})$ und daher $\E(M_{\delta, T}) \ge 0$, also
 gilt wegen $(c)$ auch $\E(Z_{\gamma,x})>\E(M_{\delta, T}) \ge 0$.\\
-Seien nun $a:=\E(Z_{\gamma,x}) - \E(M_{\delta, T})$ und 
-$b:=\E(Z_{\gamma,x}) + \E(M_{\delta, T})$.\\
+Seien nun $a\coloneqq \E(Z_{\gamma,x}) - \E(M_{\delta, T})$ und
+$b\coloneqq \E(Z_{\gamma,x}) + \E(M_{\delta, T})$.\\
 Wegen $f \ge 0$ und $h \ge 0$ und nach obiger Rechnung gilt:
 \[ 0 < a \le \E(f) \le E(h) \le b\text.\]
 Mit der Integrierbarkeit von $f$ und $h$ sind somit die Voraussetzungen von
 \ref{Erwartungswertlemma} für $f, h, a, b$ erfüllt und für
-$Q :=\menge{\omega \in \Omega}{f(\omega)> 0 \wedge ah(\omega) \le bf(\omega)}$
+$Q \coloneqq \menge{\omega \in \Omega}{f(\omega)> 0 \wedge ah(\omega) \le bf(\omega)}$
 gilt daher (gemäß \ref{Erwartungswertlemma}): $Q\in \mfa$ und $\Prim(Q) > 0$.\\
-Sei nun $\mca:=G_x(Q)$.
+Sei nun $\mca\coloneqq G_x(Q)$.
 Dann ist $G_x\inv(\mca) \supseteq Q$.\\
 Sei $A \in \mca$. Dann existiert ein $\omega \in Q$ mit $A = G_x(\omega)$.\\
 Wegen $\omega \in Q$ ist also
