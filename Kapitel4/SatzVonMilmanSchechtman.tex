@@ -9,7 +9,7 @@ und
 \sqrt{\frac m {\log\left(1+ \frac n m \right)}}\text.\]
 \end{satz}
 \begin{proof}
-Nach \cite{BS} (dort: Theorem 2) gibt es ein $C_{BS} \in \R_{>0}$, sodass für
+Nach~\cite{BS} (dort: Theorem 2) gibt es ein $C_{BS} \in \R_{>0}$, sodass für
 alle normierten Räume $(X, \norm\cdot_X)$ ein $M \in \N$ mit
 $M > \frac 1 2 \dim X$ und $y \in X^M$ existieren mit
 $\norm\cdot_{\infty,M}\le\norm\cdot_X\circ\bprod\cdot y_M
@@ -33,8 +33,7 @@ $\frac 1 {C_{BS}} = \frac 1 {C_{BS}} \norm{e_i^N}_{\infty,N} \le \norm{x_i}_E$
 für alle $i \in \haken N$.\\
 Seien nun $T\coloneqq S^{m-1}$,
 \[\bigg((\Omega, \mfa, \Prim), (\gamma,\delta,\widetilde g),(N, m, mN)\bigg)
-\text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach
-\ref{ExistenzNormalNTupel}), $G_x \coloneqq  \bprod \cdot x_N \circ g$ und $(Z_{\gamma, x}, M_{\delta,T})$ das
+\text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach~\ref{ExistenzNormalNTupel}), $G_x \coloneqq  \bprod \cdot x_N \circ g$ und $(Z_{\gamma, x}, M_{\delta,T})$ das
 Auswertungspaar zu $(\gamma, \delta, x, T)$.\\
 Seien weiter
 \[f: = \inf_{t \in T} \, \norm\cdot_E \circ \bprod \cdot x _N \circ G_x,
@@ -56,15 +55,15 @@ und
     \text.\]
 Dann ist $V \subseteq \R^N$, nichtleer,
 beschränkt (da endlich) und es ist $0 \notin V$. \hfill $(a)$\\
-Nach \refclaim{Sortierungsnorm}{Sortierungsnorm3} ist
+Nach~\refclaim{Sortierungsnorm}{Sortierungsnorm3} ist
 \begin{align}
 \norm\cdot_{(m)}\text{ eine
 Norm auf dem }\R^N\text{ mit } 
 \norm\cdot_{(m)} \le \norm\cdot_{\infty, N}\text.\label{svmseq:3}
 \end{align}
-Ferner ist nach \refclaim{Sortierungsnorm}{Sortierungsnorm1}
+Ferner ist nach~\refclaim{Sortierungsnorm}{Sortierungsnorm1}
 $\sup\menge{\norm v_{2, N}}{v \in V} = \frac 1{\sqrt m}$ \hfill $(b)$\\
-und nach \refclaim{Sortierungsnorm}{Sortierungsnorm2}
+und nach~\refclaim{Sortierungsnorm}{Sortierungsnorm2}
 \begin{align}
 \forall\, w \in \R^N: \sup_{v \in V}\sprod w v_N = \norm w_{(m)}\text.\tag{$c$}
 \end{align}
@@ -115,8 +114,7 @@ $1+\frac{N+1}m \ge 1+\frac{13}2 = \frac{15}2$ gilt weiter:
 \end{align}
 Seien $E_1\coloneqq  \R^N$, $\norm\cdot_{E_1}\coloneqq  \norm\cdot_{(m)}$,
 $x_1 \coloneqq  (e_i^N)_{i=1}^N$ und $G_{x_1}\coloneqq  \bprod \cdot {x_1}_N \circ g = g$.\\
-Wegen $(a), (b), (c)$ sind die Voraussetzungen von
-\ref{GordonschePaareUndNormiterierendeMengen} für $(E_1, \norm\cdot_{E_1})$,
+Wegen $(a), (b), (c)$ sind die Voraussetzungen von~\ref{GordonschePaareUndNormiterierendeMengen} für $(E_1, \norm\cdot_{E_1})$,
 $x_1$, $T$, $V$ und $c\coloneqq \frac 1 {\sqrt{m}}$ erfüllt und damit gilt:
 \begin{align}
 \E\left(\norm\cdot_{(m)} \circ \gamma \right) - \frac {a_m}{\sqrt m}
@@ -177,16 +175,14 @@ Wir erhalten also insgesamt:
 = \E \left(\sup_{t \in T}\, \norm\cdot_{E}\circ ev(t,\cdot)\circ G_x \right)
 \overset{\eqref{svmseq:8}}< 3 a_m\text.
 \end{align*}
-Da $f \ge 0, h \ge 0$ und beide integrierbar sind, gibt es nach
-\ref{Erwartungswertlemma} ein $\omega_0 \in \Omega$ mit
+Da $f \ge 0, h \ge 0$ und beide integrierbar sind, gibt es nach~\ref{Erwartungswertlemma} ein $\omega_0 \in \Omega$ mit
 $f(\omega_0)>0$ und $\frac{h(\omega_0)}{f(\omega_0)} \le \frac{3a_m}\alpha$.\\
 Sei $A\coloneqq  G_x(\omega_0)$. Dann ist $A \in L(\ell_2^m, E)$ und es gilt:
 \[\inf_{t \in S^{m-1}}\norm{At}_E =
   \inf_{t \in T} \norm{G_x(\omega_0)t}_E =
   \left(\inf_{t \in T} \norm\cdot_E \circ ev(t, \cdot) \circ G_x\right)
   (\omega_0) = f(\omega_0) > 0\]
-und damit ist $A$ nach
-\ref{InjektivitätLinearerAbbildungenZwischenNormiertenRäumen} injektiv.\\
+und damit ist $A$ nach~\ref{InjektivitätLinearerAbbildungenZwischenNormiertenRäumen} injektiv.\\
 Sei $F\coloneqq  \Bild A$. Da $A$ injektiv ist, ist $\dim F = m$ und da jeder
 endlichdimensionale normierte Raum vollständig ist, gilt:
 \begin{align*}
@@ -225,8 +221,7 @@ Schließlich gilt:
  \overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}=
  a_m = \frac 1 2 2a_m \le \eps\E(Z_{\gamma,x})\text. \tag{$c'$}
  \end{align}
-Wegen $(a'), (b'), (c')$ sind die Voraussetzungen von
-\ref{ExistenzEingeschraenkterFastIsometrien} erfüllt und es gibt ein 
+Wegen $(a'), (b'), (c')$ sind die Voraussetzungen von~\ref{ExistenzEingeschraenkterFastIsometrien} erfüllt und es gibt ein
 $A \in L(\ell_2^m, E)$ injektiv mit
 \begin{align}
 \opnorm A {\ell_2^m} E \opnorm{A\inv}{A(E)}{\ell_2^m} \le

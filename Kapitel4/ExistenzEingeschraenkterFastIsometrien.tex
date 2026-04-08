@@ -51,15 +51,14 @@ $\forall\, A \in \mca:
 \end{enumerate}
 \end{satz}
 \begin{proof}
-Zunächst sind offenbar die Voraussetzungen von
-\ref{GordonschePaareUndSubeuklidischeBildhalbnormen} erfüllt.\\
+Zunächst sind offenbar die Voraussetzungen von~\ref{GordonschePaareUndSubeuklidischeBildhalbnormen} erfüllt.\\
 Seien
 \[f\coloneqq  \inf_{t \in T} \, \norm \cdot_E \circ ev(t, \cdot) \circ G_x
 \quad \text{ und }\quad
   h\coloneqq  \sup_{t \in T} \, \norm \cdot_E \circ ev(t, \cdot) \circ G_x.\]
-Nach \refclaim{IntegrierbarkeitVonExtremaInGordonschenPaaren}
+Nach~\refclaim{IntegrierbarkeitVonExtremaInGordonschenPaaren}
 {IntegrierbarkeitVonExtremaInGordonschenPaaren2} sind $f, h$ integrierbar.\\
-Wegen (b) und \refclaim{GordonschePaareUndSubeuklidischeBildhalbnormen}
+Wegen (b) und~\refclaim{GordonschePaareUndSubeuklidischeBildhalbnormen}
 {GordonschePaareUndSubeuklidischeBildhalbnormen2} gilt weiter:
 \begin{align} \E\left(\inf_{t\in T}\bprod t \delta_m \right)
 	= - \E\left(\sup_{t\in T}\bprod t \delta_m \right) = 
@@ -84,8 +83,7 @@ Seien nun $a\coloneqq \E(Z_{\gamma,x}) - \E(M_{\delta, T})$ und
 $b\coloneqq \E(Z_{\gamma,x}) + \E(M_{\delta, T})$.\\
 Wegen $f \ge 0$ und $h \ge 0$ und nach obiger Rechnung gilt:
 \[ 0 < a \le \E(f) \le E(h) \le b\text.\]
-Mit der Integrierbarkeit von $f$ und $h$ sind somit die Voraussetzungen von
-\ref{Erwartungswertlemma} für $f, h, a, b$ erfüllt und für
+Mit der Integrierbarkeit von $f$ und $h$ sind somit die Voraussetzungen von~\ref{Erwartungswertlemma} für $f, h, a, b$ erfüllt und für
 $Q \coloneqq \menge{\omega \in \Omega}{f(\omega)> 0 \wedge ah(\omega) \le bf(\omega)}$
 gilt daher (gemäß~\ref{Erwartungswertlemma}): $Q\in \mfa$ und $\Prim(Q) > 0$.\\
 Sei nun $\mca\coloneqq G_x(Q)$.
@@ -110,15 +108,13 @@ $\E(Z_{\gamma, x})>0$ gilt:
         {1 - \frac{\E(M_{\delta, T})}{\E(Z_{\gamma,x})}}\text.
  \end{align*}
 Ist $T = S^{m-1}$, so folgt mit $\inf\menge{\norm{At}_E}{t \in S^{m-1}} > 0$
-und $S^{m-1} = \kran{\ell^2_m}01$ nach 
-\ref{InjektivitätLinearerAbbildungenZwischenNormiertenRäumen} die Injektivität
+und $S^{m-1} = \kran{\ell^2_m}01$ nach~\ref{InjektivitätLinearerAbbildungenZwischenNormiertenRäumen} die Injektivität
 von $A$.\\
 Weiter ist der Raum 
 $(A(\R^m), \restrict{\norm\cdot_E}{A(\R^m)})$ ein endlichdimensionaler
 normierter Raum und damit ein Banachraum.\\
 Fasse nun $A$ als Abbildung $A:\R^m \rightarrow A(\R^m)$ auf.\\
-Dann ist $A$ bijektiv, linear und stetig, sodass nach
-\ref{OperatornormDerInversen} gilt:
+Dann ist $A$ bijektiv, linear und stetig, sodass nach~\ref{OperatornormDerInversen} gilt:
 \[\opnorm{A\inv}{A(\R^m)}{\R^m} 
 = \frac 1 {\inf\menge{\norm{At}_E}{t \in S^{m-1}}}\text.\]
 Wegen $\opnorm A {\R^m} E = \sup\menge{\norm{At}_E}{t \in S^{m-1}}$ gilt also

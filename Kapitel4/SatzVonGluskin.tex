@@ -33,13 +33,13 @@ Falls $N=m$ gilt, ist die Aussage trivial, sodass wir $N<m$ annehmen kˆnnen.\\
 \underline{1. Fall:} $m \le 2 t_\eta$.\\
 Sei $F \coloneqq  \left\langle \menge{e_i^m}{i \in \haken {m-N}}\right\rangle$.\\
 Offenbar ist dann $(F,\norm\cdot_1\vert_{F})$ isometrisch isomorph zu
-$\ell_1^{m-N}$ und damit nach \refclaim{EigenschaftenDesBanachMazurAbstands}
+$\ell_1^{m-N}$ und damit nach~\refclaim{EigenschaftenDesBanachMazurAbstands}
 {EigenschaftenDesBanachMazurAbstands2}:
 $d_{BM}((F,\norm\cdot_1\vert_{F}), \ell_1^{m-N}) = 1$.\\
 Weiter gilt nach
 \refclaim{AequivalenzkonstantenFuerPNormen}{AequivalenzkonstantenFuerPNormen1}
 $\norm\cdot_{2, m-N} \le\norm\cdot_{1, m-N} \le \sqrt{m-N}\norm\cdot_{2, m-N}$
-und somit nach \refclaim{EigenschaftenDesBanachMazurAbstands}
+und somit nach~\refclaim{EigenschaftenDesBanachMazurAbstands}
 {EigenschaftenDesBanachMazurAbstands3}: $d_{BM}(\ell_1^{m-N}, \ell_2^{m-N}) \le
 \sqrt{m-N}$.\\
 Somit gilt
@@ -66,8 +66,7 @@ Also ist $k \le \frac m {t_\eta} < \frac m 2$.\\
 Seien $(E,\norm\cdot_E)\coloneqq \ell_2^N$, $T\coloneqq S^{m-1}\cap\kabg{\ell_1^m} 0{\sqrt k}$,
 $x \coloneqq  (e_i)_{i = 1}^N$,
 \[\bigg((\Omega, \mfa, \Prim), (\gamma,\delta,\widetilde g),(N, m, mN)\bigg)
-\text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach
-\ref{ExistenzNormalNTupel}) und $(Z_{\gamma, x}, M_{\delta,T})$ das
+\text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach~\ref{ExistenzNormalNTupel}) und $(Z_{\gamma, x}, M_{\delta,T})$ das
 Auswertungspaar zu $(\gamma, \delta, x, T)$.\\
 Dann gilt $\bprod \cdot x_N = \id_{\R^N}$ und damit $x \neq 0$ und
 $\norm\cdot_E\circ\bprod\cdot x _N=\norm\cdot_{2,N}$. \hfill $(a)$\\
@@ -92,7 +91,7 @@ Sei $\omega \in \Omega$. Dann gilt f¸r alle $s \in T$:
 \end{align}
 Weiter gilt wegen $k \le \frac m {t_\eta}$ auch $\frac m k \ge t_\eta$.\\
 Da $\eta \in\!\  ]0,1[$ gilt nach Setzung von
-$t_\eta$ gemäß \refclaim{Numeriklemma}{Numeriklemma4}:
+$t_\eta$ gemäß~\refclaim{Numeriklemma}{Numeriklemma4}:
 \begin{align}
 \log\left(\frac{2m}k \right) < \eta \frac m k\text. \label{svgeq:4}
 \end{align}
@@ -132,8 +131,7 @@ Somit gilt:
 \sqrt{\frac 2 \pi} \sqrt{(1-\eps)m} \le \sqrt{\frac 2 \pi}
 \sqrt N \overset{\refclaim{AbschaetzungEinesGammafunktionsquotienten}
 {AbschaetzungEinesGammafunktionsquotienten4}}\le a_N\\
-\overset{
-\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}
+\overset{~\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}
 =&\, \E\left(\norm\cdot_{2, N} \circ \gamma \right)
 = \E\left(\norm\cdot_{2, N}\circ \bprod \cdot x_N \circ \gamma \right)
 = \E\left(\norm\cdot_E \circ \bprod \cdot x_N \circ \gamma \right) \tag{$c$}
