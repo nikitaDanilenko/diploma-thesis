@@ -41,12 +41,12 @@
 \hypertarget{titlepage}{}
 
 \begin{center}
-{ \huge \bf Anwendungen des Gauß'schen Min--Max--Satzes}\\[3cm]
+{ \huge \textbf{Anwendungen des Gauß'schen Min--Max--Satzes}}\\[3cm]
 \vspace*{3cm}
 {\large
 Diplomarbeit\\
 von\\
-{\bf Nikita Danilenko} \\
+{\textbf {Nikita Danilenko}} \\
 }
 
 \vspace*{\fill}
@@ -71,8 +71,8 @@ Kiel, Juli 2010
 \chapter*{Einführung}
 
 Ziel dieser Arbeit ist es, eine Reihe bekannter Sätze aus der Banachraumtheorie
-unter Zuhilfenahme des Gauß'schen Min--Max--Satzes zu beweisen. Um dieses zu
-bewerkstelligen, wird zunächst der besagte Satz auf eine bestimmte Klasse
+unter Zuhilfenahme des Gauß'schen Min--Max--Satzes zu beweisen.
+Um dieses zu bewerkstelligen, wird zunächst der besagte Satz auf eine bestimmte Klasse
 von unendlichen Familien normalverteilter Zufallsgrößen verallgemeinert.
 
 Unter Zuhilfenahme des verallgemeinerten Satzes wird es schließlich möglich
@@ -89,13 +89,14 @@ Diese Arbeit beruht zu großen Teilen auf den Arbeiten von Yehoram Gordon.
 Die im dritten Kapitel behandelten Gordon'schen Paare wurden von Gordon
 in \cite{Gor} vorgestellt und in \cite{Gor2} in modifizierter Form verwendet,
 die Hauptergebnisse über Gordon'sche Paare stammen ebenfalls aus diesen
-Quellen. Ebenso gehen die Folgerungen aus dem ursprünglichen Gauß'schen
+Quellen.
+Ebenso gehen die Folgerungen aus dem ursprünglichen Gauß'schen
 Min--Max--Satz (besonders \ref{SatzVonFernique} und
 \ref{MaximumZentrierterNormalverteilterZufallsgroessen}) weitestgehend auf
 Gordon zurück.
 
 Die Beweise der Resultate im vierten Kapitel beruhen zu wesentlichen Teilen auf
-\cite{Gor2}, \cite{Gor}, \cite{Gued}. 
+\cite{Gor2}, \cite{Gor}, \cite{Gued}.
 
 \newpage
 \setcounter{chapter}{-1}
@@ -108,8 +109,8 @@ Die Beweise der Resultate im vierten Kapitel beruhen zu wesentlichen Teilen auf
 \label{ch:kapitel1}
 
 In diesem Kapitel werden wir einige Sätze und Lemmata im Zusammenhang mit
-linearen Abbildungen und insbesondere Funktionalen beweisen. Die meisten dieser
-Aussagen sind elementarer Natur, einige allerdings benutzen bekannte Sätze der
+linearen Abbildungen und insbesondere Funktionalen beweisen.
+Die meisten dieser Aussagen sind elementarer Natur, einige allerdings benutzen bekannte Sätze der
 Funktionalanalysis wie den Satz von Hahn--Banach und den Satz von der offenen
 Abbildung.
 
@@ -161,8 +162,8 @@ $(\R^n, \sprod \cdot {\cdot\cdot}_n)$.
 \input{Kapitel1/Iterierte2Norm}
 \parag
 Wir werden nun Vorbereitungen für zwei nützliche Aussagen in Bezug auf den
-Banach--Mazur--Abstand zweier Vektorräume treffen. Zwar werden wir diese
-Aussagen nur im Falle endlichdimensionaler Räume anwenden, allerdings ist der
+Banach--Mazur--Abstand zweier Vektorräume treffen.
+Zwar werden wir diese Aussagen nur im Falle endlichdimensionaler Räume anwenden, allerdings ist der
 Mehraufwand für die Beweise im Unendlichdimensionalen durchaus vertretbar.\\
 Wir beginnen mit einem ebenso trivialen wie nützlichen Lemma.
 
@@ -173,7 +174,7 @@ weitere nützliche Rolle spielt.
 
 Die Umkehrung dieses Lemmas ist leider falsch.
 Als Beispiel betrachte man die Räume
-$(E,\norm\cdot_E):=\ell_2(\N,\K)$, $(F,\norm\cdot_F):=(E,\norm\cdot_E)$ und 
+$(E,\norm\cdot_E):=\ell_2(\N,\K)$, $(F,\norm\cdot_F):=(E,\norm\cdot_E)$ und
 \[T:E\rightarrow F, \folge x n \N \mapsto \left(\frac{x_n}n\right)_{n\in \N}
 \text.\]
 Dann ist $T$ offenbar linear, stetig und injektiv.\\
@@ -217,7 +218,7 @@ die Folge der Inversen beschränkt ist.
 \input{Kapitel1/InvertierbarkeitDesGrenzwertsInvertierbarerOperatoren}
 \parag
 Wir definieren nun den Banach--Mazur--Abstand zweier normierter Räume. Dieser
-kann dazu verwendet werden, optimale untere Normäquivalenzkonstanten zu 
+kann dazu verwendet werden, optimale untere Normäquivalenzkonstanten zu
 erhalten, sofern die obere bereits 1 ist.\\
 In der Definition wird ein Infimum einer Menge verwendet, die zunächst leer
 sein könnte -- in diesem Fall vereinbaren wir, dass $\inf \emptyset = \infty$
@@ -227,13 +228,15 @@ Menge stets nichtleer sein.
 \input{Kapitel1/DefinitionBanachMazurAbstand}
 \parag
 Die Normiertheitsbedingung einer Banach--Mazur--Abbildung dient lediglich der
-Bequemlichkeit. Als nächstes notieren wir einige Eigenschaften des
+Bequemlichkeit.
+Als Nächstes notieren wir einige Eigenschaften des
 Banach--Mazur--Abstandes.
 
 \input{Kapitel1/EigenschaftenDesBanachMazurAbstands}
 
 Wir stellen uns nun die Frage, ob es stets eine Banach--Mazur--Abbildung
-zwischen zwei isomorphen Räumen gibt. Im Unendlichdimensionalen braucht es
+zwischen zwei isomorphen Räumen gibt.
+Im Unendlichdimensionalen braucht es
 diese Abbildungen nicht zu geben, im Endlichdimensionalen hingegen existieren
 stets Banach--Mazur--Abbildungen.
 
@@ -338,7 +341,7 @@ ein Wahrscheinlichkeitsraum. Für alle $n \in \N$ setzen wir auf dem $\R^n$
 die Borel'sche $\sigma$--Algebra $\mfb_n$ voraus, wobei wir speziell
 $\mfb := \mfb_1$ schreiben.\\
 Weiter setzen wir für alle $n \in \N$:
-\[\mcm_n(\Omega, \mfa, \R^n) 
+\[\mcm_n(\Omega, \mfa, \R^n)
  :=\menge{f\in\mcf(\Omega,\R^n)}{f\quad \mfa - \mfb_n - \text{messbar}}\text.\]
 Schließlich sei für alle $n \in \N$:
 \[\mct_n(\Omega, \mfa, \R^n)
@@ -417,7 +420,7 @@ diese überall endlich sind.
 \input{Kapitel2/NormalverteilteTupel}
 \parag
 Zu Beginn des Kapitels
-(\ref{ElementareEigenschaftenQuadratintegrierbarerAbbildungen}) 
+(\ref{ElementareEigenschaftenQuadratintegrierbarerAbbildungen})
 hatten wir schon einmal mit dem Ausdruck  $\E(\norm\cdot_{2,n}\circ\gamma)$
 für $n \in \N$ und $\gamma \in \mcm(\Omega, \mfa, \R^n)$ zu tun. An dieser
 Stelle wollen wir diesen Ausdruck für bestimmte $\gamma$ explizit berechnen.
@@ -447,7 +450,7 @@ elementares Korollar folgern.
 \parag
 Wir werden an späterer Stelle Ordnungsstatistiken von
 standardnormalverteilten Zufallsgrößen benötigen, wobei uns insbesondere
-deren Erwartungswerte interessieren werden. 
+deren Erwartungswerte interessieren werden.
 
 \input{Kapitel2/Ordnungsstatistik}
 \parag
@@ -457,12 +460,13 @@ insbesondere deren Verteilung bzw. Dichte interessieren wird.
 \input{Kapitel2/EigenschaftenVonOrdnungsstatistiken}
 
 Um konkrete Abschätzungen der Erwartungswerte gewisser absoluter
-Ordnungsstatistiken anzugeben kann man deren Verteilung bzw. Dichte
-benutzen. Es wird sich als nützlich herausstellen, die Abbildung
-$\Prim(\abs{\gamma} > \cdot)$ statt der Verteilung zu betrachten. Im Falle
+Ordnungsstatistiken anzugeben, kann man deren Verteilung bzw. Dichte benutzen.
+Es wird sich als nützlich herausstellen, die Abbildung
+$\Prim(\abs{\gamma} > \cdot)$ statt der Verteilung zu betrachten.
+Im Falle
 einer $N(0, 1)$--verteilten Zufallsgröße $\gamma$ hat diese Abbildung
-besonders gute Eigenschaften, die wir als nächstes notieren. Die erste
-Ungleichung der vierten Aussage beruht dabei maßgeblich auf \cite{RW}, die
+besonders gute Eigenschaften, die wir als Nächstes notieren.
+Die erste Ungleichung der vierten Aussage beruht dabei maßgeblich auf \cite{RW}, die
 Anwendung auf die komplementäre Verteilungsfunktion ist elementar.
 
 \input{Kapitel2/EigenschaftenDerKomplementaerenVerteilungsfunktionVonN01}
@@ -474,11 +478,11 @@ nachfolgenden Lemmas sind.
 \input{Kapitel1/AbschaetzungDerUnvollstaendigenBetafunktion}
 \parag
 Wir sind nun imstande, Schranken für den Erwartungswert der $k$--ten absoluten
-Ordnungsstatistik eines standardnormalverteilten $\gamma$ anzugeben. Es stellt
-sich heraus, dass die obere und untere Schranke sich im Wesentlichen nur um
+Ordnungsstatistik eines standardnormalverteilten $\gamma$ anzugeben.
+Es stellt sich heraus, dass die obere und untere Schranke sich im Wesentlichen nur um
 eine multiplikative Konstante unterscheiden und dass vor allem das Verhältnis
 der Anzahl zur gewählten Ordnungsstatistik eine Rolle spielt (asymptotisch:
-$\E(\gamma_k^\ast) \in \Theta(\nicefrac n k \mapsto 
+$\E(\gamma_k^\ast) \in \Theta(\nicefrac n k \mapsto
 \sqrt{\log\left(\nicefrac n k \right)})$). Wir werden an
 an dieser Stelle lediglich auf jene Ordnungsstatistiken eingehen, die an
 späterer Stelle von Interesse sein werden. Alle anderen können mit ähnlichen
@@ -529,9 +533,11 @@ Dualisierung ist Inhalt des folgenden Korollars.
 
 Obwohl der Gauß'sche Min--Max--Satz keinerlei Aussagen über die Schärfe der
 Ungleichung trifft, gibt es durchaus interessante Fälle, in denen diese
-optimal ist. In dem folgenden Korollar kommt noch hinzu, dass die
+optimal ist.
+In dem folgenden Korollar kommt noch hinzu, dass die
 Beweisstrategie vermuten lässt, man würde grob schätzen, während die erhaltene
-Abschätzung allerdings tatsächlich optimal ist. Das folgende Korollar ist eine
+Abschätzung allerdings tatsächlich optimal ist.
+Das folgende Korollar ist eine
 Modifikation einer in \cite{Gor2} vorgenommenen Nebenrechnung.
 
 \input{Kapitel2/MaximumNormalverteilterZufallsgroessen}
@@ -543,15 +549,17 @@ In diesem Kapitel führen wir Gordon'sche Paare ein, die nichts
 weiter als spezielle unendliche Familien normalverteilter Zufallsgrößen sind.
 Neben einigen einfachen Eigenschaften Gordon'scher Paare werden wir vor allem
 nachweisen, dass diese Paare ebenfalls die Anwendung des Gauß'schen
-Min--Max--Satzes zulassen. Die Namensgebung geht auf Yehoram Gordon zurück, der
+Min--Max--Satzes zulassen.
+Die Namensgebung geht auf Yehoram Gordon zurück, der
 diese Familien in \cite{Gor} (bzw. abgewandelt in \cite{Gor2}) einführte.
 \parag
 Für dieses Kapitel seien $(\Omega, \mfa, \Prim)$ ein Wahrscheinlichkeitsraum
 $m, N \in \N$.\\
 Seien $\gamma: \Omega \rightarrow \R^N$, $\delta: \Omega \rightarrow \R^m$
-und $\widetilde g: \Omega \rightarrow \R^{mN}$ jeweils $N(0,1)$--verteilt, 
+und $\widetilde g: \Omega \rightarrow \R^{mN}$ jeweils $N(0,1)$--verteilt,
 $\widetilde g$ sei unabhängig und $\gamma, \delta$ seien vollständig
-unabhängig. Sei weiter $g:= \Mat_{m,N} \circ \widetilde g$.\\
+unabhängig.
+Sei weiter $g:= \Mat_{m,N} \circ \widetilde g$.\\
 Wir werden in diesem Kapitel für $\omega \in \Omega$ die Matrix $g(\omega)$
 stets mit der linearen Abbildung $t \mapsto g(\omega)t$ identifizieren.
 
@@ -573,10 +581,11 @@ Abbildungen zuzusichern, weil er sich als operatorwertige Zufallsvariable
 auffassen lässt.\parag
 Wir beobachten, dass für alle $t \in \R^m$, $v \in \R^N$ und $c \in \R$ die
 Abbildungen $c\bprod t \delta _m + \bprod v \gamma_N$ und
-$\sprod \cdot v _N \circ ev(t, \cdot) \circ g$ nach 
+$\sprod \cdot v _N \circ ev(t, \cdot) \circ g$ nach
 \refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
 {IntegrierbarkeitUndVerteilungVonLinearkombinationen1} quadratintegrierbar
-sind. Damit ist die folgende Setzung wohldefiniert.
+sind.
+Damit ist die folgende Setzung wohldefiniert.
 
 \input{Kapitel3/GordonschesPaar}
 \parag
@@ -586,8 +595,8 @@ Als nächstes notieren einige elementare Eigenschaften Gordon'scher Paare.
 \parag
 Für die Prüfung der Voraussetzungen im Gauß'schen Min--Max--Satz sind die
 $L_2$--Abstände innerhalb Gordon'scher Paare von besonderem Interesse. Mit dem
-eben bewiesenen Lemma können diese einfach bestimmt werden. Diese Abstände wurden bereits von Gordon in \cite{Gor}, \cite{Gor2} in modifizierter Weise
-bestimmt.
+eben bewiesenen Lemma können diese einfach bestimmt werden.
+Diese Abstände wurden bereits von Gordon in \cite{Gor}, \cite{Gor2} in modifizierter Weise bestimmt.
 \newpage
 \input{Kapitel3/AbstaendeInGordonschenPaaren}
 \parag
@@ -602,7 +611,8 @@ Die in Kapitel 2 getroffenen Vorbereitungen für die Verallgemeinerung gewisser
 Erwartungswertungleichungen wurde nur für abzählbare Mengen getroffen.
 Allerdings ist $\R^n$ für alle $n \in \N$ mit beliebiger Norm separabel, sodass
 es interessant zu wissen ist, wie sich Gordon'sche Paare auf dicht liegenden
-Mengen verhalten. Die Antwort ist nicht sehr überraschend -- die betrachteten
+Mengen verhalten.
+Die Antwort ist nicht sehr überraschend -- die betrachteten
 Infima bzw. Suprema stimmen darauf mit denen der ganzen Menge überein.
 
 \input{Kapitel3/GordonschePaareAufDichtenTeilmengen}
@@ -630,11 +640,13 @@ Wir können nun den Gauß'schen Min--Max--Satz für Gordon'sche Paare formuliere
 Im Wesentlichen verwenden wir dazu die Ergebnisse aus dem zweiten Kapitel.
 Es ist allerdings auch noch ein gewisser Mehraufwand vonnöten, weil in der
 späteren Anwendung die Situation $0 \in V$ durchaus auftreten wird, wodurch
-der letzte Satz nicht direkt anwendbar ist. Ist allerdings $0$ auch ein
+der letzte Satz nicht direkt anwendbar ist.
+Ist allerdings $0$ auch ein
 Häufungspunkt von $V$, so kann man zu einer dichten Teilmenge übergehen, die
-$0$ nicht enthält. Auf die Voraussetzung an die $0$ als Häufungspunkt kann
+$0$ nicht enthält.
+Auf die Voraussetzung an die $0$ als Häufungspunkt kann
 nicht verzichtet werden, weil z. B. für $V := \meng 0$, $T:=\meng{e_1^m}$ und
-$c := 1$ im die anderen Voraussetzungen offensichtlich gegegeben sind, aber
+$c := 1$ die anderen Voraussetzungen offensichtlich gegegeben sind, aber
 die Bilinearität von $Y$ bereits liefert, dass der zweite Erwartungswert in
 der ersten Aussage $0$ ist, während der erste Erwartungswert allerdings $1$
 ist.
@@ -642,7 +654,8 @@ ist.
 \input{Kapitel3/GordonschePaareUndDerGaussscheMinMaxSatz}
 \parag
 Die Idee, den Gauß'schen Min--Max--Satz auf Gordon'sche Paare anzuwenden
-stammte von Gordon. Tatsächlich sind die Gordon'schen Paare genau so
+stammte von Gordon.
+Tatsächlich sind die Gordon'schen Paare genau so
 konstruiert, dass der Gauß'sche Min--Max--Satz nach einigen technischen
 Vorüberlegungen direkt angewandt werden kann.
 
@@ -651,9 +664,11 @@ Aussagen über die in den Zusätzen von
 \ref{IntegrierbarkeitVonExtremaInGordonschenPaaren} vorgestellten Abbildungen
 treffen.\\
 Das nachfolgende Korollar stammt im Wesentlichen aus \cite{Gor}
-(und wurde in \cite{Gor2} verwendet). In der vorliegenden Form wird es in
+(und wurde in \cite{Gor2} verwendet).
+In der vorliegenden Form wird es in
 dieser Arbeit vorrangig für den Beweis des Satzes von Milman und Schechtman
-verwendet. Dort werden wir die Normdarstellung durch ein Supremum auf die
+verwendet.
+Dort werden wir die Normdarstellung durch ein Supremum auf die
 spezielle Norm aus \ref{Sortierungsnorm} anwenden.
 
 \input{Kapitel3/GordonschePaareUndNormiterierendeMengen}
@@ -666,11 +681,11 @@ Das nächste Korollar ist in der vorgestellten Form eine Nebenrechnung aus
 \label{ch:kapitel4}
 
 Für dieses Kapitel seien
-$\Gamma: ]0, \infty[ \rightarrow \R,t \mapsto \int_0^\infty x^{t-1}\exp(-x)dx$ 
-(vgl. \ref{ElementareEigenschaftenDerGammafunktion}) und 
-$a: \N \rightarrow \R, 
+$\Gamma: ]0, \infty[ \rightarrow \R,t \mapsto \int_0^\infty x^{t-1}\exp(-x)dx$
+(vgl. \ref{ElementareEigenschaftenDerGammafunktion}) und
+$a: \N \rightarrow \R,
 n\mapsto\sqrt 2\frac{\Gamma\left(\frac{n+1}2\right)}
-                    {\Gamma\left(\frac n2 \right)}$ 
+                    {\Gamma\left(\frac n2 \right)}$
 (vgl. \ref{AbschaetzungEinesGammafunktionsquotienten}).\absatz
 In diesem Kapitel werden uns zwei bestimmte Zufallsgrößen interessieren, die
 wir nun im Zusammenhang mit einem abkürzenden Begriff einführen wollen.
@@ -685,12 +700,13 @@ Gauß'schen Min--Max--Satz für Gordon'sche Paare.
 Das Vektortupel $x$ der Auswertungspaare wird in diesem Kapitel meist aus einem
 klassischen Satz der Banachraumtheorie stammen und dazu verwendet werden, mit
 wahrscheinlichkeitstheoretischen Mitteln die Existenz bestimmter linearer
-Abbildungen zuzusichern. Die Menge $T$ wird die Eigenschaften dieser
-Abbildungen regulieren. So wird zum Beispiel $T = S^{m-1}$ die Abbildungen
-injektiv machen.
+Abbildungen zuzusichern.
+Die Menge $T$ wird die Eigenschaften dieser Abbildungen regulieren.
+So wird zum Beispiel $T = S^{m-1}$ die Abbildungen injektiv machen.
 
 Wir sind nun in der Lage, einen wichtigen Satz der Banachraumtheorie zu
-beweisen. Dieser sichert die Existenz gewisser linearer Abbildungen zu,
+beweisen.
+Dieser sichert die Existenz gewisser linearer Abbildungen zu,
 welche sich besonders gut dazu eignen, den Banach--Mazur--Abstand zweier
 Räume sehr einfach abzuschätzen.
 
@@ -700,13 +716,14 @@ In den späteren Anwendungen werden die ersten beiden Voraussetzungen dieses
 Satzes ($(a),(b)$) sehr einfach zu prüfen sein und die Arbeit wird im Verifizieren von $(c)$ stecken.
 
 Interessiert man sich nur für injektive Abbildungen, so kann man direkt
-$T := S^{m-1}$ setzen. Es stellt sich allerdings heraus, dass die
+$T := S^{m-1}$ setzen.
+Es stellt sich allerdings heraus, dass die
 Voraussetzungen an das $x$ und das Auswertungspaar mit Hilfe des
-Banach--Mazur--Abstandes implizit ausgedrückt werden können. Die dadurch
-entstehende Bedingung ist einerseits handlicher, weil es eine einzige
+Banach--Mazur--Abstandes implizit ausgedrückt werden können.
+Die dadurch entstehende Bedingung ist einerseits handlicher, weil es eine einzige
 Ungleichung ist, andererseits weniger einfach, weil in der Anwendung der
-Banach--Mazur--Abstand bestimmt werden müsste. Wir fassen dies in
-dem folgenden Korollar zusammen.
+Banach--Mazur--Abstand bestimmt werden müsste.
+Wir fassen dies in dem folgenden Korollar zusammen.
 
 \input{Kapitel4/ExistenzFastIsometrischerAbbildungen}
 
@@ -728,11 +745,13 @@ Der wesentliche Aspekt des Beweises ist die Existenz eines $x \in E^n$ mit
 der verwendeten Abschätzung nach oben und unten. In der
 Dvoretzky--Rogers--Variante kann diese Abschätzung nicht weiter verbessert
 werden, weil die Voraussetzung an das $n$ bzw. $N$ wesentlich in die
-Abschätzung eingeht. Allerdings gibt es abstraktere Verbesserungen, wie die
+Abschätzung eingeht.
+Allerdings gibt es abstraktere Verbesserungen, wie die
 sogenannte proportionale Dvoretzky--Rogers--Faktorisierung (vgl. \cite{BS}).
-Die dort verwendete Konstante für die Abschätzung nach unten ($\nicefrac 12$
-bei Dvoretzky--Rogers) ist allerdings schlecht explizit bestimmbar, weil sie
-sich aus axiomatisch existenten Faktoren zusammensetzt. Nichtsdestoweniger
+Die dort verwendete Konstante für die Abschätzung nach unten
+($\nicefrac 12$ bei Dvoretzky--Rogers) ist allerdings schlecht explizit bestimmbar, weil sie
+sich aus axiomatisch existenten Faktoren zusammensetzt.
+Nichtsdestoweniger
 werden wir auf genau diese proportionale Faktorisierung später im Satz von
 Milman--Schechtman zurückkommen.\\
 Wir beweisen nun das Lemma von Johnson und Lindenstrauss, wobei wir im Beweis
@@ -741,8 +760,8 @@ zum ersten Mal ein anderes $T$ als $S^{m-1}$ verwenden werden.
 \input{Kapitel4/JohnsonLindenstraussLemma}
 \parag
 Wir können also eine endliche Menge von normierten Vektorendifferenzen so
-abbilden, dass alle Bilder "`fast"' normiert sind. Unter etwas schärferen
-Voraussetzungen können aber auch bestimmte unendliche Mengen (nicht
+abbilden, dass alle Bilder "`fast"' normiert sind.
+Unter etwas schärferen Voraussetzungen können aber auch bestimmte unendliche Mengen (nicht
 notwendigerweise spezieller Differenzen) ähnlich abgebildet werden.
 
 \input{Kapitel4/RIP}
@@ -758,18 +777,17 @@ In den Sätzen \ref{ExistenzFastIsometrischerAbbildungen},
 \ref{ExistenzEingeschraenkterFastIsometrien} verwendet, in den Formulierungen
 jedoch stets ein einzelner Operator und nicht wie in
 \ref{ExistenzEingeschraenkterFastIsometrien} eine (in gewisser Hinsicht große)
-Menge solcher Operatoren. Der Grund für diese Abschwächung ist
-der, dass die "`Größe"' der Menge sich nicht ohne den Gauß'schen Operator auf
+Menge solcher Operatoren.
+Der Grund für diese Abschwächung ist der, dass die "`Größe"' der Menge sich nicht ohne den Gauß'schen Operator auf
 einem bestimmten Wahrscheinlichkeitsraum beschreiben lässt, während die
 Aussagen der genannten Sätze für ihre Formulierung keinen solchen Raum
 benötigen.\parag
 Wir kommen nun zu einem weiteren Resultat, welches sich unter Zuhilfenahme des
-Gauß'schen Min--Max--Satzes überraschend einfach beweisen lässt. Dieses ist der
-Satz von Gluskin, welcher besagt, dass es in $\ell_1^m$ zu $N \in \haken m$
+Gauß'schen Min--Max--Satzes überraschend einfach beweisen lässt.
+Dieses ist der Satz von Gluskin, welcher besagt, dass es in $\ell_1^m$ zu $N \in \haken m$
 stets $N$--codimensionale Unterräume gibt, deren Abstand zum $\ell_2^{m-N}$ von
-der Größenordnung $\sqrt{\frac m N \log\left(\frac{2m}N\right)}$ ist. Eine
-konkrete (wenn auch recht grobe) Abschätzung ist mit unseren Methoden ebenfalls
-möglich.
+der Größenordnung $\sqrt{\frac m N \log\left(\frac{2m}N\right)}$ ist.
+Eine konkrete (wenn auch recht grobe) Abschätzung ist mit unseren Methoden ebenfalls möglich.
 
 \input{Kapitel4/SatzVonGluskin}
 
@@ -789,16 +807,18 @@ nur \refclaim{ExistenzEingeschraenkterFastIsometrien}
 {ExistenzEingeschraenkterFastIsometrien1} verwendet wird und nicht etwa die
 sonst nützliche Abschätzung aus
 \refclaim{ExistenzEingeschraenkterFastIsometrien}
-{ExistenzEingeschraenkterFastIsometrien2}. Hierbei bestand die Aufgabe darin,
+{ExistenzEingeschraenkterFastIsometrien2}.
+Hierbei bestand die Aufgabe darin,
 einen Unterraum zu finden, welcher das gegebene $T$ nicht schneidet (was im
 zwei-- und dreidimensionalen Fall sehr anschaulich ist), woraus die für den
 Beweis interessante Abschätzung folgt.\parag
-Zum Abschluss beweisen wir den Satz von Milman und Schechtman. Dieser stellt
-eine interessante Ergänzung zum Satz von Dvoretzky dar, auf die im Anschluss
+Zum Abschluss beweisen wir den Satz von Milman und Schechtman.
+Dieser stellt eine interessante Ergänzung zum Satz von Dvoretzky dar, auf die im Anschluss
 an den Beweis eingegangen wird.
 
 Der vorgestellte Beweis beruht auf jenen von Gordon in \cite{Gor2}
-und Guédon in \cite{Gued}. Die Idee, die in \ref{Sortierungsnorm} vorgestellte
+und Guédon in \cite{Gued}.
+Die Idee, die in \ref{Sortierungsnorm} vorgestellte
 Sortierungsnorm für eine wesentliche Abschätzung zu benutzen, stammt von
 Gordon und wurde von Guédon in \cite{Gued} verwendet.
 
@@ -808,34 +828,39 @@ Gordon und wurde von Guédon in \cite{Gued} verwendet.
 Die Konstante $C_{BS}$ lässt sich zwar nicht gut bestimmen, der zweite Teil der
 angegebenen Konstante allerdings kann mit elementaren Methoden angenähert
 werden und beträgt etwa $14.4$ (ist also im Vergleich zur Konstante bei
-Gluskin recht klein). Die Aufteilung des Beweises in die verschiedenen Fälle
+Gluskin recht klein).
+Die Aufteilung des Beweises in die verschiedenen Fälle
 ist nicht willkürlich -- im Falle von $m \le \frac 2{13}(n+1)$ ist nämlich eine
 sehr wohlwollende Abschätzung nach unten für $\E(\gamma_m^\ast)$ bekannt (vgl.
 \ref{UntereSchrankeDesErwartungswertsVonAbsolutenN01Ordnungsstatistiken}),
 welche nicht nur die gesuchte Wachstumsordnung widerspiegelt, sondern dies auch
-noch mit Konstante $1$ erfüllt. Abstrahiert man sich von diesem wohlwollenden
+noch mit Konstante $1$ erfüllt.
+Abstrahiert man sich von diesem wohlwollenden
 Fall so braucht man nur jene $m \le n$ zu betrachten, für welche ein
 $\alpha \in \R_{>0}$ existiert, sodass einerseits $\E(\gamma_m^\ast) > 1$ gilt
 und $\E(\gamma_m^\ast)-1\ge\alpha \sqrt{\log\left(1+\frac n m \right)}$ ist.
 Die vorgenommene Abschätzung, um von $\frac{N+1}m$ auf $\frac n m$ zu kommen
 ist zwar etwas grob, sichert allerdings ohne größere Mühe eine multiplikative
-Konstante vor dem logarithmischen Term. Zu beachten gilt aber auch, dass die
+Konstante vor dem logarithmischen Term.
+Zu beachten gilt aber auch, dass die
 oben erwähnte Abschätzung mit $\alpha > 0$ sich im Nenner des gesamten
 Ausdrucks wiederfindet, sodass ein möglicherweise sehr kleines $\alpha$ eine
 schlechtere Abschätzung liefert, weil der berechenbare Teil der Konstante dann
 den Faktor $\frac 1 \alpha$ enthält.\parag
 Wie vor dem Satz erwähnt, stellt der Satz von Milman--Schechtman eine Ergänzung
-zum Satz von Dvoretzky dar. Um diesen Sachverhalt genau notieren zu können,
+zum Satz von Dvoretzky dar.
+Um diesen Sachverhalt genau notieren zu können,
 beobachten wir zunächst, dass es für alle $c \in \!\ ]0, \nicefrac 1 2[$ ein
 $n_0 \in \N$ gibt, sodass für alle $n \in \N_{\ge n_0}$ gilt:
 \begin{align*}
 n&\ge\max\meng{\left(\frac 2{1-2c}\right)^2,\frac 1 {c^{10}}}\text.\tag{$\ast$}
 \end{align*}
-Seien nun $c\in\!\ ]0,\nicefrac 12[$ und $n\in\N$. Dann gilt:
+Seien nun $c\in\!\ ]0,\nicefrac 12[$ und $n\in\N$.
+Dann gilt:
 \begin{align*}
 \frac{\sqrt n} 2 - 1 \ge c\sqrt n & \iff\left(\frac 1 2-c\right)\sqrt n \ge 1\\
 &\iff n\ge\left(\frac1{\frac 12-c}\right)^2=\left(\frac2{1-2c}\right)^2\tag 1\\
-\frac 1 {10}\log(n) \le \frac 1 4 \log(c \sqrt n)&\iff 
+\frac 1 {10}\log(n) \le \frac 1 4 \log(c \sqrt n)&\iff
 \log\left(n^{\nicefrac 2 5} \right) \le \log(c\sqrt n)\\
 &\iff n^{\nicefrac 25}\le cn^{\nicefrac 1 2} \iff n \ge \frac 1 {c^{10}}
 \text.\tag 2
@@ -846,26 +871,27 @@ Erfüllt $n$ also die Eigenschaft $(\ast)$, so gilt
 \overset{(1)}\le \frac 1 4 \log\left(\frac{\sqrt n}2-1 \right)
 < \frac 1 4 \log\left(\floor{\frac{\sqrt n}2}\right)\text. \tag 3
 \end{align*}
-Ist also $(E,\norm\cdot_E)$ ein $n$--dimensionaler $\R$--Vektorraum, 
+Ist also $(E,\norm\cdot_E)$ ein $n$--dimensionaler $\R$--Vektorraum,
 $m \in\haken n$ und erfüllt $n$ die Eigenschaft $(\ast)$, so ist der Satz von
 Dvoretzky oder der Satz von Milman--Schechtman anwendbar, sodass es in beiden
 Fällen ein $F \le E$ mit $\dim F = m$ gibt, dessen
 Banach--Mazur--Abstand zu $\ell_2^m$ gut abgeschätzt werden kann.
 
 Die Bedingungen $(1),(2)$ können zu konkreten Berechnungen benutzt werden.
-Seien dazu $f:\!\ ]0, \nicefrac 1 2[ \rightarrow \R, 
-x \mapsto \left(\frac x{1-2x}\right)^2$ und 
+Seien dazu $f:\!\ ]0, \nicefrac 1 2[ \rightarrow \R,
+x \mapsto \left(\frac x{1-2x}\right)^2$ und
 $g:\!\ ]0, \nicefrac 1 2[ \rightarrow \R, x \mapsto \frac 1 {x^{10}}$.\\
 Dann ist $f$ streng monoton wachsend und $g$ streng monoton fallend.\\
 Die Abbildung $h : \R \rightarrow \R, x \mapsto x^5 + x - \nicefrac 12$
-besitzt nach den Zwischenwertsatz eine Nullstelle $c_0 \in \R$ (und auch
-genau eine, weil $h$ streng monoton wachsend ist). Offensichtlich ist
+besitzt nach dem Zwischenwertsatz eine Nullstelle $c_0 \in \R$ (und auch
+genau eine, weil $h$ streng monoton wachsend ist).
+Offensichtlich ist
 $c_0 < \nicefrac 1 2$, denn $h(\nicefrac 1 2) > 0$ und $c_0 > 0$, denn
 $h(0) < 0$.\\
 Zudem gilt $f(c_0) = g(c_0)$. Das bedeutet, dass die Kenntnis von $c_0$ ein
 bezüglich obiger Berechnungen minimales $n \in \N$ liefert.\\
 Um eine Größenordnung des $n$ zu erhalten, betrachten wir $c_1:=\frac 9{20}$.\\
-Es gilt $h(c_1) = \frac{59049}{3200000}+ \frac 9 {20}- \frac 1 2 = 
+Es gilt $h(c_1) = \frac{59049}{3200000}+ \frac 9 {20}- \frac 1 2 =
 - \frac{100951}{3200000}$ (also $c_1$ "`nahe bei"' $c_0$).\\
 Sei $N \in \N$ minimal mit der Eigenschaft $(\ast)$ bezüglich $c_1$.\\
 Durch $(1)$ hat man $N \ge 400$, während $(2)$ liefert

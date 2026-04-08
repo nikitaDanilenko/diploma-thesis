@@ -9,8 +9,8 @@ Dann gilt:
 	\int_0^x t^{n-1-m}(1-t)^m dt \le x^{n-m}(1-x)^m$.
 	\item \label{AbschaetzungDerUnvollstaendigenBetafunktion2}
 	$\forall\, y \in \R_{>0}\, \forall\, l \in \haken {n-1}_0:
-	\int_{y}^\infty tu(t)^{n-l}(1-u(t))^ldt \le
-	\int_0^{u(y)}t^{n-l-1}(1-t)^ldt$.
+	\int_{y}^\infty tu(t)^{n-l}(1-u(t))^l dt \le
+	\int_0^{u(y)}t^{n-l-1}(1-t)^l dt$.
 \end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -41,7 +41,7 @@ Damit gilt wegen $\alpha(0) = 0$:
 (2) Seien $y \in \R_{>0}$ und $l \in \haken {n-1}_0$.\\
 Dann ist $n-l \ge 1$ und es gilt:
 \begin{align*}
-&\int_y^\infty t u(t)^{n-l}(1-u(t))^ldt
+&\int_y^\infty t u(t)^{n-l}(1-u(t))^l dt
 = \int_y^\infty u(t)^{n-l-1}(1-u(t))^l t u(t)dt\\
 \overset{\refclaim{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN01}
 {EigenschaftenDerKomplementaerenVerteilungsfunktionVonN014}}\le
@@ -54,6 +54,6 @@ Dann ist $n-l \ge 1$ und es gilt:
 \int_y^\infty  u(t)^{n-l-1}(1-u(t))^l \abs{u'(t)}dt
 = \int_{]y, \infty[}u(t)^{n-l-1}(1-u(t))^l \abs{u'(t)}dt\\
 \overset{\substack{\text{Transf.}\\\text{mit }u}}=&\,
-\int_{]0,u(y)[}t^{n-l-1}(1-t)^ldt = \int_0^{u(y)} t^{n-l-1}(1-t)^ldt
+\int_{]0,u(y)[}t^{n-l-1}(1-t)^l dt = \int_0^{u(y)} t^{n-l-1}(1-t)^l dt
 \end{align*}
 \end{proof}
