@@ -10,7 +10,7 @@
 % Double stroked R for reals
 \newcommand{\R}{\ensuremath{\mathbb{R}}}
 
-% Double stroked K for a field (K as in "`Körper"'). Very common in Banach 
+% Double stroked K for a field (K as in "Körper"). Very common in Banach
 % space analysis. Same for F (as in field) for texts in english.
 \newcommand{\K}{\ensuremath{\mathbb{K}}}
 \newcommand{\F}{\ensuremath{\mathbb{F}}}
@@ -84,23 +84,8 @@
 
 \newcommand{\opnorm}[3]{\left\|#1\right\|_{\scriptscriptstyle{#2 \rightarrow #3}}}
 
-% Puts [] around the argument
-\newcommand{\klasse}[1]{\left[#1\right]}
-
 % Simplifies the \lim command
 \newcommand{\Limes}[2]{\underset{#1\to #2}{\lim}}
-
-% limsup
-\newcommand{\Lims}[2]{\underset{#1\to #2}{\overline{\lim}}}
-
-% liminf
-\newcommand{\Limi}[2]{\underset{#1\to #2}{\underline{\lim}}}
-
-% lim from below
-\newcommand{\Limup}[2]{\underset{#1\nearrow #2}{\lim}}
-
-% lim from above
-\newcommand{\Limdown}[2]{\underset{#1\searrow #2}{\lim}}
 
 % creates a paragraph
 \newcommand{\absatz}{\hfill \medskip \newline}
@@ -112,63 +97,19 @@
 \newcommand{\id}{\text{id}\,}
 
 % Abbreviations
-\newcommand{\Def}{\mathop{\rm Def}\nolimits}    % domain
 
-\newcommand{\Kern}   {\mathop{\rm Kern}\nolimits}   % kernel
-\newcommand{\Bild}   {\mathop{\rm Bild}\nolimits}   % range
-\newcommand{\Spur}   {\mathop{\rm Spur}\nolimits}   % trace
-\newcommand{\Inn}    {\mathop{\rm int}\nolimits}    % interior
-\newcommand{\Syl}    {\mathop{\rm Syl}\nolimits}    % sylow groups
-\newcommand{\minpol} {\mathop{\rm minPol}\nolimits} % minimal polynomial
-\newcommand{\charpol}{\mathop{\rm charPol}\nolimits}% characteristic polynomial
-\newcommand{\chark}  {\mathop{\rm char}\nolimits}   % characteristic (rings)
-\newcommand{\grad}   {\mathop{\rm grad}\nolimits}   % degree
-\newcommand{\sgn}    {\mathop{\rm sgn}\nolimits}    % sign
-\newcommand{\Pot}    {\mathop{\rm Pot}\nolimits}    % power set
-\newcommand{\End}    {\mathop{\rm End}\nolimits}    % endomorphisms
-\newcommand{\Aut}    {\mathop{\rm Aut}\nolimits}    % automorphisms
-\newcommand{\Hom}    {\mathop{\rm Hom}\nolimits}    % homomorphisms
-\newcommand{\Epi}    {\mathop{\rm Epi}\nolimits}    % epimorphisms
-\newcommand{\Mon}    {\mathop{\rm Mon}\nolimits}    % monomorphisms
-\newcommand{\Iso}    {\mathop{\rm Iso}\nolimits}    % isomorphisms
-\newcommand{\Fix}    {\mathop{\rm Fix}\nolimits}    % fix point set
-\newcommand{\Inv}    {\mathop{\rm Inv}\nolimits}    % units
-\newcommand{\ggt}    {\mathop{\rm ggT}\nolimits}    % greatest common divisor
-\newcommand{\kgv}    {\mathop{\rm kgV}\nolimits}    % least common multiple
-\newcommand{\inv}    {^{-1}}                        % to the power of -1
-\newcommand{\ord}    {\mathop{\rm ord}\nolimits}    % degree of a group element
-\newcommand{\Gal}    {\mathop{\rm Gal}\nolimits}    % galois group
-\newcommand{\Mat}    {\mathop{\rm Mat}\nolimits}
-\newcommand{\Umg}    {\mathop{\rm Umg}\nolimits}
-\newcommand{\pr}     {\mathop{\rm pr}\nolimits}
-\newcommand{\spann}  {\mathop{\rm span}\nolimits}
-\newcommand{\conv}   {\mathop{\rm conv}\nolimits}
-%induction stuff
-\newcommand{\ia}{\textsl{Induktionsanker:}}
-\newcommand{\iv}{\textsl{Induktionsannahme:}}
-\newcommand{\is}{\textsl{Induktionsschritt:}}
+\newcommand{\Kern}   {\mathop{\textrm{Kern}}\nolimits}   % kernel
+\newcommand{\Bild}   {\mathop{\textrm{Bild}}\nolimits}   % range
+\newcommand{\Inn}    {\mathop{\textrm{int}}\nolimits}    % interior
+\newcommand{\sgn}    {\mathop{\textrm{sgn}}\nolimits}    % sign
+\newcommand{\Pot}    {\mathop{\textrm{Pot}}\nolimits}    % power set
+\newcommand{\Hom}    {\mathop{\textrm{Hom}}\nolimits}    % homomorphisms
+\newcommand{\Inv}    {\mathop{\textrm{Inv}}\nolimits}    % units
+\newcommand{\inv}    {^{-1}}                             % to the power of -1
+\newcommand{\Mat}    {\mathop{\textrm{Mat}}\nolimits}
+\newcommand{\pr}     {\mathop{\textrm{pr}}\nolimits}
 
-% "`=>"' and "`<="'
-\newcommand{\rueck}{\enquote{$\Leftarrow$}:}
-\newcommand{\hin}{\enquote{$\Rightarrow$}:}
-
-% same for subset and supset
-\newcommand{\teilmenge}{\enquote{$\subseteq$}:\\}
-\newcommand{\obermenge}{\enquote{$\supseteq$}:\\}
-
-% some common distributions (not common notation)
-\newcommand{\hyp}{\textsl{Hyp}} %hypergeometric
-\newcommand{\ber}{\textsl{Ber}} %Bernoulli
-\newcommand{\cau}{\textsl{Cau}} %Cauchy
-\newcommand{\bin}{\textsl{Bin}} %binomial
-\newcommand{\poi}{\textsl{Poi}} %Poisson
-\newcommand{\Var}{\textsl{Var}} %variance
-
-\newcommand{\erf}{\mathop{\textrm erf}\nolimits}
-
-% direct and orthogonal sum - if you find a single sign for this one, let
-% me know ;)
-\newcommand{\orth}{\text{\textcircled{$\bot$}}}
+\newcommand{\erf}{\mathop{\textrm{erf}}\nolimits}
 
 % litte shorter for single letters
 \newcommand{\mca}{\mathcal{A}}
@@ -231,15 +172,12 @@
 % \varepsilon looks great, but is way to long
 \newcommand{\eps}{\varepsilon}
 
-% tautology (quick and dirty)
-\newcommand{\tteq}{\dashv \vdash}
-
 % implication with extra space
 \newcommand{\folgt}{\, \Rightarrow \,}
 
 % creates two links to the same object, respecting the current value
 % (ref). For instance "\shortref{fig:figure}{Fig.}"' will create a blue
-% "`Fig. 1"', where both parts link to the figure.
+% "Fig. 1", where both parts link to the figure.
 \newcommand{\shortref}[2]{\hyperref[#1]{#2} \ref{#1}}
 
 % inner produkt in "langle"-notation.
@@ -281,6 +219,3 @@
 \newcommand{\restrict}[2]{#1\vrule_{{}_{\scriptstyle #2}}}
 
 \newcommand{\refclaim}[2]{\ref{#1}.(\ref{#2})}
-\newcommand{\refcl}[2]{\ref{#1}.({\ref{#1#2}})}
-
-\newcommand{\claim}[1]{\item \label{\thesection{#1}}}
