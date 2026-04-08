@@ -1,6 +1,40 @@
-\documentclass[a4paper]{thesis}
+\documentclass[a4paper]{book}
+
+
+
+\usepackage{ucs}
+%\usepackage{dinbrief}
+\usepackage[utf8]{inputenc}
+\usepackage[OT2, T1]{fontenc}
+\usepackage[ngerman]{babel}
+%\usepackage[russian]{babel}
+\usepackage{altstyle}
+\usepackage{braket}
+%\usepackage{enumitem}
+%\RequirePackage[l2tabu, orthodox]{nag}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{eurosym}
+%\usepackage{ulsy}  % Not available in TeX Live; not used in this document
+\usepackage{byname}
+\usepackage{nameref}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black]{hyperref}
+\usepackage{smartref}
+\usepackage{bookmark}
+\usepackage{titleref}
+\usepackage{enumerate}
+\usepackage{rotating}
+\usepackage{stmaryrd}
+\usepackage{nicefrac}
+\usepackage{ifsym}
+
 \include{MathKernel}
 \include{Theorems}
+
 \allowdisplaybreaks[1]
 \numberwithin[\roman]{equation}{sat}
 
@@ -138,7 +172,7 @@ Aussagen nur im Falle endlichdimensionaler Räume anwenden, allerdings ist der
 Mehraufwand für die Beweise im Unendlichdimensionalen durchaus vertretbar.\\
 Wir beginnen mit einem ebenso trivialen wie nützlichen Lemma.
 
-\input{Kapitel1/HinreichendeBedingungFürDieInjektivitätLinearerAbbildungen}
+\input{Kapitel1/HinreichendeBedingungFuerDieInjektivitaetLinearerAbbildungen}
 
 Es stellt sich heraus, dass das in diesem Lemma beschriebene Infimum eine
 weitere nützliche Rolle spielt.
@@ -162,7 +196,7 @@ abgeschlossenes Bild in $F$.\\
 Nimmt man jedoch die erwähnten Voraussetzungen hinzu, so erhält man den
 folgenden Sachverhalt.
 
-\input{Kapitel1/NotwendigeBedingungFürDieInjektivitätLinearerAbbildungen}
+\input{Kapitel1/NotwendigeBedingungFuerDieInjektivitaetLinearerAbbildungen}
 \parag
 Das zuvor beschriebene Infimum kann also benutzt werden, um die Operatornorm
 der inversen Abbildung zu bestimmen. Wir notieren das.
@@ -217,14 +251,14 @@ kompakt ist. Die beiden letztgenannten Voraussetzungen implizieren aber die
 endliche Dimension von $E$ und $F$, wie das nachfolgende Lemma zeigt, sodass
 dieser Satz mit dem obigen Beweis nicht weiter verallgemeinert werden kann.
 
-\input{Kapitel1/KompaktheitDerSphäre}
+\input{Kapitel1/KompaktheitDerSphaere}
 \parag
 Eine nützliche Folgerung aus diesem Satz \ref{ExistenzEinerBanachMazurAbbildung}
 ist die Existenz einer Basis, welche die Äquivalenz der Bildhalbnorm auf dem
 $\K^n$ zu jeder anderen Norm nur mit Hilfe des Banach--Mazur--Abstands
 ausdrückt.
 
-\input{Kapitel1/Normäquivalenzbasis}
+\input{Kapitel1/Normaequivalenzbasis}
 \parag
 Insbesondere gibt es eine Basis $x \in E^n$ mit der Eigenschaft
 \[\frac 1 d \norm \cdot _{\infty, n} \le \frac 1 d \norm\cdot_{2,n}
@@ -242,7 +276,7 @@ $n$ abhängt) ist auch für $\ell_p(\N, \K)$ mit dem jeweils gleichen Beweis
 gültig. In der gewählten Formulierung sieht man jedoch die Äquivalenzkonstanten
 direkt in der Formulierung.
 
-\input{Kapitel1/ÄquivalenzkonstantenFürPNormen}
+\input{Kapitel1/AequivalenzkonstantenFuerPNormen}
 \parag
 Die beiden folgenden Lemmata werden wir dafür verwenden, das Supremum bzw.
 Infimum einer stetigen Funktion über einer dichten Teilmenge darzustellen
@@ -256,7 +290,7 @@ einer dichten Teilmenge zu entfernen und weiterhin Dichtheit zu haben.
 Ebenso wie der punktweise Limes gleichmäßig lipschitz--stetiger Funktionen
 bereits selbst lipschitz--stetig ist, ist es auch bei dem Supremum der Fall.
 
-\input{Kapitel1/GleichmässigeLipschitzstetigkeit}
+\input{Kapitel1/GleichmaessigeLipschitzstetigkeit}
 
 \input{Kapitel1/GeradeUngeradeFunktionen}
 \parag
@@ -317,7 +351,7 @@ Schließlich sei für alle $n \in \N$:
 Auch hier treffen wir die Vereinbarung, dass für $n = 1$ der Index weggelassen
 werden möge.
 
-\input{Kapitel2/DefinitionUnabhängig}
+\input{Kapitel2/DefinitionUnabhaengig}
 
 Für Zufallsgrößen ist bekannt, dass die Unabhängigkeit die
 Unkorreliertheit impliziert (siehe z. B. \cite{Irle}, 10.16).
@@ -381,7 +415,7 @@ einerseits sichert es die Existenz beliebig vieler unabhängiger, identisch
 verteilter Zufallsgrößen zu und garantiert dabei noch andererseits, dass all
 diese überall endlich sind.
 
-\input{Kapitel2/ExistenzFVerteilterZufallsgrössen}
+\input{Kapitel2/ExistenzFVerteilterZufallsgroessen}
 
 \input{Kapitel2/NormalNTupel}
 
@@ -559,14 +593,14 @@ $L_2$--Abstände innerhalb Gordon'scher Paare von besonderem Interesse. Mit dem
 eben bewiesenen Lemma können diese einfach bestimmt werden. Diese Abstände wurden bereits von Gordon in \cite{Gor}, \cite{Gor2} in modifizierter Weise
 bestimmt.
 \newpage
-\input{Kapitel3/AbständeInGordonschenPaaren}
+\input{Kapitel3/AbstaendeInGordonschenPaaren}
 \parag
 Da das "`Min--Max"' aus dem Gauß'schen Min--Max--Satz für Gordon'sche Paare
 sinnvollerweise zu einem "`Inf--Sup"' umgewandelt werden sollte, brauchen wir
 die Beschränktheit gewisser Mengen, welche wir in dem nachfolgenden Lemma
 notieren.
 
-\input{Kapitel3/BeschränktheitGordonscherPaare}
+\input{Kapitel3/BeschraaenktheitGordonscherPaare}
 \parag
 Die in Kapitel 2 getroffenen Vorbereitungen für die Verallgemeinerung gewisser
 Erwartungswertungleichungen wurde nur für abzählbare Mengen getroffen.
