@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{mathpazo}
 \usepackage[ngerman]{babel}
+\usepackage[german=quotes]{csquotes}  % Proper German quotation marks with \enquote{}
 \usepackage{altstyle}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -70,7 +71,7 @@ von unendlichen Familien normalverteilter Zufallsgrößen verallgemeinert.
 Unter Zuhilfenahme des verallgemeinerten Satzes wird es schließlich möglich
 sein, die Sätze von Dvoretzky, Milman--Schechtman und Gluskin zu beweisen.
 Außerdem folgen Beweise für das Johnson--Lindenstrauss--Lemma und ein
-Satz über die "`Restricted Isometry Property"'.
+Satz über die \enquote{Restricted Isometry Property}.
 
 In den ersten zwei Kapiteln werden funktionalanalytische und maßtheoretische
 Grundlagen wiederholt, das dritte Kapitel verallgemeinert den Gauß'schen
@@ -236,7 +237,8 @@ stets Banach--Mazur--Abbildungen.
 \parag
 Im Beweis ist eingegangen, dass $(E, \norm\cdot_E)$
 ein Banachraum ist, $\Inv(E, F)\neq \emptyset$ gilt und $\kran{L(E,F)}01$
-kompakt ist. Die beiden letztgenannten Voraussetzungen implizieren aber die
+kompakt ist.
+Die beiden letztgenannten Voraussetzungen implizieren aber die
 endliche Dimension von $E$ und $F$, wie das nachfolgende Lemma zeigt, sodass
 dieser Satz mit dem obigen Beweis nicht weiter verallgemeinert werden kann.
 
@@ -592,8 +594,8 @@ Diese Abstände wurden bereits von Gordon in \cite{Gor}, \cite{Gor2} in modifizi
 \newpage
 \input{Kapitel3/AbstaendeInGordonschenPaaren}
 \parag
-Da das "`Min--Max"' aus dem Gauß'schen Min--Max--Satz für Gordon'sche Paare
-sinnvollerweise zu einem "`Inf--Sup"' umgewandelt werden sollte, brauchen wir
+Da das \enquote{Min--Max} aus dem Gauß'schen Min--Max--Satz für Gordon'sche Paare
+sinnvollerweise zu einem \enquote{Inf--Sup} umgewandelt werden sollte, brauchen wir
 die Beschränktheit gewisser Mengen, welche wir in dem nachfolgenden Lemma
 notieren.
 
@@ -752,13 +754,13 @@ zum ersten Mal ein anderes $T$ als $S^{m-1}$ verwenden werden.
 \input{Kapitel4/JohnsonLindenstraussLemma}
 \parag
 Wir können also eine endliche Menge von normierten Vektorendifferenzen so
-abbilden, dass alle Bilder "`fast"' normiert sind.
+abbilden, dass alle Bilder \enquote{fast} normiert sind.
 Unter etwas schärferen Voraussetzungen können aber auch bestimmte unendliche Mengen (nicht
 notwendigerweise spezieller Differenzen) ähnlich abgebildet werden.
 
 \input{Kapitel4/RIP}
 \parag
-Die "`Ausdünnung"' der Vektoren in diesem Satz lässt höchstens ein Drittel der
+Die \enquote{Ausdünnung} der Vektoren in diesem Satz lässt höchstens ein Drittel der
 Komponenten von $0$ verschieden.
 Auch wenn dies zunächst sehr schwach erscheint
 (tatsächlich wird die Anzahl der von $0$ verschiedenen Komponenten noch stärker
@@ -771,7 +773,7 @@ In den Sätzen \ref{ExistenzFastIsometrischerAbbildungen},
 jedoch stets ein einzelner Operator und nicht wie in
 \ref{ExistenzEingeschraenkterFastIsometrien} eine (in gewisser Hinsicht große)
 Menge solcher Operatoren.
-Der Grund für diese Abschwächung ist der, dass die "`Größe"' der Menge sich nicht ohne den Gauß'schen Operator auf
+Der Grund für diese Abschwächung ist der, dass die \enquote{Größe} der Menge sich nicht ohne den Gauß'schen Operator auf
 einem bestimmten Wahrscheinlichkeitsraum beschreiben lässt, während die
 Aussagen der genannten Sätze für ihre Formulierung keinen solchen Raum
 benötigen.\parag
@@ -885,7 +887,7 @@ Zudem gilt $f(c_0) = g(c_0)$. Das bedeutet, dass die Kenntnis von $c_0$ ein
 bezüglich obiger Berechnungen minimales $n \in \N$ liefert.\\
 Um eine Größenordnung des $n$ zu erhalten, betrachten wir $c_1\coloneqq \frac 9{20}$.\\
 Es gilt $h(c_1) = \frac{59049}{3200000}+ \frac 9 {20}- \frac 1 2 =
-- \frac{100951}{3200000}$ (also $c_1$ "`nahe bei"' $c_0$).\\
+- \frac{100951}{3200000}$ (also $c_1$ \enquote{nahe bei} $c_0$).\\
 Sei $N \in \N$ minimal mit der Eigenschaft $(\ast)$ bezüglich $c_1$.\\
 Durch $(1)$ hat man $N \ge 400$, während $(2)$ liefert
 \[N \ge \left(\frac {20}9 \right)^{10} = \frac{10240000000000}{3486784401}
