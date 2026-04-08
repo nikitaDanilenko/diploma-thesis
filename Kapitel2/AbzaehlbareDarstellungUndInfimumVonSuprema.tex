@@ -1,0 +1,102 @@
+\begin{satz}{Fortsetzung einer endlichen Erwartungswertungleichung (I)}
+            {AbzaehlbareDarstellungUndInfimumVonSuprema}
+Seien $I, J$ nichtleere, abzählbare Mengen,
+$X, Y: I\times J \rightarrow \mcm(\Omega, \mfa, \R)$, sowie
+$\mci := \Pot_{ne}(I)$ und $\mcj := \Pot_{ne}(J)$.\\
+Es gelte:
+\begin{enumerate}[(a)]
+\item $\forall\,\omega\in\Omega\,\forall\, Z \in \meng{X, Y}: 
+      \menge{Z(i, j)(\omega)}{(i, j)\in I\times J}$
+      beschränkt.
+\item $\forall\, A \in \mci \cup \meng I \, \forall\, B \in \mcj \cup \meng J:
+     \Inf{i \in A}\Sup{j \in B} X(i, j) = \Sup{j \in B}\Inf{i \in A} X(i,j)$.
+\item $\forall A \in \mci \cup \meng I  \forall B \in \mcj \cup \meng J:
+     \Inf{i \in A}\Sup{j \in B} X(i, j), \Inf{i \in A}\Sup{j \in B} Y(i, j)
+     \in L_1(\Omega, \mfa, \Prim, \R)$.   
+\item $\forall\, A \in \mci \, \forall\, B \in \mcj:
+\E\bigg(\underset{i \in A}\inf\,\underset{j \in B}\sup\, X(i, j) \bigg)
+\le \E\bigg(\underset{i \in A}\inf\,\underset{j \in B}\sup\, Y(i, j) \bigg)$.\\
+(Alle genannten Abbildungen sind wegen $(a)$ und $I \neq \emptyset \neq J$
+ wohldefiniert.)
+\end{enumerate}
+Dann gilt \[\E\left(\inf_{i \in I}\,\sup_{j \in J}\, X(i, j) \right)
+\le \E\left(\inf_{i \in I}\,\sup_{j \in J}\, Y(i, j) \right)\text.\]
+\end{satz}
+\begin{proof}
+Definiere $W_j := \Inf{i\in I} X(i, j)$ für alle $j \in J$.\\
+Wegen (a) ist $\menge{W_j(\omega)}{j\in J}$ für alle $\omega \in \Omega$ nach
+oben beschränkt.\\
+Für jedes $k\in J$ ist $W_k$ und
+\begin{align}
+\sup_{j \in J}W_j = \sup_{j \in J}\inf_{i \in I}X(i, j) \overset{(b)}= 
+\inf_{i \in I}\sup_{j \in J}X(i, j)\quad \text{ nach (c) integrierbar.}
+\label{feeeieq:1}
+\end{align}
+Damit sind die Voraussetzungen von
+\ref{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen} für
+$\folge W j J$ erfüllt. Daher ist
+\[\menge{\E\left(\inf_{i\in I}\sup_{j \in B}X(i,j) \right)}{B \in \mcj}
+\overset{\eqref{feeeieq:1}}= 
+ \menge{\E\left(\sup_{j \in B}W_j \right)}{B \in \mcj}\]
+nach \refclaim{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen}
+{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen1} nichtleer und nach
+oben beschränkt und es gilt:
+\begin{align}
+& \sup\menge{\E\left(\inf_{i \in I}\sup_{j \in B}X(i, j) \right)}{B \in \mcj}
+\notag\\
+ =&\,  \sup\menge{\E\left(\sup_{j \in B}W_j \right)}{B \in \mcj}
+ \overset{\refclaim{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen}
+ {EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen2}}=
+\E\left(\sup_{j \in J}W_j \right)\notag\\ 
+\overset{(b)}= &\,\E\left(\inf_{i\in I}\sup_{j\in J}X(i,j)\right)\text.
+\label{feeeieq:2}
+\end{align}
+Seien nun $Z_i := \Sup{j \in J}Y(i, j)$ für alle $i \in I$.\\
+Wegen (a) ist $\menge{Z_i(\omega)}{i\in I}$ nach unten beschränkt für alle
+$\omega \in \Omega$.\\
+Für alle $l\in I$ ist $Z_l$ und
+\[\inf_{i \in I}Z_i = \inf_{i \in I}\sup_{j \in J}Y(i, j) \quad
+\text{ nach (c) integrierbar.} \]
+Damit sind auch die Vorausssetzungen von
+\ref{EndlicheDarstellungDesInfimumsIntegrierbarerFunktionen} erfüllt. Also ist
+\[\menge{\E\left(\inf_{i\in A}\sup_{j\in J}Y(i,j)\right)}{A\in\mci}
+  =\menge{\E\left(\inf_{i\in A}Z_i\right)}{A\in\mci}\]
+nach \refclaim{EndlicheDarstellungDesInfimumsIntegrierbarerFunktionen}
+{EndlicheDarstellungDesInfimumsIntegrierbarerFunktionen1} nichtleer und nach
+oben beschränkt und es gilt:
+\begin{align}
+& \inf\menge{\E\left(\inf_{i\in A}\sup_{j\in J}Y(i,j)\right)}{A\in\mci}
+= \inf\menge{\E\left(\inf_{i \in A}Z_i \right)}{A \in \mci}\notag\\
+\overset{\refclaim{EndlicheDarstellungDesInfimumsIntegrierbarerFunktionen}
+{EndlicheDarstellungDesInfimumsIntegrierbarerFunktionen2}}=&
+\E\left(\inf_{i\in I}Z_i\right)=\E\left(\inf_{i\in I}\sup_{j\in J}Y(i,j)\right)
+\text.\label{feeeieq:3}
+\end{align}
+Seien nun $C \in \mci$ und $D \in \mcj$. Dann gilt
+\[ \inf_{i \in I}\sup_{j \in D}X(i, j) \le \inf_{i \in C}\sup_{j \in D}X(i,j)
+\quad \text{ und }\quad  
+\inf_{i\in C}\sup_{j\in D}Y(i,j)\le \inf_{i \in C}\sup_{j \in J}Y(i, j)\]
+und diese vier Abbildungen sind nach (c) integrierbar.\\
+Daher gelten diese Ungleichungen auch im Erwartungswert, sodass gilt:
+\begin{align*}
+\E\left(\inf_{i \in I}\sup_{j \in D}X(i, j) \right) & \le
+\E\left(\inf_{i \in C}\sup_{j \in D}X(i, j) \right) \overset{(d)}\le
+\E\left(\inf_{i \in C}\sup_{j \in D}Y(i, j) \right)\\
+&\le \E\left(\inf_{i \in C}\sup_{j \in J}Y(i, j) \right)\text.
+\end{align*}
+Somit erhält man
+\begin{align}
+&
+\sup\menge{\E\left(\inf_{i\in I}\sup_{j\in B}X(i,j)\right)}{B \in \mcj}\notag\\
+\le&\, \inf\menge{\E\left(\inf_{i\in A}\sup_{j\in J}Y(i,j)\right)}{A\in\mci}
+ \text. \label{feeeieq:4}\end{align}
+Dies liefert schließlich
+\begin{align*}
+& \E\left(\inf_{i\in I}\sup_{j\in J}X(i,j)\right) \overset{\eqref{feeeieq:2}}=
+\sup\menge{\E\left(\inf_{i \in I}\sup_{j \in B}X(i, j) \right)}{B \in \mcj}\\
+\overset{\eqref{feeeieq:4}}\le &
+\inf\menge{\E\left(\inf_{i\in A}\sup_{j\in J}Y(i,j)\right)}{A\in\mci}
+\overset{\eqref{feeeieq:3}}= \E\left(\inf_{i\in I}\sup_{j\in J}Y(i,j)\right)
+\end{align*}
+und damit die Behauptung.
+\end{proof}

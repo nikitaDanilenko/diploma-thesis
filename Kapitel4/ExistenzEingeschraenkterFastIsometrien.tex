@@ -1,0 +1,137 @@
+\begin{satz}{Existenz eingeschränkter Fast--Isometrien}
+            {ExistenzEingeschraenkterFastIsometrien}
+Seien $m, N \in \N$,
+$((\Omega, \mfa, \Prim), (\gamma, \delta, \widetilde g), (N, m, mN))$
+ein unabhängiges $(N(0,1),3)$--Tupel (zu $(3, (N, m, mN))$) und
+$g:=\Mat_{m,N} \circ \widetilde g$.\\
+Seien $(E, \norm\cdot_E)$ ein normierter $\R$--Vektorraum,
+$0\neq x \in E^n$ und $\emptyset \neq T \subseteq S^{m-1}$.\\
+Seien $G_x$ der Gauß'sche Operator zum Tupel $(x,g)$ 
+(vgl. \ref{GaussscherOperator}) und $(Z_{\gamma,x}, M_{\delta, T})$ das
+Auswertungspaar zu $(\gamma, \delta, x, T)$ (vgl. \ref{Auswertungspaar}).\\
+Es gelte:
+\begin{enumerate}[(a)]
+	\item $\norm\cdot_E \circ \bprod \cdot x _N \le \norm\cdot_{2, N}$,
+	\item $T = -T$,
+	\item $\E\left(M_{\delta, T}\right) < \E\left(Z_{\gamma, x} \right)$.
+\end{enumerate}
+Dann gilt $\E(Z_{\gamma, x}) > 0$, $\E(M_{\delta, T}) \ge 0$ und es gibt 
+$\mca \subseteq L(\ell_2^m, (E, \norm\cdot_E))$ mit:
+\begin{enumerate}[(1)]
+  \item\label{ExistenzEingeschraenkterFastIsometrien1}
+  $\mca \subseteq \Bild(G_x)$, es gibt $Q \in \mfa$ mit $\Prim(Q)>0$ und
+  $Q \subseteq G_x\inv(\mca)$, insbesondere also $\mca \neq \emptyset$.
+	\item \label{ExistenzEingeschraenkterFastIsometrien2}
+	$\forall\, A \in \mca: \inf\menge{\norm{At}_E}{t \in T} > 0$\\
+	Falls $T = S^{m-1}$, so ist jedes $A \in \mca$ injektiv.
+	\item \label{ExistenzEingeschraenkterFastIsometrien3}
+	$\forall\, A \in \mca:
+	\dfrac{\sup\menge{\norm{At}_E}{t \in T}}{\inf\menge{\norm{At}_E}{t \in T}}
+	\le \dfrac{\E\left(Z_{\gamma, x} \right) + \E\left(M_{\delta, T}\right)}
+	{\E\left(Z_{\gamma, x} \right) - \E\left(M_{\delta, T}\right)}
+	=\dfrac{1 + \frac{\E(M_{\delta, T})}{\E(Z_{\gamma, x})}}
+	       {1 - \frac{\E(M_{\delta, T})}{\E(Z_{\gamma, x})}}$\\
+	Ist $T = S^{m-1}$, so gilt für jedes $A \in \mca$: 
+	$A\inv\in \Inv(A(\R^m),\R^m)$ und
+	\[\opnorm A {\R^m} E \opnorm{A\inv}{A(\R^m)}{\R^m}
+	\le \dfrac{1 + \frac{\E(M_{\delta, T})}{\E(Z_{\gamma, x})}}
+	       {1 - \frac{\E(M_{\delta, T})}{\E(Z_{\gamma, x})}}\text.\]
+\end{enumerate}
+Ist zusätzlich $\eps \in\!\  ]0, 1[$ mit
+$\E\left(M_{\delta, T}\right) \le \eps\E\left(Z_{\gamma, x} \right)$, so gilt
+auch
+\begin{enumerate}
+\item[(3')] \label{ExistenzEingeschraenkterFastIsometrien3strich}
+$\forall\, A \in \mca:
+	\dfrac{\sup\menge{\norm{At}_E}{t \in T}}{\inf\menge{\norm{At}_E}{t \in T}}
+	\le \dfrac{1 + \eps}	{1 - \eps}$\\
+	Gilt $T = S^{m-1}$, so ist für jedes $A \in \mca$:
+	\[\opnorm A {\R^m} E \opnorm{A\inv}{A(\R^m)}{\R^m}
+	\le \dfrac{1 + \eps}	{1 - \eps}\text.\]
+\end{enumerate}
+\end{satz}
+\begin{proof}
+Zunächst sind offenbar die Voraussetzungen von
+\ref{GordonschePaareUndSubeuklidischeBildhalbnormen} erfüllt.\\
+Seien
+\[f:= \inf_{t \in T} \, \norm \cdot_E \circ ev(t, \cdot) \circ G_x
+\quad \text{ und }\quad
+  h:= \sup_{t \in T} \, \norm \cdot_E \circ ev(t, \cdot) \circ G_x.\]
+Nach \refclaim{IntegrierbarkeitVonExtremaInGordonschenPaaren}
+{IntegrierbarkeitVonExtremaInGordonschenPaaren2} sind $f, h$ integrierbar.\\
+Wegen (b) und \refclaim{GordonschePaareUndSubeuklidischeBildhalbnormen}
+{GordonschePaareUndSubeuklidischeBildhalbnormen2} gilt weiter:
+\begin{align} \E\left(\inf_{t\in T}\bprod t \delta_m \right)
+	= - \E\left(\sup_{t\in T}\bprod t \delta_m \right) = 
+	- \E\left(M_{\delta,T}\right)\text.\tag {$\ast$}
+\end{align}
+Somit gilt wegen der Integrierbarkeit von $Z_{\gamma, x}$ und $M_{\delta, T}$
+(siehe \ref{Auswertungspaar}):
+\begin{align*}
+0 & \overset{(c)}< \E\left(Z_{\gamma, x}\right) - \E\left(M_{\delta, T} \right)
+\overset{(\ast)}= \E\left(Z_{\gamma, x}\right) 
++ \E\left(\inf_{t\in T}\bprod t \delta_m \right)\\
+&\overset{\refclaim{GordonschePaareUndSubeuklidischeBildhalbnormen}
+{GordonschePaareUndSubeuklidischeBildhalbnormen1}}\le \E(f) \le \E(h)
+\overset{\refclaim{GordonschePaareUndSubeuklidischeBildhalbnormen}
+{GordonschePaareUndSubeuklidischeBildhalbnormen1}}\le
+\E\left(Z_{\gamma, x}\right) + \E\left(M_{\delta, T} \right)\text.
+\end{align*}
+Somit $\E(Z_{\gamma,x}) - \E(M_{\delta, T}) \le
+\E(Z_{\gamma,x}) + \E(M_{\delta, T})$ und daher $\E(M_{\delta, T}) \ge 0$, also
+gilt wegen $(c)$ auch $\E(Z_{\gamma,x})>\E(M_{\delta, T}) \ge 0$.\\
+Seien nun $a:=\E(Z_{\gamma,x}) - \E(M_{\delta, T})$ und 
+$b:=\E(Z_{\gamma,x}) + \E(M_{\delta, T})$.\\
+Wegen $f \ge 0$ und $h \ge 0$ und nach obiger Rechnung gilt:
+\[ 0 < a \le \E(f) \le E(h) \le b\text.\]
+Mit der Integrierbarkeit von $f$ und $h$ sind somit die Voraussetzungen von
+\ref{Erwartungswertlemma} für $f, h, a, b$ erfüllt und für
+$Q :=\menge{\omega \in \Omega}{f(\omega)> 0 \wedge ah(\omega) \le bf(\omega)}$
+gilt daher (gemäß \ref{Erwartungswertlemma}): $Q\in \mfa$ und $\Prim(Q) > 0$.\\
+Sei nun $\mca:=G_x(Q)$.
+Dann ist $G_x\inv(\mca) \supseteq Q$.\\
+Sei $A \in \mca$. Dann existiert ein $\omega \in Q$ mit $A = G_x(\omega)$.\\
+Wegen $\omega \in Q$ ist also
+\[0 < f(\omega) = \inf_{t \in T}\norm{G_x(\omega)t}_E 
+    = \inf_{t \in T}\norm{At}_E \]
+und außerdem $ah(\omega) \le bf(\omega)$, was wegen $f(\omega)> 0$ und $a >0$
+auch $\frac{h(\omega)}{f(\omega)} \le \frac b a$ bedeutet, sodass mit
+$\E(Z_{\gamma, x})>0$ gilt:
+\begin{align*}
+&\,\frac{\sup\menge{\norm{At}_E}{t \in T}}
+       {\inf\menge{\norm{At}_E}{t \in T}}
+ =\frac{\sup\menge{\norm{G_x(\omega)t}_E}{t \in T}}
+       {\inf\menge{\norm{G_x(\omega)t}_E}{t \in T}}
+ = \frac{h(\omega)}{f(\omega)}\\ \le & \,\frac b a = 
+ \frac{\E(Z_{\gamma,x})+\E(M_{\delta, T})}{\E(Z_{\gamma,x})-\E(M_{\delta, T})}
+ = \frac{\E(Z_{\gamma,x})(1 + \frac{\E(M_{\delta, T})}{\E(Z_{\gamma,x})})}
+        {\E(Z_{\gamma,x})(1 - \frac{\E(M_{\delta, T})}{\E(Z_{\gamma,x})})}
+ = \frac{1 + \frac{\E(M_{\delta, T})}{\E(Z_{\gamma,x})}}
+        {1 - \frac{\E(M_{\delta, T})}{\E(Z_{\gamma,x})}}\text.
+ \end{align*}
+Ist $T = S^{m-1}$, so folgt mit $\inf\menge{\norm{At}_E}{t \in S^{m-1}} > 0$
+und $S^{m-1} = \kran{\ell^2_m}01$ nach 
+\ref{InjektivitätLinearerAbbildungenZwischenNormiertenRäumen} die Injektivität
+von $A$.\\
+Weiter ist der Raum 
+$(A(\R^m), \restrict{\norm\cdot_E}{A(\R^m)})$ ein endlichdimensionaler
+normierter Raum und damit ein Banachraum.\\
+Fasse nun $A$ als Abbildung $A:\R^m \rightarrow A(\R^m)$ auf.\\
+Dann ist $A$ bijektiv, linear und stetig, sodass nach
+\ref{OperatornormDerInversen} gilt:
+\[\opnorm{A\inv}{A(\R^m)}{\R^m} 
+= \frac 1 {\inf\menge{\norm{At}_E}{t \in S^{m-1}}}\text.\]
+Wegen $\opnorm A {\R^m} E = \sup\menge{\norm{At}_E}{t \in S^{m-1}}$ gilt also
+\[\opnorm A {\R^m} E \opnorm{A\inv}{A(\R^m)}{\R^m}
+= \frac{\sup\menge{\norm{At}_E}{t \in S^{m-1}}}
+       {\inf\menge{\norm{At}_E}{t \in S^{m-1}}}\text.\]
+Damit sind $(1)$, $(2)$, $(3)$ gezeigt.\\
+Sei nun $\eps\in\!\ ]0, 1[$ mit $\E(M_{\delta, T})\le \eps \E(Z_{\gamma,x})$.\\
+Wegen $\E(Z_{\gamma,x}) > 0$ ist also 
+$\frac{\E(M_{\delta, T})}{\E(Z_{\gamma,x})} \le \eps$ und daher
+\[\frac{1 + \frac{\E(M_{\delta, T})}{\E(Z_{\gamma,x})}}
+       {1 - \frac{\E(M_{\delta, T})}{\E(Z_{\gamma,x})}}
+\le \frac{1 + \eps}{1 - \frac{\E(M_{\delta, T})}{\E(Z_{\gamma,x})}}
+\le \frac{1 + \eps}{1 - \eps} \text.\]
+Wegen $(3)$ ist damit auch $(3')$ gezeigt.
+\end{proof}

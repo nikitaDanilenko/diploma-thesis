@@ -1,0 +1,17 @@
+\begin{definition}{Gordon'sches Paar}{GordonschesPaar}
+Sei $c \in \R$. Definiere
+\begin{align*}
+X&: \R^m \times \R^N \rightarrow L_2(\Omega, \mfa, \Prim, \R),
+    (t, v) \mapsto c\bprod t \delta _m + \bprod v \gamma_N\text,\\
+Y&: \R^m \times \R^N \rightarrow L_2(\Omega, \mfa, \Prim, \R),
+    (t, v) \mapsto \sprod \cdot v_N \circ ev(t, \cdot)\circ g\text.
+\end{align*}
+Dann heißt $(X, Y)$ \textbf{das Gordon'sche Paar zum Tupel}
+$(\gamma, \delta, g, c)$.\\
+Eine unmittelbare Folgerung aus dieser Definition ist, dass für alle
+$t \in \R^m$ und alle $v \in \R^N$ gilt:
+$\Bild X(t,v)\subseteq \R$ und $\Bild Y(t, v)\subseteq \R$.\\
+Ebenso evident ist
+$\forall\, (t, v) \in \R^m\times \R^N\, \forall\, \omega \in \Omega:
+Y(t, v)(\omega) = \sprod{g(\omega)t}v_N$.
+\end{definition}

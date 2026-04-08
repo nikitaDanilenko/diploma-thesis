@@ -1,0 +1,87 @@
+\begin{korollar}{Abstände bezüglich der p--Norm}{AbstaendeBezueglichDerPnorm}
+Seien $n \in \N$, $p \in [1, \infty]$, $\eps \in \,\! ]0,1[$ und $m \in \N$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+\item\label{AbstaendeBezueglichDerPnorm1} Ist $p <\infty$ und $m\le\frac 2\pi\eps^2 n^{1-\abs{\frac2p-1}}$,
+so gibt es ein injektives $A\in L(\ell_2^m, \ell_p^n)$, sodass gilt
+\[\opnorm A
+ {\ell_2^m}{\ell_p^n}\opnorm{A\inv}{A\left(\ell_2^m\right)}{\ell_2^m}
+\le \frac {1+\eps}{1-\eps}\text.\]
+\item\label{AbstaendeBezueglichDerPnorm2} Ist $p = \infty$ und $m \le \eps^2 \log(n)$, 
+so gibt es ein injektives $A\in L(\ell_2^m, \ell_\infty^n)$, sodass gilt
+\[\opnorm A
+ {\ell_2^m}{\ell_\infty^n}\opnorm{A\inv}{A\left(\ell_2^m\right)}{\ell_2^m}
+\le \frac {1+\eps}{1-\eps}\text.\]
+\end{enumerate}
+\end{korollar}
+\begin{proof}
+(1) Es gelte $p < \infty$ und
+$m\le\frac 2\pi\eps^2 n^{1-\abs{\frac2p-1}}$.\\
+Ist $p < 2$, so gilt nach \refclaim{AequivalenzkonstantenFuerPNormen}
+{AequivalenzkonstantenFuerPNormen3}:
+$\norm\cdot_{2,n}\le\norm\cdot_{p,n}\le n^{\frac 1p-\frac 12}\norm\cdot_{2,n}$,
+also nach \refclaim{EigenschaftenDesBanachMazurAbstands}
+{EigenschaftenDesBanachMazurAbstands3}
+\begin{align}
+d_{BM}\left(\ell_p^n, \ell_2^n \right) \le n ^{\frac 1 p - \frac 1 2}
+= n ^{\abs{\frac 1 p - \frac 1 2}}\text.\label{abdpneq:1}
+\end{align}
+Ist $p \ge 2$, so gilt nach \refclaim{AequivalenzkonstantenFuerPNormen}
+{AequivalenzkonstantenFuerPNormen3}:
+$\norm\cdot_{p,n}\le\norm\cdot_{2,n}\le n^{\frac 12-\frac 1p}\norm\cdot_{p,n}$,
+also nach \refclaim{EigenschaftenDesBanachMazurAbstands}
+{EigenschaftenDesBanachMazurAbstands3}
+\begin{align}
+d_{BM}\left(\ell_2^n, \ell_p^n\right) \le n ^{\frac 1 2 - \frac 1 p}
+= n ^{\abs{\frac 1 2 - \frac 1 p}} = n ^{\abs{\frac 1 p -\frac 12}}\text.
+\label{abdpneq:2}
+\end{align}
+Somit gilt
+\[m \le \frac 2 \pi \eps^2 n^{1- \abs{\frac 2 p - 1}}
+= \frac 2 \pi \eps^2 \frac n {\left(n^{\abs{\frac 1 p - \frac 1 2}}\right)^2}
+\overset{\substack{\eqref{abdpneq:1},\\\eqref{abdpneq:2}}}
+\le\frac 2 \pi \eps^2 \frac n {d_{BM}(\ell_p^n, \ell_2^n)^2}\]
+und damit sind die Voraussetzungen von
+\ref{ExistenzFastIsometrischerAbbildungen} erfüllt.\\
+Die Aussage (1) ist genau die Aussage von
+\ref{ExistenzFastIsometrischerAbbildungen}.\\
+(2) Es gelte $p=\infty$ und $m \le \eps^2 \log(n)$.\\
+Seien $(E,\norm\cdot_E):=\ell_\infty^n$, $T:=S^{m-1}$, $x:= (e_i^n)_{i=1}^n$,
+\[\bigg((\Omega, \mfa, \Prim), (\gamma,\delta,\widetilde g),(n, m, mn)\bigg)
+\text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(n,m,mn))\] (existiert nach
+\ref{ExistenzNormalNTupel}) und $(Z_{\gamma, x}, M_{\delta_T})$ das
+Auswertungspaar zu $(\gamma, \delta, x, T)$.\\
+Es gilt $x \neq 0$ und wegen $\bprod \cdot x_n = \id_{\R^n}$ gilt
+\begin{align}\norm\cdot_E \circ\bprod \cdot x _n
+= \norm\cdot_E = \norm\cdot_{\infty, n}
+\overset{\refclaim{AequivalenzkonstantenFuerPNormen}
+{AequivalenzkonstantenFuerPNormen2}}\le \norm\cdot_{2, n}\text. \tag {$a$}
+\end{align}
+Ferner ist $\emptyset \neq T$, $T=-T$ und $T \subseteq S^{m-1}$.\hfill $(b)$\\
+Schließlich gilt:
+\begin{align*}
+\E\left(M_{\delta, T} \right) 
+&= \E\left(\sup_{t \in S^{m-1}} \bprod t \delta_m \right)
+\overset{\ref{IterierteEuklidischeNorm}}= 
+\E\left(\norm\cdot_{2,m} \circ \delta \right)
+\overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}=
+a_m \overset{\refclaim{AbschaetzungEinesGammafunktionsquotienten}
+{AbschaetzungEinesGammafunktionsquotienten2}}\le \sqrt m\\
+&\overset{\text{Vor.}}\le \eps \sqrt{\log(n)}
+\overset{
+\refclaim{UntereSchrankeDesErwartungswertsVonAbsolutenN01Ordnungsstatistiken}
+{UntereSchrankeDesErwartungswertsVonAbsolutenN01Ordnungsstatistiken2}}\le
+\eps\E\left(\gamma_1^\ast \right) \overset{\ref{Ordnungsstatistik}}=
+\eps \E\left(\norm\cdot_{\infty, n}\circ\gamma\right)
+=\eps\E\left(Z_{\gamma,x}\right)\text. \tag {$c$}
+\end{align*}
+Wegen $(a), (b), (c)$ sind die Voraussetzungen von
+\ref{ExistenzEingeschraenkterFastIsometrien} erfüllt und wegen 
+$T = S^{m-1}$ gibt es 
+$\emptyset \neq \mca \subseteq L(\ell_2^m, \ell_\infty^n)$ mit
+\[\forall\, A \in \mca: A \text{ injektiv } \wedge \, 
+\opnorm A
+{\ell_2^m}{\ell_\infty^n}\opnorm{A\inv}{A\left(\ell_2^m\right)}{\ell_2^m}
+\le \frac {1+\eps}{1-\eps}\text.\]
+Wegen $\mca \neq \emptyset$ ist damit insbesondere (2) gezeigt.
+\end{proof}

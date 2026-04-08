@@ -1,0 +1,172 @@
+\begin{lemma}{Integrierbarkeit von Extrema in Gordon'schen Paaren}
+             {IntegrierbarkeitVonExtremaInGordonschenPaaren}
+Seien $c \in \R$, $(X, Y)$ das Gordon'sche Paar zum Tupel
+$(\gamma, \delta, g, c)$.\\
+Seien $\emptyset \neq T \subseteq \R^m$ beschränkt
+und $\emptyset \neq V \subseteq \R^N$ beschränkt.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{IntegrierbarkeitVonExtremaInGordonschenPaaren1}
+	$\Inf{t \in T}\Sup{v \in V}X(t, v)$ und $\Sup{t \in T}\Sup{v \in V}X(t, v)$
+	sind integrierbar.\absatz
+	Insbesondere sind $\Inf{t \in T}\bprod t \delta_m$
+	und $\Sup{t \in T}\bprod t \delta_m$ integrierbar.\\
+	Außerdem ist für jeden
+	normierten $\R$--Vektorraum $(E, \norm\cdot_E)$ und $x \in E^N$
+die Abbildung $\norm\cdot_E \circ \bprod \cdot x_n \circ \gamma$ integrierbar.
+	\item \label{IntegrierbarkeitVonExtremaInGordonschenPaaren2}
+	$\Inf{t \in T}\Sup{v \in V}Y(t, v)$ und $\Sup{t \in T}\Sup{v \in V}Y(t, v)$
+	sind integrierbar.\\
+	Sind $(E, \norm\cdot_E)$ ein normierter $\R$--Vektorraum, 
+	$x \in E^N$, $G_x$ der Gauß'sche Operator zum Tupel $(x,g)$, so sind
+	\[\inf_{t \in T}\, \norm\cdot_E \circ ev(t,\cdot)\circ G_x \quad\text{ und } 
+	  \quad \sup_{t \in T}\, \norm\cdot_E \circ ev(t,\cdot)\circ G_x \quad
+	\text{integrierbar.}\]
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Wir zeigen, dass für alle $Z \in \meng{X, Y}$ ein
+ $f_Z: \Omega \rightarrow \R$ integrierbar existiert mit
+\[(\ast)\quad
+\forall\, t \in T \, \forall\, v \in V \, \forall\, \omega \in \Omega:
+ \abs{Z(t, v)(\omega)} \le f_Z(\omega)\text.\]
+Ist nämlich $Z \in \meng{X, Y}$ und $f_Z :\Omega \rightarrow \R$ integrierbar, 
+sodass $(\ast)$ erfüllt ist, so gilt für alle $\omega \in \Omega$:
+$\forall\,t \in T \, \forall\, v \in V:
+-f_Z(\omega) \le Z(t, v) (\omega) \le f_Z(\omega)$\\
+und damit sogleich
+\[-f_Z(\omega) \le \inf_{t \in T}\inf_{v \in V} Z(t, v)(\omega)
+\le \inf_{t \in T}\sup_{v \in V} Z (t, v) (\omega)
+\le \sup_{t \in T}\sup_{v\in V} Z(t, v)(\omega) \le f_Z(\omega)\text.\]
+Somit gilt insbesondere
+\[-f_Z \le \inf_{t \in T}\sup_{v \in V} Z (t, v)
+\le \sup_{t \in T}\sup_{v\in V} Z(t, v) \le f_Z\text.\]
+Da $f_Z$ und $-f_Z$ integrierbar und nach
+\ref{MessbarkeitVonExtremaInGordonschenPaaren} die Abbildungen
+\[\inf_{t\in T}\sup_{v\in V}Z(t, v),\quad \sup_{t \in T}\sup_{v\in V} Z(t, v)\]
+messbar sind, sind die letztgenannten Abbildungen nach
+\refclaim{Integrierbarkeitskriterien}{Integrierbarkeitskriterien2}
+integrierbar.\\
+Da $T$ beschränkt ist, gibt es ein $a \in \R_{>0}$ mit 
+$\forall\, t \in T: \norm t_{2, m} \le a$.\\
+Da auch $V$ beschränkt ist, gibt
+es ein $b \in \R_{>0}$ mit $\forall\, v \in V: \norm v_{2, N} \le b$.\\
+(1) Sei 
+$f_X:=a\abs c(\norm\cdot_{2,m}\circ\delta) + \norm\cdot_{2, N} \circ\gamma$.\\
+Nach \refclaim{ElementareEigenschaftenQuadratintegrierbarerAbbildungen}
+{ElementareEigenschaftenQuadratintegrierbarerAbbildungen4} sind
+$\norm\cdot_{2,m} \circ \delta$ und $\norm\cdot_{2, N} \circ\gamma$ 
+$\mfa-\mfb$--messbar und nach
+\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses} sind diese
+beiden Abbildungen auch integrierbar.\\
+Damit ist es auch $f_X$ als Linearkombination integrierbarer Abbildungen.\\
+Seien nun $t \in T$, $v \in V$ und $\omega \in \Omega$.\\
+Dann gilt:
+\begin{align*}
+\abs{X(t, v)(\omega)}&\overset{\refclaim{BeschraenktheitGordonscherPaare}
+{BeschraenktheitGordonscherPaare1}}\le
+\abs c \norm t _{2, m}\norm {\delta(\omega)}_{2, m} 
++ \norm v _{2, N}\norm{\gamma(\omega)}_{2, N}\\
+&\le\abs ca\norm{\delta(\omega)}_{2,m}+b\norm{\gamma(\omega)}_{2,N}=f_X(\omega)
+\text.\end{align*}
+Damit ist (1) (ohne den Zusatz) nach obiger Begründung gezeigt.\\
+Sei $(X', Y')$ das Gordon'sche Paar zum Tupel $(\gamma, \delta, g, 1)$ und
+$V' := \meng 0$.\\
+Dann ist nach (1) die Abbildung
+\[\sup_{t \in T}\bprod t \delta_m =
+\sup_{t \in T}\bprod t \delta_m + \sup_{v \in V'} \bprod v \gamma_N
+\overset{\refclaim{BeschraenktheitGordonscherPaare}
+{BeschraenktheitGordonscherPaare4}}=
+\sup_{t \in T}\sup_{v\in V'}X'(t, v) \text{ integrierbar.}\]
+Analog ist
+\[\inf_{t \in T}\bprod t \delta _m =\inf_{t \in T}\bprod t \delta_m + \sup_{v \in V'} \bprod v \gamma_N
+\overset{\refclaim{BeschraenktheitGordonscherPaare}
+{BeschraenktheitGordonscherPaare4}}=
+\inf_{t \in T}\sup_{v\in V'}X'(t, v) \text{ integrierbar.}\]
+Seien nun $(E, \norm\cdot_E)$ ein normierter $\R$-Vektorraum, $x \in E^N$,
+$T':= \meng 0$, sowie $V'':= \menge{\pfeil \vi N (x)}{\vi \in \kabg{E'}01}$.\\
+Wegen
+\[\forall\, \vi \in \kabg{E'}01: \abs{\pfeil\vi N (x)}
+\overset{\ref{EigenschaftenDerErweiterungImNormiertenFall}}\le
+\opnorm \vi E \R \norm x _{1, N, E} \le \norm x _{1, N, E}\]
+ist $V''$ beschränkt und offensichtlich nichtleer.\\
+Also gilt für alle $\omega \in \Omega$
+\begin{align*}
+&\,\left(\norm\cdot_E \circ \bprod \cdot x \circ \gamma \right)(\omega)
+=\norm{\bprod {\gamma(\omega)} x_N}_E
+ \overset{\ref{NormUndDualeNorm}}= 
+\sup_{\vi \in \kabg{E'}01}\vi\left(\bprod{\gamma(\omega)}x_N \right)\\
+\overset{\refclaim{EigenschaftenDesLinearkombinators}
+{EigenschaftenDesLinearkombinators2}}= &\,
+\sup_{\vi \in \kabg{E'}01}\sprod{\gamma(\omega)}{\pfeil \vi N (x)}_N
+= \sup_{v \in V''}\sprod{\gamma(\omega)}v_N
+=  \sup_{v \in V''}\sprod v{\gamma(\omega)}_N\\
+=&\, \left(\sup_{v \in V''}\bprod v \gamma_N\right)(\omega)
+\end{align*}
+und daher
+\begin{align*}
+\norm\cdot_E \circ \bprod \cdot x \circ \gamma &=
+\sup_{v \in V''}\bprod v \gamma_N 
+= \sup_{t \in T'}\bprod t \delta_m + \sup_{v \in V''}\bprod v \gamma_N\\
+&\overset{\refclaim{BeschraenktheitGordonscherPaare}
+{BeschraenktheitGordonscherPaare4}}= \sup_{t \in T'}\sup_{v \in V''}X'(t,v)
+\ \text{ integrierbar nach (1).}
+\end{align*}
+(2) Die Abbildung $\Mat_{m, N}$ (vgl. Bezeichnungen.(\ref{Bez12})) ist linear
+und bijektiv.\\
+Da die $\R$--Vektorräume $\R^{mN}$ und $\R^{m\times N}$ endlichdimensional
+sind, ist $\Mat_{m,N}$ als Abbildung von $(\R^{mN}, \norm\cdot_{2, mN})$ nach
+$(\R^{m \times N}, \opnorm \cdot {\R^m}{\R^N})$ stetig.\\
+Wegen der Injektivität von $\Mat_{m,N}$ ist nach
+\refclaim{EigenschaftenDerBildhalbnorm}{EigenschaftenDerBildhalbnorm2} 
+\[\norm\cdot_{\Mat_{m, N}}: \R^{mN} \rightarrow [0, \infty[,
+x \mapsto \opnorm {\Mat_{m, N}(x)}{\R^m}{\R^N}\]
+eine Norm auf dem $\R^{mN}$ und da $\Mat_{m, N}$ stetig ist, existiert nach
+\refclaim{EigenschaftenDerBildhalbnorm}{EigenschaftenDerBildhalbnorm3} 
+ein $d \in \R_{>0}$ mit
+$\norm\cdot_{\Mat_{m, N}} \le d \norm\cdot_{2, mN}$.\hfill $(\ast\ast)$\\
+Sei nun $f_Y := abd \left(\norm\cdot_{2, mN} \circ \widetilde g \right)$.\\
+Da $\widetilde g$ nach Voraussetzung $N(0, 1)$--verteilt und unabhängig ist,
+ist $\norm\cdot_{2, mN} \circ \widetilde g$ nach
+\refclaim{ElementareEigenschaftenQuadratintegrierbarerAbbildungen}
+{ElementareEigenschaftenQuadratintegrierbarerAbbildungen4}
+$\mfa-\mfb$--messbar und nach
+\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses} 
+auch integrierbar, also ist es auch $f_Y$ als Vielfaches einer integrierbaren
+Abbildung.\\
+Seien $t \in T$, $v \in V$ und $\omega \in \Omega$.\\
+Dann gilt:
+\begin{align*}
+&\abs{Y(t, v)(\omega)} \overset{\refclaim{BeschraenktheitGordonscherPaare}
+{BeschraenktheitGordonscherPaare1}}\le 
+ \opnorm{g(\omega)}{\R^m}{\R^N}\norm t _{2, m}\norm v_{2, N}
+ \le\, ab\opnorm{g(\omega)}{\R^m}{\R^N}\\
+  =&\, ab \opnorm{\Mat_{m, N}(\widetilde g (\omega))}{\R^m}{\R^N}
+ = ab \norm{\widetilde g (\omega)}_{\Mat_{m, N}} \overset{(\ast\ast)}\le
+ abd \norm{\widetilde g (\omega)}_{2, mN} = f_Y(\omega) \text.
+\end{align*}
+Somit ist auch (2) (ohne den Zusatz) gezeigt.\\
+Seien $(E, \norm\cdot_E)$ ein normierter $\R$--Vektorraum, $x \in E^N$ und
+$G_x$ der Gauß'sche Operator zum Tupel $(x,g)$.\\
+Sei $V'':= \menge{\pfeil \vi N(x)}{\vi \in \kabg{E'}01}$.\\
+Wie im Beweis des Zusatzes von (1) gesehen, ist $V''$ beschränkt und
+nichtleer.\\
+Es gilt für alle $s\in T$ und alle $\omega \in \Omega$:
+\begin{align*}
+\sup_{v \in V''}Y(s,v) &= \sup_{v\in V''}\sprod{g(\omega)s}{v}_N
+=\sup_{\vi \in \kabg{E'}01}\sprod{g(\omega)s}{\pfeil\vi N (x)}_N\\
+&\overset{\refclaim{EigenschaftenDesLinearkombinators}
+{EigenschaftenDesLinearkombinators2}}=
+\sup_{\vi \in \kabg{E'}01}\vi\left(\bprod{g(\omega)s}x_N \right)
+\overset{\ref{NormUndDualeNorm}}= \norm{\bprod{g(\omega)s}x_N}_E\\
+&= \norm{G_x(\omega)s}_E 
+= \left(\norm\cdot_E\circ ev(s,\cdot)\circ G_x\right)(\omega)\text.
+\end{align*}
+Somit gilt:
+\begin{align*}
+\inf_{t \in T}\, \norm\cdot_E \circ ev(t,\cdot)\circ G_x
+&= \inf_{t \in T}\sup_{v \in V''}Y(t, v)\text,\\
+\sup_{t \in T}\, \norm\cdot_E \circ ev(t,\cdot)\circ G_x
+&= \sup_{t \in T}\sup_{v \in V''}Y(t, v)\end{align*}
+und damit sind diese beiden Abbildungen nach (2) integrierbar.
+\end{proof}

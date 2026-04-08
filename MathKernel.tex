@@ -1,0 +1,345 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Usepackage section                                                          %
+%                                                                             %
+% Includes several packages for certain fonts, commands, symbols etc.         %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{ucs}
+%\usepackage{dinbrief}
+\usepackage[latin1]{inputenc}
+\usepackage[OT2, T1]{fontenc}
+\usepackage[ngerman]{babel}
+%\usepackage[russian]{babel}
+\usepackage{altstyle}
+\usepackage{braket}
+%\usepackage{enumitem}
+%\RequirePackage[l2tabu, orthodox]{nag}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{eurosym}
+\usepackage{ulsy}
+\usepackage{byname}
+\usepackage{nameref}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black]{hyperref}
+\usepackage{smartref}
+\usepackage{bookmark}
+\usepackage{titleref}
+\usepackage{enumerate}
+\usepackage{rotating}
+\usepackage{stmaryrd}
+\usepackage{nicefrac}
+\usepackage{ifsym}
+%\usepackage{pxfonts}
+
+%\usepackage{listings}\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt}%\lstset{backgroundcolor=\color{lightgray}}
+
+
+% Automatically create a nice index. Maybe redundant in small files.
+%\makeindex
+
+% An environment for simple typesetting of cyrillic letters.
+
+%\newcommand{\textcyr}[1]{%
+%   {\donothyphenate\fontencoding{OT2}\selectfont #1}}
+%\newlanguage\nohyphens
+%	\newcommand{\donothyphenate}{%
+%	\language=\nohyphens}
+
+\newcommand{\textcyr}[1]{%
+   {\fontencoding{OT2}\selectfont #1}}
+	
+% Double stroked N for natural numbers
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+
+% Double stroked Z for integers
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+
+% Double stroked Q for rational numbers
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+
+% Double stroked R for reals
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+
+% Double stroked C for complex numbers
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+
+% Double stroked K for a field (K as in "`Körper"'). Very common in Banach 
+% space analysis. Same for F (as in field) for texts in english.
+\newcommand{\K}{\ensuremath{\mathbb{K}}}
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+
+% Double stroked E, commonly used in discrete stochastics and asymptotic
+% functional analysis to denote the expected value
+
+\newcommand{\E}{\ensuremath{\mathbb{E}}}
+
+% Double stroked P for the set of prime numbers
+\newcommand{\Prim}{\ensuremath{\mathbb{P}}}
+
+% Double stroked 1. Commonly used to denote indicator functions.
+\newcommand{\Eins}{\ensuremath{\mathds{1}}}
+
+% For flooring an expression without opening and closing any tags
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+
+% For ceiling an expression without opening and closing any tags
+\newcommand{\ceil}[1]{\left\lceil{#1}\right\rceil}
+
+% The following four commands create a quick and dirty way to type a sum,
+% product, cap or cup in a $.$-math environment having the bounds above and 
+% below the sign instead of its right. Use them economically as they
+% destroy any flow.
+
+\newcommand{\Sum}[2]{\stackrel{#2}{\underset{#1}{\sum}}}
+\newcommand{\Prod}[2]{\stackrel{#2}{\underset{#1}{\prod}}}
+\newcommand{\altCup}[2]{\overset{#2}{\underset{#1}{\bigcup}}}
+\newcommand{\altCap}[2]{\overset{#2}{\underset{#1}{\bigcap}}}
+\newcommand{\Sup}[1]{\underset{#1}\sup\,}
+\newcommand{\Inf}[1]{\underset{#1}\inf\,}
+
+% Simplified command for lower/upper integral bounds
+\newcommand{\Int}[2]{\int\limits_{#1}^{#2}}
+
+% Simplified command for an integral with just one lower bound, as in curvature
+% integrals or integrals in measure theory
+\newcommand{\Intmen}[1]{\underset{#1}{\int}}
+
+% These three commands create brackets around the variable and add its 
+% (single!) index (subscript) and its range. Handle with care ;).
+% Requires the altstyle.sty to create the "Laue-Haken".
+
+\newcommand{\finfol}[3]{(#1_{#2})_{#2\in\haken{#3}}}   %finite series
+\newcommand{\finfolN}[3]{(#1_{#2})_{#2\in\haken{#3}_0}}%finite series with zero
+\newcommand{\folge}[3]{(#1_{#2})_{#2 \in #3}}          %series
+
+% Denotes the span of the argument in algebraic notation
+\newcommand{\erz}[1]{\left\langle #1\right\rangle}
+
+% Denotes the absolute value of the argument
+\newcommand{\abs}[1]{\left|#1\right|}
+
+% Use this to create "sets". The first argument defines the variable (x \in X
+% for instance), the second one its defining property (e. g. x \neq y).
+
+\newcommand{\menge}[2]{\left\{#1\,|\,#2\right\}}
+\newcommand{\mengea}[2]{\left\{#1\,\vrule\,#2\right\}}
+
+% Puts set brackets around the argument
+
+\newcommand{\meng}[1]{\left\{#1\right\}}
+
+% Same as \abs, but with "norm lines".
+\newcommand{\norm}[1]{\lVert#1\rVert} %simple norm, always small delimiters
+\newcommand{\norma}[1]{\left\|#1\right\|} %variable delimiters
+
+% Creates the commonly used notation of the "operator norm". The first
+% argument is the operator, the second its domain and the third its range.
+
+\newcommand{\opnorm}[3]{\left\|#1\right\|_{\scriptscriptstyle{#2 \rightarrow #3}}}
+
+% Puts [] around the argument
+\newcommand{\klasse}[1]{\left[#1\right]}
+
+% Simplifies the \lim command
+\newcommand{\Limes}[2]{\underset{#1\to #2}{\lim}}
+
+% limsup
+\newcommand{\Lims}[2]{\underset{#1\to #2}{\overline{\lim}}}
+
+% liminf
+\newcommand{\Limi}[2]{\underset{#1\to #2}{\underline{\lim}}}
+
+% lim from below
+\newcommand{\Limup}[2]{\underset{#1\nearrow #2}{\lim}}
+
+% lim from above
+\newcommand{\Limdown}[2]{\underset{#1\searrow #2}{\lim}}
+
+% creates a paragraph
+\newcommand{\absatz}{\hfill \medskip \newline}
+
+% creates a indented paragraph
+\newcommand{\parag}{\hfill \medskip \par}
+
+% denotes the "id" (as in identity)
+\newcommand{\id}{\text{id}\,}
+
+% Abbreviations
+\newcommand{\Def}{\mathop{\rm Def}\nolimits}    % domain
+
+\newcommand{\Kern}   {\mathop{\rm Kern}\nolimits}   % kernel
+\newcommand{\Bild}   {\mathop{\rm Bild}\nolimits}   % range
+\newcommand{\Spur}   {\mathop{\rm Spur}\nolimits}   % trace
+\newcommand{\Inn}    {\mathop{\rm int}\nolimits}    % interior
+\newcommand{\Syl}    {\mathop{\rm Syl}\nolimits}    % sylow groups
+\newcommand{\minpol} {\mathop{\rm minPol}\nolimits} % minimal polynomial
+\newcommand{\charpol}{\mathop{\rm charPol}\nolimits}% characteristic polynomial
+\newcommand{\chark}  {\mathop{\rm char}\nolimits}   % characteristic (rings)
+\newcommand{\grad}   {\mathop{\rm grad}\nolimits}   % degree
+\newcommand{\sgn}    {\mathop{\rm sgn}\nolimits}    % sign
+\newcommand{\Pot}    {\mathop{\rm Pot}\nolimits}    % power set
+\newcommand{\End}    {\mathop{\rm End}\nolimits}    % endomorphisms
+\newcommand{\Aut}    {\mathop{\rm Aut}\nolimits}    % automorphisms
+\newcommand{\Hom}    {\mathop{\rm Hom}\nolimits}    % homomorphisms
+\newcommand{\Epi}    {\mathop{\rm Epi}\nolimits}    % epimorphisms
+\newcommand{\Mon}    {\mathop{\rm Mon}\nolimits}    % monomorphisms
+\newcommand{\Iso}    {\mathop{\rm Iso}\nolimits}    % isomorphisms
+\newcommand{\Fix}    {\mathop{\rm Fix}\nolimits}    % fix point set
+\newcommand{\Inv}    {\mathop{\rm Inv}\nolimits}    % units
+\newcommand{\ggt}    {\mathop{\rm ggT}\nolimits}    % greatest common divisor
+\newcommand{\kgv}    {\mathop{\rm kgV}\nolimits}    % least common multiple
+\newcommand{\inv}    {^{-1}}                        % to the power of -1
+\newcommand{\ord}    {\mathop{\rm ord}\nolimits}    % degree of a group element
+\newcommand{\Gal}    {\mathop{\rm Gal}\nolimits}    % galois group
+\newcommand{\Mat}    {\mathop{\rm Mat}\nolimits}
+\newcommand{\Umg}    {\mathop{\rm Umg}\nolimits}
+\newcommand{\pr}     {\mathop{\rm pr}\nolimits}
+\newcommand{\spann}  {\mathop{\rm span}\nolimits}
+\newcommand{\conv}   {\mathop{\rm conv}\nolimits}
+%induction stuff
+\newcommand{\ia}{\textsl{Induktionsanker:}}
+\newcommand{\iv}{\textsl{Induktionsannahme:}}
+\newcommand{\is}{\textsl{Induktionsschritt:}}
+
+% "`=>"' and "`<="'
+\newcommand{\rueck}{"`$\Leftarrow$"':}
+\newcommand{\hin}{"`$\Rightarrow$"':}
+
+% same for subset and supset
+\newcommand{\teilmenge}{"`$\subseteq$"':\\}
+\newcommand{\obermenge}{"`$\supseteq$"':\\}
+
+% some common distributions (not common notation)
+\newcommand{\hyp}{\textsl{Hyp}} %hypergeometric
+\newcommand{\ber}{\textsl{Ber}} %Bernoulli
+\newcommand{\cau}{\textsl{Cau}} %Cauchy
+\newcommand{\bin}{\textsl{Bin}} %binomial
+\newcommand{\poi}{\textsl{Poi}} %Poisson
+\newcommand{\Var}{\textsl{Var}} %variance
+
+\newcommand{\erf}{\mathop{\rm erf}\nolimits}
+
+% direct and orthogonal sum - if you find a single sign for this one, let
+% me know ;)
+\newcommand{\orth}{\text{\textcircled{$\bot$}}}
+
+% litte shorter for single letters
+\newcommand{\mca}{\mathcal{A}}
+\newcommand{\mcb}{\mathcal{B}}
+\newcommand{\mcc}{\mathcal{C}}
+\newcommand{\mcd}{\mathcal{D}}
+\newcommand{\mce}{\mathcal{E}}
+\newcommand{\mcf}{\mathcal{F}}
+\newcommand{\mcg}{\mathcal{G}}
+\newcommand{\mch}{\mathcal{H}}
+\newcommand{\mci}{\mathcal{I}}
+\newcommand{\mcj}{\mathcal{J}}
+\newcommand{\mck}{\mathcal{K}}
+\newcommand{\mcl}{\mathcal{L}}
+\newcommand{\mcm}{\mathcal{M}}
+\newcommand{\mcn}{\mathcal{N}}
+\newcommand{\mco}{\mathcal{O}}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\mcq}{\mathcal{Q}}
+\newcommand{\mcr}{\mathcal{R}}
+\newcommand{\mcs}{\mathcal{S}}
+\newcommand{\mct}{\mathcal{T}}
+\newcommand{\mcu}{\mathcal{U}}
+\newcommand{\mcv}{\mathcal{V}}
+\newcommand{\mcw}{\mathcal{W}}
+\newcommand{\mcx}{\mathcal{X}}
+\newcommand{\mcy}{\mathcal{Y}}
+\newcommand{\mcz}{\mathcal{Z}}
+
+\newcommand{\mfa}{\mathfrak{A}}
+\newcommand{\mfb}{\mathfrak{B}}
+\newcommand{\mfc}{\mathfrak{C}}
+\newcommand{\mfd}{\mathfrak{D}}
+\newcommand{\mfe}{\mathfrak{E}}
+\newcommand{\mff}{\mathfrak{F}}
+\newcommand{\mfg}{\mathfrak{G}}
+\newcommand{\mfh}{\mathfrak{H}}
+\newcommand{\mfi}{\mathfrak{I}}
+\newcommand{\mfj}{\mathfrak{J}}
+\newcommand{\mfk}{\mathfrak{K}}
+\newcommand{\mfl}{\mathfrak{L}}
+\newcommand{\mfm}{\mathfrak{M}}
+\newcommand{\mfn}{\mathfrak{N}}
+\newcommand{\mfo}{\mathfrak{O}}
+\newcommand{\mfp}{\mathfrak{P}}
+\newcommand{\mfq}{\mathfrak{Q}}
+\newcommand{\mfr}{\mathfrak{R}}
+\newcommand{\mfs}{\mathfrak{S}}
+\newcommand{\mft}{\mathfrak{T}}
+\newcommand{\mfu}{\mathfrak{U}}
+\newcommand{\mfv}{\mathfrak{V}}
+\newcommand{\mfw}{\mathfrak{W}}
+\newcommand{\mfx}{\mathfrak{X}}
+\newcommand{\mfy}{\mathfrak{Y}}
+\newcommand{\mfz}{\mathfrak{Z}}
+
+% common in probability theory and function theory
+\newcommand{\spi}{\frac{1}{\sqrt{2\pi}}}
+
+% \varepsilon looks great, but is way to long, same for \varphi
+\newcommand{\eps}{\varepsilon}
+\newcommand{\vi}{\varphi}
+
+% tautology (quick and dirty)
+\newcommand{\tteq}{\dashv \vdash}
+
+% implication with extra space
+\newcommand{\folgt}{\, \Rightarrow \,}
+
+% creates two links to the same object, respecting the current value
+% (ref). For instance "\shortref{fig:figure}{Fig.}"' will create a blue
+% "`Fig. 1"', where both parts link to the figure.
+\newcommand{\shortref}[2]{\hyperref[#1]{#2} \ref{#1}}
+
+% inner produkt in "langle"-notation.
+\newcommand{\sprod}[2]{\left\langle #1 |#2\right\rangle}
+
+% used for the linear combinator (by me ;))
+\newcommand{\bprod}[2]{\left\langle #1 ||#2\right\rangle}
+
+% add the current section to the table of contents.
+
+\newcommand{\tocsec}[2]
+ {\addcontentsline{toc}{section}{\protect\numberline{#1} #2}}
+
+% Some ball abbreviations.
+
+% open ball in #1 with centre #2 and radius #3
+\newcommand{\koff}[3]{K_{#1}\left(#2, #3\right)}
+
+% closed ball in #1 with centre #2 and radius #3
+\newcommand{\kabg}[3]{\overline K_{#1}\left(#2, #3\right)}
+
+% the boundary of a closed ball in #1 with centre #2 and radius #3
+\newcommand{\kran}[3]{\partial \kabg{#1}{#2}{#3}}
+
+\newcommand{\koffk}[3]{K_{\scriptscriptstyle{#1}}
+                        ^{\scriptscriptstyle{\left(#2, #3\right)}}}
+
+% closed ball in #1 with centre #2 and radius #3
+\newcommand{\kabgk}[3]{\overline K_{\scriptscriptstyle{#1}}
+                        ^{\scriptscriptstyle{\left(#2, #3\right)}}}
+
+% the boundary of a closed ball in #1 with centre #2 and radius #3
+\newcommand{\krank}[3]{\partial \kabgk{#1}{#2}{#3}}
+
+% overset an arrow with an index
+\newcommand{\pfeil}[2]{ {\overrightarrow{#1}}^{{}_#2} }
+\newcommand{\pfeilk}[2]{ {\scriptstyle{\overrightarrow{#1}}^{{}_#2}} }
+
+\newcommand{\restrict}[2]{#1\vrule_{{}_{\scriptstyle #2}}}
+
+\newcommand{\refclaim}[2]{\ref{#1}.(\ref{#2})}
+\newcommand{\refcl}[2]{\ref{#1}.({\ref{#1#2}})}
+
+\newcommand{\claim}[1]{\item \label{\thesection{#1}}}

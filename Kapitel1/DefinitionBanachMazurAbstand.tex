@@ -1,0 +1,21 @@
+\begin{definition}{Banach--Mazur--Abstand, Banach--Mazur--Abbildung}
+                  {BanachMazurAbstand}
+Seien $(E, \norm\cdot_E), (F, \norm\cdot_F)$ normierte $\K$--Vektorräume.\\
+Dann heißt
+\[d_{BM}\left( (E, \norm\cdot_E), (F, \norm\cdot_F) \right) := 
+\inf\menge{\opnorm S E F \cdot \opnorm {S\inv} F E}{S \in \Inv(E, F)}\]
+\textbf{Banach--Mazur--Abstand zwischen $(E, \norm\cdot_E)$ und 
+$(F, \norm\cdot_F)$}.\\
+Wenn aus dem Zusammenhang klar ist, welche Norm auf $E$ bzw. $F$ vorliegt,
+werden wir auch $d_{BM}(E,F)$ schreiben.\\
+Durch oben erwähnte Festsetzung $\inf \emptyset = \infty$ ist $d_{BM}$ für je
+zwei normierte Räume sinnvoll erklärt.\\
+Ist $\Inv(E, F) \neq \emptyset$, so heißt ein $T \in \Inv(E, F)$ \textbf{Banach--Mazur--Abbildung zwischen $(E, \norm\cdot_E)$ und 
+$(F, \norm\cdot_F)$}
+\[:\iff \opnorm T E F = 1 \quad \wedge \quad 
+\opnorm {T\inv} F E 
+ = d_{BM}\left( (E, \norm\cdot_E), (F, \norm\cdot_F) \right)\text.\]
+Insbesondere gilt also für eine Banach--Mazur--Abbildung $T$:
+\[\opnorm T E F \cdot \opnorm {T\inv} F E 
+= d_{BM}\left( (E, \norm\cdot_E), (F, \norm\cdot_F) \right)\text.\]
+\end{definition}

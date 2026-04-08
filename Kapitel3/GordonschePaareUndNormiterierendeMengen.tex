@@ -1,0 +1,103 @@
+\begin{korollar}{Gordon'sche Paare und normiterierende Mengen}
+{GordonschePaareUndNormiterierendeMengen}
+Seien $(E, \norm\cdot_E)$ ein normierter $\R$--Vektorraum, $x\in E^N$ und
+$G_x$ der Gauß'sche Operator zum Tupel $(x,g)$.\\
+Seien $\emptyset \neq T \subseteq S^{m-1}$,
+$\emptyset\neq V\subseteq \R^N$ und $c \in \R_{> 0}$ mit
+$\forall\, v \in V: \norm v_{2, N} \le c$.\\
+Es gelte:
+\begin{enumerate}[(a)]
+	\item $0 \in V \folgt 0$ Häufungspunkt von $V$.
+	\item $\forall\, w \in \R^N: \sup\menge{\sprod w v _N}{v \in V} 
+	= \norm{\bprod w x_N}_E$.
+\end{enumerate}
+Dann sind nach \refclaim{IntegrierbarkeitVonExtremaInGordonschenPaaren}
+{IntegrierbarkeitVonExtremaInGordonschenPaaren1}
+\[\norm\cdot_E \circ \bprod \cdot x _N \circ \gamma, \quad
+\inf_{t\in T}\bprod t \delta_m, \quad \sup_{t\in T}\bprod t \delta_m\]
+und nach \refclaim{IntegrierbarkeitVonExtremaInGordonschenPaaren}
+{IntegrierbarkeitVonExtremaInGordonschenPaaren2}
+\[\inf_{t \in T}\, \norm\cdot_E \circ ev(t,\cdot)\circ G_x, \quad
+\sup_{t \in T}\, \norm\cdot_E \circ ev(t,\cdot)\circ G_x \]
+integrierbar und es gilt:
+\begin{enumerate}[(1)]
+	\item \label{GordonschePaareUndNormiterierendeMengen1}
+	\begin{align*}
+	& \E\left( \norm\cdot_E \circ \bprod \cdot x _N \circ \gamma\right)
+	+ c \E\left(\inf_{t\in T}\bprod t \delta_m \right)\\
+	\le &\,\E\left(\inf_{t \in T} \norm\cdot_E \circ ev(t,\cdot)\circ G_x \right)
+	\le \E\left(\sup_{t \in T} \norm\cdot_E \circ ev(t,\cdot)\circ G_x \right)\\
+	\le &\,\E\left( \norm\cdot_E \circ \bprod \cdot x _N \circ \gamma\right)
+	+ c \E\left(\sup_{t\in T}\bprod t \delta_m \right)\text.
+	\end{align*}
+	\item \label{GordonschePaareUndNormiterierendeMengen2}
+	Ist $T = -T$, so ist
+	$\E\left(\Inf{t\in T}\bprod t \delta_m \right)
+	= - \E\left(\Sup{t\in T}\bprod t \delta_m \right)$.
+\end{enumerate}
+\end{korollar}
+\begin{proof}
+(1) Sei $(X,Y)$ das Gordon'sche Paar zum Tupel $(\gamma,\delta,g,c)$.\\
+Dann sind die Voraussetzungen von
+\ref{GordonschePaareUndDerGaussscheMinMaxSatz} erfüllt.\\
+Ferner gilt für alle $\omega \in \Omega$:
+\begin{align}
+\left(\sup_{v \in V}\bprod v \gamma_N \right)(\omega)
+&= \sup_{v \in V}\sprod v {\gamma(\omega)_N}
+=\sup_{v \in V}\sprod{\gamma(\omega)}v_N
+\overset{\text{Vor.}}= \norm{\bprod {\gamma(\omega)} x}_N\notag\\
+&= \left(\norm\cdot_E \circ \bprod \cdot x_N \circ \gamma\right) (\omega)\text,
+\label{gpunmeq:1}
+\end{align}
+sowie für alle $s \in T$:
+\begin{align}
+\left(\sup_{v \in V}Y(s,v)\right)(\omega)&= \sup_{v \in V}\sprod{g(\omega)s}v_N
+\overset{\text{Vor.}}= \norm{\bprod {g(\omega)s} x_N}_E
+= \norm{G_x(\omega)s}_E \notag\\
+&=\left(\norm\cdot_E \circ ev(s,\cdot)\circ G_x\right)(\omega)\text.
+\label{gpunmeq:2}
+\end{align}
+Somit gilt wegen der Integrierbarkeit aller vorkommenden Abbildungen:
+\begin{align*}
+&\E\left( \norm\cdot_E \circ \bprod \cdot x _N \circ \gamma\right)
+	+ c \E\left(\inf_{t\in T}\bprod t \delta_m \right)\\
+	\overset{c>0}=&\,
+	\E\left( \norm\cdot_E \circ \bprod \cdot x _N \circ \gamma\right)
+	+  \E\left(\inf_{t\in T}c\bprod t \delta_m \right)\\
+\overset{\eqref{gpunmeq:1}}= &\, \E\left(\sup_{v \in V}\bprod v \gamma_N
++ \inf_{t\in T}c\bprod t \delta_m\right)\\
+\overset{
+\refclaim{BeschraenktheitGordonscherPaare}{BeschraenktheitGordonscherPaare3}}=&
+\,\E \left(\inf_{t \in T}\sup_{v \in V}X(t, v) \right)
+\overset{\refclaim{GordonschePaareUndDerGaussscheMinMaxSatz}
+{GordonschePaareUndDerGaussscheMinMaxSatz1}}
+\le \E\left(\inf_{t \in T}\sup_{v \in V}Y(t, v) \right)\\
+\overset{\eqref{gpunmeq:2}}= & \,
+\E\left(\inf_{t \in T}\norm\cdot_E \circ ev(t,\cdot) \circ G_x \right)
+\le
+\E\left(\sup_{t \in T}\norm\cdot_E \circ ev(t,\cdot) \circ G_x \right)\\
+\overset{\eqref{gpunmeq:1}}= 
+&\, \E\left(\sup_{t \in T}\sup_{v \in V}Y(t, v) \right)
+\overset{\refclaim{GordonschePaareUndDerGaussscheMinMaxSatz}
+{GordonschePaareUndDerGaussscheMinMaxSatz2}}\le
+\E\left(\sup_{t \in T}\sup_{v \in V}X(t, v) \right)\\
+\overset{\refclaim{BeschraenktheitGordonscherPaare}
+{BeschraenktheitGordonscherPaare3}} = &\,
+\E\left(\sup_{v \in V}\bprod v \gamma_N
++ \sup_{t\in T}c\bprod t \delta_m\right)\\
+\overset{\eqref{gpunmeq:1}}=&\,
+\E\left( \norm\cdot_E \circ \bprod \cdot x _N \circ \gamma\right)
+	+  \E\left(\sup_{t\in T}c\bprod t \delta_m \right)
+\end{align*}
+(2) Es gelte $T=-T$ und sei $\omega \in \Omega$. Dann gilt:
+\begin{align*}
+\left(\inf_{t\in T}\bprod t \delta_m\right)(\omega)
+&= \inf_{t \in T}\sprod t {\delta(\omega)}_m
+= - \sup_{t\in T}\left(-\sprod t {\delta(\omega)}\right)
+= - \sup_{t\in T}\left(\sprod {-t} {\delta(\omega)}\right)\\
+&=- \sup_{t\in -T}\left(\sprod t {\delta(\omega)}\right)
+=- \sup_{t\in T}\left(\sprod t {\delta(\omega)}\right)
+= \left(- \sup_{t\in T}\bprod t \delta_m \right)(\omega)\text.
+\end{align*}
+Da die genannten Abbildungen integrierbar sind, gilt somit (2).
+\end{proof}

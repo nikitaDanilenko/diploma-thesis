@@ -1,0 +1,84 @@
+\begin{lemma}{Gerade und ungerade Funktionen}{GeradeUndUngeradeFunktionen}
+Seien $a \in\!\ ]0,\infty]$, $f:\!\  ]-a,a[ \rightarrow \R$ ungerade und
+$g:\!\ ]-a,a[ \rightarrow \R$ gerade.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{GeradeUndUngeradeFunktionen1}
+	Ist $f$ stetig in $0$, so ist $f(0) = 0$.
+	\item \label{GeradeUndUngeradeFunktionen2}
+	Ist $f$ differenzierbar, so ist $f'$ gerade.
+	\item \label{GeradeUndUngeradeFunktionen3}
+	Ist $g$ differenzierbar, so ist $g'$ ungerade.
+	\item \label{GeradeUndUngeradeFunktionen4}
+	Ist $f$ injektiv und stetig, so gibt es $b \in \!\ ]0,\infty]$ mit 
+	$\Bild f=\!\  ]-b,b[$
+	und $f\inv: \Bild f \rightarrow \R$ ist ungerade.
+	\item \label{GeradeUndUngeradeFunktionen5}
+	Ist $f \in \mcc^2(]-a,a[, \R)$, $f'(0) \ge 0$ und gibt es $c \in \R_{>0}$ mit
+	$f'' = c\cdot f\cdot(f')^2$, so ist bereits $f \in \mcc^\infty(]-a,a[,\R)$
+	und es gilt \[\forall\, n \in \N: f^{(2n+1)}(0) \ge 0\] 
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Sei also $f$ stetig in $0$.\\
+Dann ist $\frac a {2n} \in\!\  ]-a,a[$ für alle $n \in \N$ und es gilt
+\begin{align*}f(0) &\overset{f \text{ stet.}}
+= \Limes n \infty f\left(\frac a {2n}\right) 
+= \Limes n \infty f\left(-\left(-\frac a {2n}\right)\right)
+\overset{f \text{ ung.}}= \Limes n \infty - f\left(-\frac a {2n}\right)\\ 
+&= - \Limes n \infty f\left(-\frac a {2n}\right)
+\overset{f \text{ stet.}}= - f(0)\text,
+\end{align*}
+also $f(0)=0$.\\
+(2)/(3) Seien $f,g$ differenzierbar und $\mu:\R\to\R, x\mapsto-x$.\\
+Es gilt dann für alle $x \in \!\ ]-a,a[$:
+\begin{align}
+\label{guufeq:1}f(x) &= f(-(-x)) = - f(-x) = - (f\circ \mu)(x)\text, \\
+\label{guufeq:2}g(x) &= g(-(-x)) = g(-x) = (g \circ \mu)(x)\text. 
+\end{align}
+Also ist für alle $x \in \!\ ]-a,a[$:
+\[f'(-x) \overset{\eqref{guufeq:1}}= 
+(-f \circ \mu)'(-x) = - (-1)\cdot f'(\mu(-x))= f'(x)\]
+und analog
+\[g'(-x) \overset{\eqref{guufeq:2}}= 
+(g \circ \mu)'(-x) = - g'(\mu(-x)) = -g'(x)\text.\]
+Also ist $f'$ gerade und $g'$ ungerade.\\
+(4) Sei $f$ injektiv und stetig. Nach dem Zwischenwertsatz ist $\Bild f$
+ein Intervall und es gilt:
+\begin{align*}
+-\Bild f &= \menge{-f(x)}{x \in \!\ ]-a,a[}=\menge{f(-x)}{x \in \!\ ]-a,a[}\\
+&= \menge{f(x)}{x \in \!\ ]-a,a[}= \Bild f\text.\end{align*}
+Somit ist $\Bild f$ symmetrisch, woraus die Behauptung über das Bild folgt.\\
+Sei nun $x \in \Bild f$. Dann gilt
+\[f\inv(-x) = f\inv(-f(f\inv(x))) \overset{f \text{ ung.}} = 
+f\inv(f(-f\inv(x))) = -f\inv(x)\text,\]
+also $f\inv$ ungerade.\\
+(5) Seien $f$ zweimal stetig differenzierbar und $c \in \R_{>0}$ mit
+$f'' = cf(f')^2$.\\
+Da $cf(f')^2 = cff'f'$ als Produkt differenzierbarer Funktionen differenzierbar
+ist, ist $f$ bereits dreimal stetig differenzierbar.\\
+Ist nun $f$ schon $2+n$--mal stetig differenzierbar für ein $n \in\N$, so ist
+$f'$ noch $1+n$--mal stetig differenzierbar und damit $f''= cff'f'$ als Produkt
+$1+n$--mal stetig differenzierbarer Funktionen ebenfalls noch $1+n$--mal stetig
+differenzierbar, also $f$ bereits $3+n$--mal stetig differenzierbar.\\
+Damit ist $f$ unendlich oft stetig differenzierbar.\\
+Nach Voraussetzung ist $f'(0) \ge 0$.\\
+Sei nun $N \in \N$ und es gelte $\forall\, m \in \haken N: f^{(2m+1)}\ge 0$.\\
+Dann gilt
+\begin{align}
+&\,f^{(2(N+1)+1)}(0) = f^{(2N+3)}(0) = 
+\left(\left(\frac d {dx} \right)^{2N+1}f'' \right)(0)\notag\\
+=&\, \left(\left(\frac d {dx} \right)^{2N+1} c f (f')^2\right) (0)\notag\\
+\overset{\text{Leibniz}}=&\, c\sum_{k=0}^{2N+1}\binom{2N+1}k f^{(2N+1-k)}(0) 
+\left(\left(\frac d {dx} \right)^{k}f'f' \right)(0)\notag\\
+\overset{\text{Leibniz}}=&\,c\sum_{k=0}^{2N+1}\binom{2N+1}k f^{(2N+1-k)}(0)
+\sum_{j=0}^k\binom k j f^{(k+1-j)}(0)f^{(j+1)}(0) \label{guufeq:3}
+\end{align}
+Sei nun $i \in \haken {2N+2}_0$.\\
+Falls $i$ gerade ist, so ist $f^{(i)}$ nach $(2),(3)$ ungerade, also nach
+$(1)$: $f^{(i)}(0) = 0$.\\
+Falls $i$ ungerade ist, so ist $i \in \haken{2N+1}$ und damit nach
+Induktionsvoraussetzung $f^{(i)}(0) \ge 0$.\\
+Gemäß $\eqref{guufeq:3}$ ist dann $f^{2N+3}(0)$ als Summe von Produkten
+nichtnegativer Zahlen selbst nichtnegativ.
+\end{proof}

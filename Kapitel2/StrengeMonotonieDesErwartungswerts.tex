@@ -1,0 +1,13 @@
+\begin{lemma}{Strenge Monotonie des Erwartungswerts}
+             {StrengeMonotonieDesErwartungswerts}
+Seien $f,g\in L_1(\Omega,\mfa,\Prim, \R)$ mit $f \le g$.\\
+Dann ist $\meng{f < g}\in \mfa$ und es gilt:
+\[\Prim(f < g)>0 \folgt \E(f) < \E(g)\]
+\end{lemma}
+\begin{proof}
+Die Messbarkeit von $\meng{f < g}$ ist bekannt.\\
+Sei also $\E(f) \ge \E(g)$.\\
+Wegen $f \le g$ ist auch $\E(f) \le \E(g)$ und somit $\E(f) = \E(g)$.\\
+Es ist $g-f\ge 0$ und $\E(g-f)=\E(g) -\E(f) = 0$, da $f,g$ integrierbar sind.\\
+Daher ist also $0 = \Prim(g-f > 0) = \Prim(f < g)$.
+\end{proof}

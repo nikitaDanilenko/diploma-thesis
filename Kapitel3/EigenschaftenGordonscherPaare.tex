@@ -1,0 +1,78 @@
+\begin{lemma}{Eigenschaften Gordon'scher Paare}
+             {EigenschaftenGordonscherPaare}
+Seien $c \in \R$ und $(X, Y)$ das Gordon'sche Paar zu $(\gamma, \delta,g,c)$.\\
+Der Raum $\R^m \times \R^N$ sei mit der Produktnorm ausgestattet.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{EigenschaftenGordonscherPaare1}
+	$\forall\, t \in \R^m\, \forall\, v \in \R^N:
+	\E(X(t,v)) = 0 = \E(Y(t,v))$.
+	\item \label{EigenschaftenGordonscherPaare2}
+	$\forall\, t \in \R^m\, \forall\, v \in \R^N: \norm{X(t,v)}_2^2 
+	= c^2\norm t _{2,m}^2 + \norm v _{2, N}^2$.
+	\item \label{EigenschaftenGordonscherPaare3}
+	$\forall\, t \in \R^m\, \forall\, v\in \R^N:
+	\norm{Y(t, v)}_2^2 = \norm t_{2,m}^2\norm v_{2, N}^2$.
+	\item \label{EigenschaftenGordonscherPaare4}
+	$X$ ist linear und stetig.
+	\item\label{EigenschaftenGordonscherPaare5}
+	$Y$ ist bilinear und stetig.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Seien $t \in \R^m$ und $v \in \R^N$.\\
+Falls $ct\neq 0$ oder $v \neq 0$, ist $X(t,v)$ nach
+\refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
+         {IntegrierbarkeitUndVerteilungVonLinearkombinationen4}
+$N(0, c^2\norm t_{2, m}^2 + \norm v_{2,N}^2)-$verteilt, hat also Erwartungswert
+0 und Varianz $c^2\norm t_{2, m}^2 + \norm v_{2,N}^2$ 
+(siehe 8.8, 9.2 in \cite{Irle}).\\
+Ist $ct = 0$ und $v = 0$, so ist $X(t, v) = 0$ und hat daher trivialerweise den
+Erwartungswert 0 und auch Varianz 
+$0 = c^2\norm t_{2, m}^2 + \norm v_{2,N}^2$.\\
+Somit ist $\E(X(t, v)) = 0$ und daher
+$\norm{X(t,v)}_2^2 = c^2\norm t_{2, m}^2 + \norm v_{2,N}^2$ (vgl. Bemerkung vor \ref{ElementareEigenschaftenQuadratintegrierbarerAbbildungen}).\\
+Falls $t \neq 0$ und $v \neq 0$, so ist $Y(t,v)$ nach \refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
+         {IntegrierbarkeitUndVerteilungVonLinearkombinationen5}
+$N(0, \norm t _{2,m}^2 \norm v_{2, N}^2)-$verteilt, hat also Erwartungswert 0
+und Varianz $\norm t_{2,m}^2\norm v_{2,N}^2$.\\
+Falls $t = 0$ oder $v = 0$, so ist $Y(t, v) = 0$ und hat wiederum trivial
+Erwartungswert 0 und Varianz $0=\norm t _{2,m}^2 \norm v_{2, N}^2$.\\
+Also ist $E(Y(t, v))= 0$ und 
+somit $\norm{Y(t, v)}_2^2 = \norm t _{2,m}^2 \norm v_{2, N}^2$ (mit dem
+gleichen Argument, wie bei $X(t, v)$).\\
+Damit sind (1), (2) und (3) gezeigt.\\
+(4) Nach \refclaim{EigenschaftenDesLinearkombinators}
+{EigenschaftenDesLinearkombinators1}
+sind \[c\bprod\cdot \delta_m:\R^m \rightarrow L_2(\Omega,\mfa, \Prim, \R)
+\quad \text{und}\quad 
+\bprod \cdot \gamma_N:\R^N \rightarrow L_2(\Omega,\mfa, \Prim,\R)\] linear.
+Daher ist deren Summe linear im Tupel der beiden Komponenten.\\
+Als lineare Abbildung mit endlichdimensionalem Definitionsraum ist $X$
+stetig.\\
+(5) Seien $t,s\in \R^m$, $v, w \in \R^N$, $a \in \R$ und $\omega \in \Omega$.\\
+Dann gilt wegen der Linearität von $g(\omega)$:
+\begin{align*}
+Y(t+as, v)(\omega)& = \sprod{g(\omega)(t+as)}v_N 
+= \sprod{g(\omega)t + ag(\omega)s}v_N\\
+&= \sprod{g(\omega)t}v_N + a\sprod{g(\omega)s}v_N =
+Y(t, v)(\omega)+ a Y(s, v)(\omega)\\
+&= (Y(t, v) + a Y (s, v))(\omega)\text.
+\end{align*}
+Außerdem ist
+\begin{align*}
+Y(t, v+aw)(\omega) &= \sprod{g(\omega)t}{v+aw}_N
+= \sprod{g(\omega)t}v_N+a\sprod{g(\omega)t}w_N\\
+&= Y(t, v)(\omega) + a Y(t, w)(\omega)
+= (Y(t, v) + a Y(t, w))(\omega)\text.
+\end{align*}
+Somit ist $Y$ bilinear.\\
+Wegen (3) ist $\norm{Y(t, v)}_2 = \norm t_{2,m}\norm v_{2,N}$ und da $Y$
+bilinear ist, ist es nach der bekannten Charakterisierung der Stetigkeit
+bilinearer Abbildungen stetig. Auch hier könnte man alternativ die endliche
+Dimension des Definitionsraums nutzen, um die Stetigkeit von $Y$ einzusehen:
+$\R^m, \R^N$ und $L_2(\Omega, \mfa, \Prim, \R)$ sind vollständig, $Y$ ist
+komponentenweise als lineare Abbildung mit endlichdimensionalem
+Definitionsraum stetig, also ist nach dem Satz von Banach--Steinhaus auch
+$Y$ stetig.
+\end{proof}

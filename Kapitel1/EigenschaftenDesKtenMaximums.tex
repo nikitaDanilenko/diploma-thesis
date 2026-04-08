@@ -1,0 +1,106 @@
+\begin{lemma}{Eigenschaften des k--ten Maximums}
+             {EigenschaftenDesKtenMaximums}
+Sei $n \in \N$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{EigenschaftenDesKtenMaximums1}
+	$\forall\, k \in \haken {n-1}: \mu_{k+1,n} \le \mu_{k,n}$.
+	\item \label{EigenschaftenDesKtenMaximums2}
+	$\forall\, k \in \haken n\, \forall\, x \in \R^n\, \forall\,a \in \R:
+	\mu_{k,n}(x) \ge a \iff \abs{\menge{i \in \haken n}{x_i \ge a}} \ge k$.
+	\item\label{EigenschaftenDesKtenMaximums2a}
+	$\forall\, k \in \haken n\, \forall\, x \in \R^n\, \forall\,a \in \R:
+	\mu_{k,n}(x) < a \iff \abs{\menge{i \in \haken n}{x_i < a}} > n - k$.
+	\item\label{EigenschaftenDesKtenMaximums2b}
+	$\forall\, k \in \haken n\, \forall\, x \in \R^n\, \forall\,a \in \R:
+	\mu_{k,n}(x) > a \iff \abs{\menge{i \in \haken n}{x_i > a}} \ge k$.
+	\item\label{EigenschaftenDesKtenMaximums2c}
+	$\forall\, k \in \haken n: \mu_{k, n}$ stetig.
+	\item \label{EigenschaftenDesKtenMaximums3}
+	$\forall\, k \in \haken n: \mu_{k, n}$ nichtnegativ--homogen.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Seien $k \in \haken {n-1}$ und $x \in \R^n$.\\
+Seien
+\[M_{k, x}:=\menge{x_i}{i\in\haken n,\abs{\menge{j\in\haken n}{x_j>x_i}}<k}\]
+und
+\[M_{k+1,x}:=
+\menge{x_i}{i\in\haken n,\abs{\menge{j\in\haken n}{x_j>x_i}}<k+1}.\]
+Nach \refclaim{Sortierungsmengen}{Sortierungsmengen1} ist dann
+$M_{k,x} \subseteq M_{k+1,x}$ und daher:
+\[\mu_{k+1,n}(x) = \min M_{k+1,x} \le \min M_{k,x} = \mu_{k,n}(x).\]
+(2) Seien $k \in \haken n$, $x \in \R^n$ und $a \in \R$.\\
+"`$\Rightarrow$"': Es gelte $\mu_{k,n}(x) \ge a$.\\
+Nach (1) gilt: $\forall\,j\in\haken k: \mu_{j, n}(x) \ge \mu_{k, n}(x)\ge a$.\\
+Es gibt $\iota: \haken k \rightarrow \haken n$ injektiv mit
+$\forall\, j \in \haken k: x_{\iota(j)}= \mu_{j,n}(x)$.\\
+Ferner gilt $\iota(\haken k) \subseteq \menge{i \in \haken n}{x_i \ge a}$ und
+damit wegen der Injektivität von $\iota$
+\[k = \abs{\iota(\haken k)} \le \abs{\menge{i \in \haken n}{x_i \ge a} }.\]
+"`$\Leftarrow$:"' Es gelte $\mu_{k,n}(x) < a$.\\
+Es gibt ein $j \in \haken n$ mit $x_j = \mu_{k,n}(x) < a$.\\
+Nach Definition von $\mu_{k,n}$ gilt weiter: 
+$\abs{\menge{i \in \haken n}{x_i> x_j}}<k$.\\
+Somit gilt 
+$\menge{i \in \haken n}{x_i\ge a} \subseteq \menge{i \in \haken n}{x_i > x_j}$
+und daher
+\[\abs{\menge{i\in\haken n}{x_i\ge a}}
+\le\abs{\menge{i\in\haken n}{x_i>x_j}}<k.\]
+(3) Seien $k \in \haken n$, $x \in \R^n$ und $a \in \R$. Dann gilt:
+\begin{align*}
+\mu_{k, n}(x) < a & \overset{(2)}\iff \abs{\menge{i \in \haken n}{x_i \ge a}}<k
+\text.
+\end{align*}
+Offensichtlich gilt auch:
+\[\abs{\menge{i \in \haken n}{x_i \ge a}}<k \iff
+  \abs{\menge{i \in \haken n}{x_i < a}} > n-k\text.\]
+Damit ist (3) gezeigt.\\
+(4) Analog zu (2).\\
+(5) Es genügt zu zeigen, dass Urbilder offener Intervalle offen sind.\\
+Seien also $a, b \in \R$ mit $a < b$ und $k \in \haken n$. Dann gilt:
+\begin{align*}
+&\menge{x \in \R^n}{\mu_{k, n}(x)> a}
+\overset{(4)}= \menge{x \in \R^n}{\exists A \subseteq \haken n: \abs A
+\ge k \wedge (\forall\, i \in A: x_i > a)}\\
+=\,&\bigcup_{\substack{A \subseteq \haken n,\\ \abs A \ge k}}
+\bigcap_{i \in \haken A}\menge{x \in \R^n}{x_i> a}
+= \bigcup_{\substack{A \subseteq \haken n,\\ \abs A \ge k}}
+\bigcap_{i \in \haken A} \pr_i\inv(]a, \infty[) =: G\text.
+\end{align*}
+Da $\pr_i$ für alle $i \in \haken n$ unabhängig von der Norm stetig sind, ist
+$G$ als Vereinigung endlicher Schnitte offener Mengen offen.\\
+Analog gilt:
+\begin{align*}
+&\menge{x \in \R^n}{\mu_{k, n}(x)< b}
+\overset{(3)}= \menge{x \in \R^n}{\exists B \subseteq \haken n: \abs B
+>n- k \wedge (\forall i \in B: x_i < b)}\\
+=&\bigcup_{\substack{B \subseteq \haken n,\\ \abs B > n - k}}
+\bigcap_{i \in \haken B}\menge{x \in \R^n}{x_i< b}
+= \bigcup_{\substack{B \subseteq \haken n,\\ \abs B > n - k}}
+\bigcap_{i \in \haken B} \pr_i\inv(]-\infty, b[) =: K\text.
+\end{align*}
+Auch $K$ ist (mit dem gleichen Argument wie $G$) offen. Außerdem ist
+\[\mu_{k,n}\inv(]a,b[) = \menge{x \in \R^n}{\mu_{k,n}(x) > a \wedge
+\mu_{k,n}(x) < b} = G \cap K\]
+und damit offen, weil $G$ und $K$ es sind.\\
+(6) Seien $k \in \haken n$, $x \in \R^n$ und $t \in \R_{>0}$.\\
+Dann gilt:
+\begin{align*}
+&\menge{(tx)_i}{i\in\haken n,\abs{\menge{j\in\haken n}{(tx)_j>(tx)_i}}<k}\\
+=&\,\menge{tx_i}{i\in\haken n,\abs{\menge{j\in\haken n}{tx_j>tx_i}}<k}\\
+\overset{t>0}= &\,
+\menge{tx_i}{i\in\haken n,\abs{\menge{j\in\haken n}{x_j>x_i}}<k}\\
+=&\, t\menge{x_i}{i\in\haken n,\abs{\menge{j\in\haken n}{x_j>x_i}}<k}\text.
+\end{align*}
+Also nach Definition:
+\begin{align*}
+\mu_{k, n}(tx) &=
+\min\menge{(tx)_i}{i\in\haken n,\abs{\menge{j\in\haken n}{(tx)_j>(tx)_i}}<k}\\
+&=\min
+\left(t\menge{x_i}{i\in\haken n,\abs{\menge{j\in\haken n}{x_j>x_i}}<k}\right)
+\overset{t>0}=t\mu_{k, n}(x)\text.
+\end{align*}
+Zudem gilt offenbar $\mu_{k,n}(0) = 0$, sodass $\mu_{k,n}$
+nichtnegativ--homogen ist.
+\end{proof}

@@ -1,0 +1,38 @@
+\begin{lemma}{Stetige Funktionen und dichte Teilmengen}
+             {StetigeFunktionenUndDichteTeilmengen}
+Seien $(M, d)$ ein metrischer Raum, $f: M \rightarrow \R$ stetig.\\
+Seien weiter $\emptyset \neq A \subseteq M$ und $A'\subseteq A$ dicht in $A$.\\
+Wegen $A \neq \emptyset$ ist dann $A' \neq \emptyset$, sodass auch
+$f(A)\neq\emptyset\neq f(A')$ gilt.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+  \item \label{StetigeFunktionenUndDichteTeilmengen1}
+	Ist $f(A)$ nach oben beschränkt, so auch $f(A')$ mit
+	 $\sup f(A) = \sup f(A')$.
+	\item \label{StetigeFunktionenUndDichteTeilmengen2}
+	Ist $f(A)$ nach unten beschränkt, so auch $f(A')$ mit 
+	$\inf f(A) = \inf f(A')$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Sei also $f(A)$ nach oben beschränkt.\\
+Wegen $f(A) \neq \emptyset$ besitzt $f(A)$ also ein Supremum.\\
+Da $f(A') \subseteq f(A)$ und $f(A') \neq \emptyset$, besitzt
+auch $f(A')$ ein Supremum und es gilt $\sup f (A') \le \sup f(A)$.\\
+Sei nun $\eps \in \R_{>0}$.
+Dann gibt es ein $a \in A$ mit $\sup f(A) - f(a) < \frac \eps 2$.\\
+Weil $f$ stetig ist, gibt es $\delta \in \R_{>0}$, sodass gilt:
+$\forall\, b \in K_M(a,\delta): \abs{f(a)-f(b)} < \frac \eps 2$.\\
+Da $A'$ dicht in $A$ ist, gibt es ein $a' \in A'$ mit $d(a, a') < \delta$,
+also $\abs{f(a)-f(a')}< \frac \eps 2$.\\
+Somit gilt:
+\begin{align*}
+\sup f(A) - f(a') & = \sup f(A) - f(a) + f(a) -f(a')\\
+&\le(\sup f(A)-f(a))+\abs{f(a)-f(a')}<\frac\eps 2+\frac\eps 2 = \eps\text.
+\end{align*}
+Also ist $\sup f(A) = \sup f(A')$.\\
+(2) Sei also $f(A)$ nach unten beschränkt. Dann ist $-f(A)$ nach oben
+beschränkt und daher auch $-f(A')$ nach oben beschränkt und nichtleer.\\
+Es ist auch $-f$ stetig und $-(f(A)) = (-f)(A)$, sodass gilt \[
+\inf f(A) = - \sup(-f(A)) \overset{(1)}= -\sup(-f(A'))= \inf f(A')\text. \]
+\end{proof}

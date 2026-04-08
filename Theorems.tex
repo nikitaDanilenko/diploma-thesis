@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorem stuff, use "thm" for italic fonts inside theorem environments and   %
+% "def" for normal fonts. These differ from the originals: newline is created %
+% after the complete name (including optional parenthesis) of the theorem.    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\newtheoremstyle{thm}   % name
+{15pt}                  % Space above
+{10pt}                  % Space below
+{\itshape}              % Body font
+{\parindent}            % indent amount
+{\bf}                   % Theorem head font
+{}                      % Punctuation after theorem head
+{\newline}              % space after theorem head
+{}                      % Theorem head spec
+
+\newtheoremstyle{def}   % name
+{15pt}                  % Space above
+{10pt}                  % Space below
+{}                      % Body font
+{\parindent}            % indent amount
+{\bf}                   % Theorem head font
+{}                      % Punctuation after theorem head
+{\newline}              % space after theorem head
+{}                      % Theorem head spec
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forces use of "Number.Subnumber Name" (Wrobel style ;) ). Enumeration       %
+% follows the current chapter NOT the current section.                        %
+% Do NOT use this, if you don't use chapters. Swap the comments below.        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\qedsymbol}{\slashes}
+\swapnumbers
+\theoremstyle{thm}
+\newtheorem{sat}{Satz}[chapter]
+%\newtheorem{sat}{Satz}[section]
+
+\theoremstyle{def}
+\newtheorem{bem}{Bemerkung}[section]
+%\newtheorem{bem}[section]{Bemerkung}
+
+\theoremstyle{def}
+\newtheorem{dfn}[sat]{Definition}
+
+\theoremstyle{thm}
+\newtheorem{kor}[sat]{Korollar}
+
+\theoremstyle{thm}
+\newtheorem{lem}[sat]{Lemma}
+
+\theoremstyle{thm}
+\newtheorem{defsat}[sat]{Definition/Satz}
+
+\theoremstyle{thm}
+\newtheorem{beisp}[sat]{Beispiel}
+
+% These commands (definition through korollar) can be used to ensure the
+% following:
+% - you open and close a new "something", name it (#1) and label it (#2).
+% - the label is set in the right place (i. e. hyperref will jump to the right
+%   position; the label is "#2"
+% - a tableofcontents-entry is created, which respects the same enumeration
+
+\newenvironment{definition}[2] % 1=Name, 2=Label
+  {\begin{dfn}[#1]
+   \label{#2}
+   \addcontentsline{toc}{section}{\protect\numberline{\ref{#2}} {#1}} }
+  {\end{dfn}}
+
+\newenvironment{lemma}[2] % 1=Name, 2=Label
+  {\begin{lem}[#1]
+   \label{#2}
+   \addcontentsline{toc}{section}{\protect\numberline{\ref{#2}} #1}} 
+  {\end{lem}}
+  
+\newenvironment{satz}[2] % 1=Name, 2=Label
+  {\begin{sat}[#1] 
+   \label{#2}
+   \addcontentsline{toc}{section}{\protect\numberline{\ref{#2}} #1}} 
+  {\end{sat}}
+  
+\newenvironment{bemerkung}[2] % 1=Name, 2=Label
+  {\begin{bem}[#1]
+   \label{#2}
+   \addcontentsline{toc}{section}{\protect\numberline{\ref{#2}} #1}}
+  {\end{bem}}
+
+\newenvironment{korollar}[2] % 1=Name, 2=Label
+  {\begin{kor}[#1]
+   \label{#2}
+   \addcontentsline{toc}{section}{\protect\numberline{\ref{#2}} #1}}
+  {\end{kor}}
+  
+\newenvironment{defsatz}[2] % 1=Name, 2=Label
+  {\begin{defsat}[#1]
+   \label{#2}
+   \addcontentsline{toc}{section}{\protect\numberline{\ref{#2}} #1}}
+  {\end{defsat}}
+
+\newenvironment{beispiel}[2] % 1=Name, 2=Label
+  {\begin{beisp}[#1]
+   \label{#2}
+   \addcontentsline{toc}{section}{\protect\numberline{\ref{#2}} #1}}
+  {\end{beisp}}

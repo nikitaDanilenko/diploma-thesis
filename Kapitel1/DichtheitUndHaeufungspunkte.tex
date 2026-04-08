@@ -1,0 +1,43 @@
+\begin{lemma}{Dichtheit und Häufungspunkte}
+             {DichtheitUndHaeufungspunkte}
+Seien $(M, d)$ ein metrischer Raum, $x_0\in M$
+ein Häufungspunkt von $M$, sowie $D \subseteq M$ dicht in $M$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{DichtheitUndHaeufungspunkte1}
+	Es gibt $A \subseteq M\setminus\meng{x_0}$ abzählbar, sodass
+	$(D\setminus\meng{x_0}) \cup A$ dicht in $M$ ist.
+	\item \label{DichtheitUndHaeufungspunkte2}
+	Ist $D$ abzählbar, so gibt es $D'' \subseteq M$ abzählbar und dicht in
+	$M$ mit $x_0 \notin D''$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Da $x_0$ ein Häufungspunkt von $M$ ist, gibt es eine gegen $x_0$ konvergente
+Folge $\folge xn\N\in(M\setminus\meng{x_0})^\N$.\\Dann ist
+$A:=\menge{x_n}{n\in \N} \subseteq M\setminus\meng{x_0}$ und abzählbar.\\
+Sei $D':= \left(D \setminus \meng{x_0} \right) \cup A$.\\
+Dann ist $x_0\notin D'$ und falls $D$ abzählbar ist, ist auch $D'$ als endliche
+Vereinigung abzählbarer Mengen abzählbar.\\
+Da $\folge x n \N$ gegen $x_0$ konvergiert, ist
+$\menge{x_n}{n \in \N} \cup \meng{x_0}$ kompakt und damit insbesondere
+abgeschlossen, also 
+$\overline{\menge{x_n}{n\in\N}}\subseteq\menge{x_n}{n\in\N}\cup\meng{x_0}$.\\
+Offenbar ist $x_0$ als Grenzwert von $\folge x n \N$ wegen $x_n\neq x_0$ für
+alle $n \in \N$ ein Häufungspunkt von $\menge{x_n}{n \in \N}$ und damit 
+$\overline{\menge{x_n}{n\in\N}}\supseteq\menge{x_n}{n\in\N}\cup\meng{x_0}$.\\
+Also $\overline{\menge{x_n}{n\in\N}}=\menge{x_n}{n\in\N}\cup\meng{x_0}$.\\
+Es gilt weiter:
+\begin{align*}\overline{D'} 
+&=\overline{\left(D \setminus \meng{x_0} \right) \cup \menge{x_n}{n \in \N}}
+=\overline{D \setminus \meng{x_0}} \cup \overline {\menge{x_n}{n \in \N}}\\
+&= \overline{D \setminus \meng{x_0}} \cup \menge{x_n}{n \in \N}\cup\meng{x_0}\\
+&\supseteq D \setminus \meng{x_0} \cup \menge{x_n}{n \in \N}\cup\meng{x_0}
+= D \cup\menge{x_n}{n \in \N}\text.
+\end{align*}
+Da $\overline {D'}$ abgeschlossen ist, enthält es auch den Abschluss von
+$D \cup\menge{x_n}{n \in \N}$. Somit gilt wegen der Dichtheit von $D$ in M:
+\[\overline{D'} \supseteq \overline{D \cup\menge{x_n}{n \in \N}} \supseteq
+\overline D = M\text.\]
+Die umgekehrte Inklusion ist trivial.
+\end{proof}

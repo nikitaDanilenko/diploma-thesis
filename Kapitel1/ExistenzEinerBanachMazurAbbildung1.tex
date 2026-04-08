@@ -1,0 +1,44 @@
+\begin{satz}{Existenz einer Banach--Mazur--Abbildung}
+            {ExistenzEinerBanachMazurAbbildung}
+Seien $(E, \norm\cdot_E)$, $(F, \norm\cdot_F)$
+endlichdimensionale normierte $\K$--Vektorräume mit $\dim_\K E = \dim_\K F$.\\
+Dann existiert eine Banach--Mazur--Abbildung zwischen $(E, \norm\cdot_E)$ und
+$(F, \norm\cdot_F)$.
+\end{satz}
+\begin{proof}
+Da die Vektorräume $E, F$ endlichdimensional sind, gibt es bijektive lineare
+Abbildungen von $E$ nach $F$ und diese, sowie deren Umkehrabbildungen, sind
+stetig.
+Damit ist $\Inv(E, F) \neq \emptyset$.\\
+Sei $d:=d_{BM}\left( (E, \norm\cdot_E), (F, \norm\cdot_F) \right)$.\\
+Aufgrund der Infimumseigenschaft  existiert zu jedem $n \in \N$ ein
+$S_n \in \Inv(E, F)$ mit 
+$d + \frac 1 n > \opnorm {S_n} E F \opnorm {S_n\inv}FE$.\\
+Sei $\folge S n \N$ eine Auswahl solcher Elemente und
+$T_n := \frac 1 {\opnorm {S_n} E F} S_n$ für alle $n \in \N$.\\
+Dann gilt offenbar: 
+$T_n \in \Inv(E, F)$ und $T_n\inv = \opnorm{S_n} F E \cdot S_n\inv$
+für alle $n \in \N$.\\
+Somit gilt für alle $n \in \N$:\[
+\opnorm{T_n\inv}FE=\opnorm{S_n}EF\cdot\opnorm{S_n\inv}FE<d+\frac1n\le d+1
+\text.\]
+Nun ist auch $\folge T n \N \in \kran {L(E, F)} 0 1 ^\N$.\\
+Da $E$ und $F$ endlichdimensional sind, ist auch $L(E, F)$ endlichdimensional
+und somit ist $\kran{L(E,F)}01$ kompakt,
+also existiert eine
+Teilfolge $\left(T_{n_j}\right)_{j \in \N}$ von $\folge T n \N$, die gegen ein
+$T_0 \in \kran{L(E, F)}01$ konvergiert.\\
+Die Folge $(T_{n_j}\inv)_{j\in \N}$ ist offenbar ebenfalls
+beschränkt.\\
+Da $(E, \norm\cdot_E)$ als endlichdimensionaler normierter Raum vollständig
+ist, erhalten wir mit
+\ref{InvertierbarkeitDesGrenzwertsInvertierbarerOperatoren} die Konvergenz von
+$\left(T_{n_j}\inv \right)_{j\in \N}$ und es gilt
+\[T_0\text{ ist invertierbar mit }T_0\inv=\Limes j \infty T_{n_j}\inv\text. \]
+Nach Konstruktion gilt für alle $n \in \N$\[ 
+\abs{\opnorm {T_n} E F \opnorm{T_n\inv} F E - d} 
+=\opnorm{T_n}EF\opnorm{T_n\inv}FE-d=\opnorm{T_n\inv}FE-d<\frac 1n\text.\]
+Daher gilt\[
+\opnorm {T_0\inv} F E = \Limes j \infty \opnorm {T_{n_j}\inv} F E = d\text.\]
+Wegen $T_0 \in \kran{L(E, F)}01$ ist $T_0$ also eine Banach--Mazur--Abbildung.
+\end{proof}

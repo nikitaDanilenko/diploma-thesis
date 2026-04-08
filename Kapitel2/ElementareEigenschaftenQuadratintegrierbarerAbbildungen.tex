@@ -1,0 +1,43 @@
+\begin{lemma}{Elementare Eigenschaften quadratintegrierbarer Abbildungen}
+             {ElementareEigenschaftenQuadratintegrierbarerAbbildungen}
+
+Seien $n \in \N$ und $\gamma \in L_2(\Omega, \mfa, \Prim, \R^n)$ zentriert,
+unkorreliert und $L_2$--normiert.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{ElementareEigenschaftenQuadratintegrierbarerAbbildungen1}
+ $\forall\, i, j \in \haken n : i\neq j\folgt\sprod{\gamma_i}{\gamma_j}=0$.
+\item\label{ElementareEigenschaftenQuadratintegrierbarerAbbildungen2}
+ $\bigg\|\Sum{i=1}n \gamma_i\bigg\|_2^2=\Sum{i=1}n \norm{\gamma_i}_2^2= n$.
+\item\label{ElementareEigenschaftenQuadratintegrierbarerAbbildungen3}
+ $\forall\, c \in \R^n: \norma{\bprod c \gamma_{n, L_2}}_2=\norm c_{2, n}$.
+\item\label{ElementareEigenschaftenQuadratintegrierbarerAbbildungen4}
+ $\norm\cdot_{2, n} \circ\gamma$ ist $\mfa-\mfb$--messbar und
+    $\E(\norm\cdot_{2, n} \circ \gamma) \le \sqrt n$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Seien $i \neq j \in \haken n$.\\
+Dann ist $\sprod {\gamma_i} {\gamma_j}
+= \E(\gamma_i\gamma_j) = \E(\gamma_i)\E(\gamma_j) = 0$, da $\gamma$ zentriert
+ist.\\
+(2) Die erste Gleichheit ist Pythagoras im Hilbertraum 
+$L_2(\Omega, \mfa, \Prim, \R)$, die zweite folgt aus der Forderung, dass für
+alle $i \in \haken n$ wegen $\gamma$ $L_2$--normiert $\norm{\gamma_i}_2 = 1$
+gilt.\\
+(3) Sei $c \in \R^n$. Dann gilt mit Pythagoras:
+\[\norma{\bprod c \gamma _{n, L_2}}_2^2 = \norma{\sum_{i=1}^nc_i\gamma_i}_2^2
+= \sum_{i=1}^n c_i^2 \norm{\gamma_i}_2^2 = \norm c _{2, n}^2\text.\]
+(4) Sei $Y := \norm\cdot_{2,n}^2 \circ \gamma$.\\
+Da $\gamma$ messbar,
+$\norm\cdot_{2, n}$ stetig bezüglich sich selbst, $q: \R \rightarrow \R,
+t\mapsto t^2$ stetig sind und auf $\R$ die Borel'sche $\sigma-$Algebra
+vorliegt, sind $Y$ und $\sqrt\cdot \circ Y$ als Hintereinanderausführung
+messbarer und stetiger Funktionen selbst messbar.\\
+Da $\norm\cdot_{2, n} \circ \gamma \ge 0$, gilt
+$\norm\cdot_{2, n} \circ \gamma = \sqrt\cdot \circ Y$.\\
+Die Wurzelabbildung ist konkav, also gilt mit der Jensenschen Ungleichung und
+der Normiertheit der Komponentenfunktionen von $\gamma$:
+\[\E\left(\sqrt\cdot \circ Y\right) \le \sqrt{\E(Y)} 
+= \sqrt{\sum_{i=1}^n\E(\gamma_i^2)} = \sqrt n\text.\]
+\end{proof}

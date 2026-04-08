@@ -1,0 +1,57 @@
+\begin{lemma}{Erwartungswert des Supremums integrierbarer Funktionen}
+            {EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen}
+Seien $I$ eine nichtleere, abzählbare Menge und 
+$\folge X i I \in L_1(\Omega, \mfa, \Prim, \R)^I$.\\
+Es gelte:
+\begin{enumerate}[(a)]
+\item für alle 
+     $\omega \in \Omega$ ist $\menge{X_i(\omega)}{i \in I}$
+     nach oben beschränkt,
+\item $\Sup{i \in I} X_i \in L_1(\Omega, \mfa, \Prim, \R)$
+(wohldefiniert wegen (a) und $I\neq \emptyset$).
+\end{enumerate}
+Dann gilt:
+\begin{enumerate}[(1)]
+\item\label{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen1}
+ $\menge{\E\left( \Sup{i \in E} X_i \right)}{E \in \Pot_{ne}(I)} $
+    ist nichtleer und nach oben beschränkt.
+\item\label{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen2}
+ $\sup\menge{\E\left( \Sup{i \in E} X_i\right)}{E \in \Pot_{ne}(I)} 
+    = \E\left(\Sup{i \in I} X_i \right)$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Da $I$ nichtleer ist, gibt es ein $i_0 \in I$. Daher ist
+$\meng{i_0}\in\Pot_{ne}(I)$, sodass die in (1) angegebene Menge nichtleer
+ist.\\
+Sei $A \in \Pot_{ne}(I)$. Dann ist auch $A \neq \emptyset$, sodass ein
+$a \in A$ existiert.\\
+Wegen
+\[X_a \le \sup_{i \in A}X_i \le \sup_{i \in I}X_i =: f,\]
+der Integrierbarkeit von $X_a$ und nach (b) auch der von $f$
+ist nach \refclaim{Integrierbarkeitskriterien}{Integrierbarkeitskriterien2}
+\begin{align}\sup_{i \in A}X_i \text{ integrierbar mit }
+\E\left(\sup_{i \in A}X_i \right) \le  \E\left(f \right)\text. \tag{$\ast$}
+\end{align}
+Somit ist die in (1) angegebene Menge auch nach oben beschränkt.\\
+Falls nun $I$ endlich ist, so ist wegen $I \in \Pot_{ne}(I)$ für (2) nichts zu
+zeigen.\\
+Sei also $I$ abzählbar unendlich.
+Dann existiert $\iota: \N \rightarrow I$ bijektiv.\\
+Setze
+\[I_n := \iota(\haken n) \text{ und } f_n:= \sup_{i \in I_n}X_i 
+\text{ für alle } n \in \N\text.\]
+Dann ist $\folge I n \N$ eine aufsteigende Mengenfolge mit
+$\bigcup\menge{I_n}{n \in \N} = I$ und daher $\folge f n \N$ eine monoton
+wachsende Folge nach $(\ast)$ integrierbarer Funktionen, die punktweise gegen
+$f$ konvergiert.\\
+Somit sind die Voraussetzungen von \ref{MonotoneKonvergenzImIntegrierbarenFall}
+erfüllt und es gilt:
+\begin{align*}
+\E(f)& \overset{\ref{MonotoneKonvergenzImIntegrierbarenFall}}= 
+\Limes n \infty \E(f_n) = \sup_{n \in \N}\E(f_n)
+= \sup\menge{\E\left(\sup_{i \in I_n}X_i \right)}{n \in \N}\\
+&\le\sup\menge{\E\left(\sup_{i \in E}X_i \right)}{E \in \Pot_{ne}(I)}
+\overset{(\ast)} \le \E(f)\text.
+\end{align*}
+\end{proof}

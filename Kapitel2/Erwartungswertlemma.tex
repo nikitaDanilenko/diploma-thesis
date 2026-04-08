@@ -1,0 +1,40 @@
+\begin{lemma}{Erwartungswertlemma}{Erwartungswertlemma}
+Seien $f,g\in L_1(\Omega,\mfa,\Prim,\R)$ mit $f,g\ge 0$ und $\E(f)\le\E(g)$.\\
+Seien $a, b \in \R_{>0}$ mit $a \le \E(f) \le \E(g) \le b$.\\
+Dann ist $\meng{f > 0}\cap \meng{ag \le bf} \in \mfa$ und es gilt:
+$\Prim\big(\meng{f > 0}\cap \meng{ag \le bf}\big) > 0\text.$\\
+Insbesondere existiert also ein $\omega \in \Omega$ mit $f(\omega) > 0$ und
+$\frac {g(\omega)}{f(\omega)} \le \frac b a$.
+\end{lemma}
+\begin{proof}
+Da $f$ und $g$ integrierbar sind, sind auch $ag$ und $bf$ integrierbar. Damit
+sind sie messbar und daher sind $\meng{f >0}$,
+$\meng{ag \le bf} \in \mfa$. Also auch deren Schnitt.\\
+Annahme: $\Prim(\meng{f > 0}\cap \meng{ag \le bf}) = 0$.\\
+Dann ist $\Prim(f = 0 \vee ag > bf) = 1$.\\
+Es ist 
+\begin{align*}\meng{f = 0 \vee ag > bf} &= \meng{f=0} \cup \meng{ag > bf} \\
+&= \meng{f=0} \overset{\cdot}\cup \bigg(\meng{ag>bf}\setminus\meng{f=0}
+\bigg)\text.\end{align*}
+Da $\E(f) > 0$ und $f \ge 0$ ist $\Prim(f = 0) < 1$.\\
+Wegen der Disjunktheit von $\meng{ag >bf}\setminus\meng{f=0}$ und $\meng{f=0}$
+gilt daher
+\[\Prim\left(ag > bf \wedge f > 0 \right) = 1 - \Prim(\meng{f= 0}) > 0\text.\]
+Sei $A := \meng{ag>bf}$.\\
+Dann ist $\meng{ag>bf}\setminus\meng{f=0}\subseteq A$ und daher $\Prim(A)>0$.\\
+Wegen $b>0$ ist $A = \meng{f < \frac a b g}$.\\
+Seien $X := f \Eins_A$ und $Y:= \left(\frac a b g\right) \Eins_A$.\\
+Dann sind $0 \le X \le f$ und $0 \le Y \le \frac a b g$, also nach
+\ref{Integrierbarkeitskriterien}: $X, Y$ integrierbar.\\
+Weiter sind $X \le Y$ und $\meng{X < Y} = A$.\\
+Nach \ref{StrengeMonotonieDesErwartungswerts} gilt somit: $\E(X) < \E(Y)$.\\
+Erhalte wegen der Integrierbarkeit von $g$:
+\begin{align*}
+& \E(f) = \E\left(f\Eins_{\meng{f = 0 \vee ag > bf}}\right) 
+= \E\left(f\Eins_{\meng{f=0}} +f\Eins_{\meng{ag > bf}\setminus\meng{f=0}}\right)\\
+=&\, \E\left(f\Eins_{\meng{ag > bf}\setminus\meng{f=0}} \right) 
+\le \E\left(f\Eins_A \right)= \E(X) < \E(Y) = \E\left(\frac abg \right)
+=\frac a b \E\left(g\right) \le a
+\end{align*}
+Was aber wegen $\E(f) \ge a$ nicht sein kann. $\lightning$
+\end{proof}

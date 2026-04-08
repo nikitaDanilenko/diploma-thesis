@@ -1,0 +1,53 @@
+\begin{lemma}{Erwartungswert der 2--Norm eines N(0,1)--Prozesses}
+             {ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}
+Seien $n \in \N$, $\gamma : \Omega \rightarrow \R^n$ unabhängig und
+$N(0,1)$--verteilt.\\
+Sei $\Gamma:\!\  ]0, \infty[ \rightarrow \R, 
+             t \mapsto \int_0^\infty x^{t-1}\exp(-x)dx$.\\
+Dann gilt:
+\[\E\left(\norm\cdot_{2, n} \circ \gamma \right)
+= \sqrt 2\frac{\Gamma\left(\frac{n+1}2\right)}{\Gamma\left(\frac n 2 \right)}
+\text.\]
+\end{lemma}
+\begin{proof}
+Seien $Z := \norm\cdot_{2, n}\circ \gamma$ und $Y := Z^2$.\\
+Nach Definition ist $Y$ dann $\chi^2_n$--verteilt.\\
+Für alle $\nu, \lambda \in \!\ ]0, \infty[$ ist 
+\[ f_{\nu, \lambda}: \R \rightarrow \R, t \mapsto
+	\begin{cases}
+\frac 1 {\Gamma(\nu)}\lambda^\nu t^{\nu -1}\exp\left(-\lambda t\right) &:t> 0\\
+0 & :\text{ sonst}
+	\end{cases}
+\]
+die Dichte der Gammaverteilung mit den Parametern $\nu$ und $\lambda$
+($f_{\nu, \lambda}$ ist nach \refclaim{ElementareEigenschaftenDerGammafunktion}
+{ElementareEigenschaftenDerGammafunktion1} wohldefiniert). (Vgl. \cite{Irle},
+dort 20.8 und 20.10).\\
+Weiter ist eine $\chi_n^2$--verteilte Zufallsgröße auch gammaverteilt mit den
+Parametern $\nu = \frac n 2$ und $\lambda = \frac 1 2$.\\
+Da $Y, Z \ge 0$, ist $Z = \sqrt\cdot \circ Y$ und
+weil $f_{\frac n 2, \frac 1 2}, f_{\frac {n+1}2, \frac 1 2}$ stetige
+Dichten sind, gilt:
+\begin{align*}
+\E(\norm\cdot_{2, n} \circ \gamma) &= \E(Z) = \E(\sqrt\cdot \circ Y)
+ = \int_{0}^\infty\sqrt t \Prim^Y(dt) 
+ = \int_0^\infty t^{\frac 1 2}f_{\frac n 2, \frac 1 2}(t) dt\\
+ &= \frac 1 {\Gamma\left(\frac n 2 \right)} \left(\frac 1 2 \right)^{\frac n 2}
+ \int_0^\infty t^{\frac 1 2}t^{\frac n 2 - 1}\exp\left(-\frac 1 2 t \right)dt\\
+ &= \frac {\left(\frac 1 2 \right)^{\frac n 2}} {\Gamma\left(\frac n 2\right)} 
+\frac{\Gamma\left(\frac{n+1}2 \right)}{\left(\frac 12\right)^{\frac{n+1}{2}}}
+\int_0^\infty \frac 1 {\Gamma\left(\frac{n+1}2 \right)}
+                      \left(\frac 12\right)^{\frac{n+1}{2}}
+                      t^{\frac {n+1} 2 - 1}\exp\left(-\frac 1 2 t \right)dt\\
+&=\frac {\left(\frac 1 2 \right)^{\frac n 2}} {\Gamma\left(\frac n 2\right)} 
+\frac{\Gamma\left(\frac{n+1}2 \right)}{\left(\frac 12\right)^{\frac{n+1}{2}}}
+\int_0^\infty f_{\frac{n+1}2, \frac 1 2}(t) dt
+\overset{\substack{f_{\frac{n+1}2, \frac 1 2}\\\text{Dichte}}}= \frac {\left(\frac 1 2 \right)^{\frac n 2}} {\Gamma\left(\frac n 2\right)} 
+\frac{\Gamma\left(\frac{n+1}2 \right)}{\left(\frac 12\right)^{\frac{n+1}{2}}}\\
+&= \frac 1{\left(\frac 1 2 \right)^{\frac 1 2}} 
+   \frac{\Gamma\left(\frac{n+1}2 \right)}
+        {\Gamma\left(\frac n 2\right)}
+= \sqrt 2\frac{\Gamma\left(\frac{n+1}2\right)}{\Gamma\left(\frac n 2 \right)}
+\text. 
+\end{align*}
+\end{proof}

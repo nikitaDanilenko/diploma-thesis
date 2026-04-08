@@ -1,0 +1,37 @@
+\begin{lemma}{Integrierbarkeitskriterien}
+             {Integrierbarkeitskriterien}
+Seien $f, g, h \in \mcm(\Omega, \mfa, \R)$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{Integrierbarkeitskriterien1}
+ Sind $f, g \ge 0$, $f \le g$ und $g$ integrierbar, so auch $f$ mit
+$0 \le \E(f) \le \E(g)$.
+\item \label{Integrierbarkeitskriterien2}
+ Sind $h \le f \le g$ und $g, h$ integrierbar, so auch $f$ und
+$\E(h) \le \E(f) \le \E(g)$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Ist die Integrierbarkeit von $f$ in den beiden Fällen geklärt, so folgt die
+jeweils zweite Aussage einfach über die Monotonie des Erwartungswerts.\\
+(1) Seien $f, g \ge 0$, $f\le g$ und $g$ integrierbar.\\
+Sei $\vi \in \mct(\Omega, \mfa, \R)$ mit $0 \le \vi \le f$.\\
+Dann ist auch $0 \le \vi \le f \le g$ und daher
+\[\menge{\E(\psi)}{\psi \in \mct(\Omega,\mfa,\R), 0 \le \psi\le f}
+\subseteq
+ \menge{\E(\psi)}{\psi \in \mct(\Omega,\mfa,\R), 0 \le \psi\le g}\text.\]
+Die größere Menge ist allerdings beschränkt, weil $g$ integrierbar ist.\\
+Also ist $\menge{\E(\psi)}{\psi \in \mct_1(\Omega,\mfa,\R), 0 \le \psi\le f}$
+nichtleer und nach oben beschränkt, besitzt also ein Supremum in $\R$.\\
+Daher
+\begin{align*}
+\E(f)&=\sup\menge{\E(\psi)}{\psi \in \mct(\Omega,\mfa,\R), 0 \le \psi\le f}\\
+   &\le\sup\menge{\E(\psi)}{\psi \in \mct(\Omega,\mfa,\R), 0 \le \psi\le g}
+   = \E(g) < \infty\text.
+\end{align*}
+Somit ist $f$ integrierbar.\\
+(2) Seien $h \le f \le g$ und $g, h$ integrierbar.\\
+Es gilt also $0 \le f-h \le g -h$.\\
+Da $g, h$ integrierbar sind, ist es auch $g-h$ und damit nach (1) auch $f-h$.\\
+Analog ist also $(f-h)+ h = f$ integrierbar.
+\end{proof}

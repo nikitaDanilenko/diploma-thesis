@@ -1,0 +1,35 @@
+\begin{lemma}{Eigenschaften der Bildhalbnorm}{EigenschaftenDerBildhalbnorm}
+Seien $(E, \norm\cdot_E), (F, \norm\cdot_F)$ normierte $\K$-Vektorräume,
+$T \in \Hom(E, F)$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+ \item \label{EigenschaftenDerBildhalbnorm1}
+ $\norm\cdot_T$ ist eine Halbnorm auf $E$.
+ \item\label{EigenschaftenDerBildhalbnorm2}
+ Genau dann ist $\norm \cdot_T$ eine Norm auf $E$, wenn $T$ injektiv ist.
+ \item\label{EigenschaftenDerBildhalbnorm3}
+ Genau dann gibt es ein $C \in \R_{>0}$
+    mit $\norm\cdot_T \le C\cdot\norm\cdot_E$, wenn $T$ stetig ist.
+ \item\label{EigenschaftenDerBildhalbnorm4}
+ Sind $E, F$ Banachräume, $T$ stetig, injektiv und $T(E)$ abgeschlossen, so
+    ist $\norm \cdot_T$ eine zu $\norm\cdot_E$ äquivalente Norm und es gilt:
+    \[\inf\menge{ \norm{Tx}_F }{x \in \kran E 0 1} \cdot \norm\cdot_E
+    \le \norm\cdot_T \le \opnorm T E F \cdot \norm\cdot _E\text.\]
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Die ersten drei Aussagen sind trivial.\\
+Für die vierte sei $c := \inf\menge{ \norm{Tx}_F }{x \in \kran E 0 1}$.
+Die Voraussetzung in $(4)$ ist genau jene von
+\ref{InjektivitätLinearerOperatorenUndOperatornormDerInversen},
+sodass also $c > 0$ gilt.\\
+Sei $x \in E\setminus\meng 0$.
+Dann gilt wegen $\norma{\frac 1 {\norm{x}_E} \cdot x}_E = 1$
+\begin{align*} \norm x _T = \norm {Tx}_F 
+  = \norma{\norm x _E\cdot T\left(\frac 1 {\norm x _E}x \right)}_F
+  = \norm x _E \cdot \norma{T\left(\frac 1 {\norm x _E}x \right)}_F
+  \ge \norm x _E \cdot c\text.\end{align*}
+Für $0$ ist diese Abschätzung trivial erfüllt.\\
+Die zweite Abschätzung folgt direkt aus der Stetigkeit von $T$ und der
+Definition der Bildhalbnorm.
+\end{proof}

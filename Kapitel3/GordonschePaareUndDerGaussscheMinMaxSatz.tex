@@ -1,0 +1,158 @@
+\begin{satz}{Gordon'sche Paare und der Gauß'sche Min--Max-Satz}
+            {GordonschePaareUndDerGaussscheMinMaxSatz}
+Seien $\emptyset \neq T \subseteq S^{m-1}$ und 
+$\emptyset\neq V \subseteq \R^N$ beschränkt.\\
+Seien $c \in \R_{>0}$ mit $\forall\, v \in V: \norm v _{2,N} \le c$ und es gelte
+\[0 \in V \folgt 0 \text{ Häufungspunkt von }V\]
+Schließlich sei $(X,Y)$ das Gordon'sche Paar zum Tupel $(\gamma,\delta,g,c)$.\\
+Dann sind die Abbildungen
+\[\inf_{t \in T}\sup_{v \in V}X(t, v),\  \sup_{t \in T}\sup_{v \in V}X(t, v),\ 
+\inf_{t \in T}\sup_{v \in V}Y(t, v),\  \sup_{t \in T}\sup_{v \in V}Y(t, v)\]
+nach \ref{IntegrierbarkeitVonExtremaInGordonschenPaaren} integrierbar und es
+gilt:
+\begin{enumerate}[(1)]
+	\item \label{GordonschePaareUndDerGaussscheMinMaxSatz1}
+	$  \E\left(\Inf{t \in T}\Sup{v\in V}X(t, v)\right)
+	\le\E\left(\Inf{t \in T}\Sup{v\in V}Y(t, v)\right)$
+	\item \label{GordonschePaareUndDerGaussscheMinMaxSatz2}
+	$  \E\left(\Sup{t \in T}\Sup{v\in V}Y(t, v)\right)
+	\le\E\left(\Sup{t \in T}\Sup{v\in V}X(t, v)\right)$
+\end{enumerate}
+Insbesondere gilt
+\begin{align*}
+\E\bigg(\Inf{t \in T}\Sup{v\in V}X(t, v)\bigg) & \le 
+\E\left(\Inf{t \in T}\Sup{v\in V}Y(t, v)\right) \le 
+\E\left(\Sup{t \in T}\Sup{v\in V}Y(t, v)\right)\\& \le
+\E\left(\Sup{t \in T}\Sup{v\in V}X(t, v)\right)
+\end{align*}
+\end{satz}
+\begin{proof}
+Zunächst gibt es wegen der Separabilität von $\R^m$ und $\R^N$ ein
+$T' \subseteq T$ abzählbar und dicht in $T$, sowie ein
+$\widetilde V \subseteq V$ abzählbar und dicht in $V$.\\
+Falls $0 \in V$, so ist nach Voraussetzung $0$ ein Häufungspunkt von $V$, also
+gibt es nach 
+\refclaim{DichtheitUndHaeufungspunkte}{DichtheitUndHaeufungspunkte2} ein
+$V'' \subseteq V$ abzählbar und dicht in $V$ mit $0 \notin V''$.\\
+Sei also
+\[V' := \begin{cases}\widetilde V &:\text{ falls } 0 \notin V\\
+V'' & : \text{ sonst} \end{cases}\text.\]
+Dann ist insbesondere $0 \notin V'$.\\
+Seien $\mct := \Pot_{ne}(T')$ und $\mcv:= \Pot_{ne}(V')$.\\
+Nach
+\refclaim{BeschraenktheitGordonscherPaare}{BeschraenktheitGordonscherPaare1}
+sind für alle $\omega \in \Omega$ die Mengen
+\begin{align}\menge{X(t, v)(\omega)}{(t, v) \in T \times V},\,
+\menge{Y(t, v)(\omega)}{(t, v) \in T \times V} \text{ beschränkt.}\tag {$a$}
+\end{align}
+Da jedes $C \in \mct\cup\meng{T'}$ und jedes $D\in\mcv\cup\meng{V'}$
+beschränkt und nichtleer ist, gilt nach
+\refclaim{BeschraenktheitGordonscherPaare}{BeschraenktheitGordonscherPaare3}:
+\begin{align}
+\forall\, A \in \mct\cup\meng{T'}\, \forall\, B \in \mcv\cup\meng{V'}:
+ \inf_{t \in A}\sup_{v \in V}X(t, v) = \sup_{v \in V}\inf_{t \in A}X(t,v)
+ \tag {$b$}
+\end{align}
+und nach \ref{IntegrierbarkeitVonExtremaInGordonschenPaaren}:
+\begin{align*}
+ &\forall\, A \in \mct\cup\meng{T'}\, \forall\, B \in \mcv\cup\meng{V'}:\\
+ &\quad \quad
+ \inf_{t \in A}\sup_{v \in B}X(t, v), \, \inf_{t \in A}\sup_{v \in B}Y(t, v)
+ \overset{\refclaim{IntegrierbarkeitVonExtremaInGordonschenPaaren}
+ {IntegrierbarkeitVonExtremaInGordonschenPaaren1}}\in L_1(\Omega,\mfa,\Prim,\R)
+ \tag  {$c$}\\
+ &\wedge\quad
+ \sup_{t \in A}\sup_{v \in B}X(t, v), \, \sup_{t \in A}\sup_{v \in B}Y(t, v)
+ \overset{\refclaim{IntegrierbarkeitVonExtremaInGordonschenPaaren}
+ {IntegrierbarkeitVonExtremaInGordonschenPaaren2}}\in L_1(\Omega,\mfa,\Prim,\R)
+  \text.\tag {$b'$}
+\end{align*}
+Da für jedes $C \in \mct \cup \meng {T'}$ nach Setzung 
+$\emptyset \neq C \subseteq S^{m-1}$ gilt, sowie jedes 
+$D \in \mcv \cup \meng{V'}$
+nichtleer und beschränkt ist mit $0 \notin D$, gilt nach
+\ref{GordonschePaareUndDerGaussscheMinMaxSatzEndlich}
+\begin{align*}
+&\forall\, A \in \mct\, \forall\, B \in \mcv:\\
+& \quad\quad\E\left(\inf_{t \in A}\sup_{v \in B}X(t, v) \right)
+ \overset{\refclaim{GordonschePaareUndDerGaussscheMinMaxSatzEndlich}
+{GordonschePaareUndDerGaussscheMinMaxSatzEndlich1}}\le
+ \E\left(\inf_{t \in A}\sup_{v \in B}Y(t, v)\right) \tag {$d$}\\
+& \wedge \quad
+ \E\left(\sup_{t \in A}\sup_{v \in B}Y(t, v) \right)
+ \overset{\refclaim{GordonschePaareUndDerGaussscheMinMaxSatzEndlich}
+{GordonschePaareUndDerGaussscheMinMaxSatzEndlich2}}\le
+ \E\left(\sup_{t \in A}\sup_{v \in B}X(t, v)\right) \text.\tag {$c'$}
+\end{align*}
+Seien $I:=T'$, $J:=V'$, $X':= X\vert_{I\times J} = X\vert_{T' \times V'}$ und
+$Y':=Y\vert_{I \times J}= Y\vert_{T' \times V'}$.\\
+Mit $(a)$, $(b)$, $(c)$, $(d)$, sind die Voraussetzungen von 
+\ref{AbzaehlbareDarstellungUndInfimumVonSuprema} und
+wegen $(a)$, $(b')$, $(c')$ auch jene von
+\ref{AbzaehlbareDarstellungUndSupremumVonSuprema} für $X', Y'$
+und $I, J$ erfüllt.\\
+Es gilt:
+\[\inf_{t \in T'}\sup_{v \in V'}X'(t,v) =
+  \inf_{t \in T'}\sup_{v \in V'}X(t, v)\text, \ 
+  \inf_{t \in T'}\sup_{v \in V'}Y'(t,v) =
+  \inf_{t \in T'}\sup_{v \in V'}Y(t, v)\text,\]
+\[\sup_{t \in T'}\sup_{v \in V'}X'(t,v) =
+  \sup_{t \in T'}\sup_{v \in V'}X(t, v), \ 
+  \sup_{t \in T'}\sup_{v \in V'}Y'(t,v) =
+  \sup_{t \in T'}\sup_{v \in V'}Y(t, v)\text.\]
+Somit folgt:
+\begin{align}\E\left(\inf_{t \in T'}\sup_{v \in V'}X(t, v)\right) &=
+\E\left(\inf_{t \in T'}\sup_{v \in V'}X'(t, v)\right) 
+\overset{\ref{AbzaehlbareDarstellungUndInfimumVonSuprema}}\le
+\E\left(\inf_{t \in T'}\sup_{v \in V'}Y'(t, v)\right)\notag\\
+&= \E\left(\inf_{t \in T'}\sup_{v \in V'}Y(t, v)\right) \label{gpudgmmseq:1}
+\end{align}
+und
+\begin{align}\E\left(\sup_{t \in T'}\sup_{v \in V'}Y(t, v)\right) &=
+\E\left(\sup_{t \in T'}\sup_{v \in V'}Y'(t, v)\right) 
+\overset{\ref{AbzaehlbareDarstellungUndSupremumVonSuprema}}\le
+\E\left(\sup_{t \in T'}\sup_{v \in V'}X'(t, v)\right)\notag\\
+&= \E\left(\sup_{t \in T'}\sup_{v \in V'}X(t, v)\right)\text.
+\label{gpudgmmseq:2}
+\end{align}
+Schließlich ist $T'$ dicht in $T$ und $V'$ dicht in $V$, sodass wegen
+\ref{GordonschePaareAufDichtenTeilmengen} gilt:
+\begin{align*}
+\E\left(\inf_{t \in T}\sup_{v\in V}X(t,v) \right)
+&\overset{\refclaim{GordonschePaareAufDichtenTeilmengen}
+{GordonschePaareAufDichtenTeilmengen2}}=
+\E\left(\inf_{t \in T'}\sup_{v\in V'}X(t,v) \right)\\
+& \overset{\eqref{gpudgmmseq:1}}\le
+\E\left(\inf_{t \in T'}\sup_{v\in V'}Y(t,v) \right)
+\overset{\refclaim{GordonschePaareAufDichtenTeilmengen}
+{GordonschePaareAufDichtenTeilmengen4}}=
+\E\left(\inf_{t \in T}\sup_{v\in V}Y(t,v) \right)\text,\\
+\E\left(\sup_{t \in T}\sup_{v\in V}Y(t,v) \right)
+&\overset{\refclaim{GordonschePaareAufDichtenTeilmengen}
+{GordonschePaareAufDichtenTeilmengen4}}=
+\E\left(\sup_{t \in T'}\sup_{v\in V'}Y(t,v) \right)\\
+& \overset{\eqref{gpudgmmseq:2}}\le
+\E\left(\sup_{t \in T'}\sup_{v\in V'}X(t,v) \right)
+\overset{\refclaim{GordonschePaareAufDichtenTeilmengen}
+{GordonschePaareAufDichtenTeilmengen2}}=
+\E\left(\sup_{t \in T}\sup_{v\in V}X(t,v) \right)\text.
+\end{align*}
+Damit sind (1) und (2) gezeigt.\\
+Zusätzlich gilt
+\[\inf_{t \in T}\sup_{v \in V}Y(t,v) \le \sup_{t \in T}\sup_{v \in V}Y(t,v)\]
+und da die beiden genannten Abbildungen nach
+\ref{IntegrierbarkeitVonExtremaInGordonschenPaaren} integrierbar sind, gilt
+auch
+\begin{align} \E\left(\inf_{t \in T}\sup_{v \in V}Y(t,v) \right) 
+\le \E\left(\sup_{t \in T}\sup_{v \in V}Y(t,v) \right)
+\label{gpudgmmseq:3}
+\end{align}
+und daher
+\begin{align*}
+\E\bigg(\Inf{t \in T}\Sup{v\in V}X(t, v)\bigg) & \overset{(1)}\le 
+\E\left(\Inf{t \in T}\Sup{v\in V}Y(t, v)\right)
+\overset{\eqref{gpudgmmseq:3}}\le 
+\E\left(\Sup{t \in T}\Sup{v\in V}Y(t, v)\right)\\& \overset{(2)}\le
+\E\left(\Sup{t \in T}\Sup{v\in V}X(t, v)\right)\text.
+\end{align*}
+\end{proof}

@@ -1,0 +1,78 @@
+\begin{korollar}{Maximum zentrierter normalverteilter Zufallsgrößen}
+             {MaximumZentrierterNormalverteilterZufallsgroessen}
+Seien $n \in \N$, $\sigma \in \left(\R_{>0}\right)^n$,
+$\gamma: \Omega \rightarrow \R^n$, $\delta: \Omega \rightarrow \R^n$ mit
+$\delta$ unabhängig und
+\[\forall\, i \in \haken n: \gamma_i, \delta_i \text{ sind }
+N(0,\sigma_i^2)\text{--verteilt.}\]
+Dann gilt:
+\[\E\left(\max_{i \in \haken n}\gamma_i \right)
+\le \sqrt 2 \E\left(\max_{i \in \haken n}\delta_i\right)\]
+und diese Ungleichung ist optimal.
+\end{korollar}
+\begin{proof}
+Seien $i, j \in \haken n$.\\
+Dann gilt $\sigma_i^2 - 2\sigma_i\sigma_j +\sigma_j^2
+= (\sigma_i - \sigma_j)^2 \ge 0$ und damit $2 \sigma_i\sigma_j \le
+\sigma_i^2 + \sigma_j^2$, also
+\begin{align}
+(\sigma_i + \sigma_j)^2 = \sigma_i^2 + 2 \sigma_i\sigma_j + \sigma_j^2
+\le \sigma_i^2 + \sigma_i^2 + \sigma_j^2 + \sigma_j^2 
+= 2(\sigma_i^2 + \sigma_j^2) \text. \label{mzngeq:1}
+\end{align}
+Außerdem gilt:
+\begin{align*}
+\norm{\gamma_i - \gamma_j}_2^2 
+&\le \left(\norm{\gamma_i}_2 + \norm{\gamma_j}_2 \right)^2
+= (\sigma_i + \sigma_j)^2 \overset{\eqref{mzngeq:1}}\le 
+2(\sigma_i^2 + \sigma_j^2)\\
+&= 2\left(\norm{\delta_i}_2^2 + \norm{\delta_j}_2^2 \right)
+\overset{\delta \text{ unabh.}}=
+2 \left(\norm{\delta_i}_2^2 + \norm{\delta_j}_2^2 
+- 2 \sprod{\delta_i}{\delta_j}_{L_2} \right)\\
+&= 2\norm{\delta_i - \delta_j}_2^2 =
+\norm{\sqrt 2 \delta_i - \sqrt 2 \delta_j}_2^2\text.
+\end{align*}
+Offenbar ist für jedes $k\in \N$ die Abbildung $\sqrt 2\delta_k$
+$N(0, 2\sigma_k^2)$--verteilt. Damit sind die Voraussetzungen von
+\ref{SatzVonFernique} für $\gamma$ und $\sqrt 2 \delta$ erfüllt, sodass gilt:
+\[\E\left(\max_{i \in \haken n}\gamma_i \right)
+\overset{\ref{SatzVonFernique}}\le 
+\E\left(\max_{i \in \haken n}\sqrt 2\delta_i\right)
+\overset{\sqrt 2>0}=\sqrt 2\E\left(\max_{i \in \haken n}\delta_i\right)\text.\]
+Für den Beweis der Optimalität seien $Y_1, Y_2$ stochastisch unabhängige
+$N(0,1)$--verteilte Zufallsgrößen, sowie $X_1 :=Y_1$ und $X_2:=-Y_1$.\\
+Dann sind auch $X_1, X_2$ $N(0,1)$--verteilt, aber nicht stochastisch
+unabhängig.\\
+Offensichtlich ist $\max\meng{X_1,X_2} = \max\meng{Y_1, -Y_1} = \abs {Y_1}$
+und damit
+\begin{align}
+\E\left(\max_{i \in \haken 2}X_i \right) = \E\left(\abs {Y_1} \right) 
+= \sqrt{\frac 2 \pi}\label{mzngeq:2}\text.
+\end{align}
+Nach \cite{K2} (dort Abschnitt 6.6) gilt:
+\begin{align}
+\int_{-\infty}^\infty \exp(-t^2)dt = 2 \int_0^\infty \exp(-t^2)dt = \sqrt \pi
+\label{mzngeq:3}\text.
+\end{align}
+Seien $\Phi$ die Verteilung und $\vi$ die Dichte von $N(0,1)$, sowie
+$f$ die Dichte von $\max\meng{Y_1, Y_2}$.\\
+Nach \refclaim{EigenschaftenVonOrdnungsstatistiken}
+{EigenschaftenVonOrdnungsstatistiken4} gilt dann: $f = 2\Phi\vi$,
+sodass wir wegen $\forall\, t \in \R: \vi'(t) = -t\vi(t)$ erhalten:
+\begin{align}
+\E\left(\max_{i \in \haken 2}Y_i \right)&=
+\int_{-\infty}^\infty t f(t)dt = 2\int_{-\infty}^\infty \Phi(t)t\vi(t)dt
+= - 2\int_{-\infty}^\infty \Phi(t)\vi'(t)dt\notag\\
+&= -2\left([\Phi(t)\vi(t)]_{t=-\infty}^\infty - 
+\int_{-\infty}^\infty \vi(t)^2dt \right)
+= 2 \int_{-\infty}^\infty \frac 1 {2\pi}\exp\left(-t^2\right)dt\notag\\
+&= \frac 1 \pi \int_{-\infty}^\infty \exp\left(-t^2\right)dt
+\overset{\eqref{mzngeq:3}}= \frac 1 \pi \sqrt \pi = \sqrt{\frac 1 \pi}\text.
+\label{mzngeq:4}
+\end{align}
+Also
+\[\E\left(\max_{i \in \haken 2}X_i \right) \overset{\eqref{mzngeq:2}}= 
+\sqrt 2 \sqrt{\frac 1 \pi} \overset{\eqref{mzngeq:4}}= 
+\sqrt 2 \E\left(\max_{i \in \haken 2}Y_i \right)\text.\]
+\end{proof}

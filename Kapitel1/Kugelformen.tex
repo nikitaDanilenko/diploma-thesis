@@ -1,0 +1,27 @@
+\begin{korollar}{Kugelformen im Endlichdimensionalen}
+                {KugelformenImEndlichdimensionalen}
+Seien $n \in \N$ und $p \in [1, \infty[$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+
+\item\label{KugelformenImEndlichdimensionalen1}
+ $\koff {(\K^n, \norm\cdot_{1, n})} 0 1 
+    \subseteq \koff{(\K^n, \norm\cdot_{p, n})} 0 1 \subseteq
+     n^{\frac{p-1}p}\koff{(\K^n, \norm\cdot_{1, n})} 0 1$
+\item\label{KugelformenImEndlichdimensionalen2}
+ $\koff{(\K^n, \norm\cdot_{p, n})} 0 1 \subseteq
+     \koff{(\K^n, \norm\cdot_{\infty, n})} 0 1 \subseteq
+     n^{\frac 1 p}\koff {(\K^n, \norm\cdot_{p, n})} 0 1$
+\end{enumerate}
+\end{korollar}
+\begin{proof}
+Sei $x \in \K^n$.\\
+Falls $\norm x _{1, n} < 1$, so ist nach \ref{ÄquivalenzkonstantenFürPNormen}
+auch $\norm x _{p, n} \le \norm x _{1, n} < 1$.\\
+Ist $\norm x _{p, n} < 1$, so ist $\norm x_{1,n} \le 
+n^{\frac{p-1} p}\norm x_{p, n}$.\\
+Gilt $\norm x _{p, n} < 1$, so auch $\norm x _{\infty, n} 
+\le \norm x _{p, n}< 1$.\\
+Hat man schließlich $\norm x _{\infty, n} < 1$, so ist
+$\norm x _{p, n} \le n^{\frac 1 p}\norm x _{\infty, n} < n^{\frac 1 p}$.
+\end{proof}

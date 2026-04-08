@@ -1,0 +1,114 @@
+\begin{lemma}{Gauß'scher Min--Max--Satz für Gordon'sche Paare (endlich)}
+             {GordonschePaareUndDerGaussscheMinMaxSatzEndlich}
+Seien $\emptyset \neq T \subseteq S^{m-1}$ und
+$\emptyset \neq V \subseteq \R^N\setminus\meng 0$ beschränkt.\\
+Seien $c \in \R_{>0}$ mit
+$\forall\, v \in V: \norm v _{2, N} \le c$
+und $(X, Y)$ das Gordon'sche Paar zum Tupel $(\gamma, \delta, g, c)$.
+Schließlich seien $\mct := \Pot_{ne}(T)$ und $\mcv := \Pot_{ne}(V)$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{GordonschePaareUndDerGaussscheMinMaxSatzEndlich1}
+	$\forall\, A \in \mct\, \forall\, B \in \mcv:
+	\E\left(\Inf{t \in A}\Sup{v \in B}X(t, v) \right)
+	\le \E\left(\Inf{t \in A}\Sup{v \in B}Y(t, v) \right)$.
+	\item \label{GordonschePaareUndDerGaussscheMinMaxSatzEndlich2}
+	$\forall\, A \in \mct\, \forall\, B \in \mcv:
+	\E\left(\Sup{t \in A}\Sup{v \in B}Y(t, v) \right)
+	\le \E\left(\Sup{t \in A}\Sup{v \in B}X(t, v) \right)$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Seien $A \in \mct$ und $B \in \mcv$.\\
+Da $A$ und $B$ endlich und nichtleer sind, existieren $r, s \in \N$ und
+$\alpha : \haken r \rightarrow A$ bijektiv und $\beta: \haken s \rightarrow B$
+bijektiv.\\
+Seien $i, j \in \haken r$ und $k, l \in \haken s$.\\
+Nach \refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
+{IntegrierbarkeitUndVerteilungVonLinearkombinationen1} sind 
+$X(\alpha(i), \beta(j))$ und $Y(\alpha(i), \beta(j))$ quadratintegrierbar und
+damit
+\begin{align*}
+X'& : \haken r \times \haken s \rightarrow L_2(\Omega, \mfa, \Prim, \R),\ 
+(a, b) \mapsto X(\alpha(a), \beta(b))\\
+Y'& : \haken r \times \haken s \rightarrow L_2(\Omega, \mfa, \Prim, \R),\ 
+(a, b) \mapsto Y(\alpha(a), \beta(b))
+\end{align*}
+wohldefiniert.\\
+Da $\alpha$ und $\beta$ bijektiv, sowie $A$ und $B$ endlich sind, gilt
+offenbar:
+\begin{align}\inf_{t \in A}\sup_{v \in B}X(t, v) =
+  \min_{a \in \haken r}\max_{b \in \haken s}X(\alpha(a), \beta(b))
+  = \min_{a \in \haken r}\max_{b \in \haken s}X'(a, b) \label{gpugmmseeq:1}
+\end{align}
+und analog:
+\begin{align}
+\inf_{t \in A}\sup_{v\in B}Y(t, v) 
+= \min_{a \in \haken r}\max_{b \in \haken s}Y'(a, b)\text,\label{gpugmmseeq:2}
+\end{align}
+sowie
+\begin{align}\sup_{t \in A}\sup_{v\in B}X(t, v) 
+&=\max_{a\in \haken r}\max_{b \in \haken s}X'(a, b)\text,\label{gpugmmseeq:3}\\
+\sup_{t \in A}\sup_{v\in B}Y(t, v) 
+&=\max_{a \in \haken r}\max_{b \in \haken s}Y'(a, b)\text.\label{gpugmmseeq:4}
+\end{align}
+Wegen $\alpha(i) \in S^{m-1}$ ist $\alpha(i) \neq 0$ und wegen
+$\beta(i) \in V \subseteq \R^N\setminus\meng 0$ ist $\beta(i) \neq 0$.\\
+Somit ist nach
+\refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
+{IntegrierbarkeitUndVerteilungVonLinearkombinationen2}: 
+$X(\alpha(i), \beta(j))\neq 0$ und nach
+\refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
+{IntegrierbarkeitUndVerteilungVonLinearkombinationen3}:
+$Y(\alpha(i), \beta(j)) \neq 0$.\\
+Mit $\norm{\alpha(i)}_{2,m}=1$ gilt nach
+\refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
+{IntegrierbarkeitUndVerteilungVonLinearkombinationen4}
+\[X'(i,j)=X(\alpha(i), \beta(j)) \ \text{ ist }\ 
+N(0, c^2 + \norm {\beta(j)}_{2, N}^2)\text{--verteilt}\] und 
+nach \refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
+{IntegrierbarkeitUndVerteilungVonLinearkombinationen5}
+\[Y'(i, j)=Y(\alpha(i), \beta(j)) \ \text{ ist } \ 
+N(0, \norm{\beta(i)}_{2, N}^2)\text{--verteilt.}\]
+Weiter gilt ebenfalls wegen $\alpha(i) \in S^{m-1}$:
+\begin{align*}
+&\, \norm{X'(i, k) - X'(i, l)}_2  = \norm{X(\alpha(i), \beta(k)) 
+- X(\alpha(i), \beta(l))}_2\\ \overset{\refclaim{AbstaendeInGordonschenPaaren}
+{AbstaendeInGordonschenPaaren4}} = &\, \norm{Y(\alpha(i), \beta(k)) 
+- Y(\alpha(i), \beta(l))}_2 = \norm{Y'(i, k) - Y'(i, l)}_2\text.
+\end{align*}
+Es ist auch $\alpha(j) \in S^{m-1}$, sowie 
+$\beta(k), \beta(l)\in V$ und damit nach Voraussetzung 
+$\norm{\beta(k)}_{2,N} \le c$, $\norm{\beta(l)}_{2,N} \le c$, also gilt:
+\begin{align*}
+&\, \norm{Y'(i, k) - Y'(j, l)}_2 
+= \norm{Y(\alpha(i), \beta(k)) - Y(\alpha(j), \beta(l))}_2\\
+\overset{\refclaim{AbstaendeInGordonschenPaaren}
+{AbstaendeInGordonschenPaaren5}}\le &\,
+\norm{X(\alpha(i), \beta(k)) - X(\alpha(j), \beta(l))}_2
+= \norm{X'(i, k) - X'(j, l)}_2\text.
+\end{align*}
+Damit erfüllen $X', Y'$ alle Voraussetzungen von
+\ref{GaussscherMinMaxSatzGleichheitInDerErstenBedingung}, sodass gilt:
+\begin{align*}
+\E\left(\inf_{t \in A}\sup_{v \in B}X(t, v) \right)
+&\overset{\eqref{gpugmmseeq:1}}=
+\E\left(\min_{a \in \haken r}\max_{b \in \haken s}X'(a, b)\right)
+\overset{\refclaim{GaussscherMinMaxSatzGleichheitInDerErstenBedingung}
+{GaussscherMinMaxSatzGleichheitInDerErstenBedingung1}}\le
+\E\left(\min_{a \in \haken r}\max_{b \in \haken s}Y'(a, b)\right)\\
+& \overset{\eqref{gpugmmseeq:2}}= 
+\E\left(\inf_{t \in A}\sup_{v \in B}Y(t, v) \right)
+\end{align*}
+und
+\begin{align*}
+\E\left(\sup_{t \in A}\sup_{v \in B}X(t, v) \right)
+&\overset{\eqref{gpugmmseeq:3}}=
+\E\left(\max_{a \in \haken r}\max_{b \in \haken s}X'(a, b)\right)\\
+&\overset{\refclaim{GaussscherMinMaxSatzGleichheitInDerErstenBedingung}
+{GaussscherMinMaxSatzGleichheitInDerErstenBedingung2}}\le
+\E\left(\max_{a \in \haken r}\max_{b \in \haken s}Y'(a, b)\right)
+\overset{\eqref{gpugmmseeq:4}}=
+\E\left(\sup_{t \in A}\sup_{v \in B}Y(t, v) \right)\text.
+\end{align*}
+\end{proof}

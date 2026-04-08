@@ -1,0 +1,25 @@
+\begin{satz}{Gauß'scher Min--Max--Satz}
+            {GaussscherMinMaxSatz}
+Seien $r, s \in \N$ und 
+$X, Y: \haken r \times \haken s \rightarrow L_2(\Omega, \mfa, \Prim, \R)$
+mit 
+\[\forall\,i\in\haken r\,\forall\,j\in\haken s\,\exists\,\rho_{i,j}\in\R_{>0}:
+X(i, j) \text{ ist }N(0, \rho_{i,j}^2)\text{--verteilt,}\]
+\[
+\forall\,i\in\haken r\,\forall\,j\in\haken s\,
+\exists\,\sigma_{i,j}\in\R_{>0}:
+Y(i, j) \text{ ist }N(0, \sigma_{i,j}^2)\text{--verteilt.}\]
+Es gelte
+\begin{enumerate}[(a)]
+	\item $\forall\, i \in \haken r \, \forall\, k,l \in \haken s:
+	\norm{X(i,k)-X(i,l)}_2 \le \norm{Y(i,k)-Y(i,l)}_2$,
+	\item $\forall\, i, j \in \haken r\,\forall\, k, l \in \haken s:
+i \neq j \folgt \norm{X(i,k)-X(j,l)}_2 \ge \norm{Y(i,k)-Y(j,l)}_2$.
+\end{enumerate}
+Dann gilt
+\[\E\left(\min_{i \in \haken r}\max_{j \in \haken s}X(i,j) \right)
+\le\E\left(\min_{i \in \haken r}\max_{j \in \haken s}Y(i,j) \right)\text.\]
+\end{satz}
+\begin{proof}
+siehe \cite{Gor}
+\end{proof}

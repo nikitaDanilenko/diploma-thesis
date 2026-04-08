@@ -1,0 +1,15 @@
+\begin{korollar}{Operatornorm der Inversen}
+                {OperatornormDerInversen}
+Seien $(E,\norm\cdot_E),(F,\norm\cdot_F)$ $\K$--Banachräume und $T\in L(E,F)$
+bijektiv.\\
+Dann ist $T\inv \in L(F, E)$, es gilt
+$\inf\menge{\norm{Tx}_F}{x \in\kran E 0 1}>0$ und\[
+\opnorm{T\inv} FE = \frac 1 {\inf\menge{\norm{Tx}_F}{x \in\kran E 0 1}}\text.\]
+\end{korollar}
+\begin{proof}
+Da $T$ bijektiv ist, ist es insbesondere injektiv.\\
+Wegen $T(E) = F$ ist $T(E)$ abgeschlossen in $F$.
+Somit folgen alle Aussagen aus
+\ref{InjektivitätLinearerOperatorenUndOperatornormDerInversen}, 
+indem man dort überall $T(E)$ durch $F$ ersetzt.
+\end{proof}

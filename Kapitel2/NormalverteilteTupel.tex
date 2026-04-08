@@ -1,0 +1,20 @@
+\begin{korollar}{Existenz unabhängiger (\textsl N(0,1),
+\textsl n)--Tupel}{ExistenzNormalNTupel}
+Seien $n \in \N$ und $\alpha \in \N^n$.\\
+Dann existiert ein unabhängiges $(N(0,1),n)$--Tupel zu $(n, \alpha)$.
+\end{korollar}
+\begin{proof}
+Sei $N:= \Sum{i=1}n \alpha_i$.\\
+Nach \refclaim{ExistenzFVerteilterZufallsgrössen}
+{ExistenzFVerteilterZufallsgrössen2} gibt es einen Wahrscheinlichkeitsraum
+$(\Omega', \mfa', \Prim')$ und $\eta: \Omega' \rightarrow \R^N$ unabhängig und
+$N(0,1)$--verteilt.\\
+Definiere für alle $i \in \haken n$:
+\[s_i := \left(\sum_{k=1}^{i-1}\alpha_i\right)+1\text{, }
+  t_i := \sum_{k=1}^{i}\alpha_i \text{ und }
+ \gamma_i:=\left(\eta_j \right)_{j = s_i}^{t_i}\text.\]
+Seien nun $k, l \in \haken n$ mit $k \neq l$. Dann sind $\gamma_k$ und
+$\gamma_l$ vollständig unabhängig als Teilfamilien einer unabhängigen Familie
+und damit ist \[\bigg((\Omega',\mfa',\Prim'),(\gamma_i)_{i=1}^n, (\alpha_i)_{i=1}^n\bigg)\]
+ein $(N(0,1),n)$--Tupel zu $(n, \alpha)$.
+\end{proof}

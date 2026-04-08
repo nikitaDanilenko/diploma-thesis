@@ -1,0 +1,24 @@
+\begin{korollar}{Banach--Mazur--Abbildungen im Endlichdimensionalen}
+                {BanachMazurAbbildungenImEndlichdimensionalen}
+Seien $(E, \norm\cdot_E), (F, \norm\cdot_F)$ endlichdimensionale normierte
+$\K$--Vektorräume mit $\dim_\K E = \dim_\K F$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+\item\label{BanachMazurAbbildungenImEndlichdimensionalen1}
+  $\Inv(E, F) \neq \emptyset$.
+\item\label{BanachMazurAbbildungenImEndlichdimensionalen2}
+ Es gibt eine Banach--Mazur--Abbildung zwischen $(E, \norm\cdot_E)$ und
+$(F, \norm\cdot_F)$.
+\end{enumerate}
+\end{korollar}
+\begin{proof}
+Da $E, F$ die gleiche Dimension haben, gibt es bijektive lineare Abbildungen
+von $E$ nach $F$. Aufgrund der endlichen Dimension sind diese bereits stetig.
+Somit ist $\Inv(E, F) \neq \emptyset$.\\
+Es ist $L(E, F)$ wegen der endlichen Dimensionen von $E$ und $F$ auch
+endlichdimensional. 
+Daher ist $\kabg{L(E, F)}01$ kompakt und somit auch $\kran{L(E, F)}01$ als abgeschlossene Teilmenge eines Kompaktums.\\
+Schließlich sind endlichdimensionale normierte Räume stets vollständig.\\
+Also sind alle Voraussetzungen von \ref{ExistenzEinerBanachMazurAbbildung}
+erfüllt und die Aussage gezeigt.
+\end{proof}

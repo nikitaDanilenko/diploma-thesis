@@ -1,0 +1,96 @@
+\begin{satz}{Fortsetzung einer endlichen Erwartungswertungleichung (II)}
+            {AbzaehlbareDarstellungUndSupremumVonSuprema}
+Seien $I, J$ nichtleere, abzählbare Mengen,
+$X, Y: I\times J \rightarrow \mcm(\Omega, \mfa, \R)$, sowie
+$\mci := \Pot_{ne}(I)$ und $\mcj := \Pot_{ne}(J)$.\\
+Es gelte:
+\begin{enumerate}[(a)]
+\item $\forall\,\omega\in\Omega\,\forall\, Z\in \meng{X, Y}: 
+\menge{Z(i, j)(\omega)}{(i, j)\in I\times J}$
+      nach oben beschränkt.
+\item $\forall A \in \mci \cup \meng I \forall B \in \mcj \cup \meng J
+\forall Z\in \meng{X, Y}:
+     \underset{i \in A}\sup\,\underset{j \in B}\sup\, Z(i, j)
+     \in L_1(\Omega, \mfa, \Prim, \R)$.
+\item $\forall\, A \in \mci \, \forall\, B \in \mcj: 
+\E\bigg(\underset{i \in A}\sup\,\underset{j \in B}\sup\, Y(i, j) \bigg)
+\le \E\bigg(\underset{i \in A}\sup\,\underset{j \in B}\sup\, X(i, j) \bigg)$.\\
+ (Alle genannten Abbildungen sind wegen $(a)$ und
+$I \neq \emptyset \neq J$wohldefiniert.)
+\end{enumerate}
+Dann gilt
+\[\E\left(\sup_{i \in I}\sup_{j \in J}Y(i, j) \right) \le
+  \E\left(\sup_{i \in I}\sup_{j \in J}X(i, j) \right)\text.\]
+\end{satz}
+\begin{proof}
+Seien $\mcp:= \Pot_{ne}(I \times J)$ und $(i_0, j_0) \in I \times J$.\\
+Dann sind $Y(i_0, j_0)$ und
+\[\sup_{(i, j) \in I \times J}Y(i, j)= \sup_{i \in I} \sup_{j \in J}Y(i, j)
+\text{ nach (b) integrierbar.}\]
+Da $I$ und $J$ abzählbar sind, ist auch $I \times J$ abzählbar.
+Zusammen mit (a) sind damit die Voraussetzungen von
+\ref{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen} für die Familie
+$(Y(i,j))_{(i,j) \in I \times J}$ erfüllt. Also ist
+\[M_1:=\menge{\E\left(\sup_{(i, j) \in P}Y(i,j) \right)}{P \in \mcp}\]
+nach \refclaim{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen}
+{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen1} nichtleer und nach
+oben beschränkt und es gilt
+\begin{align}\sup M_1
+\overset{\refclaim{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen}
+{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen2}}= 
+\E\bigg(\sup_{(i, j) \in I \times J}Y(i, j) \bigg)
+= \E\left(\sup_{i \in I}\sup_{j \in J}Y(i,j)\right)\text. \label{feeeiieq:1}
+\end{align}
+Sei nun 
+\[M_2 := \menge{\E\left(\sup_{i \in A}\sup_{j \in B}Y(i,j) \right)}
+               {A \in \mci, B \in \mcj}\text.\]
+Offenbar ist $M_2 \subseteq M_1$ und wegen $I \neq \emptyset\neq J$ auch
+nichtleer.
+Da $M_1$ nach oben beschränkt ist, ist es auch
+$M_2$ und es gilt $\sup M_2 \le \sup M_1$.\\
+Sei nun $Q \in \mcp$. Dann gibt es ein
+$A_Q \in \mci$ und ein $B_Q \in \mcj$ mit 
+$Q \subseteq A_Q \times B_Q$.\\
+Da $Q \neq \emptyset$ existiert ein $(i', j') \in Q$, sodass gilt:
+\[Y(i',j')\le\sup_{(i,j)\in Q}Y(i,j)\le\sup_{(i,j)\in A_Q\times B_Q}Y(i,j)
+=\sup_{i\in A_Q}\sup_{j\in B_Q}Y(i,j)\text.\]
+Nach (b) sind die erste und die letzte Abbildung integrierbar, also ist
+es nach \refclaim{Integrierbarkeitskriterien}{Integrierbarkeitskriterien2}
+auch die zweite Abbildung. Somit gilt:
+\[\E\left(\sup_{(i, j) \in Q}Y(i, j) \right) \le 
+\E\left(\sup_{(i, j) \in A_Q \times B_Q}Y(i, j) \right)
+= \E\left(\sup_{i \in A_Q}\sup_{j \in B_Q}Y(i, j) \right) \in M_2\text.\]
+Erhalte: $\forall \, x \in M_1\, \exists \, y \in M_2: x \le y$.\\
+Damit ist offensichtlich:
+\begin{align}
+ \sup M_1\le\sup M_2\text{, also }
+\sup M_1=\sup M_2\text. \label{feeeiieq:2}
+\end{align}
+Seien nun $C \in \mci$ und $D \in \mcj$. Dann gilt
+\[\sup_{i\in C}\sup_{j\in D}X(i,j)\le\sup_{i\in I}\sup_{j \in J}X(i,j)\text.\]
+Gemäß (b) sind beide Abbildungen integrierbar und daher ist auch
+\[\E\left(\sup_{i \in C} \sup_{j \in D}X(i, j) \right)
+\le \E\left(\sup_{i \in I} \sup_{j \in J}X(i, j) \right)\text.\]
+Daher gilt
+\[\E\left(\sup_{i \in C} \sup_{j \in D}Y(i, j) \right)
+\overset{(c)}\le\E\left(\sup_{i \in C} \sup_{j \in D}X(i, j) \right)
+\le \E\left(\sup_{i \in I} \sup_{j \in J}X(i, j) \right)\]
+und damit
+\begin{align}
+\sup\menge{\E\left(\sup_{i \in A} \sup_{j \in B}Y(i, j) \right)}
+            {A \in \mci, B \in \mcj} \le
+            \E\left(\sup_{i \in I} \sup_{j \in J}X(i, j) \right)\text.
+            \label{feeeiieq:3}
+\end{align}
+Schließlich gilt also
+\begin{align*}
+&\,\E\left(\sup_{i \in I}\sup_{j \in J}Y(i,j)\right)
+\overset{\eqref{feeeiieq:1}}=
+\sup M_1 \overset{\eqref{feeeiieq:2}}= \sup M_2\\
+= &\, \sup \menge{\E\left(\sup_{i \in A}\sup_{j \in B}Y(i,j) \right)}
+        {A \in \mci, B \in \mcj}
+ \overset{\eqref{feeeiieq:3}}\le
+ \E\left(\sup_{i\in I}\sup_{j \in J}X(i, j) \right)\text,
+\end{align*}
+was gerade behauptet wurde.
+\end{proof}

@@ -1,0 +1,97 @@
+\begin{korollar}
+  {Gauß'scher Min--Max--Satz (Gleichheit in der ersten Bed.)}
+  {GaussscherMinMaxSatzGleichheitInDerErstenBedingung}
+Seien $r, s \in \N$ und 
+$X, Y: \haken r \times \haken s \rightarrow L_2(\Omega, \mfa, \Prim, \R)$
+mit 
+\[\forall\,i\in\haken r\,\forall\,j\in\haken s\,\exists\,\rho_{i,j}\in\R_{>0}:
+X(i, j) \text{ ist }N(0, \rho_{i,j}^2)\text{--verteilt,}\]
+\[
+\forall\,i\in\haken r\,\forall\,j\in\haken s\,
+\exists\,\sigma_{i,j}\in\R_{>0}:
+Y(i, j) \text{ ist }N(0, \sigma_{i,j}^2)\text{--verteilt.}\]
+Es gelte
+\begin{enumerate}[(a)]
+	\item $\forall\, i \in \haken r \, \forall\, k,l \in \haken s:
+	\norm{X(i,k)-X(i,l)}_2 = \norm{Y(i,k)-Y(i,l)}_2$,
+	\item $\forall\, i, j \in \haken r\,\forall\, k, l \in \haken s:
+i \neq j \folgt \norm{X(i,k)-X(j,l)}_2 \ge \norm{Y(i,k)-Y(j,l)}_2$.
+\end{enumerate}
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item\label{GaussscherMinMaxSatzGleichheitInDerErstenBedingung1}
+	$\E\left(\underset{{i \in \haken r}}\min\,
+	         \underset{{j \in \haken s}}\max \,X_{i,j} \right)
+	\le \E\left(\underset{{i \in \haken r}}\min\,
+	         \underset{{j \in \haken s}}\max \,Y_{i,j} \right)$.
+	\item\label{GaussscherMinMaxSatzGleichheitInDerErstenBedingung2}
+	$\E\left(\underset{{i \in \haken r}}\max\,
+	         \underset{{j \in \haken s}}\max \,Y_{i,j} \right)
+  \le\E\left(\underset{{i \in \haken r}}\max\,
+	         \underset{{j \in \haken s}}\max \,X_{i,j} \right)$.
+\end{enumerate}
+Insbesondere also
+\begin{align*}
+\E\bigg(\min_{i \in \haken r}\max_{j \in \haken s}X_{i,j} \bigg)
+&\le\E\left(\min_{i \in \haken r}\max_{j \in \haken s}Y_{i,j} \right)
+\le\E\left(\max_{i \in \haken r}\max_{j \in \haken s}Y_{i,j} \right)\\
+&\le\E\left(\max_{i \in \haken r}\max_{j \in \haken s}X_{i,j} \right)\text.
+\end{align*}
+\end{korollar}
+\begin{proof}
+(1) Offenbar sind die Voraussetzungen von \ref{GaussscherMinMaxSatz} erfüllt.\\
+Damit ist bereits die erste Aussage gezeigt.\\
+(2) Seien zunächst $a \in \haken r$ und $b, c \in \haken s$.\\
+Wegen (a) ist dann $\norm{X_{a,b}-X_{a,c}}_2 = \norm{Y_{a,b} -Y_{a,c}}_2$, sodass
+also gilt 
+\begin{align}
+\forall\, i, j \in \haken r\,\forall\, k, l \in \haken s:
+\norm{X_{i,k}-X_{j,l}}_2 \ge \norm{Y_{i,k}-Y_{j,l}}_2 \tag{$\ast$}
+\end{align}
+Wegen $\abs{\haken r \times \haken s}= \abs{\haken{rs}}$ gibt es
+$\sigma: \haken {rs} \rightarrow \haken r \times \haken s$ bijektiv.\\
+Seien $\rho_1: \haken r \times \haken s \rightarrow \haken r,(x, y) \mapsto x$,
+$\rho_2: \haken r \times \haken s \rightarrow \haken s, (x, y) \mapsto y$ und
+$\tau_i:= \rho_i \circ \sigma$ für alle $i \in \haken 2$.\\
+Seien nun $r':=1, s':= rs$ sowie
+\begin{align*}
+X' & :\haken {r'}\times \haken {s'} \rightarrow L_2(\Omega, \Prim, \mfa, \R),
+(t,z) \mapsto Y(\tau_1(z), \tau_2(z))\text,\\
+Y' & :\haken {r'}\times \haken {s'} \rightarrow L_2(\Omega, \Prim, \mfa, \R),
+(t,z) \mapsto X(\tau_1(z), \tau_2(z))\text.
+\end{align*}
+Dann sind $X', Y'$ offensichtlich punktweise zentriert und
+normalverteilt, weil $X, Y$ es sind.\\
+Seien $k, l \in \haken {s'}$. Dann gilt:
+\begin{align*}
+&\norm{X'(1,k)-X'(1, l)}_2 = \norm{Y(\tau_1(k), \tau_2(k))
+- Y(\tau_1(l), \tau_2(l))}_2\\
+\overset{(\ast)}\le &\,
+\norm{X(\tau_1(k), \tau_2(k))- X(\tau_1(l), \tau_2(l))}_2
+= \norm{Y'(1,k)-Y'(1, l)}_2
+\end{align*}
+Wegen $r' = 1$ gilt weiter trivial
+\begin{align*}
+\forall i, j \in \haken {r'}\forall m, n \in \haken {s'}:
+i \neq j \folgt \norm{X'(i,m)-X'(j,n)}_2 \ge \norm{Y'(i,m)-Y'(j,n)}_2\text.
+\end{align*}
+Damit sind die Voraussetzungen von \ref{GaussscherMinMaxSatz} auch für
+$X'$ und $Y'$ erfüllt, also gilt:
+\begin{align*}
+&\E\left(\max_{i \in \haken r}\max_{i \in \haken s} Y(i,j) \right)
+= \E\left(\max_{(i, j) \in \haken r \times \haken s} Y(i,j) \right)
+= \E\left(\min_{i\in \haken {r'}}\max_{z \in \haken {s'}}
+Y(\tau_1(z), \tau_2(z))\right)\\
+= &\, \E\left(\min_{i\in \haken {r'}}\max_{z \in \haken {s'}}
+X'(i, z)\right)
+\overset{\ref{GaussscherMinMaxSatz}}\le
+\E\left(\min_{i\in \haken {r'}}\max_{z \in \haken {s'}}
+Y'(i, z)\right)\\
+=&\,\E\left(\min_{i\in \haken {r'}}\max_{z \in \haken {s'}}
+X(\tau_1(z), \tau_2(z)) \right)
+=\E\left(\max_{z \in \haken {s'}}X(\tau_1(z), \tau_2(z)) \right)\\
+= & \, \E\left(\max_{(i,j) \in \haken r \times \haken s} X(i,j) \right)
+= \E\left(\max_{i \in \haken r}\max_{i \in \haken s} X(i,j) \right)\text.
+\end{align*}
+Somit ist auch (2) gezeigt.
+\end{proof}

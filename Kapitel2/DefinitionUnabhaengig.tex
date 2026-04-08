@@ -1,0 +1,38 @@
+\begin{definition}{(vollst‰ndig) unabh‰ngig/identisch verteilt/zentriert}
+                  {Unabh‰ngigIdentischVerteilt}
+Seien $n, m \in \N$, $\gamma \in \mcm_n(\Omega, \mfa, \R^n)$,
+$\delta \in \mcm_m(\Omega, \mfa, \R^m)$ und $F: \R \rightarrow [0, 1]$ eine
+Verteilungsfunktion.\\
+$\gamma$ heiﬂt \textbf{unkorreliert}
+\[: \iff \gamma \in L_2(\Omega, \mfa, \Prim, \R^n) \; \wedge \;
+    \forall\, i, j \in \haken n: i \neq j \folgt \E(\gamma_i\gamma_j)
+  = \E(\gamma_i)\E(\gamma_j)\text.\]
+$\gamma$ und $\delta$ heiﬂen \textbf{vollst‰ndig unkorreliert}
+\[:\iff \gamma, \delta \text{ unkorreliert } \; \wedge \;
+        \forall\, i \in \haken n\, \forall\, j \in \haken m:
+        \E(\gamma_i\delta_j)= \E(\gamma_i)\E(\delta_j)\text.\]
+$\gamma$ heiﬂt \textbf{unabh‰ngig} 
+\[:\iff \forall A \in \mathfrak B^n: 
+\Prim\left(\bigcap_{i=1}^n \meng{\gamma_i\in A_i}\right)
+=\prod_{i=1}^n \Prim(\gamma_i\in A_i)\text.\]
+$\gamma$ und $\delta$ heiﬂen \textbf{vollst‰ndig unabh‰ngig}
+\begin{align*}
+&:\iff \,
+\forall\, A\in \mfb^n\, \forall\, B\in \mfb^m:\\
+& \Prim\left(\bigcap_{i=1}^n \meng{\gamma_i \in A_i} \cap 
+\bigcap_{j=1}^m \meng{\delta_j \in B_j} \right)
+= \left(\prod_{i=1}^n \Prim(\gamma_i\in A_i)\right)
+\left(\prod_{j=1}^m \Prim(\delta_j\in B_i)\right)\text.
+\end{align*}
+$\gamma$ heiﬂt \textbf{identisch verteilt}
+$: \iff \forall \, i, j \in \haken n\, \forall \, t \in \R:
+    \Prim(\gamma_i \le t) = \Prim(\gamma_j \le t)$.\\
+$\gamma$ heiﬂt \textbf{$F$--verteilt}
+$:\iff \gamma \text{ identisch verteilt } \; \wedge \;
+ \forall \, t \in \R: \Prim(\gamma_1 \le t) = F(t)$.\\
+$\gamma$ heiﬂt \textbf{zentriert}
+$:\iff \forall\, i \in \haken n: \E(\gamma_i) = 0$.\\
+$\gamma$ heiﬂt \textbf{$L_2$--normiert}
+$:\iff \gamma \in L_2(\Omega, \mfa, \Prim, \R^n) \; \wedge \;
+   \forall i \in \haken n: \norm{f_i}_2 = 1$.
+\end{definition}
