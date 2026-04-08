@@ -1,0 +1,151 @@
+\begin{lemma}{Existenz (unabh\"angiger) F--verteilter Zufallsgrößen}
+             {ExistenzFVerteilterZufallsgroessen}
+Seien $F: \R \rightarrow [0,1]$ eine Verteilungsfunktion und $n \in \N$.
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{ExistenzFVerteilterZufallsgroessen1}
+	Es gibt einen Wahrscheinlichkeitsraum $(\Omega_1, \mfc, \Prim_1)$
+	und $\xi \in \mcm(\Omega_1, \mfc, \R)$, sodass $\xi$ $F$--verteilt
+	 ist.\\
+	Insbesondere ist $\xi$ sicher endlich.
+	\item \label{ExistenzFVerteilterZufallsgroessen2}
+	Es gibt einen Wahrscheinlichkeitsraum $(\Omega_2, \mfd, \Prim_2)$ und
+	$\eta \in \mcm_n(\Omega_2, \mfd, \R^n)$ derart, dass $\eta$ $F$--verteilt  
+	und unabhängig ist (im Sinne von~\ref{UnabhaengigIdentischVerteilt}).\\
+	Insbesondere ist $\eta_i$ sicher endlich für alle $i \in \haken n$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Als Verteilungsfunktion ist 
+$F$ monoton wachsend, rechtsseitig stetig und es gilt
+\[\Limes t {-\infty}F(t) = 0\text{, sowie }\Limes t \infty F(t) = 1\text.\]
+(1) Aus~\cite{Irle}, dort Beweis von 6.6, geht hervor, dass gilt:
+\[G:\!\  ]0,1[ \rightarrow \R, p \mapsto \inf\menge{x \in \R}{F(x) \ge p}\]
+ist wohldefiniert und genügt der Äquivalenz
+\begin{align}
+\forall\,t\in\R\,\forall\,s\in\!\ ]0,1[:
+G(s)\le t\iff s\le F(t)\text.\label{efvzeq:1}
+\end{align}
+Seien $\Omega_1\coloneqq \!\ ]0,1[$, $\mfc \coloneqq  \Pot(]0,1[)\: \cap\: \mfb$ und
+$\Prim_1\coloneqq \lambda\vert_{\mfc}$, wobei $\lambda$ das eindimensionale Lebesguemaß
+bezeichne.\\
+Sei $t \in \R$.\\
+Dann ist
+\[\meng{G \le t} = \menge{x \in\!\  ]0,1[}{G(x) \le t}
+\overset{\eqref{efvzeq:1}}= 
+\menge{x \in\!\  ]0,1[}{x \le F(t)} = \!\ ]0, F(t)] \in \mfc\]
+und daher $\Prim_1(G \le t) = \lambda (]0, F(t)]) = F(t)$, sodass
+$G$ $F$--verteilt ist.\\
+Damit wurde ein Wahrscheinlichkeitsraum und eine Abbildung wie behauptet
+gefunden.\absatz
+(2) Seien $\Omega_2\coloneqq \!\ ]0,1[^n$, $\mfd\coloneqq \Pot\left(]0,1[^n\right) \cap \mfb_n$
+und $\Prim_2\coloneqq  \lambda_n\vert_\mfd$, wobei $\lambda_n$ das $n$--dimensionale
+Lebesguemaß bezeichne.\\
+Nach (1) existiert ein $F$--verteiltes $\xi:\!\ ]0,1[\rightarrow\R$.\\
+Sei $\eta: \Omega_2 \rightarrow \R^n, \omega \mapsto \pfeil \xi n (\omega)$.\\
+Offenbar gilt dann für alle $j \in \haken n$ und alle $\omega \in \Omega_2$:
+$\eta_j(\omega) = \xi(\omega_j)$.\\
+Wir können o. B. d. A. annehmen, dass $n > 1$ ist, denn für $n = 1$ sagt (2)
+dasselbe aus, wie (1).\\
+Seien $i \in \haken n$ und $t \in \R$.\\
+Falls $1<i<n$, so gilt:
+\begin{align*}
+\meng{\eta_i \le t} & = \menge{\omega \in \Omega_2}{\eta_i(\omega) \le t}
+ = \menge{\omega \in \Omega_2}{\xi(\omega_i) \le t}\\
+ &=\!\  ]0,1[^{i-1}\times\menge{x \in\!\  ]0, 1[}{\xi(x)\le t}\times\!\ 
+ ]0,1[^{n-i}
+ \in \mfd
+\end{align*}
+falls $i = 1$:
+\begin{align*}
+\meng{\eta_i \le t} & = \menge{\omega \in \Omega_2}{\eta_1(\omega) \le t}
+ = \menge{\omega \in \Omega_2}{\xi(\omega_1) \le t}\\
+ &= \menge{x \in\!\  ]0,1[}{\xi(x) \le t}\times\!\  ]0,1[^{n-1} \in \mfd
+\end{align*}
+und falls $i = n$:
+\begin{align*}
+\meng{\eta_i \le t} & = \menge{\omega \in \Omega_2}{\eta_n(\omega) \le t}
+ = \menge{\omega \in \Omega_2}{\xi(\omega_n) \le t}\\
+ &=\!\  ]0,1[^{n-1} \times \menge{x \in \!\ ]0,1[}{\xi(x) \le t}  \in \mfd
+\end{align*}
+Außerdem gilt
+\begin{align}
+\Prim_2(\eta_i \le t) & = \lambda_n(\eta_i \le t) \notag\\
+&= \begin{cases} 
+\lambda_n\bigg(
+]0,1[^{i-1}\times\menge{x\in\!\ ]0,1[}{\xi(x)\le t}\times\ \!]0,1[^{n-i} \bigg)
+ & : \, 1 < i < n\notag\\
+\lambda_n\bigg(
+\menge{x \in\!\  ]0,1[}{\xi(x) \le t}\times\!\ ]0,1[^{n-1} \bigg) & : \,i = 1
+\notag\\
+\lambda_n\bigg(]0,1[^{n-1}\times\menge{x\in\!\  ]0,1[}{\xi(x) \le t} \bigg)&:\,
+i=n\end{cases}\notag\\
+&= \lambda\left(\menge{x \in\!\  ]0,1[}{\xi(x) \le t}\right) \cdot
+ \lambda_{n-1}\left(]0,1[^{n-1} \right)\notag\\
+ &= \lambda\left(\menge{x \in\!\  ]0,1[}{\xi(x) \le t}\right)
+  \overset{(1)}= F(t) \label{efvzeq:2}
+\end{align}
+Damit ist $\eta$ $F$--verteilt.\\
+Sei nun $s \in \R^n$. Dann gilt:
+\begin{align*}
+& \Prim_2\left(\bigcap_{k=1}^n \meng{\eta_k \le s_k}\right)
+= \Prim_2\left(\forall\, k \in \haken n: \eta_k \le s_k\right)\\
+ =&\, \lambda_n\left( \menge{\omega \in \Omega_2}
+  {\forall\, k \in \haken n: \eta_k(\omega) \le s_k} \right)
+= \lambda_n\left(\menge{\omega \in \Omega_2}
+  {\forall\, k \in \haken n: \xi(\omega_k) \le s_k} \right) \\
+= &\,\lambda_n \left(\prod_{k = 1}^n \menge{x \in \!\ ]0,1[}
+  {\xi(x) \le s_k}\right)
+= \prod_{k=1}^n \lambda\left(\menge{x \in\!\  ]0,1[}
+  {\xi(x) \le s_k} \right)\\
+\overset{(1)}=&\, \prod_{k=1}^n F(s_k) \overset{\eqref{efvzeq:2}}= 
+\prod_{k=1}^n \Prim_2(\eta_k \le s_k)
+\end{align*}
+Damit ist $\eta$ auch unabhängig und die Behauptung gezeigt.
+
+%(1) Seien zunächst $\Omega_1\coloneqq ]0,1[$, $\mfc \coloneqq  \Pot(]0,1[) \cap \mfb$ und
+%$\Prim_1\coloneqq \lambda\vert_{\mfc}$, wobei $\lambda$ das eindimensionale %Lebesguemaß
+%bezeichne.\\
+%Seien $p \in ]0, 1[$ und $M_p\coloneqq \menge{x \in \R}{F(x) \ge p}$.\\
+%Da $F$ eine Verteilungsfunktion ist, gilt
+%\[\Limes y \infty F(y) = 1\]
+%Also existiert ein $\delta \in \R_{>0}$ mit
+%$\forall\, y \in ]\delta, \infty[: 1-F(y)= \abs{1 - F(y)} < 1 - p$.\\
+%Daher gilt für alle $y \in ]\delta, \infty[: F(t) > p$ und damit ist 
+%$M_p \neq \emptyset$.\\
+%Weiterhin ist $M_p$ nach unten beschränkt, denn wäre dem nicht so, so gälte
+%$\forall\, c \in \R\, \exists\, x \in \R: F(x) \ge p \wedge x < c$.\\
+%Sei dann $c\in \R$. Dann existiert ein $x \in \R$ mit $F(x) \ge p$ und %$x<c$.\\
+%Da $F$ eine Verteilungsfunktion ist, gilt auch $F(x)\le F(c)$ und damit 
+%$p\le F(c)$.\\
+%Das hieße aber insbesondere: $\forall\, d \in \R: p \le F(d)$, was wegen
+%\[\Limes d {-\infty} F(d) = 0 \quad \text{ und } \quad p > 0\]
+%nicht sein kann.\\
+%Somit ist $M_p$ nach unten beschränkt und nichtleer.\\
+%Also ist die Abbildung
+%\[G: \Omega_1 \rightarrow \R, t \mapsto \inf\menge{z \in \R}{F(z) \ge t}\]
+%wohldefiniert.\\
+%\textsl{Behauptung:} $\forall\, t \in \R \, \forall\, s \in ]0,1[: G(s) \le t
+%\iff s \le F(t) \quad (\ast)$\\
+%\textsl{Beweis:} Seien $t \in \R$ und $s \in ]0,1[$.\\
+%"`$\Leftarrow$"': Es gelte $s \le F(t)$.\\
+%Dann ist $t \in \menge{y \in \R}{F(y) \ge s}$.\\
+%Nach Definition von $G$ gilt also
+%$t \ge \inf\menge{y \in \R}{F(y) \ge s} = G(s)$.\\
+%"`$\Rightarrow$"': 
+%Es gelte nun $G(s) \le t$.\\
+%Da $G(s) = \inf\menge{y \in \R}{F(y) \ge s}$, existiert ein 
+%$\folge x n \N \in \menge{y \in \R}{F(y) \ge s}^\N$ monoton fallend und
+%konvergent gegen $G(s)$ (Infimumseigenschaft).\\
+%Da $F$ als Verteilungsfunktion rechtsseitig stetig ist gilt daher
+%\[ F(G(s)) = \Limes n \infty F(x_n) \ge s\]
+%nach Wahl von $\folge x n \N$.\\
+%Da $F$ monoton wachsend ist und $G(s) \le t$ angenommen wurde, gilt aber auch
+%$F(G(s)) \le F(t)$ und somit insgesamt: $F(t) \ge F(G(s)) \ge s$, womit die
+%Behauptung gezeigt ist.\\
+%Sei nun $z \in \R$. Dann gilt:
+%\[\Prim_1(G \le z) \overset{(\ast)}= \Prim_1(\id_{]0,1[} \le F(z)) 
+%= \Prim_1(]0, F(z)]) \overset{\text{Def. } \Prim_1}= F(z)\]
+%Somit ist $G$ $F-$verteilt und (1) gezeigt.\absatz
+%(2)
+\end{proof}

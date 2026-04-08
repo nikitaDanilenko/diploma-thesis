@@ -1,0 +1,31 @@
+\begin{lemma}{Gleichmäßige Lipschitzstetigkeit}
+             {GleichmaessigeLipschitzstetigkeit}
+Seien $(M,d)$ ein metrischer Raum und $I$ eine nichtleere Menge.\\
+Sei $(f_i)_{i \in I} \in \mcf(M, \R)^I$ mit den Eigenschaften:
+\begin{enumerate}[(a)]
+\item $\forall\, m \in M: \menge{f_i(m)}{i \in I}$ ist nach oben beschränkt,
+\item $\exists\, c \in \R_{>0}\,\forall\, i \in I \, \forall\, x, y \in M:
+\abs{f_i(x)-f_i(y)}\le c\cdot d(x, y)$.
+\end{enumerate}
+Dann ist die Abbildung
+\[f: M \rightarrow \R, m \mapsto \sup\menge{f_i(m)}{i \in I}\]
+wohldefiniert und lipschitzstetig mit Lipschitzkonstante $c$.
+\end{lemma}
+\begin{proof}
+Die Wohldefiniertheit ist offensichtlich, denn wegen $I \neq \emptyset$ ist
+für jedes $m \in M$ die Menge $\menge{f_i(m)}{i \in I}$ nichtleer und wegen
+$(a)$ nach oben beschränkt, besitzt also ein Supremum (und auch genau eins).\\
+Seien nun $x, y \in M$. O. B. d. A.: $f(x) \ge f(y)$.\\
+Dann gilt:
+\begin{align*}
+\abs{f(x)-f(y)} &= f(x) - f(y) = \left(\sup_{i \in I}f_i(x)\right) -
+ \left(\sup_{i \in I}f_i(y)\right)\\
+ & = \left(\sup_{i \in I}(f_i(x)-f_i(y) + f_i(y))\right) -
+ \left(\sup_{i \in I}f_i(y)\right)\\
+ &\le \left(\sup_{i \in I}(f_i(x) -f_i(y)) \right)
+ + \left(\sup_{i\in I}f_i(y)\right) - \left(\sup_{i\in I}f_i(y)\right)\\
+ & = \sup_{i \in I}\underbrace{(f_i(x) -f_i(y))}_{\le c\cdot d(x, y)}
+ \le c \cdot d(x, y)\text.
+\end{align*}
+Also ist $f$ lipschitzstetig mit Lipschitzkonstante $c$.
+\end{proof}

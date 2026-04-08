@@ -1,0 +1,92 @@
+Seien $n,m\in \N$, $p \in [1, \infty[$, $K$ ein Körper, $\K\in\meng{\R, \mathbb C}$.\\
+Wenn wir von einem normierten Vektorraum reden, setzen wir implizit voraus,
+dass dieser nicht der Nullvektorraum ist.
+
+\begin{enumerate}[(1)]
+ \item \label{Bez1}
+       Wir schreiben verkürzend $\haken n \coloneqq  \N_{\le n}$ und
+       $\haken n _0\coloneqq \haken n \cup \meng 0$.
+ \item \label{Bez2}
+       Wir nennen eine Menge $M$ abzählbar, genau dann, wenn sie endlich oder
+       abzählbar unendlich ist.
+ \item \label{Bez3}
+       Ist $A$ eine Menge und $a \in A^n$, so fassen wir $a$ als Abbildung 
+       $a : \haken n \rightarrow A$, für die wir wiederum die
+       Familienschreibweise nutzen. Spielt die Reihenfolge eine Rolle, so
+       schreiben wir $a = (a_i)_{i=1}^n$ anstelle von $a=(a_i)_{i\in\haken n}$.
+ \item \label{Bez13}
+       Für eine Menge $M$ sei 
+       $\Pot_{ne}(M)\coloneqq \menge{A\in\Pot(M)}{A\neq\emptyset,\,A\text{ endlich}}$.
+ \item \label{Bez4}
+       Mit $(e^n_i)_{i =1}^n$ bezeichnen wir die kanonische Basis des
+       $K^n$.
+ \item \label{Bez5}
+       Ist $(E, \norm{\cdot}_E)$ ein normierter $\K$--Vektorraum, so sei
+  \[
+   \norm{\cdot}_{p, n, E}: E^n \rightarrow [0, \infty[, 
+   \finfol x i n\mapsto\bigg(\sum_{i=1}^n \norm{x_i}^p_E\bigg)^{\nicefrac 1p}  
+  \]
+  die $p$--Norm auf dem Vektorraum $E^n$.
+ \item \label{Bez6}
+       $\sprod{\cdot}{\cdot\cdot}_n$ sei das Standardskalarprodukt auf $K^n$.
+ \item \label{Bez7}
+       Ist $\Omega$ eine Menge und $f:\Omega \rightarrow \R^n$, so seien für
+       alle $i \in \haken n$: $f_i \coloneqq  \text{pr}_i \circ f$, wobei $\text{pr}_i$
+       die Projektion in die $i$--te Komponente sei. Wir werden dann häufig $f$
+       mit $(f_i)_{i=1}^n$ identifizieren.
+ \item \label{Bez8}
+       Mit $K^{n \times m}$ bezeichnen wir den Raum der $n\times m$--Matrizen,
+       wobei $n$ die Anzahl der Spalten und $m$ die der Zeilen ist.
+       
+       Für $A\in K^{n\times m}$ definieren wir $A_i \coloneqq  A e_i^n$ und
+       $A_{i,j}\coloneqq \sprod{A_i}{e_j^m}_m$ für alle $i\in\haken n$,
+       $j\in\haken m$, d. h. $A_i$ ist die $i$--te Spalte von $A$ und $A_{i,j}$
+       ist der $j$--te Eintrag in der $i$--ten Spalten von $A$.\\
+       Ist analog $\Omega$ eine Menge und 
+       $\alpha:\Omega \rightarrow K^{m\times n}$, so bezeichnen wir für alle 
+       $i \in \haken n$ und alle $j \in \haken m$
+       \[\alpha_i: \Omega \rightarrow K^n, \omega \mapsto \alpha(\omega)_i
+       \quad \text{und} \quad
+       \alpha_{i,j}:\Omega\rightarrow K,\omega\mapsto\alpha(\omega)_{i,j}
+       \text.\]
+ \item \label{Bez9}
+       Die $p$--Norm auf den $L_p$-- (bzw. $\mcl_p$--) Räumen bezeichnen wir
+       mit $\norm\cdot_p$ und die $p$--Norm auf dem $\K^n$ speziell als 
+       $\norm\cdot_{p, n}$.
+ \item \label{Bez10}
+       Sind $(X, \norm\cdot_X)$ und $(Y, \norm\cdot_Y)$ normierte
+       $\K$--Vektorräume, so sei
+       \[ ev : X \times L(X, Y) \rightarrow Y, (x, T) \mapsto Tx \]
+       der Einsetzungshomomorphismus.\\
+       Ferner sei
+       \[\Inv(X, Y) \coloneqq  \menge{T \in L(X, Y)}{T \text{ invertierbar und }
+       T\inv \in L(Y, X)}\]
+ \item \label{Bez11}
+       Ist $X$ ein $K$--Vektorraum, so seien $X^* \coloneqq  \Hom(X,\K)$ (algebraischer
+       Dualraum) und $X'\coloneqq L(X, \K)$ (stetiger Dualraum).
+ \item \label{Bez12}
+       Sei 
+\[\Mat_{m,n}: \R^{mn} \rightarrow \R^{m \times n}, (x_i)_{i=1}^{mn} \mapsto
+{\left(x_{m\cdot (i-1) + j}\right)_{i=1}^n}_{j=1}^m\text,\]
+d. h. durch $\Mat_{m,n}$ können wir einen Vektor aus dem $\R^{mn}$ als Matrix
+im $\R^{m \times n}$ auffassen. Offensichtlich ist $\Mat_{m,n}$ linear,
+bijektiv und aufgrund der endlichen Dimension der beiden Räume auch stetig,
+wenn man beide Räume mit Normen ausstattet.
+ \item \label{Bez14} Ist $(M,d)$ ein metrischer Raum, $x \in M$ und $r \in
+  \R_{>0}$, so seien
+  \[\koff M x r \coloneqq  \menge{y \in X}{d(x,y) < r}\text{ und }
+  \kabg M x r \coloneqq  \menge{y \in X}{d(x,y) \le r}\text.\]
+  Ist $A \subseteq M$, so sei $\partial A \coloneqq  \overline A \setminus \Inn(A)$.
+ \item \label{Bez15}
+ Ist die Norm eines normierten Raumes $(X, \norm\cdot_X)$ von besonderer
+ Bedeutung, so werden wir gelegentlich den Index bei Kugeln von $X$ zu
+ $(X, \norm\cdot_X)$ abwandeln, um kenntlich zu machen, dass diese Norm
+ gemeint ist. Analog werden wir verfahren, wenn $(Y, \norm\cdot_Y)$ ein
+ weiterer normierter Raum ist und wir $L(X,Y)$ betrachten, d. h. wir werden
+ statt dessen $L((X, \norm\cdot_X), (Y, \norm\cdot_Y))$ oder
+ $L((X, \norm\cdot_X),Y)$ schreiben. Dies ist besonders dann wichtig, wenn es
+ mehrere Normen auf $X$ (bzw. $Y$) gibt und aus dem Kontext nicht klar wird,
+ welche gemeint ist.
+ \item \label{Bez16}
+ Sei $\ell_p^n \coloneqq  (\R^n, \norm\cdot_{p,n})$.
+\end{enumerate}

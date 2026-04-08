@@ -1,0 +1,33 @@
+\begin{lemma}{Kompaktheit der Sphäre}{PraekompaktheitDerSphaere}
+Sei $(E, \norm\cdot_E)$ ein normierter $\K$--Vektorraum.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item Ist $\kran E01$ kompakt, so auch $\kabg E01$.
+	\item Ist $(F, \norm\cdot_F)$ ein weiterer normierter $\K$--Vektorraum,
+	      $\kran {L(E,F)}01$ kompakt und $\Inv(E,F) \neq \emptyset$, so sind
+	      $E$ und $F$ endlichdimensional.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Die Aussage ist trivial, wenn $E = \meng 0$.\\
+Sei also zusätzlich $E \neq \meng 0$ angenommen.\\
+Dann ist $\kran E 01 \neq \emptyset$ und offensichtlich gilt
+\begin{align}\kabg E 01 = \menge{sy}{s \in [0,1], y \in \kran E 01}\text. 
+\tag {$\ast$}\label{pdseq:1}\end{align}
+Sei nun $K\coloneqq [0,1] \times \kran E01$ mit der Produktmetrik ausgestattet.\\
+Ist $\kran E01$ kompakt, so ist auch $K$ kompakt.\\
+Seien $f: K \rightarrow \kabg E 01, (s,y) \mapsto sy$. Dann ist $f$ stetig.\\
+Wegen $\eqref{pdseq:1}$ ist $f(K)=\kabg E01$ und damit ist $\kabg E01$ als
+stetiges Bild einer kompakten Menge selbst kompakt.\\
+(3) Sei $(F, \norm\cdot_F)$ ein normierter $\K$--Vektorraum und es gelte
+$\kran {L(E,F)}01$ ist kompakt und $\Inv(E, F) \neq \emptyset$.\\
+Nach (2) ist dann $\kabg{L(E,F)}01$ kompakt, also $L(E,F)$
+endlichdimensional.\\
+Ist $F= \meng 0$, so ist wegen $\Inv(E,F) \neq \emptyset$ auch $E = \meng 0$.\\
+Ist $F\neq0$, so existiert nach Hahn--Banach ein $\varphi\in F'\setminus\meng 0$.\\
+Sei $\Phi: F \rightarrow L(E,F), y \mapsto (x \mapsto \varphi(x)y)$.\\
+Offensichtlich ist $\Phi$ linear und wegen $\varphi \neq 0$ auch injektiv.\\
+Damit ist $F$ isomorph zu einem Unterraum des endlichdimensionalen Raums
+$L(E,F)$, also endlichdimensional und
+wegen $\Inv(E,F) \neq \emptyset$, ist es auch $E$.
+\end{proof}

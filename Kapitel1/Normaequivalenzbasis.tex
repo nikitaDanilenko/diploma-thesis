@@ -1,0 +1,46 @@
+\begin{korollar}{Normäquivalenzbasis im Endlichdimensionalen}
+                {NormaequivalenzbasisImEndlichdimensionalen}
+Seien $n \in \N$, $(E, \norm\cdot_E)$ ein $n$--dimensionaler normierter
+$\K$--Vektorraum, $\norm\cdot$ eine Norm auf dem $\K^n$ und 
+$d \coloneqq  d_{BM}((\K^n, \norm\cdot), (E, \norm\cdot_E))$.\\
+Dann existiert eine Basis $x \in E^n$ mit der Eigenschaft
+\[\frac 1 d \norm\cdot \le\norm\cdot_E \circ \bprod\cdot x_{n, E} \le \norm\cdot\text.\]
+\end{korollar}
+\begin{proof}
+Da $E$ und $\K^n$ endlichdimensional sind und die gleiche Dimension haben,
+existiert nach~\ref{ExistenzEinerBanachMazurAbbildung} eine
+Banach--Mazur--Abbildung 
+$T \in \Inv(\K^n, E)$ zwischen $(\K^n, \norm\cdot)$ und $(E, \norm\cdot_E)$,
+also sind 
+\begin{align}\opnorm T{\K^n}E=1 \quad \text{ und }\quad 
+\opnorm{T \inv}E{\K^n} = d\text. \label{nieeq:1}\end{align}
+Seien $e \coloneqq  (e_i^n)_{i=1}^n$ und $x \coloneqq  \pfeil T n (e)$. Offenbar ist $x$ eine Basis von $E$.\\
+Sei $t \in \K^n$. Dann gilt:
+\[ \bprod t x _{n, E}= \bprod t {\pfeil T n (e)} _{n, E}
+\overset{\refclaim{EigenschaftenDesLinearkombinators}
+{EigenschaftenDesLinearkombinators2}}{=} 
+T\left(\bprod t e _{n, \K^n}\right) = T(t)\text.\]
+Somit ist also $T = \bprod \cdot x_{n, E}$ und daher 
+\begin{align}\norm\cdot_T = \norma\cdot_E \circ \bprod \cdot x _{n, E}\text.
+\label{nieeq:2}\end{align}
+Wegen der endlichen Dimension sind $(E, \norm\cdot_E)$ und $(\K^n, \norm\cdot)$
+vollständig, $T$ ist injektiv und hat abgeschlossenes Bild.\\
+Daher liefert~\ref{EigenschaftenDerBildhalbnorm}:
+\begin{align}\inf\menge{ \norm{Ta}_E }{a \in \kran {\K^n} 0 1} \cdot \norm\cdot
+    \le \norm\cdot_T \le \opnorm TE{\K^n}\cdot \norm\cdot\text. \label{nieeq:3}
+    \end{align}
+Auch die Voraussetzungen von~\ref{OperatornormDerInversen} sind erfüllt,
+sodass wir weiterhin erhalten:
+\begin{align}\label{nieeq:4}\inf\menge{ \norm{Ta}_E }{a \in \kran {\K^n} 0 1} 
+ = \frac 1 {\opnorm{T\inv}E {\K^n}} \overset{\eqref{nieeq:1}}= \frac 1 d\text. \end{align}
+Insgesamt folgt:
+\begin{align*}
+\frac 1 d \norm\cdot &\overset{\eqref{nieeq:4}}=
+ \left(\inf\menge{\norm{Ta}_E }{a\in\kran{\K^n}01}\right) \cdot \norm\cdot \\
+ &\overset{\eqref{nieeq:3}}\le \norm\cdot_T \overset{\eqref{nieeq:2}}= 
+ \norm\cdot_E \circ \bprod \cdot x _{n, E}
+ \overset{\substack{\eqref{nieeq:2},\\\eqref{nieeq:3}}}\le 
+ \opnorm T {\K^n} E \norm\cdot \overset{\eqref{nieeq:1}}
+ = \norm \cdot \text.
+\end{align*}
+\end{proof}

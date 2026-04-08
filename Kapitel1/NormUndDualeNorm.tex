@@ -1,0 +1,37 @@
+\begin{lemma}{Norm und duale Norm}{NormUndDualeNorm}
+Seien $(E, \norm\cdot_E)$ ein normierter $\K$--Vektorraum und $x \in E$.\\
+Dann existiert ein $\varphi \in \kran{E'}01$
+mit $\norm x_E = \varphi(x)$.\\
+Insbesondere ist damit $\opnorm {ev(x, \cdot)} {E'} \K  = \norm x_E$.\\
+Für alle $K \in \meng{\kabg{E'}01, \kran{E'}01}$
+gilt daher $\norm x _ E = \sup\menge{\abs{\varphi(x)}}{\varphi \in K}$.\\
+Für $\K = \R$ gilt außerdem $\norm x _ E = \sup\menge{\varphi(x)}{\varphi \in K}$.
+\end{lemma}
+\begin{proof}
+Wir verwenden den folgenden Spezialfall des Satzes von Hahn--Banach:
+\begin{quote}
+Seien $(X, \norm\cdot)$ ein normierter $\K$--Vektorraum, $Y \le X$ und
+$l \in Y'$.\\
+Dann existiert ein $L \in X'$ mit $L\vert _Y = l$ und $\opnorm L X \K = \opnorm l Y \K$.
+\end{quote}
+Falls $x = 0$, so ist nichts zu tun, denn es gibt stetige Funktionale außer dem
+Nullfunktional (wegen $E \neq 0$ kann man $y \in E\setminus \meng 0$ wählen
+und damit wie unten beschrieben verfahren).\\
+Sei also zusätzlich $x \neq 0$ und $x' \coloneqq  \frac 1 {\norm x _E} x$.\\
+Seien $F\coloneqq \erz {x'}_\K$ und $\iota : \K \rightarrow F, k \mapsto k\cdot x'$.\\
+Dann ist $\iota$ wegen $\norm{x'}_E=1$ eine bijektive, lineare Isometrie.\\
+Sei nun $l \coloneqq  \iota\inv$. Dann ist $l$ ebenfalls eine lineare Isometrie, also
+$\opnorm l F \K = 1$.\\
+Also existiert nach obigem Satz ein $L \in E'$ mit $L \vert_ F = l$ und
+$\opnorm L E \K = 1$.\\
+Wegen $x \in F$ gilt weiter $L(x) = L(\norm x_E \cdot x') = \norm x_E$, womit
+der erste Teil der Behauptung gezeigt ist.\\
+Seien $K \in \meng{\kabg{E'}01, \kran{E'}01}$ und $\varphi \in K$.\\
+Dann gilt $\abs{\varphi(x)} \le \opnorm \varphi E \K \cdot \norm x_E \le \norm x_E$.\\
+Damit ist bereits $\opnorm {ev(x, \cdot)} {E'} \K \le \norm x _E$.\\
+Da aber weiter $L \in K$ ist, gilt auch Gleichheit, denn nach Definition und
+einer aus dem Grundstudium bekannten Rechnung ist
+\[\opnorm {ev(x, \cdot)} {E'} \K = \sup\menge{\abs{ev(x,\psi)}}{\psi \in K} =
+                          \sup\menge{\abs{\psi(x)}}{\psi \in K}\text.\]
+Im Falle $\K = \R$ kann man offensichtlich auf den Betrag verzichten.
+\end{proof}

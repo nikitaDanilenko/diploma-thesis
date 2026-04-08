@@ -1,0 +1,35 @@
+\begin{lemma}{Eigenschaften der Erweiterung im Vektorraumfall}
+             {EigenschaftenDerErweiterungImVektorraumfall}
+Seien $K$ ein Körper, $V,W$ $K$--Vektorräume und $n \in \N$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{EigenschaftenDerErweiterungImVektorraumfall1}
+	 Für jedes $\alpha \in \Hom(V, W)$ ist auch 
+    $\pfeil \alpha n:V^n \rightarrow W^n$ linear.
+\item \label{EigenschaftenDerErweiterungImVektorraumfall2} Die Abbildung \[
+\pfeil{\cdot}n: \Hom(V, W) \rightarrow \Hom(V^n, W^n), \varphi\mapsto\pfeil\varphi n\]
+ist ebenfalls linear.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Seien $\varphi, \tau \in \Hom(V, W)$, $k \in K$ und $v, w \in V^n$.\\
+Es ist dann
+\begin{align*}
+\pfeil \varphi n(v+kw)
+   & = \pfeil\varphi n \left((v_i+k w_i)_{i=1}^n\right)
+     = (\varphi(v_i+kw_i))_{i=1}^n\\
+   & = (\varphi(v_i) + k \varphi(w_i))_{i=1}^n &\quad \varphi \text{ linear}\\
+   & = \left(\varphi(v_i)\right)_{i=1}^n + k\left(\varphi(v_i)\right)_{i=1}^n
+     = \pfeil \varphi n (v) + k \pfeil \varphi n (w)
+\end{align*}
+Damit ist $\pfeil \varphi n$ linear.\\
+Weiter gilt:
+\begin{align*}
+\pfeil {(\varphi + k \tau)} n (v)
+  & = \left((\varphi + k \tau)(v_i)\right)_{i=1}^n
+    = \left(\varphi(v_i) + k \tau(v_i)\right)_{i=1}^n\\
+  & = \left(\varphi(v_i)\right)_{i=1}^n + k \left(\tau(v_i)\right)_{i=1}^n
+    = \pfeil \varphi n (v) + k \pfeil \tau n (v)
+\end{align*}
+Also ist auch $\pfeil \cdot n$ linear.
+\end{proof}

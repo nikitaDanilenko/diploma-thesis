@@ -1,0 +1,90 @@
+\begin{lemma}{Sortierungsnorm}{Sortierungsnorm}
+Seien $n \in \N$, $m \in \haken n$, 
+\[\norm\cdot_{(m)}: \R^n \rightarrow [0, \infty[,
+ v\mapsto\frac 1m\sum_{i=1}^m \mu_{i, n}\left(\pfeil {\abs\cdot}n(v) \right)\]
+und
+\[V\coloneqq  \mengea{z \in \R^n\setminus\meng 0}
+    {\left(\forall\, i \in \haken n: \abs{z_i} \in\meng{0,\nicefrac 1m} \right)
+    \wedge \left(\abs{\menge{i \in \haken n}{\abs{z_i} \neq 0}}\le m \right)}
+    \text.\]
+Dann ist $V$ endlich, nichtleer und es gilt:
+\begin{enumerate}[(1)]
+	\item \label{Sortierungsnorm1}
+	$\sup \menge{\norm v_{2, n}}{v \in V} = \frac 1 {\sqrt m}$.
+	\item \label{Sortierungsnorm2}
+	$\forall\, w \in \R^n: \sup\menge{\sprod w v_n}{v \in V} = \norm w _{(m)}$.
+	\item \label{Sortierungsnorm3}
+	$\norm\cdot_{(m)}$ ist eine Norm auf dem $\R^n$ mit $\norm\cdot_{(m)} \le
+	\norm\cdot_{\infty, n}$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Wegen $\frac 1 m e_1^n \in V \subseteq \meng{-\frac 1 m, 0, \frac 1 m}^n$ ist
+$V$ nichtleer und endlich.\\
+(1) Sei $v \in V$. Dann gilt:
+\begin{align*}
+\norm v_{2, n}^2 &= \sum_{i \in \haken n}\abs{v_i}^2
+= \sum_{\substack{i\in \haken n\\ \abs{v_i} \neq 0}} \abs{v_i}^2
+= \frac 1 {m^2} \sum_{\substack{i\in \haken n\\ \abs{v_i} \neq 0}} 1
+\le \frac 1 {m^2} m = \frac 1 m\text.
+\end{align*}
+Also ist $\norm v _{2, n} \le\frac 1 {\sqrt m}$ und es gilt
+\[v_0 \coloneqq  \sum_{i=1}^m \frac 1 m e_i^n \in V \quad \text{ und } \quad
+\norm{v_0}_{2, n} = \frac 1 {\sqrt m}\text.\]
+Somit gilt $\sup\menge{\norm w_{2, n}}{w \in V} = \frac 1 {\sqrt m}$.\\
+(2) Sei $w \in \R^n$. Falls $w = 0$, so ist die Aussage trivial.\\
+Sei also $w \neq 0$. Dann gilt für alle $v\in V$:
+\begin{align*}\sprod w v_n& \le \sum_{i=1}^n \abs{w_i}\abs{v_i}
+= \sum_{\substack{i \in \haken n\\ \abs{v_i} \neq 0} }\abs{w_i}\abs{v_i}
+= \sum_{\substack{i \in \haken n\\ \abs{v_i} \neq 0} }\abs{w_i}\frac 1 m
+\le \frac 1 m \sum_{i=1}^m \mu_{i, n}\left(\pfeil {\abs\cdot}n (w) \right)\\
+&= \norm w_{(m)}\text.
+\end{align*}
+Ferner gibt es $\iota: \haken m \rightarrow \haken n$ injektiv mit
+$\forall\, i \in \haken m: \abs{w_{\iota(i)}}
+= \mu_{i, n}\left(\pfeil {\abs\cdot}n (w) \right)$.\\
+Sei
+\[v_w : \haken n \rightarrow \R,\, j \mapsto \begin{cases}
+\frac 1 m \sgn(w_{j})&: j \in \Bild(\iota)\\
+0 & : \text{ sonst}
+\end{cases}.\]
+Dann ist $v_w \in V$ und es gilt:
+\begin{align*}
+\sprod w {v_w}_n &= \sum_{i \in \haken n}w_i (v_w)_i
+= \sum_{\substack{i \in \haken n\\ (v_w)_i \neq 0}}w_i (v_w)_i
+= \sum_{i \in \Bild(\iota)}w_i \frac 1 m \sgn(w_i)\\
+&= \frac 1 m\sum_{i \in \Bild(\iota)} \abs{w_i}
+= \frac 1 m \sum_{i \in \haken m} \abs{w_{\iota(i)}}
+= \frac 1 m \sum_{i=1}^m\mu_{i, n}\left(\pfeil {\abs\cdot}n (w) \right)
+= \norm w _{(m)}\text.
+\end{align*}
+Somit ist auch (2) (analog zu (1)) gezeigt.\\
+(3) Offenbar ist $\norm\cdot_{(m)}$ nichtnegativ--definit.\\
+Seien $x, y \in \R^n$ und $t \in \R$. Dann gilt wegen $\abs t \ge 0$:
+\begin{align*}
+\norm{tx}_{(m)}&= 
+\frac 1 m \sum_{i=1}^n\mu_{i, n}\left(\pfeil{\abs\cdot}n(tx) \right)
+= \frac 1 m \sum_{i=1}^n\mu_{i, n}\left(\abs{t} \pfeil{\abs\cdot}n(x) \right)\\
+&\overset{\refclaim{EigenschaftenDesKtenMaximums}
+{EigenschaftenDesKtenMaximums3}}=
+\frac 1 m\sum_{i=1}^n\abs{t}\mu_{i, n}\left(\pfeil{\abs\cdot}n(x) \right)
+= \abs{t}\frac 1 m\sum_{i=1}^n\mu_{i, n}\left(\pfeil{\abs\cdot}n(x) \right)
+= \abs{t}\norm{x}_{(m)}\text.
+\end{align*}
+Schließlich gilt:
+\begin{align*}
+\norm{x+y}_{(m)} &\overset{(2)}=
+\sup_{v \in V} \sprod {x+y}v_n 
+= \sup_{v \in V}\left(\sprod x v_n + \sprod y v_n \right)\\
+&\le \left(\sup_{v \in V}\sprod x v_n \right) 
++ \left(\sup_{v \in V}\sprod y v_n \right)
+\overset{(2)}= \norm x_{(m)} + \norm y _{(m)}\text.
+\end{align*}
+Also ist $\norm\cdot_{(m)}$ in der Tat eine Norm und es gilt
+\[\norm\cdot _{(m)}
+ = \frac 1 m \sum_{i=1}^m \mu_{i, n} \circ \pfeil{\abs\cdot}n
+ \overset{\refclaim{EigenschaftenDesKtenMaximums}
+ {EigenschaftenDesKtenMaximums1}}\le
+ \frac 1 m \sum_{i=1}^m \mu_{1, n} \circ \pfeil{\abs\cdot}n
+ = \mu_{1, n} \circ \pfeil{\abs\cdot}n = \norm\cdot_{\infty, n}\text.\]
+\end{proof}

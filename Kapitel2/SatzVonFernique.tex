@@ -1,0 +1,44 @@
+\begin{korollar}{Satz von Fernique}{SatzVonFernique}
+Seien $n \in \N$, $\gamma, \delta : \Omega \rightarrow \R^n$ mit
+\begin{align*}
+\forall\, i \in \haken n \, \exists\, \rho_i \in \R_{>0}:
+\gamma_i \text{ ist } N(0, \rho_i^2)\text{--verteilt,}\\
+\forall\, i \in \haken n \, \exists\, \sigma_i \in \R_{>0}:
+\delta_i \text{ ist } N(0, \sigma_i^2)\text{--verteilt}
+\end{align*}
+und es gelte: $\forall\, i, j \in \haken n: \norm{\gamma_i - \gamma_j}_2 \le
+\norm{\delta_i - \delta_j}_2$.\\
+Dann gilt:
+\[\E\left(\max_{i \in \haken n}\gamma_i \right)
+\le \E\left(\max_{i \in \haken n}\delta_i \right)\text.\]
+\end{korollar}
+\begin{proof}
+Seien $r\coloneqq  1$, $s \coloneqq  n$ und
+\begin{align*}
+X: \haken r \times \haken s \rightarrow L_2(\Omega, \mfa, \Prim, \R),
+(i, j) \mapsto \gamma_j\text,\\
+Y: \haken r \times \haken s \rightarrow L_2(\Omega, \mfa, \Prim, \R),
+(i, j) \mapsto \delta_j\text.
+\end{align*}
+Dann sind $X, Y$ offenbar wohldefiniert.\\
+Ferner gilt für alle $i \in \haken r$ und alle $k, l \in \haken s$:
+\begin{align*}
+\norm{X(i,k)-X(i,l)}_2 &= \norm{\gamma_k - \gamma_l}_2 \overset{\text{Vor.}}\le
+\norm{\delta_k - \delta_l}_2 = \norm{Y(i,k)- Y(i,l)}_2\text.
+\end{align*}
+Außerdem gilt wegen $r = 1$ trivial:
+\[\forall j_1, j_2 \in \haken r \forall a, b \in \haken s:
+j_1\neq j_2\Rightarrow\norm{X(j_1, a)-X(j_2,b)}_2\ge 
+\norm{Y(j_1, a)-Y(j_2,b)}_2 \text.\]
+Damit sind die Voraussetzungen von~\ref{GaussscherMinMaxSatz} für $X,Y$
+erfüllt und es gilt:
+\begin{align*}
+\E\left(\max_{j \in \haken n}\gamma_j \right) &=
+\E\left(\max_{j \in \haken n}X(1, j) \right) \overset{r=1}=
+\E\left(\min_{j \in \haken r}\max_{j \in \haken n}X(i, j) \right)\\
+&\overset{\ref{GaussscherMinMaxSatz}}\le
+\E\left(\min_{j \in \haken r}\max_{j \in \haken n}Y(i, j) \right)
+= \E\left(\max_{j \in \haken n}Y(1, j) \right)
+= \E\left(\max_{j \in \haken n}\delta_j \right)\text.
+\end{align*}
+\end{proof}

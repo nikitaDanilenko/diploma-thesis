@@ -1,0 +1,280 @@
+\begin{satz}{Satz von Milman--Schechtman}{SatzVonMilmanSchechtman}
+Es gibt ein $C_{BS} \in [1, \infty[$ derart, dass für alle $m, n \in \N$
+mit $\frac 1 {10} \log(n) \le m \le n$ und jeden $n$--dimensionalen normierten
+$\R$--Vektorraum $(E, \norm\cdot_E)$ ein $F \le E$ existiert mit $\dim F = m$
+und
+\[d_{BM}\left((F, \restrict{\norm\cdot_E}F), \ell_2^m \right)
+\le 3 \frac{\sqrt{2 \log\left(\frac {15}2 \right)}}
+{\sqrt{\log\left(\frac {15}2 \right)} - 1}C_{BS}
+\sqrt{\frac m {\log\left(1+ \frac n m \right)}}\text.\]
+\end{satz}
+\begin{proof}
+Nach~\cite{BS} (dort: Theorem 2) gibt es ein $C_{BS} \in \R_{>0}$, sodass für
+alle normierten Räume $(X, \norm\cdot_X)$ ein $M \in \N$ mit
+$M > \frac 1 2 \dim X$ und $y \in X^M$ existieren mit
+$\norm\cdot_{\infty,M}\le\norm\cdot_X\circ\bprod\cdot y_M
+\le C_{BS}\norm\cdot_{2,M}$.\\
+Wegen $\norm{e_1^M}_{\infty, M} = \norm{e_1^M}_{2, N}$ ist $C_{BS} \ge 1$.\\
+Seien also $m, n \in \N$ mit $\frac 1 {10} \log(n) \le m \le n$ und
+$(E, \norm\cdot_E)$ ein $n$--dimensionaler normierter $\R$--Vektorraum.\\
+Nach dem oben zitierten Satz gibt es also ein $\widetilde M \in \N$ mit
+$\widetilde M > \frac n 2$ und ein $\widetilde y \in E^{\widetilde M}$ mit
+$\norm\cdot_{\infty,\widetilde M}
+\le\norm\cdot_E\circ\bprod\cdot {\widetilde y}_{\widetilde M}
+\le C_{BS}\norm\cdot_{2,\widetilde M}$.\\
+Sei $N \coloneqq  \floor{\frac n 2}$. Dann ist $N \le \frac n 2 < \widetilde M$ und
+daher $x\coloneqq \left(\frac 1{C_{BS}}\widetilde y_i \right)_{i=1}^N$ wohldefiniert
+und es gilt (durch Auffüllung mit Nullen auf den Indizes ab $N+1$):
+\begin{align}\frac 1{C_{BS}}
+\norm\cdot_{\infty, N} \le \norm\cdot_E \circ \bprod\cdot x_N \le
+\norm\cdot_{2,N} \text.\label{svmseq:1}\end{align}
+Damit ist $x \neq 0$, sogar $x_i \neq 0$, da
+$\frac 1 {C_{BS}} = \frac 1 {C_{BS}} \norm{e_i^N}_{\infty,N} \le \norm{x_i}_E$
+für alle $i \in \haken N$.\\
+Seien nun $T\coloneqq S^{m-1}$,
+\[\bigg((\Omega, \mfa, \Prim), (\gamma,\delta,\widetilde g),(N, m, mN)\bigg)
+\text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach~\ref{ExistenzNormalNTupel}), $G_x \coloneqq  \bprod \cdot x_N \circ g$ und $(Z_{\gamma, x}, M_{\delta,T})$ das
+Auswertungspaar zu $(\gamma, \delta, x, T)$.\\
+Seien weiter
+\[f \coloneqq \inf_{t \in T} \, \norm\cdot_E \circ \bprod \cdot x _N \circ G_x,
+\quad
+h\coloneqq  \sup_{t \in T} \, \norm\cdot_E \circ \bprod \cdot x _N \circ G_x\text.\]
+Nach~\ref{IntegrierbarkeitVonExtremaInGordonschenPaaren} sind
+\begin{align}
+f, h\text{ integrierbar und es ist } f \le h\text.\label{svmseq:2}
+\end{align}
+\underline{1. Fall:} $m \le \frac 2 {13}(N+1)$\absatz
+\underline{1.1. Fall:} $\E(Z_{\gamma, x}) < 2a_m$\absatz
+Seien $\mu_{j, N}$ für alle $j \in \haken N$ gemäß~\ref{ktesMaximum},
+\[\norm\cdot_{(m)}:\R^N \rightarrow [0, \infty[, v \mapsto
+\frac 1 m \sum_{i=1}^m \mu_{i, N}\left(\pfeil {\abs\cdot}N (v)\right)\]
+und
+\[ V\coloneqq  \mengea{z \in \R^N\setminus\meng 0}
+    {\left(\forall\, i \in \haken N: \abs{z_i} \in\meng{0,\nicefrac 1m} \right)
+    \wedge \left(\abs{\menge{i \in \haken N}{\abs{z_i} \neq 0}}\le m \right)}
+    \text.\]
+Dann ist $V \subseteq \R^N$, nichtleer,
+beschränkt (da endlich) und es ist $0 \notin V$. \hfill $(a)$\\
+Nach~\refclaim{Sortierungsnorm}{Sortierungsnorm3} ist
+\begin{align}
+\norm\cdot_{(m)}\text{ eine
+Norm auf dem }\R^N\text{ mit } 
+\norm\cdot_{(m)} \le \norm\cdot_{\infty, N}\text.\label{svmseq:3}
+\end{align}
+Ferner ist nach~\refclaim{Sortierungsnorm}{Sortierungsnorm1}
+$\sup\menge{\norm v_{2, N}}{v \in V} = \frac 1{\sqrt m}$ \hfill $(b)$\\
+und nach~\refclaim{Sortierungsnorm}{Sortierungsnorm2}
+\begin{align}
+\forall\, w \in \R^N: \sup_{v \in V}\sprod w v_N = \norm w_{(m)}\text.\tag{$c$}
+\end{align}
+Für alle $s \in \R^m$ und alle $\omega \in \Omega$ gilt:
+\begin{align}
+&\,(\bprod \cdot x \circ ev(s, \cdot) \circ g)(\omega)
+= \bprod {g(\omega)s}x_N = (\bprod \cdot x_N \circ g(\omega))(s)\notag\\
+=&\, ev(s, \cdot) \bigg(\bprod \cdot x _N \circ g(\omega) \bigg)
+= (ev(s, \cdot) \circ \bprod \cdot x _N \circ g)(\omega) \text.\label{svmseq:4}
+\end{align}
+Wegen $N = \floor {\frac n 2}$ ist $N+1\ge \frac n 2$, also auch
+$\frac {N+1}m \ge \frac n {2m}$ und damit
+\begin{align}\left(1+\frac{N+1}m \right)^2
+\ge 1 + 2 \frac{N+1}m \ge 1 + \frac n m\, , \text{ also } 1 + \frac{N+1}m
+\ge \sqrt{1+ \frac n m} \text.\label{svmseq:5}\end{align}
+Wegen $m \le \frac 2 {13}(N+1)$ und damit
+$1+\frac{N+1}m \ge 1+\frac{13}2 = \frac{15}2$ gilt weiter:
+\begin{align}
+&\,\E\left(\norm \cdot_{(m)} \circ \gamma \right) - \frac {a_m}{\sqrt m}
+\ge \E\left(\gamma_m^\ast \right) - \frac {a_m}{\sqrt m}
+\overset{\refclaim{AbschaetzungEinesGammafunktionsquotienten}
+{AbschaetzungEinesGammafunktionsquotienten2}}\ge 
+\E\left(\gamma_m^\ast \right)-1\notag\\
+\overset{\refclaim
+{UntereSchrankeDesErwartungswertsVonAbsolutenN01Ordnungsstatistiken}
+{UntereSchrankeDesErwartungswertsVonAbsolutenN01Ordnungsstatistiken3}}\ge
+&\,
+\sqrt{\log\left(1 + \frac {N+1}m \right)}-1\notag\\
+=&\, \sqrt{\log\left(1 + \frac {N+1}m \right)} - 
+\left(1 - \frac{\sqrt{\log\left(\frac {15}2 \right)} -1}
+{\sqrt{\log\left(\frac {15}2 \right)}} \right)
+\sqrt{\log\left(\frac {15}2 \right)}\notag\\
+\ge &\,\sqrt{\log\left(1 + \frac {N+1}m \right)} - 
+\left(1 - \frac{\sqrt{\log\left(\frac {15}2 \right)} -1}
+{\sqrt{\log\left(\frac {15}2 \right)}} \right)
+\sqrt{\log\left(1 + \frac {N+1}m \right)}\notag\\
+=&\, \left(\frac{\sqrt{\log\left(\frac {15}2 \right)} -1}
+{\sqrt{\log\left(\frac {15}2 \right)}} \right)
+\sqrt{\log\left(1 + \frac {N+1}m \right)}\notag\\
+\overset{\eqref{svmseq:5}}\ge 
+&\, \left(\frac{\sqrt{\log\left(\frac {15}2 \right)} -1}
+{\sqrt{\log\left(\frac {15}2 \right)}} \right)
+\sqrt{\frac 1 2\log\left(1 + \frac {n}m \right)}\notag\\
+=& \underbrace{\left(\frac{\sqrt{\log\left(\frac {15}2 \right)} -1}
+{\sqrt{2\log\left(\frac {15}2 \right)}} \right)}_{>0, \text{ da }
+\frac{15}2 > \exp(1)}
+\sqrt{\log\left(1 + \frac {n}m \right)} \eqqcolon \alpha \text.\label{svmseq:6}
+\end{align}
+Seien $E_1\coloneqq  \R^N$, $\norm\cdot_{E_1}\coloneqq  \norm\cdot_{(m)}$,
+$x_1 \coloneqq  (e_i^N)_{i=1}^N$ und $G_{x_1}\coloneqq  \bprod \cdot {x_1}_N \circ g = g$.\\
+Wegen $(a), (b), (c)$ sind die Voraussetzungen von~\ref{GordonschePaareUndNormiterierendeMengen} für $(E_1, \norm\cdot_{E_1})$,
+$x_1$, $T$, $V$ und $c\coloneqq \frac 1 {\sqrt{m}}$ erfüllt und damit gilt:
+\begin{align}
+\E\left(\norm\cdot_{(m)} \circ \gamma \right) - \frac {a_m}{\sqrt m}
+& \overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}
+= \E\left(\norm\cdot_{(m)} \circ \bprod \cdot {x_1}_N \circ\gamma \right)
+- \frac 1 {\sqrt m} \E\left(\norm\cdot_{2, m} \circ \delta \right)\notag\\
+&\overset{\ref{IterierteEuklidischeNorm}}=
+\E\left(\norm\cdot_{(m)} \circ \bprod \cdot {x_1}_N \circ\gamma \right)
++ \frac 1 {\sqrt m}\E\left(\inf_{t \in T} \bprod t \delta_m \right)\notag\\
+&\overset{\refclaim{GordonschePaareUndNormiterierendeMengen}
+{GordonschePaareUndNormiterierendeMengen1}}\le
+\E\left(\inf_{t \in T}\, \norm\cdot_{(m)}\circ ev(t,\cdot)\circ G_{x_1} \right)
+\text.\label{svmseq:7}
+\end{align}
+Außerdem sind wegen $x \neq 0$ und~\eqref{svmseq:1} auch die Voraussetzungen
+von~\ref{GordonschePaareUndSubeuklidischeBildhalbnormen} für
+$(E, \norm\cdot_E)$, $x$ und $T$ erfüllt, sodass gilt:
+\begin{align}
+\E\left(\sup_{t \in T}\, \norm\cdot_{E}\circ ev(t,\cdot)\circ G_{x} \right)
+&\overset{
+\refclaim{GordonschePaareUndSubeuklidischeBildhalbnormen}
+{GordonschePaareUndSubeuklidischeBildhalbnormen1}}
+\le \E\left(\norm\cdot_E \circ \bprod \cdot x_N \circ \gamma \right)
++ \E\left(\sup_{t \in T} \bprod t \delta_m \right)\notag\\
+&\overset{\ref{IterierteEuklidischeNorm}}=
+\E\left(\norm\cdot_E \circ \bprod \cdot x_N \circ \gamma \right)
++ \E\left(\norm\cdot_{2, m}\circ \delta \right)\notag\\
+&\overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}=
+\E\left(\norm\cdot_E \circ \bprod \cdot x_N \circ \gamma \right) + a_m\notag\\
+&\overset{\text{1.1 Fall}}< 3a_m \text.\label{svmseq:8}
+\end{align}
+Wir erhalten also insgesamt:
+\begin{align*}
+0 & \overset{\eqref{svmseq:6}}<
+\frac 1 {C_{BS}}\left(\frac{\sqrt{\log\left(\frac {15}2 \right)} -1}
+{\sqrt{2\log\left(\frac {15}2 \right)}} \right)
+\sqrt{\log\left(1 + \frac {n}m \right)}\\
+&\overset{\eqref{svmseq:6}}\le 
+\frac 1 {C_{BS}}\left(\E\left(\norm \cdot_{(m)} \circ \gamma \right) 
+- \frac {a_m}{\sqrt m}\right)\\
+&\overset{\eqref{svmseq:7}}\le
+\E\left(\inf_{t \in T}\, 
+\frac 1 {C_{BS}}\norm\cdot_{(m)}\circ ev(t,\cdot)\circ G_{x_1} \right)\\
+&=
+\E\left(\inf_{t \in T}\, 
+\frac 1 {C_{BS}}\norm\cdot_{(m)}\circ ev(t,\cdot)\circ g \right)\\
+&\overset{\eqref{svmseq:3}}\le
+\E\left(\inf_{t \in T}\, 
+\frac 1 {C_{BS}}\norm\cdot_{\infty, N}\circ ev(t,\cdot)\circ g \right)\\
+&\overset{\eqref{svmseq:1}}\le
+\E\left(\inf_{t \in T}\, 
+\norm\cdot_{E}\circ \bprod \cdot x_N \circ ev(t,\cdot)\circ g \right)\\
+&\overset{\eqref{svmseq:4}}=
+\E\left(\inf_{t \in T}\, 
+\norm\cdot_{E}\circ ev(t,\cdot)\circ \bprod \cdot x_N \circ g \right)
+=\E\left(\inf_{t \in T}\, \norm\cdot_{E}\circ ev(t,\cdot)\circ G_x \right)\\
+&= \E(f) \overset{\eqref{svmseq:2}}\le \E(h)
+= \E \left(\sup_{t \in T}\, \norm\cdot_{E}\circ ev(t,\cdot)\circ G_x \right)
+\overset{\eqref{svmseq:8}}< 3 a_m\text.
+\end{align*}
+Da $f \ge 0, h \ge 0$ und beide integrierbar sind, gibt es nach~\ref{Erwartungswertlemma} ein $\omega_0 \in \Omega$ mit
+$f(\omega_0)>0$ und $\frac{h(\omega_0)}{f(\omega_0)} \le \frac{3a_m}\alpha$.\\
+Sei $A\coloneqq  G_x(\omega_0)$.
+Dann ist $A \in L(\ell_2^m, E)$ und es gilt:
+\[\inf_{t \in S^{m-1}}\norm{At}_E =
+  \inf_{t \in T} \norm{G_x(\omega_0)t}_E =
+  \left(\inf_{t \in T} \norm\cdot_E \circ ev(t, \cdot) \circ G_x\right)
+  (\omega_0) = f(\omega_0) > 0\]
+und damit ist $A$ nach~\ref{InjektivitaetLinearerAbbildungenZwischenNormiertenRaeumen} injektiv.\\
+Sei $F\coloneqq  \Bild A$. Da $A$ injektiv ist, ist $\dim F = m$ und da jeder
+endlichdimensionale normierte Raum vollständig ist, gilt:
+\begin{align*}
+&\,d_{BM}\bigg((F, \norm\cdot_E\vert_F), \ell_2^m \bigg)
+\le \opnorm A {\ell_2^m}{F} \opnorm{A\inv}{F}{\ell_2^m}
+\overset{\ref{OperatornormDerInversen}}=
+\frac{\Sup{t \in T} \norm{At}_E}{\Inf{t \in T}\norm{At}_E}\\
+=&\, \frac{\Sup{t \in T}\norm{G_x(\omega_0)t}_E}
+       {\Inf{t \in T}\norm{G_x(\omega_0)t}_E}
+= \frac{\left(\Sup{t \in T} \norm\cdot_E \circ ev(t, \cdot) \circ G_x\right)
+  (\omega_0)}
+  {\left(\Inf{t \in T} \norm\cdot_E \circ ev(t, \cdot) \circ G_x\right)
+  (\omega_0)} = \frac{h(\omega_0)}{f(\omega_0)} \le \frac{3a_m}\alpha\\
+\overset{C_{BS} \ge 1}\le&\, \frac{3a_m}
+{\frac 1 {C_{BS}}\left(\frac{\sqrt{\log\left(\frac {15}2 \right)} -1}
+{\sqrt{2\log\left(\frac {15}2 \right)}} \right)
+\sqrt{\log\left(1 + \frac {n}m \right)}}
+= 3 \frac{\sqrt{2 \log\left(\frac {15}2 \right)}}
+{\sqrt{\log\left(\frac {15}2 \right)} - 1}C_{BS}
+\frac{a_m}{\sqrt{\log\left(1 + \frac {n}m \right)}}\\
+\overset{\refclaim{AbschaetzungEinesGammafunktionsquotienten}
+{AbschaetzungEinesGammafunktionsquotienten2}}\le &\,
+3 \frac{\sqrt{2 \log\left(\frac {15}2 \right)}}
+{\sqrt{\log\left(\frac {15}2 \right)} - 1}C_{BS}
+\sqrt{\frac m {\log\left(1 + \frac {n}m \right)}}\text.
+\end{align*}
+Damit ist der Fall dieser Fall abgeschlossen.\absatz
+\underline{1.2. Fall:} $\E(Z_{\gamma, x}) \ge 2 a_m$\absatz
+Sei dann zusätzlich $\eps \coloneqq  \frac 1 2$.\\
+Wegen~\eqref{svmseq:1} ist $x \neq 0$ und 
+$\norm\cdot_E\circ \bprod \cdot x_N \le \norm\cdot_{2,N}$. \hfill $(a')$\\
+Ferner ist $T\neq \emptyset$, $T \subseteq S^{m-1}$ und $T=-T$. \hfill $(b')$\\
+Schließlich gilt:
+\begin{align}\E(M_{\delta, T}) \overset{\ref{IterierteEuklidischeNorm}}=
+ \E\left(\norm\cdot_{2,m} \circ \delta \right)
+ \overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}=
+ a_m = \frac 1 2 2a_m \le \eps\E(Z_{\gamma,x})\text. \tag{$c'$}
+ \end{align}
+Wegen $(a'), (b'), (c')$ sind die Voraussetzungen von~\ref{ExistenzEingeschraenkterFastIsometrien} erfüllt und es gibt ein
+$A \in L(\ell_2^m, E)$ injektiv mit
+\begin{align}
+\opnorm A {\ell_2^m} E \opnorm{A\inv}{A(E)}{\ell_2^m} \le
+\frac{1+\eps}{1-\eps} = \frac{\nicefrac 3 2}{\nicefrac 1 2} = 3\text.
+\label{svmseq:9}
+\end{align}
+Sei nun $\varphi:\!\ ]1,\infty[\rightarrow\R,s\mapsto\frac{\log(s)}{\log(1+s)}$.\\
+Dann ist $\varphi$ offenbar stetig differenzierbar und es gilt für alle
+$z\in\!\ ]1,\infty[$:
+\[\varphi'(z)=\frac{\frac{\log(1+z)}{z}-\frac{\log(z)}{1+z}}{\log(1+z)^2}>0\text,\]
+also $\varphi$ monoton wachsend, sodass wegen $n \ge 2$ und
+$m \ge \frac 1{10}\log(n)$ gilt:
+\begin{align}\frac m{\log\left(1+\frac n m \right)}
+\ge \frac 1 {10}\frac{\log(n)}{\log(n+1)}
+= \frac 1 {10}\varphi(n) \ge \frac 1 {10}\varphi(2)
+=\frac 1 {10}\frac{\log(2)}{\log(3)}\text. \label{svmseq:10}\end{align}
+Ferner gilt:
+\begin{align}\frac{\sqrt{2 \log\left(\frac {15}2 \right)}}
+{\sqrt{\log\left(\frac {15}2 \right)} - 1}
+\sqrt{\frac 1 {10}\frac{\log(2)}{\log(3)}} > 1\text. \label{svmseq:11}
+\end{align}
+Sei nun $F\coloneqq  \Bild A$. Dann gilt:
+\begin{align*}
+d_{BM}\bigg((F, \norm\cdot_E\vert_F), \ell_2^m \bigg)
+&\le \opnorm A {\ell_2^m} F \opnorm{A\inv}{F}{\ell_2^m} 
+\overset{\eqref{svmseq:9}}\le 3
+\overset{C_{BS}\ge 1}\le 3C_{BS}\\
+&\overset{\eqref{svmseq:11}}< 3\frac{\sqrt{2 \log\left(\frac {15}2 \right)}}
+{\sqrt{\log\left(\frac {15}2 \right)} - 1}
+C_{BS}\sqrt{\frac 1 {10}\frac{\log(2)}{\log(3)}}\\
+&\overset{\eqref{svmseq:10}}\le
+3\frac{\sqrt{2 \log\left(\frac {15}2 \right)}}
+{\sqrt{\log\left(\frac {15}2 \right)} - 1}
+C_{BS}\sqrt{\frac m{\log\left(1+\frac n m \right)}}\text.
+\end{align*}
+Damit ist auch dieser Fall abgeschlossen.\absatz
+\underline{2. Fall:} $m > \frac 2 {13}(N+1)$\absatz
+Wegen $N = \floor{\frac n 2} \ge \frac n 2 - 1$ ist 
+$m > \frac 2 {13}(N+1)\ge \frac 2 {13}\cdot\frac n 2 = \frac n {13}$ und
+damit $\log\left(1+\frac n m \right)< \log(14)$.\\
+Ferner gilt
+\[3\frac{\sqrt{2 \log\left(\frac {15}2 \right)}}
+{\sqrt{\log\left(\frac {15}2 \right)} - 1} \frac 1 {\sqrt{\log(14)}}> 1\text.\]
+Sei nun $F \le E$ mit $\dim F = m$.\\
+Dann ist nach dem Satz von John
+\begin{align*}
+d_{BM}\left((F, \restrict{\norm\cdot_E}F), \ell_2^m \right)
+&\le \sqrt m \overset{C_{BS}\ge 1}\le C_{BS}\sqrt{m}
+< 3\frac{\sqrt{2 \log\left(\frac {15}2 \right)}}
+{\sqrt{\log\left(\frac{15}2 \right)}-1}C_{BS}\frac{\sqrt m}{\sqrt{\log(14)}}\\
+& \le  3\frac{\sqrt{2 \log\left(\frac {15}2 \right)}}
+{\sqrt{\log\left(\frac {15}2 \right)} - 1}
+C_{BS}\sqrt{\frac m{\log\left(1+\frac n m \right)}}\text.
+\end{align*}
+\end{proof}

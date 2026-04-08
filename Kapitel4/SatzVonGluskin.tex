@@ -1,0 +1,184 @@
+\begin{satz}{Satz von Gluskin}{SatzVonGluskin}
+Seien $m \in \N$, $\eps \in\!\ ]0, 1[$, $N\coloneqq  \ceil{(1-\eps)m}$ und
+\[c \coloneqq  2\sqrt \pi (\sqrt 2 +1) \sqrt{2 + \frac 4{\log(4)}}
+\sqrt{\frac{\log\left(\pi(\sqrt 2+1)^2\left(1+\frac 2{\log(4)}\right) \right)}
+{\log(2)} + 1}\text.\]
+Dann existiert $F \le \ell_1^m$ mit $\dim F = m - N$ und
+\[d_{BM}(F,\ell_2^{m-N})<
+c\sqrt{\frac 1{1-\eps}\log\left(\frac 2{1-\eps}\right)}\text.\]
+\end{satz}
+\begin{proof}
+Seien $\rho \coloneqq  (\sqrt 2 +1)^2\left(2+\frac 4{\log(4)} \right)$,
+$\eta \coloneqq  \frac 2 \pi \frac 1 \rho (1-\eps)$ und
+$t_\eta \coloneqq  \frac 4 \eta \log\left(\frac 2 \eta \right)$.\\
+Dann ist $c^2=4\pi\rho \left(\frac{\log\left(\frac{\pi\rho}2\right)}{\log(2)}+1\right)$ und damit:
+\begin{align}
+&2t_\eta = \frac{4\pi\rho}{1-\eps}\log\left(\frac{\pi\rho}{1-\eps} \right)
+= \frac{4\pi\rho}{1-\eps}\log\left(\frac{\pi\rho}{2}\frac{2}{1-\eps} \right)
+\notag\\
+=& \frac{4\pi\rho}{1-\eps}\left(\log\left(\frac{\pi\rho}2 \right) 
+ + \log\left( \frac 2 {1-\eps}\right) \right)
+ \overset{\eps>-1}=
+ \frac{4\pi\rho}{1-\eps}\left(\frac{\log\left(\frac{\pi\rho}2
+ \right)}{\log\left( \frac 2 {1-\eps}\right)}+1 \right)\log\left(\frac 2
+ {1-\eps} \right)\notag\\
+ =&4\pi\rho\left(\frac{\log\left(\frac{\pi\rho}2 \right)}
+ {\log\left( \frac 2 {1-\eps}\right)}+1 \right)
+ \frac 1{1-\eps}\log\left(\frac 2 {1-\eps} \right)
+ \overset{\frac 2{1-\eps}>2}<
+ c^2
+ \frac 1{1-\eps}\log\bigg(\frac 2 {1-\eps} \bigg). \label{svgeq:1}
+\end{align}
+Falls $N=m$ gilt, ist die Aussage trivial, sodass wir $N<m$ annehmen können.\\
+\underline{1. Fall:} $m \le 2 t_\eta$.\\
+Sei $F \coloneqq  \left\langle \menge{e_i^m}{i \in \haken {m-N}}\right\rangle$.\\
+Offenbar ist dann $(F,\norm\cdot_1\vert_{F})$ isometrisch isomorph zu
+$\ell_1^{m-N}$ und damit nach~\refclaim{EigenschaftenDesBanachMazurAbstands}
+{EigenschaftenDesBanachMazurAbstands2}:
+$d_{BM}((F,\norm\cdot_1\vert_{F}), \ell_1^{m-N}) = 1$.\\
+Weiter gilt nach
+\refclaim{AequivalenzkonstantenFuerPNormen}{AequivalenzkonstantenFuerPNormen1}
+$\norm\cdot_{2, m-N} \le\norm\cdot_{1, m-N} \le \sqrt{m-N}\norm\cdot_{2, m-N}$
+und somit nach~\refclaim{EigenschaftenDesBanachMazurAbstands}
+{EigenschaftenDesBanachMazurAbstands3}: $d_{BM}(\ell_1^{m-N}, \ell_2^{m-N}) \le
+\sqrt{m-N}$.\\
+Somit gilt
+\begin{align*}
+d_{BM}\left((F,\restrict{\norm\cdot_1}F), \ell_2^{m-N}\right)
+&\overset{\refclaim{EigenschaftenDesBanachMazurAbstands}
+{EigenschaftenDesBanachMazurAbstands1}}\le
+d_{BM}((F,\norm\cdot_1\vert_{F}), \ell_1^{m-N})d_{BM}
+(\ell_1^{m-N}, \ell_2^{m-N})\\
+& \le \sqrt{m-N} \le \sqrt{m - (1-\eps)m} = \sqrt{\eps m} < \sqrt{m}
+\le \sqrt{2t_\eta}\\
+&\overset{\eqref{svgeq:1}}\le
+c \sqrt{\frac 1 {1-\eps}\log\left(\frac 2{1-\eps} \right)}
+\text.
+\end{align*}
+Damit ist also $F$ ein Unterraum wie behauptet.\\
+\underline{2. Fall:} $m > 2t_\eta$.\\
+Dann ist $1<m\frac1{2t_\eta}=m\left(\frac1{t_\eta}-\frac1{2t_\eta}\right)$ und
+damit $\N \cap \left[\frac 1 2 \frac m {t_\eta}, \frac m {t_\eta}\right]
+\neq \emptyset$.\\
+Sei $k\in\N\cap\left[\frac12\frac m{t_\eta},\frac m{t_\eta}\right]$.\\
+Offenbar ist $\eta < 1$ und damit $t_\eta > 4 \log(2) = \log(16) > 2$.\\
+Also ist $k \le \frac m {t_\eta} < \frac m 2$.\\
+Seien $(E,\norm\cdot_E)\coloneqq \ell_2^N$, $T\coloneqq S^{m-1}\cap\kabg{\ell_1^m} 0{\sqrt k}$,
+$x \coloneqq  (e_i)_{i = 1}^N$,
+\[\bigg((\Omega, \mfa, \Prim), (\gamma,\delta,\widetilde g),(N, m, mN)\bigg)
+\text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach~\ref{ExistenzNormalNTupel}) und $(Z_{\gamma, x}, M_{\delta,T})$ das
+Auswertungspaar zu $(\gamma, \delta, x, T)$.\\
+Dann gilt $\bprod \cdot x_N = \id_{\R^N}$ und damit $x \neq 0$ und
+$\norm\cdot_E\circ\bprod\cdot x _N=\norm\cdot_{2,N}$. \hfill $(a)$\\
+Offenbar gilt $T \neq \emptyset$ (wegen $k \ge 1$ ist $e_1^m \in T$),
+$T \subseteq S^{m-1}$, $T=-T$. \hfill $(b)$\\
+Ferner ist $T$ als Schnitt $1$--symmetrischer Mengen selbst $1$--symmetrisch
+und damit gilt ($\mu_{i,n}$ f¸r alle $i \in \haken m$ gemäß~\ref{ktesMaximum})
+\begin{align}
+\forall\ a \in \R^m : \sup_{t \in T} \sprod t a_m = \sup_{t \in T} \sprod
+t {((\mu_{i,n}\circ \pfeil {\abs\cdot} m)(a))_{i=1}^m}_m \text.\label{svgeq:2}
+\end{align}
+Sei $\omega \in \Omega$. Dann gilt f¸r alle $s \in T$:
+\begin{align}
+ \sum_{i=k+1}^m s_i\delta_i^\ast(\omega) 
+&\le \sum_{i=k+1}^m \abs{s_i}\delta_i^\ast(\omega) 
+\overset{\refclaim{EigenschaftenDesKtenMaximums}
+{EigenschaftenDesKtenMaximums1}}\le
+\delta_{k+1}^\ast(\omega) \sum_{i=k+1}^m \abs{s_i} \notag\\
+&\overset{\refclaim{EigenschaftenDesKtenMaximums}
+{EigenschaftenDesKtenMaximums1}}\le \delta_k^\ast(\omega) \norm s _{1,m}
+\le \sqrt k \cdot \delta_k^\ast(\omega) \text.\label{svgeq:3}
+\end{align}
+Weiter gilt wegen $k \le \frac m {t_\eta}$ auch $\frac m k \ge t_\eta$.\\
+Da $\eta \in\!\  ]0,1[$ gilt nach Setzung von
+$t_\eta$ gemäß~\refclaim{Numeriklemma}{Numeriklemma4}:
+\begin{align}
+\log\left(\frac{2m}k \right) < \eta \frac m k\text. \label{svgeq:4}
+\end{align}
+Somit gilt:
+\begin{align*}
+&\,\E\left(M_{\delta,T}\right)=\E\left(\sup_{t \in T} \bprod t \delta_m \right)
+\overset{\eqref{svgeq:2}}=
+\E\left(\sup_{t\in T}\bprod t{\delta^\ast}_m \right)\\
+= &\, \E\left(\sup_{t \in T}\left(\left(\sum_{i=1}^k t_i\delta_i^\ast\right) 
++ \left(\sum_{i=k+1}^m t_i\delta_i^\ast \right) \right) \right)\\
+\le &\, \E\left(\sup_{t \in T}\sum_{i=1}^k t_i\delta_i^\ast \right) 
++ \E\left(\sup_{t \in T} \sum_{i=k+1}^m t_i\delta_i^\ast\right) \\
+\overset{\eqref{svgeq:3}}\le &\,
+\E\left(\sup_{t \in T}\sum_{i=1}^k t_i\delta_i^\ast \right)
++ \sqrt k \cdot \E\left(\delta_k^\ast \right)\\
+\le &\, \E\left(\sup_{t \in T}\norm{t}_{2,m}\left(
+\norm\cdot_{2,k} \circ \left(\delta_i^\ast \right)_{i=1}^k \right) \right)
++ \sqrt k \cdot \E\left(\delta_k^\ast \right)\\
+\overset{T \subseteq S^{m-1}}=
+&\, \E\left(\norm\cdot_{2,k} \circ \left(\delta_i^\ast \right)_{i=1}^k \right)
++ \sqrt k \cdot \E\left(\delta_k^\ast \right)\\
+\overset{\substack{\refclaim
+{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik}
+{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik5},\\
+\refclaim
+{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik}
+{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik7}}}
+\le&\,\sqrt 2\sqrt{2+ \frac 4 {\log(4)}} \sqrt{k \log\left(\frac {2m}k\right)}
++\sqrt k \cdot\sqrt{2 + \frac 4 {\log(4)}}\sqrt{\log\left(\frac {2m}k\right)}\\
+=&\, \left(\sqrt{2} + 1\right)\sqrt{2+ \frac 4 {\log(4)}}
+\sqrt{k \log\left(\frac {2m}k\right)}\\
+\overset{\eqref{svgeq:4}}<
+&\, \left(\sqrt{2} + 1\right)\sqrt{2+ \frac 4 {\log(4)}}
+\sqrt{k \eta \frac mk}\\
+=&\, \left(\sqrt{2} + 1\right)\sqrt{2+ \frac 4 {\log(4)}}
+\sqrt{\eta m} = 
+\sqrt{\frac 2 \pi} \sqrt{(1-\eps)m} \le \sqrt{\frac 2 \pi}
+\sqrt N \overset{\refclaim{AbschaetzungEinesGammafunktionsquotienten}
+{AbschaetzungEinesGammafunktionsquotienten4}}\le a_N\\
+\overset{~\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}
+=&\, \E\left(\norm\cdot_{2, N} \circ \gamma \right)
+= \E\left(\norm\cdot_{2, N}\circ \bprod \cdot x_N \circ \gamma \right)
+= \E\left(\norm\cdot_E \circ \bprod \cdot x_N \circ \gamma \right) \tag{$c$}
+\end{align*}
+Also existiert nach~\ref{ExistenzEingeschraenkterFastIsometrien} ein
+$A \in L(\ell_2^m, E)$ mit $\inf\menge{\norm{At}_{2, N}}{t \in T} >0$.\\
+Wegen $\dim \Kern A = m - \dim \Bild A \ge m - N$ existiert ein $F \le \Kern A$
+mit $\dim F = m-N$.\\
+Sei $w \in F\setminus \meng 0$.\\
+Dann ist $w \in \R^m$ und damit nach
+\refclaim{AequivalenzkonstantenFuerPNormen}{AequivalenzkonstantenFuerPNormen1}:
+$\norm w _{1,m} \le \sqrt m \norm w _{2,m}$.\\
+Wegen $w \neq 0$ ist $\frac 1 {\norm w_{2,m}}w\in S^{m-1}$, also wegen $Aw = 0$
+bereits $w \in \R^m \setminus T$.\\
+Somit gilt nach Setzung von $T$:
+\[\norma{\frac 1 {\norm w_{2,m}}w}_{1,m}>\sqrt k \text{, }\,\text{ also }\,
+ \norm w _{1, m} > \sqrt k \norm w _{2,m}\text.\]
+Daher gilt: $\forall\, v \in F: \sqrt k \norm v_{2,m} \le \norm v_{1,m}
+\le \sqrt m \norm v _{2, m}$.\\
+Also gilt
+\begin{align}
+d_{BM}\left((F,\restrict{\norm\cdot_{1,m}}F), 
+(F, \restrict{\norm\cdot_{2,m}}F) \right)
+\overset{\refclaim{EigenschaftenDesBanachMazurAbstands}
+{EigenschaftenDesBanachMazurAbstands3}} \le \sqrt{\frac m k} \text.
+\label{svgeq:5}
+\end{align}
+Da $F \le \R^m$, ist $\left(F, 
+\restrict{\sprod\cdot{\cdot\cdot}_m}{F \times F}\right)$ ein
+Hilbertraum und damit sind $\left(F,\restrict{\norm\cdot_{2,m}}F\right)$
+und $\ell_2^{m-N}$ wegen gleicher Dimension isometrisch isomorph.\\
+Wegen $k \ge \frac 1 2 \frac m {t_\eta}$ gilt schließlich
+\begin{align*}
+&d_{BM}\left(\left(F,\restrict{\norm\cdot_{1,m}}F\right),\ell_2^{m-N} \right)\\
+\overset{\refclaim{EigenschaftenDesBanachMazurAbstands}
+{EigenschaftenDesBanachMazurAbstands1}}
+\le &\, d_{BM}\left(\left(F,\restrict{\norm\cdot_{1,m}}F\right),
+                    \left(F,\restrict{\norm\cdot_{2,m}}F\right) \right)
+    d_{BM}\left(\left(F,\restrict{\norm\cdot_{2,m}}F\right),
+                \ell_2^{m-N} \right)\\
+\overset{\refclaim{EigenschaftenDesBanachMazurAbstands}
+{EigenschaftenDesBanachMazurAbstands2}}= &\,
+d_{BM}\left(\left(F,\restrict{\norm\cdot_{1,m}}F\right),
+                    \left(F,\restrict{\norm\cdot_{2,m}}F\right) \right)
+ \overset{\eqref{svgeq:5}}\le\sqrt{\frac m k}\le\sqrt{2 t_\eta}\\
+\overset{\eqref{svgeq:1}}\le
+ &\,c \sqrt{\frac 1 {1-\eps}\log\left(\frac 2 {1-\eps} \right)}
+\text.
+\end{align*}
+\end{proof}

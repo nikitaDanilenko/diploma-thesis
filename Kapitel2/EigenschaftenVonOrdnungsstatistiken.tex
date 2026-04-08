@@ -1,0 +1,55 @@
+\begin{lemma}{Eigenschaften von Ordnungsstatistiken}
+             {EigenschaftenVonOrdnungsstatistiken}
+Seien $n \in \N$, $k \in \haken n$ und $\gamma \in \mcm_n(\Omega,\mfa,\R^n)$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item\label{EigenschaftenVonOrdnungsstatistiken1}
+	$\gamma^\sigma_k, \gamma^\ast_k \in \mcm(\Omega, \mfa, \R)$.
+	\item\label{EigenschaftenVonOrdnungsstatistiken2}
+	Ist $\Bild \gamma \subseteq [0, \infty[^n$, so ist
+	$\gamma_k^\ast = \gamma^\sigma_k$. Ist $\gamma$ unabhängig, so ist auch
+	\[\gamma_{\abs{\cdot}}: \Omega \rightarrow \R^n, \omega \mapsto
+	(\abs{\gamma_i(\omega)})_{i=1}^n\]
+	unabhängig.
+	\item\label{EigenschaftenVonOrdnungsstatistiken3}
+	Ist $\gamma$ unabhängig und identisch verteilt,
+	so gilt:
+	\[\forall\, t \in \R: \Prim(\gamma^\sigma_k > t) 
+	=\sum_{l=0}^{n-k}\binom n l
+	\Prim(\gamma_1\le t)^l(1-\Prim(\gamma_1\le t))^{n-l}\text.\]
+	\item\label{EigenschaftenVonOrdnungsstatistiken4}
+	Ist $\gamma$ unabhängig und identisch verteilt, sodass $\gamma_1$ eine
+	stetige Dichte $f$ besitzt, so ist 
+	$\Prim(\gamma^\sigma_k \le \cdot)$ stetig differenzierbar und es gilt
+	für alle $t_0 \in \R$:
+	\[\left(\frac d {dt} \Prim(\gamma^\sigma_k\le \cdot) \right)(t_0) 
+	= n\binom{n-1}{n-k}
+	\Prim(\gamma_1 \le t_0)^{n-k}(1-\Prim(\gamma_1 \le t_0))^{k-1}f(t_0)\text.\]
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Nach
+\refclaim{EigenschaftenDesKtenMaximums}{EigenschaftenDesKtenMaximums2c}
+ist $\mu_{k,n}$ stetig, also $\mfb_n-\mfb$--messbar und daher ist
+$\gamma^\sigma_k=\mu_{k,n} \circ\gamma$ selbst $\mfa-\mfb$--messbar als
+Komposition messbarer Funktionen.\\
+Die Abbildung $\pfeil {\abs\cdot}n$ ist offenbar stetig und daher ist
+$\gamma_k^\ast = \mu_{k,n} \circ\pfeil {\abs\cdot}n\circ \gamma$ als
+Komposition stetiger und messbarer Funktionen $\mfa-\mfb$--messbar.\\
+(2) Die erste Aussage ist direkt aus der Definition ersichtlich.\\
+Für die zweite seien $(A_i)_{i \in \haken n} \in \mfb^n$. Da die Abbildung
+$f:\R \rightarrow \R, x \mapsto -x$ stetig und damit messbar ist, ist
+$-A_i = f\inv(A_i) \in \mfb$ für alle $i \in \haken n$. Also gilt:
+\begin{align*}
+&\,\Prim\left(\bigcap_{i \in \haken n} \meng{\abs{\gamma_i} \in A_i} \right)
+= \Prim\left(\bigcap_{i \in \haken n} 
+\meng{\gamma_i \in A_i \vee \gamma_i \in -A_i} \right)\\
+=&\,\Prim\left(\bigcap_{i\in\haken n}\meng{\gamma_i\in(A_i \cup -A_i)} \right)
+\overset{\gamma \text{ unabh.}}=
+\prod_{i \in \haken n} \Prim\left(\meng{\gamma_i \in (A_i \cup -A_i )}\right)\\
+=&\prod_{i \in \haken n} \Prim\left(\meng{\abs{\gamma_i} \in A_i)}\right)\text.
+\end{align*}
+(3)/(4) Siehe~\cite{AB}, dort 2.2.13 für die Verteilung und 2.2.2 für die
+Dichte. Dabei ist zu beachten, dass in dem genannten Buch Ordnungsstatistiken
+andersherum definiert sind, d. h. aufsteigend.
+\end{proof}

@@ -1,0 +1,59 @@
+\begin{satz}{Satz von Dvoretzky}{SatzVonDvoretzky}
+Seien $\eps \in\!\  ]0,1[$, $n \in \N_{\ge 4}$, $m \in \haken n$ mit
+$m\le\frac 14\eps^2\log\left(\floor{\nicefrac{\sqrt n}2}\right)$ und
+schließlich
+$(E, \norm\cdot_E)$ ein $n$--dimensionaler, normierter $\R$--Vektorraum.\\
+Dann existiert ein $A \in L(\ell_2^m, E)$ injektiv mit
+\[\opnorm A {\ell_2^m}E\opnorm{A\inv}{A(\ell_2^m)}{\ell_2^m}  \le
+\frac {1+\eps}{1-\eps}\text.\]
+Insbesondere existiert ein $F \le E$ mit $\dim F = m$ und
+$d_{BM}(F, \ell_2^m) \le \dfrac{1+\eps}{1-\eps}$.
+\end{satz}
+\begin{proof}
+Sei $N\coloneqq \floor{\nicefrac{\sqrt n}2}$. Wegen $n \ge 4$ ist $N \ge 1$ und es gilt
+$4N^2 \le n$.\\
+Nach~\ref{DvoretzkyRogersLemma} gibt es $x \in E^N$ mit
+\begin{align}
+\frac 1 2 \norm\cdot_{\infty, N} \le \norm\cdot_E \circ \bprod \cdot x_N
+\le \norm\cdot_{2, N}\text. \label{svdeq:1}
+\end{align}
+Seien $T \coloneqq  S^{m-1}$,
+\[\bigg((\Omega, \mfa, \Prim), (\gamma,\delta,\widetilde g),(N, m, mN)\bigg)
+\text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach~\ref{ExistenzNormalNTupel}) und $(Z_{\gamma, x}, M_{\delta,T})$ das
+Auswertungspaar zu $(\gamma, \delta, x, T)$.\\
+Wegen $\eqref{svdeq:1}$ gilt $x \neq 0$ (erste Ungleichung) und
+$\norm\cdot_E \circ \bprod\cdot x_N \le \norm\cdot_{2, N}$. \hfill $(a)$\\
+Es ist $T \neq \emptyset$, $T = -T$ und $T \subseteq S^{m-1}$. \hfill $(b)$\\
+Außerdem gilt:
+\begin{align*}
+\eps\E\left(Z_{\gamma, x} \right) 
+& = \eps\E\left(\norm\cdot_E\circ \bprod \cdot x _N \circ \gamma \right)
+\overset{\eqref{svdeq:1}}\ge
+\frac 12\eps\E\left(\norm\cdot_{\infty, N}\circ\gamma \right)\\
+&\overset{\ref{Ordnungsstatistik}}= \frac 1 2\eps\E(\gamma_1^\ast) \overset{
+\refclaim{UntereSchrankeDesErwartungswertsVonAbsolutenN01Ordnungsstatistiken}
+{UntereSchrankeDesErwartungswertsVonAbsolutenN01Ordnungsstatistiken2}}\ge
+\frac 12\eps\sqrt{\log(N)}
+=\frac 12\eps\sqrt{\log\left(\floor{\frac{\sqrt n}2}\right)}
+\overset{\text{Vor.}}\ge \sqrt m\\
+&\overset{\refclaim{AbschaetzungEinesGammafunktionsquotienten}
+{AbschaetzungEinesGammafunktionsquotienten2}}\ge a_m
+\overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}=
+\E\left(\norm\cdot_{2, m} \circ \delta \right)
+\overset{\ref{IterierteEuklidischeNorm}}=
+\E\left(\sup_{t \in T}\bprod t \delta_m \right) = \E(M_{\delta, T})\text.
+\tag{$c$}
+\end{align*}
+Mit $(a),(b),(c)$ sind die Voraussetzungen von~\ref{ExistenzEingeschraenkterFastIsometrien} erfüllt, also existiert wegen
+$T=S^{m-1}$ und~\refclaim{ExistenzEingeschraenkterFastIsometrien}
+{ExistenzEingeschraenkterFastIsometrien2} ein $A\in L(\ell_2^m,E)$ injektiv mit
+\begin{align}\opnorm A {\ell_2^m}E\opnorm{A\inv}{A(\ell_2^m)}{\ell_2^m} \overset{~\ref{ExistenzEingeschraenkterFastIsometrien}.(3')} \le
+\frac {1+\eps}{1-\eps}\text. \label{svdeq:2}
+\end{align}
+Sei nun $F \coloneqq  A(\R^m)$.\\
+Da $A$ injektiv ist, ist $\dim F = m$, $F \le E$ und
+da $F = \Bild(A)$ gilt auch
+\[d_{BM}\left(\left(F, \restrict{\norm\cdot_E}F\right), \ell_2^m \right)
+\le\opnorm A {\ell_2^m}F\opnorm{A\inv}{F}{\ell_2^m} \overset{\eqref{svdeq:2}}\le
+\frac {1+\eps}{1-\eps}\text.\qedhere\]
+\end{proof}

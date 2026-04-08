@@ -1,0 +1,30 @@
+\begin{lemma}{Stetigkeit des Linearkombinators}
+             {StetigkeitDesLinearkombinators}
+Seien $(E, \norm\cdot_E)$ ein normierter $\K$--Vektorraum und $n \in \N$.\\
+Wir statten $\K^n$ mit $\norm\cdot_{2,n}$ und $E^n$ mit $\norm\cdot_{2,n,E}$
+aus.\\
+Dann gilt \[
+\forall\, t \in \K^n \forall\, v \in E^n : 
+   \norm{\bprod t v _n}_E \le \norm t_{2, n} \cdot \norm v _{2, n, E}
+\]
+Insbesondere ist $\bprod\cdot{\cdot\cdot}_n$ (mit genannter Normausstattung)
+stetig.
+\end{lemma}
+\begin{proof}
+Seien $t \in \K^n$ und $v \in E^n$.
+Dann gilt
+\begin{align*}
+\norma{\bprod t v_n}_E 
+    &= \norma{\sum_{i=1}^n t_iv_i}_E 
+    \le\sum_{i=1}^n \abs{t_i}\cdot \norm{v_i}_E\\
+    &= \sprod{\left(\pfeil {\abs\cdot}n(t)\right)}
+            {\left(\pfeil {\norm\cdot_E}n(v)\right)}_n\\
+    &\le\norma{\pfeil {\abs\cdot}n(t)}_{2,n}
+        \cdot
+        \norma{\pfeil{\norm\cdot_E}n(v)}_{2, n} & \quad\text{Cauchy--Schwarz}\\
+    &= \norm t_{2, n}\cdot \norm v_{2, n, E}
+\end{align*}
+Da $\bprod\cdot{\cdot\cdot}_n$ nach~\ref{EigenschaftenDesLinearkombinators}
+bilinear ist, folgt mit der bekannten Charakterisierung der Stetigkeit
+bilinearer Abbildungen die Stetigkeit für den Linearkombinator.
+\end{proof}

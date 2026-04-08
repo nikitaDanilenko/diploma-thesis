@@ -1,0 +1,28 @@
+\begin{lemma}{Elementare Eigenschaften der Gamma-- und Betafunktion}
+             {ElementareEigenschaftenDerGammafunktion}
+Seien $\Gamma:\R_{>0}\rightarrow\R,\,
+t\mapsto\int_0^\infty x^{t-1}\exp(-x)dx$ und 
+\[B: (\R_{>0})^2 \rightarrow \R,
+(x,y)\mapsto\int_0^1 (1-s)^{x-1}s^{y-1}ds\text.\]
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{ElementareEigenschaftenDerGammafunktion1}
+	$\forall\, t \in \R_{>0}: \Gamma(t) > 0$.
+	\item \label{ElementareEigenschaftenDerGammafunktion2}
+	$\forall\, t \in \R_{>0}: \Gamma(t+1) = t \Gamma(t)$.
+	\item\label{ElementareEigenschaftenDerGammafunktion3}
+	$\forall\, n \in \N: \Gamma(n) = (n-1)!$
+	\item\label{ElementareEigenschaftenDerGammafunktion4}
+	$\forall\,x,y\in\R_{>0}: B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Sei $t \in \R_{>0}$.\\
+Sei $f_t: \R_{>0} \rightarrow \R, x \mapsto x^{t-1}\exp(-x)$.\\
+Dann gilt für alle
+$x \in \R_{>0}: f_t(x) = \exp((t-1)\log(x))\exp(-x) > 0$, also $f_t > 0$.\\
+Da $f_t$ offensichtlich stetig ist, ist auch
+$\Gamma(t)=\int_0^\infty f_t(y)dy > 0$.\\
+(2)/(3) siehe~\cite{K1} dort 18.1.(5) und 18.1.(4).\\
+(4) siehe~\cite{K2}, dort 8.4.(8).
+\end{proof}

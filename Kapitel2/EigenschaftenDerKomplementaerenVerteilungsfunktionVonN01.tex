@@ -1,0 +1,242 @@
+\begin{satz}
+{Eigenschaften der komplementären \textsl{N}(0,1)--Verteilungsfunktion}
+{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN01}
+Seien $\gamma: \Omega \rightarrow \R$ $N(0,1)$--verteilt,
+$u:\R_{\ge 0} \rightarrow [0,1], t \mapsto \Prim(\abs \gamma > t)$ und
+schließlich
+$\Phi: \R \rightarrow\!\  ]0,1[$ die Verteilungsfunktion von $N(0,1)$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+\item \label{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN011}
+$u = 2(1 - \Phi\vert_{[0, \infty[}) = \sqrt{\frac 2 \pi}\int_\cdot ^\infty
+\exp\left(-\frac{s^2}2 \right)ds$, $\Bild u =\!\  ]0,1]$, $u$ ist injektiv 
+und besitzt daher ein Inverses 
+$u\inv:\!\ ]0,1] \rightarrow [0, \infty[$ mit $\Phi \circ u\inv 
+= 1- \frac \cdot 2$.
+\item \label{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN012}
+$u$ ist stetig differenzierbar auf $\R_{>0}$ mit 
+\[\forall\,t \in \R_{>0}: u'(t) = 
+-\sqrt{\frac 2 \pi}\exp\left(- \frac{t^2}2 \right)\text.\]
+\item \label{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN013}
+Es gibt $(c_j)_{j \in \N_0}\in [0, \infty[^{\N_0}$ mit
+\[\forall \, t \in\!\  ]0,1]: u\inv(t) = \sum_{j=0}^\infty
+c_j(1-t)^{2j+1}\text.\]
+\item \label{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN014}
+$\forall\, t \in \R_{>0}:
+\frac{\sqrt{2\pi}}{(\pi-1)t + \sqrt{t^2+2\pi}}\exp\left(-\frac{t^2}2 \right)
+\le u(t) \le \sqrt{\frac 2 \pi}\frac 1 t \exp\left(-\frac {t^2}2 \right)$.
+\item \label{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN015}
+$\forall\,t\in [1,\infty[: u\inv\left(\frac 1 {t+1} \right)\ge \sqrt{\log(t)}$.
+\item \label{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN016}
+$\forall\, t \in\!\  ]0, \frac 2 {13}]: 
+ u \inv(t) \ge \sqrt{\log\left(1+\frac 1 t\right)}$.
+\item \label{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN017}
+$\forall\, t \in \!\ ]0,\exp\left(- \frac 1 \pi \right)]:
+u\inv(t) \le \sqrt{2\log\left(\frac 1 t\right)}$.
+\end{enumerate}
+\end{satz}
+\begin{proof}
+(1) Sei $t \in [0, \infty[$. Dann gilt:
+\begin{align*}
+u(t) &= 1 - \Prim(\abs \gamma \le t) = 1 - \Prim(-t \le \gamma \le t)
+= 1 - (\Phi(t) - \Phi(-t))\\
+&= 1 - \Phi(t) + 1- \Phi(t) = 2(1- \Phi(t)) = 2\left(\int_t^\infty \frac 1 {\sqrt{2 \pi}} \exp\left(- \frac{s^2}2 \right)ds\right)\\
+& = \sqrt{\frac 2 \pi}\int_t ^\infty \exp\left(- \frac{s^2}2 \right)ds\text.
+\end{align*}
+Wegen $\Bild \Phi = \!\ ]0,1[$ gilt daher $0 < 2(1-\Phi(t)) = u(t)$ und 
+wegen $t \ge 0$ und damit $\Phi(t) \ge \frac 1 2$ auch
+$u(t) = 2(1-\Phi(t)) \le 1$.\\
+Damit ist $\Bild u \subseteq \!\ ]0, 1]$.\\
+Weiter ist $\Phi$ invertierbar und zu $y \in\!\  ]0,1]$ ist 
+$1 - \frac y 2 \in [\frac 1 2, 1[\, \subseteq \Bild \Phi$, also:
+\begin{align}
+u\left(\Phi\inv\left(1- \frac y 2 \right) \right) = 2(1-(1-\frac y 2))=y\text.
+\label{edkvvneq:1}
+\end{align}
+Damit ist $\Bild u =\!\  ]0,1]$.\\
+Da $\Phi$ streng monoton wachsend ist, ist $u$ streng monoton fallend und somit
+insbesondere injektiv, besitzt also ein Inverses auf $]0,1]$\\
+Wegen $\eqref{edkvvneq:1}$ ist für alle $z\in\!\ ]0,1]$: 
+$u(\Phi\inv(1-\frac z2))=z$, also $u\inv(z) = \Phi\inv(1- \frac z 2)$.\\
+(2) Es ist $\Phi$ stetig differenzierbar auf $\R$ mit
+\[\forall\,t\in\R:\Phi'(t)=\frac 1{\sqrt{2\pi}}\exp\left(-\frac{t^2}2
+ \right)\text.\]
+Daher gilt für alle $t \in \R_{>0}:$
+\[u'(t)\overset{(1)}= 2(-\Phi'(t))=-\frac 2{\sqrt{2\pi}}\exp\left(-\frac{t^2}2
+\right)=-\sqrt{\frac 2 \pi}\exp\left(-\frac{t^2}2 \right)\text.\]
+(3) Sei $\erf: \R \rightarrow \R,
+x \mapsto \frac 2 {\sqrt \pi}\int_0^x\exp(-t^2)dt$.\\
+Dann gilt für alle $x \in \R$:
+\begin{align*}
+&\, \frac 1 2 + \frac 1 2 \erf\left(\frac x {\sqrt 2} \right)
+= \frac 1 2 + \frac 1 {\sqrt \pi}\int_0^{\frac x {\sqrt 2}}\exp(-t^2)dt\\
+\overset{\substack{\text{Subst.}\\ s \mapsto \frac s{\sqrt 2}}}=&\, \frac 1 2
++\frac 1{\sqrt\pi}\int_0^x \exp\left(- \frac {t^2}2 \right)\frac 1{\sqrt 2}dt\\
+=&\, \spi \int_{-\infty}^0 \exp\left(-\frac {t^2}2 \right)dt 
++ \spi\int_0^x\exp\left(- \frac {t^2}2 \right)dt = \Phi(x)\text.
+\end{align*}
+Also $\Phi = \frac 1 2\left(1+\erf\left(\frac \cdot{\sqrt 2} \right)\right)$,
+d. h. 
+\begin{align}
+\erf = 2\Phi(\sqrt 2 \cdot) - 1\text. \label{edkvvneq:2}
+\end{align}
+Für alle $\alpha\in\!\ ]-1,1[$ ist $\beta\coloneqq \frac 12(\alpha+1)\in\!\ ]0,1[$,
+also gibt es ein $t \in \R$ mit $\Phi(t) = \beta$ und damit
+\[\erf\left(\frac 1 {\sqrt 2}t \right) \overset{\eqref{edkvvneq:2}}= 2\Phi(t)-1
+= 2\left(\frac 1 2 (\alpha +1)\right) -1 = \alpha \text.\]
+Damit ist $\Bild \erf = \!\ ]-1,1[$.\\
+Offensichtlich ist $\erf$ analytisch und es gilt $\erf' = \frac 2{\sqrt \pi}
+\exp\left(- (\cdot^2) \right) > 0$.\\
+Wegen der Stetigkeit des Integranden ist $\erf$ also streng monoton wachsend
+und damit injektiv. Ferner ist damit $\erf\inv:\!\ ]-1,1[ \rightarrow \R$
+ebenfalls analytisch.\\
+Nach Setzung ist $\erf$ ungerade und damit nach
+\refclaim{GeradeUndUngeradeFunktionen}{GeradeUndUngeradeFunktionen4} auch
+$\erf\inv$ ungerade.\\
+Sei $k \in \N$. Nach
+\refclaim{GeradeUndUngeradeFunktionen}{GeradeUndUngeradeFunktionen2} und
+\refclaim{GeradeUndUngeradeFunktionen}{GeradeUndUngeradeFunktionen3} ist dann
+$(\erf\inv)^{(2k)}$ ungerade und damit nach
+\refclaim{GeradeUndUngeradeFunktionen}{GeradeUndUngeradeFunktionen1}:
+\begin{align}(\erf\inv)^{(2k)}(0) = 0 \text. \label{edkvvneq:3}\end{align}
+Weiter gilt wegen $\id_{]-1,1[} = \erf \circ \erf\inv$ auch
+$1 = (\erf\inv)' \cdot \erf' \circ \erf\inv$, also:
+\begin{align}
+\forall\, p \in \!\ ]-1,1[: (\erf\inv)'(p) = \frac 1 {\erf' ( \erf \inv(p))} 
+=\frac {\sqrt \pi}2 \exp(\erf\inv(p)^2)\text. \label{edkvvneq:4}
+\end{align}
+Damit gilt aber auch für alle $p \in\!\  ]-1,1[$:
+\begin{align*}(\erf\inv)''(p) &\overset{\eqref{edkvvneq:4}}=
+2\cdot\frac{\sqrt \pi}2 \erf\inv(p)(\erf\inv)'(p)
+\exp\left(\erf\inv(p)^2\right)\\
+&\overset{\eqref{edkvvneq:4}} = 
+2\cdot\erf\inv(p)\cdot ((\erf\inv)'(p))^2\text.\end{align*}
+Ferner gilt $(\erf\inv)'(0)= \frac {\sqrt\pi}2 \exp(\erf\inv(0)^2) > 0$, also
+gilt nach~\refclaim{GeradeUndUngeradeFunktionen}{GeradeUndUngeradeFunktionen5}:
+\begin{align}
+(\erf\inv)^{(2k+1)}(0) \ge 0 \text.\label{edkvvneq:5}
+\end{align}
+Nach~\cite{Dom} (dort Abschnitt 4) ist die Taylorreihe von $\erf\inv$ mit
+Entwicklungspunkt $0$ auf $]-1,1[$ konvergent. Wegen der Analytizität von
+$\erf\inv$ stellt die besagte Reihe also auf $]-1,1[$ bereits $\erf\inv$ dar.\\
+Also liefert die Taylorentwicklung um $0$ für alle $p \in \!\ ]-1,1[$:
+\begin{align}
+\erf\inv(p) = \sum_{l=0}^\infty \frac{(\erf\inv)^{(l)}(0)}{l!}p^l
+\overset{\eqref{edkvvneq:3}}=\sum_{l=0}^\infty
+\frac{(\erf\inv)^{(2l+1)}(0)}{(2l+1)!}p^{2l+1}\text.\label{edkvvneq:6}
+\end{align}
+Wegen~\eqref{edkvvneq:2} gilt weiter: $\Phi\inv=\sqrt 2\erf\inv(2\cdot -1)$.\\
+Damit für alle $q \in \!\ ]0,1]$ wegen $1-\frac q 2 \in\!\  ]-1,1[$:
+\begin{align*}
+u\inv(q) &\overset{(1)}= \Phi\inv\left(1- \frac q 2\right)
+= \sqrt 2 \erf\inv\left(2\left(1-\frac q 2 \right)-1 \right)
+= \sqrt 2 \erf\inv(1-q)\\
+&\overset{\eqref{edkvvneq:6}}= \sum_{l=0}^\infty
+ \sqrt 2 \frac{(\erf\inv)^{(2l+1)}(0)}{(2l+1)!}(1-q)^{2l+1}\text.
+\end{align*}
+Nach~\eqref{edkvvneq:5} sind alle Koeffizienten dieser Reihendarstellung
+nichtnegativ, also ist (3) gezeigt.\\
+(4) Seien \[V_0 : [0, \infty[ \rightarrow \R, 
+x \mapsto 2\exp\left(x^2\right)\int_x^\infty \exp\left(-s^2\right)ds \]
+und 
+\[g_\pi:[0,\infty[\rightarrow\R,x\mapsto \frac{\pi}{(\pi-1)x+\sqrt{x^2+\pi}}
+\text.\]
+Nach~\cite{RW} (Notation wie dort) gilt dann:
+\begin{align}
+g_\pi\le V_0\text.
+\label{edkvvneq:7}
+\end{align}
+Sei $t \in \R_{>0}$. Dann gilt:
+\begin{align*}
+& \sqrt{\frac 2 \pi}\frac{\pi}{(\pi-1)t + \sqrt{t^2+2\pi}} =
+\sqrt{\frac 2 \pi}\cdot \frac{\pi}{(\pi-1)\frac{\sqrt 2}{\sqrt 2}t
++ \sqrt{2\frac{t^2}{2} + 2\pi}}\\
+ = & \,
+\sqrt{\frac 2 \pi} \cdot \frac \pi {\sqrt 2\left((\pi-1)\frac 1{\sqrt 2}t  +
+\sqrt{\left(\frac 1 {\sqrt{2}}t\right)^2 + \pi} \right)} 
+= \sqrt{\frac 2 \pi} \frac 1 {\sqrt 2} g_\pi\left(\frac 1 {\sqrt 2} t \right)\\
+\overset{\eqref{edkvvneq:7}}\le & \, \sqrt{\frac 2 \pi} \frac 1 {\sqrt 2} 
+V_0\left(\frac 1 {\sqrt 2} t \right) = 
+\sqrt{\frac 2 \pi}\exp\left(\frac {t^2} 2 \right)
+\int_{\frac 1 {\sqrt 2} t}^\infty \exp\left(-s^2 \right)\sqrt 2 ds\\
+= & \,\sqrt{\frac 2 \pi}\exp\left(\frac {t^2} 2 \right)
+\int_{\frac 1{\sqrt 2}t}^\infty 
+\exp\left(-\frac{(\sqrt 2s)^2}{2}\right)\sqrt 2 ds\\
+\overset{\substack{\text{Subst.}\\ s \mapsto \sqrt 2 s}}=&\,
+\sqrt{\frac 2 \pi}\exp\left(\frac {t^2} 2 \right)
+\int_{t}^\infty \exp\left(- \frac{s^2}2 \right)ds
+\overset{(1)}= \exp\left( \frac{t^2} 2 \right) u(t)\text,\end{align*}
+also nach Umstellung und Kürzung:
+\[\frac{\sqrt{2\pi}}{(\pi-1)t+\sqrt{t^2+2\pi}}\exp\left(-\frac{t^2}2\right)
+ \le u(t)\text.\]
+Weiter gilt auch:
+\begin{align*}
+t\cdot u(t) &\overset{(1)}= 
+\sqrt{\frac 2 \pi} \int_t^\infty t \exp\left(- \frac {s^2}2 \right)ds
+\le \sqrt{\frac 2 \pi} \int_t^\infty s \exp\left(- \frac {s^2}2 \right)ds\\
+&= \sqrt{\frac 2 \pi}\exp\left(- \frac{t^2}2 \right)\text,
+\end{align*}
+also
+\[u(t)\le\sqrt{\frac 2 \pi} \frac 1 t \exp\left(- \frac{t^2}2 \right)\text.\]
+(5) Annahme: es gibt ein $t \in [1, \infty[$ mit 
+$u\inv\left(\frac 1 {t+1} \right) < \sqrt{\log(t)}$.\\
+Dann gilt:
+\begin{align*}
+&\frac 1 {t+1} = u\left(u\inv\left(\frac 1{t+1} \right)\right)\\
+ \overset{(4)}\ge &\,
+\frac{\sqrt{2\pi}}{(\pi-1)u\inv\left(\frac 1{t+1}\right)
++ \sqrt{\left(u\inv\left(\frac 1{t+1}\right)\right)^2+2\pi}}
+\exp\left(-\frac 1 2 \left(u\inv\left(\frac 1{t+1}\right)\right)^2\right)\\
+ >&\, \frac{\sqrt{2\pi}}{(\pi-1)\sqrt{\log(t)} 
++ \sqrt{\log(t)+2\pi}}\exp\left(-\frac{\log(t)}2\right)\\
+=&\, \frac{\sqrt{2\pi}}{(\pi-1)\sqrt{\log(t)} 
++ \sqrt{\log(t)+2\pi}}\frac 1 {\sqrt t}\text.
+\end{align*}
+Somit auch
+\[ \frac{\sqrt t}{t+1} \left((\pi-1)\sqrt{\log(t)} 
++ \sqrt{\log(t)+2\pi} \right) > \sqrt{2\pi}\text.\]
+Sei $k: [1, \infty[ \rightarrow \R, 
+s \mapsto \frac{\sqrt s}{s+1} \left((\pi-1)\sqrt{\log(s)} 
++ \sqrt{\log(s)+2\pi} \right)$.\\
+Dann gilt $k(t) > \sqrt{2\pi}$ und nach
+\refclaim{Numeriklemma}{Numeriklemma1} auch $k(t) <\sqrt{2\pi}$. $\lightning$\\
+(6) Kontraposition:
+Sei $t\in \!\ ]0, 1]$ mit $u\inv(t)<\sqrt{\log\left(1+\frac 1 t\right)}$.\\
+Dann gilt:
+\begin{align*}
+t & = u\left(u\inv(t)\right) \overset{(4)}\ge
+\frac{\sqrt{2\pi}}{(\pi-1)u\inv(t) 
++ \sqrt{u\inv(t)^2+2\pi}}\exp\left(-\frac{u\inv(t)^2}2\right)\\
+& >  \frac{\sqrt{2\pi}}{(\pi-1) \sqrt{\log\left(1 +\frac 1 t\right)}
++ \sqrt{\log\left(1 +\frac 1 t\right)+2\pi}}
+\exp\left(-\frac{\log\left(1 +\frac 1 t\right)}2\right)\\
+& = \frac{\sqrt{2\pi}}{(\pi-1) \sqrt{\log\left(1 +\frac 1 t\right)}
++ \sqrt{\log\left(1 +\frac 1 t\right)+2\pi}}
+\frac 1 {\sqrt{1+\frac 1 t}}\text.
+\end{align*}
+Also
+\[t\sqrt{1+\frac 1 t} \left((\pi-1) \sqrt{\log\left(1 +\frac 1 t\right)}
++ \sqrt{\log\left(1 +\frac 1 t\right)+2\pi}\right)  > \sqrt{2\pi}\text.\]
+Sei $h: [1, \infty[\!\  \rightarrow \R, s \mapsto
+\frac{\sqrt{s+1}}s
+\bigg( (\pi-1)\sqrt{\log(1+s)} + \sqrt{\log(1+s) + 2\pi} \bigg)$.\\
+Dann ist also $\frac 1 t \in [1, \infty[$ und 
+$h\left(\frac 1 t \right) > \sqrt{2\pi}$.\\
+Nach~\refclaim{Numeriklemma}{Numeriklemma2} gilt daher $\frac 1 t <\frac{13}2$,
+also $t > \frac 2 {13}$, d.h. $t \in\!\  ]\frac 2 {13}, 1]$ und damit
+$t \notin \!\ ]0, \frac 2 {13}[$.\\
+(7) Sei $t\in\!\  ]0,1]$ mit $u\inv(t) > \sqrt{2\log\left(\frac 1 t\right)}$.\\
+Dann gilt:
+\begin{align*}
+t &= u\left(u\inv(t)\right) \overset{(4)}\le 
+\sqrt{\frac 2 \pi} \frac 1 {u\inv(t)}
+\exp\left(- \frac 1 2 \left(u\inv(t) \right)^2 \right)\\
+&< \sqrt{\frac 2 \pi} \frac 1 {\sqrt{2\log\left(\frac 1 t\right)}}
+\exp\left(- \frac 1 2 2\log\left(\frac 1 t\right) \right)
+= \sqrt{\frac 2 \pi} \frac 1 {\sqrt{2\log\left(\frac 1 t\right)}} t\text.
+\end{align*}
+Daher also
+$\sqrt{2\log\left(\frac 1 t \right)} < \sqrt {\frac 2 \pi}$, also 
+ $\log\left(\frac 1 t \right) < \frac 1 \pi$
+und somit $t > \exp\left(- \frac 1 \pi \right)$.
+\end{proof}

@@ -1,0 +1,21 @@
+\begin{lemma}{Eigenschaften des Linearkombinators}
+             {EigenschaftenDesLinearkombinators}
+Seien $K$ ein Körper, $V,W$ $K$--Vektorräume, $n\in\N$ und $\varphi\in\Hom(V,W)$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+\item\label{EigenschaftenDesLinearkombinators1} 
+$\bprod{\cdot}{\cdot\cdot}_{n, V}$ ist bilinear.
+\item\label{EigenschaftenDesLinearkombinators2}
+ $\forall\, t \in K^n\,\forall\, v \in V^n:
+    \varphi(\bprod t v_{n, V}) = \bprod t {\pfeil \varphi n (v)}_{n, W}$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Die Bilinearität ist offensichtlich.\\
+Seien $t \in K^n$ und $v \in V^n$.\\
+Dann gilt \[
+\bprod t {\pfeil \varphi n (v)} _{n, W} = \sum_{i=1}^n t_i \varphi(v_i)
+                       = \varphi\left(\sum_{i=1}^n t_i v_i\right)
+                       = \varphi(\bprod t v_{n, V}) \qedhere
+\]
+\end{proof}

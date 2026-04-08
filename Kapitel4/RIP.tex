@@ -1,0 +1,86 @@
+\begin{satz}{Restricted Isometry Property}{RIP}
+Seien $\eps \in\!\  ]0,1[$, $m \in \N$, $N \in \haken {m-1}$ und
+$\eta \in \!\ ]0, \frac \eps{2+\eps}[$.\\
+Sei $k \in \N$ mit $k \le \frac m {\exp(1)}$ und
+$k\log\left(\frac m k \right) \le \frac 1 {4 \left(1+ \frac 2{\log(2)}
+ \right)}\eta^2 \frac {N^2}{N+1}$.\\
+Sei schließlich
+\[\Sigma_k^m \coloneqq  \menge{x \in\R^m}{\abs{\menge{i\in\haken m}{x_i\neq 0}}\le k}\]
+Dann gibt es $A \in L(\ell_2^m, \ell_2^N)$ mit
+\begin{enumerate}[(1)]
+	\item \label{RIP1}
+	$\forall\, x \in \Sigma_k^m \cap S^{m-1}: Ax \neq 0$
+	\item \label{RIP2}
+	$\forall\, x, y \in \Sigma_k^m\cap S^{m-1}:
+	1-\eps < \frac{\norm{Ax}_{2, N}}{\norm{Ay}_{2, N}} < 1 + \eps$
+\end{enumerate}
+\end{satz}
+\begin{proof}
+Seien $(E, \norm\cdot_E)\coloneqq  \ell_2^N$, $T\coloneqq  \Sigma_k^m\cap S^{m-1}$ und
+$x \coloneqq  \left(e_i^N\right)_{i=1}^N$.\\
+Dann ist $\bprod\cdot x_N = \id_{\R^N}$ und damit $x \neq 0$ und
+$\norm\cdot_E\circ\bprod \cdot x_N  = \norm\cdot_{2, N}$.
+\hfill $(a)$\\
+Ferner ist $T \neq \emptyset$ (da $e_1^m \in T$), $T \subseteq S^{m-1}$ und
+offenbar $T = -T$. \hfill $(b)$\\
+Sei
+\[\bigg((\Omega, \mfa, \Prim), (\gamma,\delta,\widetilde g),(N, m, mN)\bigg)
+\text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach~\ref{ExistenzNormalNTupel}) und $(Z_{\gamma, x}, M_{\delta,T})$ das
+Auswertungspaar zu $(\gamma, \delta, x, T)$.\\
+Seien $s \in T$ und $\omega \in \Omega$.\\
+Da $\abs{\menge{i \in \haken m}{s_i\neq 0}} \le k$, gilt ($\mu_{j,n}$ gemäß~\ref{ktesMaximum} f¸r alle $j \in \haken n$):
+\begin{align*}
+&\,\bprod s \delta_m (\omega) = \sprod s {\delta(\omega)}_m
+\le \sum_{j=1}^m \abs{s_j}\abs{\delta_j(\omega)}\\
+\le&\, \sum_{j=1}^k \left(\mu_{j,n} \circ \pfeil {\abs\cdot} m\right)(s)
+     \left(\mu_{j,n} \circ\pfeil {\abs\cdot} m\right)(\delta(\omega))
+\overset{\ref{Ordnungsstatistik}}= \sum_{j=1}^k\left(\mu_{j,n}\circ\pfeil
+{\abs\cdot} m \right)(s)\delta_j^\ast(\omega)\\
+\le &\, \norma{\left(\left(\mu_{j,n}\circ\pfeil
+{\abs\cdot} m \right)(s)\right) _{j=1}^k}_{2, k}
+\norma{\left(\delta^\ast_j(\omega) \right)_{j=1}^k}_{2, k}
+\overset{s \in T}= \norma{\left(\delta^\ast_j(\omega) \right)_{j=1}^k}_{2, k}\\
+=&\, \left(\norm\cdot_{2,k}\circ(\delta_j^\ast)_{j\in \haken k} \right)(\omega)
+\text.\tag {$\ast$}
+\end{align*}
+Somit gilt wegen $k \le \frac m {\exp(1)}$:
+\begin{align*}
+\E\left(M_{\delta, T} \right)&= \E\left(\sup_{t \in T}\bprod t \delta_m \right)
+\overset{(\ast)}\le
+\E\bigg(\norm\cdot_{2,k} \circ (\delta_j^\ast)_{j \in \haken k} \bigg)\\
+&\overset{\refclaim
+{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik}{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik6}}
+\le \sqrt{2}\sqrt{2 + \frac 4 {\log(2)}}\sqrt{k \log\left(\frac m k \right)}
+= 2 \sqrt{1 + \frac 2 {\log(2)}}\sqrt{k \log\left(\frac m k \right)}\\
+&\overset{\substack{\text{Vor.}\\ \text{an }k}}\le \eta \frac N {\sqrt{N+1}}
+\overset{\refclaim{AbschaetzungEinesGammafunktionsquotienten}
+{AbschaetzungEinesGammafunktionsquotienten3}}\le \eta a_N
+\overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}=
+\eta \E \left(\norm\cdot_{2, N} \circ \gamma \right)
+= \eta\E(Z_{\gamma, x})\text. \tag{$c$}
+\end{align*}
+Offenbar ist $\eta \in \!\  ]0,1[$ und mit $(a), (b), (c)$ sind die Voraussetzungen von~\ref{ExistenzEingeschraenkterFastIsometrien} erf¸llt,
+sodass ein $\emptyset \neq\mca\subseteq L(\ell_2^m, \ell_2^N)$ existiert mit
+\[\forall\, A \in \mca:\,\inf\menge{\norm{At}_{2,N}}{t \in T} > 0\,\wedge
+\,\frac{\sup\menge{\norm{At}_{2,N}}{t\in T}}
+       {\inf\menge{\norm{At}_{2,N}}{t\in T}}\le\frac {1+ \eta}{1-\eta}\text.\]
+Seien $A\in \mca$, $u_A \coloneqq  \inf\menge{\norm{At}_{2,N}}{t \in T}$ und
+$o_A\coloneqq \sup\menge{\norm{At}_{2,N}}{t \in T}$.\\
+Seien $x, y \in T = \Sigma_k^m\cap S^{m-1}$.\\
+Da $u_A>0$ ist insbesondere $\norm{Ay}_{2,N}>0$, also $Ay\neq 0$, womit (1)
+gezeigt ist.\\
+Weiter gilt:
+\[\frac{\norm{Ax}_{2, N}}{\norm{Ay}_{2,N}} 
+\le \frac {o_A} {u_A} \le \frac {1+\eta}{1-\eta}
+< \frac{1 + \frac \eps{2+\eps}}{1-\frac \eps{2+\eps}}
+= \frac{\frac{2+2\eps}{2+\eps}}{\frac{2+\eps-\eps}{2+\eps}} = 1 + \eps\text,\]
+sowie wegen $\eps \in\!\ ]0, 1[$ und damit $(1+\eps)(1-\eps) = 1 - \eps^2 < 1$:
+\[\frac{\norm{Ax}_{2, N}}{\norm{Ay}_{2,N}} \ge\frac {u_A} {o_A} 
+\ge \frac {1- \eta}{1+\eta}
+> \frac{1-\frac \eps{2+\eps}}{1 + \frac \eps{2+\eps}}
+= \frac{\frac{2+\eps-\eps}{2+\eps}}{\frac{2+\eps+\eps}{2+\eps}}= 
+\frac 1 {1+\eps} > 1-\eps\text.\]
+Also insgesamt
+$1 - \eps < \nicefrac{\norm{Ax}_{2, N}}{\norm{Ay}_{2,N}} < 1+\eps$,
+sodass auch (2) gilt.
+\end{proof}

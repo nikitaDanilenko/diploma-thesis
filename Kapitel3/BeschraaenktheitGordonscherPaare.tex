@@ -1,0 +1,92 @@
+\begin{lemma}{Beschränktheit Gordon'scher Paare}
+             {BeschraenktheitGordonscherPaare}
+Seien $c \in \R$ und $(X, Y)$ das Gordon'sche Paar zu $(\gamma,\delta,g,c)$.\\
+Seien $\emptyset \neq T \subseteq \R^m$ beschränkt,
+$\emptyset \neq V \subseteq \R^N$ beschränkt und $\omega \in \Omega$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{BeschraenktheitGordonscherPaare1}
+	$\forall\, s \in \R^m\, \forall\, u \in \R^N: 
+	\abs{X(s,u)(\omega)} \le \abs{c}\norm s_{2, m}\norm{\delta(\omega)}_{2,m}
+	+ \norm u_{2, N} \norm{\gamma(\omega)}_{2, N}$\absatz
+	$\forall\, s \in \R^m\, \forall\, u \in \R^N: \abs{Y(s,u)(\omega)}
+	\le \opnorm{g(\omega)}{\R^m}{\R^N}\norm s_{2, m} \norm u_{2, N}$\absatz
+	Insbesondere sind 
+	$\menge{X(t, v)(\omega)}{t \in T, v \in V}$ und 
+	$\menge{Y(t, v)(\omega)}{t \in T, v \in V}$ beschränkt.
+  \item \label{BeschraenktheitGordonscherPaare2}
+  Die folgenden Abbildungen sind wohldefiniert und $\R$--wertig:
+  \[\inf_{t \in T}\sup_{v \in V}X(t, v), \  
+    \sup_{t \in T}\sup_{v \in V}X(t, v), \ 
+    \inf_{t \in T}\sup_{v \in V}Y(t, v), \ 
+    \sup_{t \in T}\sup_{v \in V}Y(t, v)\text.\]
+  \item \label{BeschraenktheitGordonscherPaare3}
+  \begin{align*}
+  \inf_{t \in T}\sup_{v \in V}X(t, v)(\omega)
+  &= \left(\inf_{t \in T}(c\sprod t {\delta(\omega)} _m) \right)
+  + \left(\sup_{v \in V}\sprod v {\gamma(\omega)}_N \right)\\
+  &= \sup_{v \in V}\inf_{t \in T}X(t, v)(\omega)
+  \end{align*}
+  \item \label{BeschraenktheitGordonscherPaare4}
+  \[\sup_{t \in T}\sup_{v \in V}X(t, v) = 
+  \left(\sup_{t \in T}(c\sprod t {\delta(\omega)} _m) \right)
+  + \left(\sup_{v \in V}\sprod v {\gamma(\omega)}_N \right)\]
+\end{enumerate}
+\end{lemma}
+\begin{proof} Da $T$ beschränkt ist, gibt es ein $a \in \R_{>0}$ mit
+$\forall\, t \in T: \norm t_{2, m} \le a$ und da auch $V$ beschränkt ist, gibt
+es ein $b \in \R_{>0}$ mit $\forall\, v \in V: \norm v_{2, N} \le b$.\\
+(1) Seien $t \in T$ und $v \in V$. Dann gilt:
+\begin{align*}
+\abs{X(t,v)(\omega)}&= \abs{c \sprod t {\delta(\omega)}_m 
++ \sprod v {\gamma(\omega)}_N}
+\le \abs c\abs{\sprod t{\delta(\omega)}_m}+\abs{\sprod v {\gamma(\omega)}_N}\\
+&\le \abs c \norm t_{2, m}\norm{\delta(\omega)}_{2,m}
+ + \norm v_{2, N}\norm{\gamma(\omega)}_{2, N}\\
+&\le \abs c a \norm{\delta(\omega)}_{2,m} + b\norm{\gamma(\omega)}_{2, N}
+\end{align*}
+und da $g(\omega)$ wegen der endlichen Dimension von $\R^m$ und $\R^N$ stetig
+ist auch
+\begin{align*}
+\abs{Y(t, v)(\omega)} &= 
+\abs{\sprod {g(\omega)t} v_N} \le \norm{g(\omega)t}_{2,N}\norm v_{2, N}\\
+&\le \opnorm{g(\omega)} {\R^m}{\R^N} \norm t_{2, m}\norm v_{2, N}
+\le \opnorm{g(\omega)} {\R^m}{\R^N} a b\text.
+\end{align*}
+Die Ungleichungen aus $(1)$ ergeben sich durch die jeweils vorletzte
+Abschätzung.\\
+Da $\norm{\gamma(\omega)}_{2, N}$, $\norm{\delta(\omega)}_{2,m}$ und
+$\opnorm{g(\omega)} {\R^m}{\R^N}$ nach Voraussetzung endlich sind, sind die
+beiden genannten Mengen beschränkt.\\
+(2) Folgt unmittelbar aus der Beschränktheit der in (1) angegebenen Mengen.\\
+(3)/(4) Sei $s \in T$. Dann ist
+\begin{align*}\sup_{v \in V}X(s, v)(\omega) 
+= \sup_{v\in V}\left(c\sprod s {\delta(\omega)}_m 
+  + \sprod v{\gamma(\omega)}_N\right)
+  = c\sprod s {\delta(\omega)}_m 
+  + \sup_{v\in V}\sprod v{\gamma(\omega)}_N\text.\end{align*}
+Somit ist
+\begin{align*}
+\inf_{t \in T}\sup_{v \in V}X(t, v)(\omega) &=
+\inf_{t\in T}\left(c\sprod t {\delta(\omega)}_m 
+  + \sup_{v\in V}\sprod v{\gamma(\omega)}_N \right)\\
+  &=\left(\inf_{t \in T}(c\sprod t {\delta(\omega)} _m) \right)
+  + \left(\sup_{v \in V}\sprod v {\gamma(\omega)}_N \right) \tag {$\ast$}\\
+\sup_{t \in T}\sup_{v \in V}X(t, v)(\omega) 
+ &=\sup_{t\in T}\left(c\sprod t {\delta(\omega)}_m 
+  + \sup_{v\in V}\sprod v{\gamma(\omega)}_N \right)\\
+&=\left(\sup_{t \in T}(c\sprod t {\delta(\omega)} _m) \right)
+  + \left(\sup_{v \in V}\sprod v {\gamma(\omega)}_N \right)\text.
+\end{align*}
+Schließlich gilt auch
+\begin{align*}
+\sup_{v \in V}\inf_{t\in T}X(t, v)(\omega) &=
+\sup_{v \in V}\inf_{t \in T}(c\sprod t {\delta(\omega)}_m 
+  + \sprod v{\gamma(\omega)}_N)\\
+  &=\sup_{v \in V}\left(\sprod v{\gamma(\omega)}_N + 
+  \left(\inf_{t \in T}(c\sprod t {\delta(\omega)}_m)\right) \right)\\
+  &= \left(\sup_{v \in V}\sprod v{\gamma(\omega)}_N \right) + 
+  \left(\inf_{t \in T}(c\sprod t {\delta(\omega)}_m)\right)\\
+  &\overset{(\ast)}= \inf_{t \in T}\sup_{v \in V}X(t, v)(\omega)\text.
+\end{align*}
+\end{proof}

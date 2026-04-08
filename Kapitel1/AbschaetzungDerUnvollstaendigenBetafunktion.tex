@@ -1,0 +1,59 @@
+\begin{lemma}{Abschätzung der unvollständigen Beta--Funktion}
+             {AbschaetzungDerUnvollstaendigenBetafunktion}
+Seien $n \in \N_{\ge 2}$, $k \in \haken{n-1}$ und $u:[0,\infty[ \rightarrow \R,
+t \mapsto\sqrt{\frac 2\pi} \int_t^\infty \exp\left(- \frac{s^2}2 \right)ds$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{AbschaetzungDerUnvollstaendigenBetafunktion1}
+	$\forall\, x \in \!\ ]0, \frac k {n-1}[\, \forall\, m \in \haken{n-k-1}_0:
+	\int_0^x t^{n-1-m}(1-t)^m dt \le x^{n-m}(1-x)^m$.
+	\item \label{AbschaetzungDerUnvollstaendigenBetafunktion2}
+	$\forall\, y \in \R_{>0}\, \forall\, l \in \haken {n-1}_0:
+	\int_{y}^\infty tu(t)^{n-l}(1-u(t))^l dt \le
+	\int_0^{u(y)}t^{n-l-1}(1-t)^l dt$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Seien $x \in\!\  ]0, \frac k {n-1}[$ und $m \in \haken{n-k-1}_0$.\\
+Falls $m = 0$, so ist
+\[\int_0^{x} t^{n-1-m}(1-t)^m dt 
+= \int_0^{x} t^{n-1}dt = \frac 1 n x^n \le x^n = x^{n-m}(1-x)^m\]
+Falls $m > 0$, so betrachte
+$\alpha: [0, x] \rightarrow \R, t \mapsto t^{n-1-m}(1-t)^m$.\\
+Dann ist $\alpha$ offenbar stetig differenzierbar auf $]0,x[$ und es gilt
+für alle $s \in\!\  ]0, x[:$
+\begin{align*}
+\alpha'(s)& = (n-1-m)s^{n-m-2}(1-s)^m - ms^{n-m-1}(1-s)^{m-1}\\
+&= s^{n-m-2}(1-s)^{m-1}\bigg((n-1-m)(1-s)-ms \bigg)\text.
+\end{align*}
+Ferner gilt für alle $s \in \!\ ]0,x[$:
+\[\frac{n-m-1}{n-1} \ge \frac{n-(n-k-1)-1}{n-1} = \frac k{n-1} > x > s\text,\]
+also
+\[\frac{1-s}s = \frac 1 s - 1 > \frac{n-1}{n-m-1}-1 =
+\frac{n-1-(n-m-1)}{n-m-1}= \frac m {n-m-1}\]
+und damit $(n-1-m)(1-s) > ms$.\\
+Somit ist $\alpha'(s)>0$ für alle $s \in\!\  ]0,x[$, also
+$\restrict{\alpha}{\!]0,x[}$ monoton wachsend.\\
+Damit gilt wegen $\alpha(0) = 0$:
+\begin{align*}\int_0^{x} t^{n-1-m}(1-t)^m dt
+= \int_0^x \alpha(t)dt \le x  \sup_{t \in [0,x]}\alpha(t)
+= x  \alpha(x) = x^{n-m}(1-x)^m\text.\end{align*}
+(2) Seien $y \in \R_{>0}$ und $l \in \haken {n-1}_0$.\\
+Dann ist $n-l \ge 1$ und es gilt:
+\begin{align*}
+&\int_y^\infty t u(t)^{n-l}(1-u(t))^l dt
+= \int_y^\infty u(t)^{n-l-1}(1-u(t))^l t u(t)dt\\
+\overset{\refclaim{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN01}
+{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN014}}\le
+&\, \int_y^\infty  u(t)^{n-l-1}(1-u(t))^l t \cdot 
+\sqrt{\frac 2 \pi} \frac 1 t \exp\left(- \frac 1 2 t^2 \right)dt\\
+=&\, \int_y^\infty  u(t)^{n-l-1}(1-u(t))^l \cdot \sqrt{\frac 2 \pi}
+\exp\left(- \frac 1 2 t^2 \right)dt\\
+\overset{\refclaim{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN01}
+{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN012}}=&\,
+\int_y^\infty  u(t)^{n-l-1}(1-u(t))^l \abs{u'(t)}dt
+= \int_{]y, \infty[}u(t)^{n-l-1}(1-u(t))^l \abs{u'(t)}dt\\
+\overset{\substack{\text{Transf.}\\\text{mit }u}}=&\,
+\int_{]0,u(y)[}t^{n-l-1}(1-t)^l dt = \int_0^{u(y)} t^{n-l-1}(1-t)^l dt
+\end{align*}
+\end{proof}

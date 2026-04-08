@@ -1,0 +1,27 @@
+\begin{lemma}{monotone Konvergenz im integrierbaren Fall}
+             {MonotoneKonvergenzImIntegrierbarenFall}
+Seien $\folge f n \N \in L_1(\Omega, \mfa, \Prim, \R)^\N$ und 
+$f \in L_1(\Omega, \mfa, \Prim, \R)$.\\
+Die Folge $\folge f n \N$ sei monoton wachsend und punktweise konvergent gegen
+$f$.\\
+Dann ist $\left(\E(f_n) \right)_{n \in \N}$ konvergent und es gilt:
+$ \Limes n \infty \E(f_n) = \E(f)$.
+\end{lemma}
+\begin{proof}
+Seien $g_n \coloneqq  f_n - f_1$ für alle $n \in \N$.\\
+Dann ist $g_n \in L_1(\Omega, \mfa, \R)$ und $g_n \ge 0$ für alle $n \in \N$.\\
+Wegen der Monotonie von $\folge fn\N$ ist auch $\folge gn\N$ monoton
+wachsend.\\
+Außerdem ist $\folge g n \N$ punktweise konvergent gegen $f - f_1$.\\
+Nach dem Satz von der monotonen Konvergenz ist also 
+$\left(\E(g_n) \right)_{n \in \N}$ konvergent und es gilt wegen der 
+Integrierbarkeit von $f$ und $f_1$:
+\[\Limes n \infty \E(g_n) = \E(f - f_1) = \E(f) - \E(f_1)\text.\]
+Also auch
+\begin{align*}
+\E(f) & = \left(\Limes n \infty \E(g_n) \right) + \E(f_1)
+        = \Limes n \infty \bigg(\E(g_n) + \E(f_1) \bigg)
+       = \Limes n \infty \E(g_n + f_1)\\
+        &= \Limes n \infty \E(f_n)\text.
+\end{align*}
+\end{proof}

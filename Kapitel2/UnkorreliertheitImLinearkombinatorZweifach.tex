@@ -1,0 +1,41 @@
+\begin{lemma}{Unkorreliertheit im Linearkombinator}
+             {UnkorreliertheitImLinearkombinator}
+Seien $n, m \in \N$, $\gamma\in \mcm_n(\Omega, \mfa, \R^n)$,
+$\delta\in\mcm_m(\Omega, \mfa, \R^m)$, $x \in \R^n$ und $y \in \R^m$.\\
+$\gamma$ und $\delta$ seien vollständig unkorreliert.\\
+Dann sind
+$\bprod x \gamma _{n}, \bprod y \delta _m \in L_2(\Omega, \mfa, \Prim, \R)$
+und es gilt:
+\begin{align*}\E\bigg(\bprod x \gamma _{n} \cdot \bprod y \delta _m \bigg)
+  = \E\left(\bprod x \gamma_{n}\right)\cdot\E\left(\bprod y\delta_{n} \right)
+= \sprod x {\pfeil \E n (\gamma)} _n \cdot \sprod y {\pfeil \E m (\delta)} _m
+\text.
+\end{align*}
+\end{lemma}
+\begin{proof}
+Die Quadratintegrierbarkeit der beiden Funktionen folgt einfach aus der
+Tatsache, dass die Komponentenfunktionen von $\gamma$ und $\delta$ selbst
+quadratintegrierbar sind. Da $L_2(\Omega, \mfa, \Prim, \R)$ ein Vektorraum ist,
+liegen darin also auch Linearkombinationen quadratintegrierbarer Funktionen.\\
+Da $\gamma, \delta$ vollständig unkorreliert sind, gilt:
+\[\forall\, i \in \haken n\, \forall\, j \in \haken m: \E(\gamma_i\delta_j)
+= \E(\gamma_i)\E(\delta_j)\text.\]
+Daher erhalten wir:
+\begin{align*}
+& \E\left(\bprod x \gamma _{n} \cdot \bprod y \delta _m \right)
+= \E\left( \left(\sum_{i=1}^n x_i \gamma_i\right) 
+           \left(\sum_{j=1}^m y_i \delta_j \right) \right)\\
+= & \E\left(\sum_{i=1}^n \sum_{j=1}^m x_iy_j\gamma_i\delta_j \right)
+ = \sum_{i=1}^n \sum_{j=1}^m x_iy_j\E(\gamma_i\delta_j)\\
+ =& \sum_{i=1}^n \sum_{j=1}^m x_iy_j\E(\gamma_i)\E(\delta_j)
+ = \sum_{i=1}^n \sum_{j=1}^m \E(x_i\gamma_i)\E(y_j\delta_j)\\
+ =& \left(\sum_{i=1}^n\E(x_i\gamma_i) \right) 
+    \left(\sum_{j=1}^m\E(y_j\delta_j) \right)
+ = \E\left(\sum_{i=1}^n x_i\gamma_i \right)
+   \E\left(\sum_{j=1}^m y_j\delta_j \right)\\
+ =& \E(\bprod x \gamma _n) \E(\bprod y \delta _m)\text.
+\end{align*}
+Die zweite Gleichheit folgt aus 
+\refclaim{EigenschaftenDesLinearkombinators}
+{EigenschaftenDesLinearkombinators2}, denn $\E$ ist linear.
+\end{proof}

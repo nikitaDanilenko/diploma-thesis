@@ -1,0 +1,85 @@
+\begin{lemma}{Eigenschaften des Banach--Mazur--Abstands}
+             {EigenschaftenDesBanachMazurAbstands}
+Seien $(E, \norm\cdot_E), (F, \norm\cdot_F), (G, \norm\cdot_G)$
+normierte $\K$--Vektorräume.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{EigenschaftenDesBanachMazurAbstands1}
+	Sind $\Inv(E, F) \neq \emptyset$ und $\Inv(F, G) \neq \emptyset$,
+	so auch $\Inv(E, G) \neq \emptyset$ und es gilt
+	\[d_{BM}(E,G)\le d_{BM}(E,F)d_{BM}(F,G)\text.\]
+	\item \label{EigenschaftenDesBanachMazurAbstands2}
+	Sind $(E, \norm\cdot_E)$ und $(F, \norm\cdot_F)$ isometrisch isomorph, so ist
+	$d_{BM}(E,F) = 1$.
+	\item \label{EigenschaftenDesBanachMazurAbstands3}
+	Sind $\norm\cdot$ eine weitere Norm auf $E$ und $c, d \in \R_{>0}$
+	mit $c \norm\cdot \le \norm\cdot_E \le d \norm\cdot$, so ist
+	\[d_{BM}\bigg((E, \norm\cdot_E), (E, \norm\cdot) \bigg) \le \frac d c
+	\text.\]
+	\item\label{EigenschaftenDesBanachMazurAbstands4}
+	$d_{BM}(E,F)= d_{BM}(F,E)$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Es gilt für alle $T \in \Inv(E, F)$:
+\[ 1 = \opnorm{\id_E}EE = \opnorm{T\inv \circ T} E E
+\le \opnorm T EF \opnorm{T\inv}FE\]
+und daher auch stets
+\begin{align}d_{BM}\bigg((E, \norm\cdot_E), (F, \norm\cdot_F)\bigg) \ge 1\text.
+\tag{$\ast$}\label{edbmaeq:1}
+\end{align}
+(1) Seien $R \in \Inv(E, F)$ und $S \in \Inv(F, G)$.\\
+Dann ist $S \circ R$ linear, invertierbar und stetig. Wegen $(S \circ R)\inv
+= R\inv \circ S\inv$ ist aber auch $(S \circ R)\inv$ stetig und linear und
+damit $S \circ R \in \Inv(E, G)$.\\
+Daher gilt auch
+\begin{align*}d_{BM}\left( (E, \norm\cdot_E), (G, \norm\cdot_G)\right)
+&\le \opnorm{S\circ R}EG \opnorm{(S \circ R)\inv}G E\\
+&\le \opnorm SFG \opnorm{S\inv}GF \opnorm REF \opnorm{R\inv}FE\text.
+\end{align*}
+Wegen $\opnorm REF \opnorm{R\inv}FE > 0$ ist
+$\frac{d_{BM}\left( (E, \norm\cdot_E), (G, \norm\cdot_G)\right)}
+{\opnorm REF \opnorm{R\inv}FE}$ eine untere Schranke von
+$\menge{\opnorm A F G \opnorm{A\inv}GF}{A \in \Inv(F,G)}$ und damit
+\[\frac{d_{BM}\left( (E, \norm\cdot_E), (G, \norm\cdot_G)\right)}
+{\opnorm REF \opnorm{R\inv}FE} \le 
+d_{BM}\left( (F, \norm\cdot_F), (G, \norm\cdot_G)\right)\text.\]
+Analog ist nun (wegen~\eqref{edbmaeq:1} wohldef.) $\frac{d_{BM}\left((E, \norm\cdot_E), 
+(G, \norm\cdot_G)\right)}{d_{BM}\left( (F, \norm\cdot_F), 
+(G, \norm\cdot_G)\right)}$ eine untere Schranke von
+\[\menge{\opnorm B E F \opnorm{B\inv}FE}{B \in \Inv(E,F)}\] und damit
+\[\frac{d_{BM}\left( (E, \norm\cdot_E), 
+(G, \norm\cdot_G)\right)}{d_{BM}\left( (F, \norm\cdot_F), 
+(G, \norm\cdot_G)\right)} \le d_{BM}\left( (E, \norm\cdot_E), 
+(F, \norm\cdot_F)\right)\text.\]
+(2) Seien $(E, \norm\cdot_E)$ und $(F, \norm\cdot_F)$ isometrisch isomorph.\\
+Dann existiert $\varphi : E \rightarrow F$ linear, stetig und bijektiv mit
+$\norm \cdot _F \circ \varphi = \norm\cdot _E$.\\
+Da $\varphi$ insbesondere eine bijektive Isometrie ist, ist auch $\varphi\inv$ stetig
+und es gilt $\norm\cdot_F = \norm\cdot_E \circ \varphi \inv$.\\
+Somit ist $\varphi \in \Inv(E, F)$ und es ist $\opnorm \varphi E F = 1$, sowie
+$\opnorm {\varphi\inv} F E = 1$.
+Also
+\[d_{BM}\bigg((E, \norm\cdot_E), (F, \norm\cdot_F)\bigg)
+\le \opnorm \varphi E F \opnorm {\varphi\inv} F E = 1\text.\]
+Wegen~\eqref{edbmaeq:1} gilt aber auch die umgekehrte Ungleichung, also
+Gleichheit.\\
+(3) Seien $\norm\cdot$ eine Norm auf $E$ und $c, d \in\!\ ]0,\infty[$
+mit $c \norm\cdot \le \norm\cdot_E \le d \norm\cdot$.\\
+Sei $I : (E, \norm\cdot) \rightarrow (E, \norm\cdot_E), x \mapsto x$.\\
+Offenbar ist $I$ linear und invertierbar.\\
+Wegen $\norm\cdot_E \le d \norm\cdot$ ist $I$ stetig und es gilt
+$\opnorm I {(E, \norm\cdot)}{(E, \norm\cdot_E)} \le d$.\\
+Analog ist wegen $\norm\cdot \le \frac 1 c \norm \cdot_E$ auch $I\inv$ stetig
+und es gilt $\opnorm {I\inv}{(E, \norm\cdot_E)}{(E, \norm\cdot)}\le\frac 1c$.\\
+Also ist
+\[d_{BM}\bigg((E, \norm\cdot_E), (E, \norm\cdot) \bigg) \le
+\opnorm I {(E, \norm\cdot)}{(E, \norm\cdot_E)}
+\opnorm {I\inv}{(E, \norm\cdot_E)}{(E, \norm\cdot)} \le \frac d c\text.\]
+(4) Offenbar gilt für $T \in L(E, F)$
+\[T \in \Inv(E, F) \iff T\inv \in \Inv(F, E)\]
+und $(T\inv)\inv = T$, sodass gilt:
+\[\mengea{\opnorm S E F \opnorm{S\inv}FE}{S \in \Inv(E, F)}
+= \mengea{\opnorm R F E \opnorm{R\inv}FE}{R \in \Inv(F, E)}\text.\]
+Daher stimmen die Infima dieser Mengen überein.
+\end{proof}

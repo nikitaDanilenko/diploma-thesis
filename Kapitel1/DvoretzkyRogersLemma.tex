@@ -1,0 +1,36 @@
+\begin{lemma}{Dvoretzky--Rogers--Lemma}{DvoretzkyRogersLemma}
+Seien $n, m \in \N$ mit $n \ge 4m^2$, sowie $(E, \norm\cdot_E)$ ein normierter
+$\R$--Vektorraum mit $\dim E = n$.\\
+Dann gibt es $x \in E^m$ mit
+\[\frac 1 2 \norm\cdot_{\infty, m} \le \norm\cdot_E \circ \bprod \cdot x_m
+\le \norm\cdot_{2,m}\]
+\end{lemma}
+\begin{proof}
+Ein Beweis dieser Aussage befindet sich in~\cite{Kad}, dort Lemma 6.2.1.
+Leider enthält die dortige Abschätzung in der letzten Zeile einen kleinen
+Fehler, der aber wie folgt (gemäß dem ursprünglichen Beweis von Dvoretzky und
+Rogers, vgl.~\cite{DR}) behoben werden kann (die Notation lehnt sich an jene
+aus~\cite{Kad} an):
+\begin{quote}
+Sei $i \in \haken m$ mit $i+1 \in \haken m$ und die Behauptung gelte für alle
+$k \le i$.\\
+Wegen $i < i+1 \le m \le \frac {\sqrt n} 2$ gilt:
+\[i\sqrt n + i^2 + i = i\left(\sqrt n+i+1\right)
+\le\frac{\sqrt n}2\left(\sqrt n+\frac{\sqrt n}2\right)
+= \frac 3 4 n\text.\]
+Daher ist
+\[4\frac i {\sqrt n} + 4\frac{i^2}n+ 4 \frac i n \le 3,\]
+also
+\begin{align}\left(1+\frac {2i}{\sqrt n} \right)^2
+&= 1 + 4 \frac i{\sqrt n} +  4\frac {i^2}n \le 4 - 4\frac i n 
+= 4 \left(1- \frac i n \right)\text. \tag{$\ast$}\label{drleq:1}
+\end{align}
+Damit gilt wie im Beweis angegeben:
+\begin{align*}
+\abs{t_{i+1}}^2 &\le \frac n {n-i}\left(1+ 2\sqrt{i}\sqrt{\frac i n} \right)^2
+=\frac 1{1-\frac in}\left(1+\frac{2i}{\sqrt n}\right)^2
+\overset{~\eqref{drleq:1}}\le 4\text.
+\end{align*}
+\end{quote}
+Dies liefert genau die für den Beweis benötigte Aussage.
+\end{proof}

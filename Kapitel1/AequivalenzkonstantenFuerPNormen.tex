@@ -1,0 +1,68 @@
+\begin{lemma}{Äquivalenzkonstanten für p--Normen}
+             {AequivalenzkonstantenFuerPNormen}
+Seien $n \in \N$ und $p \in [1, \infty[$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+\item\label{AequivalenzkonstantenFuerPNormen2}
+ $\norm\cdot_{\infty, n} \le \norm\cdot_{p, n} 
+     \le n^{\frac 1 p}\norm\cdot_{\infty, n}$.
+\item\label{AequivalenzkonstantenFuerPNormen3}
+ Ist zusätzlich $q \in [1, \infty[$ mit $p \le q$, so gilt
+$\norm\cdot_{q,n}\le\norm\cdot_{p,n}\le n^{\frac 1p-\frac 1q}\norm\cdot_{q,n}$.
+\item\label{AequivalenzkonstantenFuerPNormen1}
+ $\norm\cdot_{p,n}\le\norm\cdot_{1, n}\le n^{\frac{p-1}p}\norm\cdot_{p,n}$.
+\end{enumerate}
+Ferner sind alle Ungleichungen optimal.
+\end{lemma}
+\begin{proof}
+Offensichtlich gelten alle Aussagen für den Nullvektor.\\
+Sei $x \in \K^n\setminus\meng 0$.\\
+(1)
+Da $f: \R_{>0} \rightarrow \R, t \mapsto t^{\frac 1 p}$ monoton wachsend
+ist, gilt für alle $j \in \haken n$:
+\[\abs{x_j} = \left(\abs{x_j}^p \right)^{\frac 1p}
+\le \left(\sum_{i=1}^n \abs{x_i}^p\right)^{\frac 1 p}\]
+und damit $\norm x _{\infty, n} \le \norm x _{p,n}$.
+Außerdem gilt\[
+\norm x _{p, n}^p = \sum_{i=1}^n \abs{x_i}^p \le 
+\sum_{i=1}^n \max\menge{\abs{x_i}}{i\in\haken n}^p=n \norm x _{\infty, n}^p
+\text.\]
+Damit ist auch $\norm \cdot_{p, n} \le n^{\frac 1 p}\norm\cdot_{\infty, n}$
+gezeigt.\\
+(2) Sei $q \in [1, \infty[$ mit $p \le q$.\\
+Falls $p=q$ ist nichts zu zeigen, sodass wir $p < q$ annehmen können.\\
+Dann gilt:
+\begin{align*}
+\norm x _{q,n}^q&= \sum_{i=1}^n \abs{x_i}^q
+=\sum_{i=1}^n \abs{x_i}^p\abs{x_i}^{q-p}
+\le \left(\sum_{i=1}^n \abs{x_i}^p \right)\cdot 
+  \max_{i \in \haken n}\left(\abs{x_i}^{q-p}\right)\\
+ &= \norm x_{p,n}^p \max_{i \in \haken n}\left(\abs{x_i}^{q-p}\right)
+ \le \norm x_{p,n}^p \left(\max_{i \in \haken n}\abs{x_i}\right)^{q-p}
+ = \norm x _{p, n}^p \norm x _{\infty, n}^{q-p}\\
+ &\overset{(1)}\le \norm x _{p, n}^p \norm x _{p, n}^{q-p} = \norm x _{p,n}^q
+ \text.\end{align*}
+Also auch $\norm x _{q, n} \le \norm x _{p, n}$.\\
+Seien nun $p'\coloneqq\frac qp$ und $q'\coloneqq  \frac q{q-p}$ (wohldefiniert wegen $p<q$).\\
+Dann gilt
+\[\frac 1 {p'} + \frac 1 {q'} = \frac p q + \frac{q-p}q = 1\text{.}\]
+Also liefert die diskrete Hölderungleichung
+\begin{align*}
+\norm x _{p,n}^p &= \sum_{i=1}^n \abs{x_i}^p \cdot 1 \le
+\left(\sum_{i=1}^n \left(\abs{x_i}^p\right)^{p'} \right)^{\frac 1 {p'}}
+\left(\sum_{i=1}^n 1 \right)^{\frac 1 {q'}}\\
+&= \left(\sum_{i=1}^n  \left(\abs{x_i}^p\right)^{\frac q p}\right)^{\frac pq}
+ n^{\frac {q-p}q}
+ = \left(\sum_{i=1}^n \abs{x_i}^q \right)^{\frac p q} n^{\frac {q-p}q}
+ = \norm x _{q, n}^p n ^{\frac {q-p}q}
+\end{align*}
+und damit
+\[\norm x_{p, n} \le n ^\frac{q-p}{qp} \norm x _{q, n} 
+= n ^{\frac 1 p - \frac 1 q}\norm x _{q, n}\text.\]
+(3) Wegen $p \ge 1$ gilt nach (2)
+\[\norm\cdot_{p,n} \le \norm\cdot_{1, n} 
+\le n^{1 - \frac 1 p}\norm \cdot_{p,n}
+= n ^{\frac {p-1}p}\norm \cdot_{p,n}\text.\]
+Die Optimalität der ersten Ungleichung in allen drei Punkten liefert $e_1^n$,
+jede der zweiten $\sum_{i=1}^n e_i^n$.
+\end{proof}

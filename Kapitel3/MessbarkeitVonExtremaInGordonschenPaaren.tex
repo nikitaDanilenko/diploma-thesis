@@ -1,0 +1,108 @@
+\begin{satz}{Messbarkeit von Extrema in Gordon'schen Paaren}
+            {MessbarkeitVonExtremaInGordonschenPaaren}
+Seien $c \in \R$ und $(X,Y)$ das Gordon'sche Paar zum Tupel
+$(\gamma,\delta,g,c)$.\\
+Seien $\emptyset \neq T \subseteq \R^m$ beschränkt und
+$\emptyset \neq V \subseteq \R^N$ beschränkt.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item\label{MessbarkeitVonTeilextremaInGordonschenPaaren1}
+	 $\underset{t \in T} \inf\, \underset{v \in V}\sup\, X(t, v), \, 
+	\underset{t \in T} \sup\, \underset{v \in V}\sup\, X(t, v) \in 
+	\mcm(\Omega, \mfa, \R)$.
+	\item\label{MessbarkeitVonTeilextremaInGordonschenPaaren2}
+	$\underset{t \in T} \inf\, \underset{v \in V}\sup\, Y(t, v), \, 
+	\underset{t \in T} \sup\, \underset{v \in T}\sup\, Y(t, v) \in 
+	\mcm(\Omega, \mfa, \R)$.
+\end{enumerate}
+\end{satz}
+\begin{proof}
+Da $\R^m$ und $\R^N$ unabhängig von der Normwahl separabel sind, sind es auch
+$T$ und $V$ (als metrische Räume).
+Daher existieren $T' \subseteq T$ abzählbar und dicht in $T$, sowie
+$V'\subseteq V$ abzählbar und dicht in $V$.
+Als Teilmengen beschränkter Mengen sind $T'$ und $V'$ beschränkt und wegen der
+jeweiligen Dichtheit in den nichtleeren Mengen $T$ und $V$ auch nichtleer.\\
+(1)
+Sei $s \in \R^m$.\\
+Dann ist $X(s, w)$ für jedes $w \in \R^N$ nach 
+\refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
+{IntegrierbarkeitUndVerteilungVonLinearkombinationen1} quadratintegrierbar
+und da $\Bild X(s, w) \subseteq \R$ insbesondere $\mfa-\mfb-$messbar.\\
+Da $V'$ dicht in $V$ und $\meng s$ nichtleer und beschränkt sind, sowie 
+$\meng s$ dicht in $\meng s$ ist, gilt
+\begin{align*}
+ \sup_{v \in V}X(s, v) = \inf_{t \in \meng s}\sup_{v \in V}X(t, v)
+\overset{\refclaim{GordonschePaareAufDichtenTeilmengen}
+{GordonschePaareAufDichtenTeilmengen2}}= 
+ \inf_{t \in \meng s}\sup_{v \in V'}X(t, v)
+= \sup_{v \in V'}X(s, v)\text. \tag {$\ast$}
+\end{align*}
+Da $V'$ abzählbar ist, ist die letztgenannte Abbildung als abzählbares Supremum
+$\mfa-\mfb$--messbarer Abbildungen selbst $\mfa-\overline\mfb$--messbar, wobei
+$\overline \mfb$ die Borel'sche $\sigma-$Algebra auf $\overline\R$ bezeichne.\\
+Also gilt:
+\[\forall\, t \in \R^m: \sup_{v \in V'}X(t, v) \text{ ist } \mfa-\overline\mfb
+\text{--messbar.}\]
+Da $T'$ abzählbar ist, sind Abbildungen \[
+\inf_{t \in T'}\sup_{v \in V'}X(t,v)
+ \quad \text{ und }\quad
+\sup_{t \in T'}\sup_{v \in V'}X(t,v) \]
+abzählbare Infima, bzw. Suprema, 
+$\mfa-\overline\mfb$--messbarer Abbildungen und als solche selbst
+$\mfa-\overline\mfb$--messbar. Da $T'$ und $V'$ nichtleer und beschränkt sind,
+sind die obigen Abbildungen nach
+\refclaim{BeschraenktheitGordonscherPaare}{BeschraenktheitGordonscherPaare2}
+aber $\R$--wertig und damit bereits $\mfa-\mfb$--messbar.\\
+Da $T'$ dicht in $T$ und $V'$ dicht in $V$ sind, gilt
+\begin{align*}
+\inf_{t \in T}\sup_{v \in V}X(t, v) 
+&\overset{\refclaim{GordonschePaareAufDichtenTeilmengen}
+{GordonschePaareAufDichtenTeilmengen2}}= 
+\inf_{t \in T'} \sup_{v \in V'}X(t,v) \in \mcm(\Omega, \mfa, \R)\\
+\sup_{t \in T}\sup_{v \in V}X(t, v) 
+&\overset{\refclaim{GordonschePaareAufDichtenTeilmengen}
+{GordonschePaareAufDichtenTeilmengen2}}=
+ \sup_{t \in T'}\sup_{v \in V'}X(t,v) \in \mcm(\Omega, \mfa, \R)\text.
+\end{align*}
+(2) Sei $s \in \R^m$.\\
+Dann ist $Y(s, w)$ für jedes $w \in \R^N$ nach
+\refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
+{IntegrierbarkeitUndVerteilungVonLinearkombinationen1} quadratintegrierbar und
+mit $\Bild Y(s, w) \subseteq \R$ insbesondere $\mfa-\mfb$--messbar.\\
+Die Menge $\meng s$ ist dicht in $\meng s$ und $V'$ ist dicht in $V$, sodass
+gilt:
+\[\sup_{v \in V} Y (s, v) = \inf_{t \in \meng s}\sup_{v \in V}Y(t,v)
+\overset{\refclaim{GordonschePaareAufDichtenTeilmengen}
+{GordonschePaareAufDichtenTeilmengen4}}=
+\inf_{t \in \meng s}\sup_{v \in V'}Y(t,v) = \sup_{v \in V'}Y(s,v)\text.\]
+Wegen der Abzählbarkeit von $V'$ ist diese Abbildung als abzählbares Supremum
+$\mfa-\mfb$--messbarer Abbildungen selbst $\mfa-\overline\mfb$--messbar.\\
+Also gilt:\[
+\forall\,t\in\R^m:\sup_{v\in V'}Y(t,v)\text{ ist } \mfa-\overline\mfb
+\text{--messbar.}\]
+Damit sind wegen der Abzählbarkeit von $T'$ auch 
+\[\inf_{t \in T'}\sup_{v\in V'}Y(t, v)
+ \quad \text{ und }\quad 
+  \sup_{t \in T'}\sup_{v\in V'}Y(t, v)\]
+als abzählbare Infima, bzw. Suprema, $\mfa-\overline\mfb$--messbarer
+Abbildungen selbst $\mfa-\overline\mfb$--messbar.
+Da $T'$ und $V'$ nichtleer und beschränkt sind, sind die obigen Abbildungen
+nach
+\refclaim{BeschraenktheitGordonscherPaare}{BeschraenktheitGordonscherPaare2}
+ allerdings $\R$--wertig und damit bereits
+$\mfa-\mfb$--messbar.\\
+Schließlich gilt wegen $T'\subseteq T$ dicht in $T$ und $V'\subseteq V$ dicht
+in $V$:
+\begin{align*}
+\inf_{t \in T}\sup_{v \in V}Y(t, v)
+&\overset{\refclaim{GordonschePaareAufDichtenTeilmengen}
+{GordonschePaareAufDichtenTeilmengen4}}=
+\inf_{t \in T'}\sup_{v\in V'}Y(t, v) \in \mcm(\Omega, \mfa, \R)\text,\\
+\sup_{t \in T}\sup_{v \in V}Y(t, v)
+&\overset{\refclaim{GordonschePaareAufDichtenTeilmengen}
+{GordonschePaareAufDichtenTeilmengen4}}=
+\sup_{t \in T'}\sup_{v\in V'}Y(t, v) \in \mcm(\Omega, \mfa, \R)\text.
+\end{align*}
+\end{proof}
+    

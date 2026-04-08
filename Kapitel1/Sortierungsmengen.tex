@@ -1,0 +1,29 @@
+\begin{lemma}{Sortierungsmengen}{Sortierungsmengen}
+Seien $n \in \N$ und $x \in \R^n$.\\
+Für jedes $r \in \haken n$ sei
+$ M_{r,x}\coloneqq \menge{x_i}{i\in\haken n,\abs{\menge{j\in\haken n}{x_j>x_i}}<r}$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item \label{Sortierungsmengen1}
+	$\forall\, k \in \haken {n-1}: M_{k, x} \subseteq M_{k+1,x}$.
+	\item \label{Sortierungsmengen2}
+	$\forall\, k \in \haken n: M_{k, x} \neq \emptyset$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Sei $k \in \haken n$ und $y \in M_{k, x}$.\\
+Dann gibt es ein $i \in \haken n$ mit $y = x_i$ und
+$\abs{\menge{j\in\haken n}{x_j>x_i}}<k < k+1$.\\
+Also ist $y=x_i \in M_{k+1,x}$.\\
+(2) Wegen (1) genügt es zu zeigen, dass $M_{1, x} \neq \emptyset$ gilt.\\
+Es gilt:
+\begin{align*}
+M_{1,x} &= \menge{x_i}{i\in\haken n,\abs{\menge{j\in\haken n}{x_j>x_i}}<1}
+= \menge{x_i}{i\in\haken n, \menge{j\in\haken n}{x_j>x_i} = \emptyset}\\
+&= \menge{x_i}{i\in\haken n, \forall\, j \in \haken n: x_i \ge x_j}
+= \menge{x_i}{i \in \haken n, x_i = \max\menge{x_j}{j\in \haken n}}\text.
+\end{align*}
+Da $\menge{x_j}{j \in \haken n}$ endlich und nichtleer ist, gibt es
+$l \in \haken n$ mit $x_l = \max\menge{x_j}{j \in \haken n}$ und damit ist
+$M_{1, x}$ wegen obiger Umformung nichtleer.
+\end{proof}

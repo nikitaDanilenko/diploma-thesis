@@ -1,0 +1,17 @@
+\begin{korollar}{Norm und duale Norm in Hilberträumen}
+                {NormUndDualeNormImHilbertraum}
+Seien $(H, \sprod\cdot{\cdot\cdot})$ ein $\K$--Hilbertraum, $x \in H$ und
+$K \in \meng{ \kran H 0 1,\kabg H 0 1}$.\\
+Dann gilt $\norm x_H = \sup\menge{\abs{\sprod x y}}{y \in K}$.\\
+Im Falle $\K = \R$ gilt außerdem $\norm x_H = \sup\menge{\sprod x y}{y \in K}$.
+\end{korollar}
+\begin{proof}
+Nach dem aus der Funktionalanalysis bekannten Darstellungssatz von
+Fréchet--Riesz ist $\iota : H \rightarrow H', x \mapsto \sprod\cdot x$
+eine isometrische, antilineare Bijektion.\\
+Daher ist $\menge{\abs{\sprod x y}}{y \in K} 
+= \menge{\abs{\varphi(x)}}{\varphi \in \iota(K)}$.\\
+Da $\iota$ eine bijektive Isometrie ist, gilt 
+$\iota(K) \in \meng{\kabg{H'}01, \kran{H'}01}$.\\
+Somit folgt der Rest der Behauptung direkt aus~\ref{NormUndDualeNorm}.
+\end{proof}

@@ -1,0 +1,157 @@
+\begin{satz}
+{Obere Schranke des Erwartungswerts von abs.
+\textsl{N}(0,1)--Ord.st.}
+{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik}
+Seien $k, n \in \N$ mit $k \le \frac n 2$, $\gamma:\Omega\rightarrow \R^n$
+unabhängig und $N(0,1)$--verteilt und $u: [0, \infty[ \rightarrow \R,
+t \mapsto \Prim(\abs{\gamma_1}> t)$.\\
+Dann gilt:
+\begin{enumerate}[(1)]
+	\item\label
+	{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik1}
+	$\forall\, x \in \R_{>0}: u(x) \le \frac k n
+	\folgt \E\left(\left(\gamma_k^\ast\right)^2\right) \le x^2 + 4$.
+	\item\label
+	{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik2}
+	$\E\left(\left(\gamma_k^\ast\right)^2\right) 
+	\le 2 \log\left(\frac n k \right) + 4 
+	\le \left(2+\frac 4{\log(2)} \right)\log\left(\frac n k \right)$.
+	\item\label
+	{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik3}
+	$\E\left(\left(\gamma_k^\ast\right)^2 \right)
+	\le 2 \log\left(\frac {2n} k \right) + 4 
+	\le \left(2+\frac 4{\log(4)} \right)\log\left(\frac {2n} k \right)$.
+	\item\label
+	{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik4}
+	$\E\left(\gamma_k^\ast\right) \le \sqrt{2+\frac 4{\log(2)}}
+	\sqrt{\log\left(\frac n k\right)}$.
+	\item\label
+	{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik5}
+	$\E\left(\gamma_k^\ast\right) \le \sqrt{2+\frac 4{\log(4)}}
+	\sqrt{\log\left(\frac {2n} k\right)}$.
+	\item\label
+	{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik6}
+	Ist $k \le \frac n {\exp(1)}$, so ist $\E\left(\norm\cdot_{2,k} \circ 
+	\left(\gamma_j^\ast\right)_{j\in \haken k}   \right)
+	\le \sqrt 2 \sqrt{2+\frac 4{\log(2)}}\sqrt{k\log\left(\frac{n}k\right)}$.
+	\item\label
+	{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik7}
+	$\E\left(\norm\cdot_{2,k} \circ 
+	\left(\gamma_j^\ast\right)_{j\in \haken k}   \right)
+	\le \sqrt 2\sqrt{2+\frac 4{\log(4)}}\sqrt{k\log\left(\frac{2n}k\right)}$.
+\end{enumerate}
+\end{satz}
+\begin{proof}
+(1) Zunächst gilt offenbar:
+\begin{align}
+\forall\, t \in [0, \infty[: \left(\gamma_k^\ast\right)^2 > t \iff
+\gamma_k^\ast > \sqrt t \text.\label{oadedkanoeq:1}
+\end{align}
+Sei $x \in \R_{>0}$ mit $u(x) \le\frac k n $.
+Wegen $\haken{n-k}_0 \subseteq \haken {n-1}_0$ gilt nach
+\refclaim{AbschaetzungDerUnvollstaendigenBetafunktion}
+{AbschaetzungDerUnvollstaendigenBetafunktion2}:
+\begin{align}\forall\, l \in \haken {n-k}_0:
+\int_x^\infty (1-u(t))^l(u(t))^{n-l}tdt
+\le \int_0^{u(x)} (1-t)^lt^{n-l-1}dt \label{oadedkanoeq:2}
+\end{align}
+und wegen $u(x) \le \frac k n \le \frac k {n-1}$ nach
+\refclaim{AbschaetzungDerUnvollstaendigenBetafunktion}
+{AbschaetzungDerUnvollstaendigenBetafunktion1}:
+\begin{align}\forall\, l \in \haken{n-k-1}_0:
+\int_0^{u(x)} t^{n-l-1}(1-t)^ldt
+\le (u(x))^{n-l}(1-u(x))^l \text.\label{oadedkanoeq:3}
+\end{align}
+Seien $B, \Gamma$ wie in~\ref{ElementareEigenschaftenDerGammafunktion}.
+Wir fassen $\gamma_k^\ast$ als $k$--te Ordnungsstatistik von
+$\pfeil {\abs\cdot} n \circ \gamma$ auf.\\
+Dann gilt mit~\refclaim{EigenschaftenVonOrdnungsstatistiken}
+{EigenschaftenVonOrdnungsstatistiken2}:
+\begin{align*}
+& \int_{x^2}^\infty \Prim\left(\gamma_k^\ast > \sqrt t\right)dt\\
+\overset{\refclaim{EigenschaftenVonOrdnungsstatistiken}
+{EigenschaftenVonOrdnungsstatistiken3}}= &\,
+\int_{x^2}^\infty \sum_{l=0}^{n-k}\binom n l 
+\Prim\left(\abs{\gamma_1} \le\sqrt t\right)^l
+\left(1-\Prim\left(\abs{\gamma_1}\le \sqrt t\right)\right)^{n-l}dt\\
+=&\, \sum_{l=0}^{n-k}\binom n l \int_{x^2}^\infty 
+\left(u\left(\sqrt t\right)\right)^{n-l}\left(1-u\left(\sqrt t\right)\right)^l
+dt\\
+\overset{x>0}=&\, \sum_{l=0}^{n-k}\binom n l \int_{x^2}^\infty 
+\left(u\left(\sqrt t\right)\right)^{n-l}\left(1-u\left(\sqrt t\right)\right)^l
+2\sqrt t \frac 1 {2\sqrt t}dt\\
+\overset{\substack{\text{Subst.}\\t \mapsto \sqrt t}}= &\,
+2\sum_{l=0}^{n-k}\binom n l \int_x^\infty (u(t))^{n-l}(1-u(t))^l tdt\\
+\overset{\eqref{oadedkanoeq:2}}\le &\,
+2\sum_{l=0}^{n-k}\binom n l \int_0^{u(x)} t^{n-l-1}(1-t)^ldt\\
+\overset{\eqref{oadedkanoeq:3}}\le &\,
+2\binom n {n-k}\int_0^{u(x)}t^{k-1}(1-t)^{n-k}dt +
+2\underbrace{
+\sum_{l=0}^{n-k-1}\binom n l (u(x))^{n-l}(1-u(x))^l}_
+{\overset{\text{Bin. Form.}}\le 1}\\
+\le &\, 2 \binom n{n-k}B(k, n-k+1) + 2 
+\overset{\refclaim{ElementareEigenschaftenDerGammafunktion}
+{ElementareEigenschaftenDerGammafunktion4}}=
+2 \frac{n!}{(n-k)!k!}\frac{\Gamma(k)\Gamma(n-k+1)}{\Gamma(n+1)} + 2\\
+\overset{\refclaim{ElementareEigenschaftenDerGammafunktion}
+{ElementareEigenschaftenDerGammafunktion3}}=&\,
+2 \frac{n!}{(n-k)!k!} \frac{(k-1)!(n-k)!}{n!} + 2
+= \frac 2 k + 2 \le 4\text.
+\end{align*}
+Somit gilt wegen $\gamma_k^\ast \ge 0$:
+\begin{align*}
+\E\left(\left(\gamma_k^\ast\right)^2 \right) 
+&= \int_0^\infty \Prim\left(\left(\gamma_k^\ast\right)^2> t\right)dt
+\overset{\eqref{oadedkanoeq:1}}=
+\int_0^\infty \Prim\left(\gamma_k^\ast> \sqrt t\right)dt\\
+&= \int_0^{x^2}\underbrace{\Prim\left(\gamma_k^\ast> \sqrt t\right)}_{\le 1}dt
++ \int_{x^2}^\infty \Prim\left(\gamma_k^\ast> \sqrt t\right)dt
+\le x^2 + 4\text.
+\end{align*}
+(2) Sei $x \coloneqq  u\inv\left(\frac k n \right)$.\\
+Dann ist wegen $3 < \pi < 4$ und der Standardabschätzung für $\exp$
+\[\exp\left(\frac 1\pi\right)\le\frac 1{1-\frac1\pi}=\frac\pi{\pi-1}< 2\text,\]
+also auch $\exp\left(-\frac1\pi \right) \ge \frac 1 2 \ge \frac k n$ und somit
+nach~\refclaim{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN01}
+{EigenschaftenDerKomplementaerenVerteilungsfunktionVonN017}:
+$x \le \sqrt{2 \log\left(\frac n k \right)}$.\\
+Somit
+\begin{align*}
+\E\left(\left(\gamma_k^\ast\right)^2 \right) \overset{(1)} \le
+2 \log\left(\nicefrac n k \right) + 4 
+= \left(2 + \nicefrac 4 {\log\left(\frac n k \right)} \right)
+\log\left(\nicefrac n k \right)
+ \overset{\frac n k \ge 2}\le
+\left(2 + \nicefrac 4 {\log(2)} \right)
+\log\left(\nicefrac n k \right)\text.
+\end{align*}
+(3) Es gilt:
+\begin{align*}
+\E\left(\left(\gamma_k^\ast\right)^2 \right) &\overset{(2)} \le
+2 \log\left(\frac n k \right) + 4
+\le 2 \log\left(\frac {2n} k \right) + 4 = \left(2 + \frac 4 {\log\left(\frac {2n} k \right)} \right)
+\log\left(\frac {2n} k \right)\\
+&\overset{\frac{2n}k \ge 4}\le
+\left(2 + \frac 4 {\log(4)} \right)\log\left(\frac {2n} k \right)\text.
+\end{align*}
+(4)/(5) Gemäß Jensenungleichung ist
+$\E\left(\gamma_k^\ast \right)= 
+\E\left(\sqrt\cdot \circ \left(\gamma_k^\ast \right)^2 \right)
+\le \sqrt{\E\left(\left(\gamma_k^\ast\right)^2 \right)}$, also
+folgt (4) aus (2) und (5) aus (3).\\
+(6) Sei $k \le \frac n {\exp(1)}$. Dann gilt:
+\begin{align*}
+& \E\left(\norm\cdot_{2,k} \circ 
+	\left(\gamma_j^\ast\right)_{j\in \haken k}   \right)
+= \E\left(\sqrt\cdot \circ \sum_{j=1}^k \left(\gamma_j^\ast\right)^2 \right)
+\le \sqrt{\sum_{j=1}^k \E\left(\left(\gamma_j^\ast\right)^2 \right)}\\
+\overset{(2)}\le&\, \sqrt{\sum_{j=1}^k\left(2+\frac 4{\log(2)} \right)
+\log\left(\frac n j\right)}
+=\sqrt{2+\frac 4{\log(2)}}\sqrt{\sum_{j=0}^k\log\left(\frac n j\right)}\\
+\overset{\ref{SummenVonLogarithmen}}\le&\,
+\sqrt{2+\frac 4{\log(2)}}\sqrt{2 k \log\left(\frac n k \right)}
+= \sqrt 2 \sqrt{2+\frac 4{\log(2)}}\sqrt{k \log \left(\frac n k \right)}\text.
+\end{align*}
+(7) Wegen $k \le \frac n 2 = \frac{2n} 4 \le \frac{2n}{\exp(1)}$ folgt diese
+Aussage analog zu (6), nur dass (3) statt (2) angewandt wird.
+\end{proof}

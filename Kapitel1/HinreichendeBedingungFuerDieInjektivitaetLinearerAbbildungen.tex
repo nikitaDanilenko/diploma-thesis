@@ -1,0 +1,17 @@
+\begin{lemma}{Injektivität linearer Abbildungen zwischen norm. Räumen}
+             {InjektivitaetLinearerAbbildungenZwischenNormiertenRaeumen}
+Seien $(E, \norm\cdot_E), (F, \norm\cdot_F)$ normierte $\K$--Vektorräume und
+$T \in \Hom(E, F)$ mit der Eigenschaft
+$\inf\menge{\norm{Tx}_F}{x \in \kran E 0 1} \neq 0$.\\
+Dann ist $T$ injektiv.
+\end{lemma}
+\begin{proof}
+Sei $T$ nicht injektiv. Dann gibt es ein $x\in E\setminus\meng 0$ mit $Tx=0$.\\
+Da $\norm x _E > 0$ ist $x' \coloneqq  \frac 1 {\norm x_E}x$ wohldefiniert.\\
+Es ist also $\norm {x'}_E = 1$ und 
+$\norm{Tx'}_F = \frac 1 {\norm x _E}\norm{Tx}_F = 0$, da $Tx = 0$.\\
+Wegen 
+$\menge{\norm{Ta}_F}{a \in \kran E 0 1} \subseteq [0,\infty[$,
+ist 0 eine untere Schranke dieser Menge und nach obigem auch darin
+enthalten, also gleich ihrem Infimum.
+\end{proof}

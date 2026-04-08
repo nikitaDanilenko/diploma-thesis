@@ -1,0 +1,23 @@
+\begin{lemma}{Unkorreliertheit im Linearkombinator (eine Funktion)}
+             {UnkorreliertheitImLinearkombinatorEinfach}
+Seien $n \in \N$, $\gamma \in\mcm_n(\Omega, \mfa, \R^n)$ zentriert,
+unkorreliert und $L_2$--normiert.\\
+Dann sind $\bprod x \gamma _n, \bprod y \gamma_n\in L_2(\Omega,\mfa,\Prim, R)$
+und es gilt:
+\[\forall\, x, y \in \R^n : \E\bigg(\bprod x \gamma _n\bprod y \gamma_n\bigg)
+ = \sprod x y _n\text.\]
+\end{lemma}
+\begin{proof}
+Die erste Aussage folgt mit dem gleichen Argument wie in~\ref{UnkorreliertheitImLinearkombinator}.\\
+Seien $x, y \in \R^n$.\\
+Da $\gamma$ unkorreliert und zentriert ist, gilt 
+$\forall i\neq j\in\haken n:\E(\gamma_i\gamma_j)=\E(\gamma_i)\E(\gamma_j)=0$.\\
+Daher gilt:
+\begin{align*}
+ \E\bigg(\bprod x \gamma _n\bprod y \gamma_n\bigg)
+& = \E\left(\sum_{i=1}^n\sum_{j=1}^n  x_iy_j\gamma_i\gamma_j\right)
+= \sum_{i=1}^n\sum_{j=1}^n x_iy_j\E(\gamma_i\gamma_j)\\
+&= \sum_{i=1}^n x_iy_i \underbrace{\E(\gamma_i^2)}_{=\norm{\gamma}_2^2 = 1}
+= \sprod x y_n\text.
+\end{align*}
+\end{proof}

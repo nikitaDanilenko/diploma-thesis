@@ -1,0 +1,78 @@
+\begin{lemma}{Abschätzung eines Gammafunktionsquotienten}
+             {AbschaetzungEinesGammafunktionsquotienten}
+Seien $\Gamma: ]0, \infty[ \rightarrow \R, 
+             t \mapsto \int_0^\infty x^{t-1}\exp(-x)dx$ und
+$a : \N \rightarrow \R, 
+  n \mapsto \sqrt 2 \frac{\Gamma\left(\frac{n+1}2 \right)}
+{\Gamma\left(\frac n 2 \right)}$
+(nach~\refclaim{ElementareEigenschaftenDerGammafunktion}
+{ElementareEigenschaftenDerGammafunktion1} ist $a$ wohldefiniert).\\
+Dann gilt:
+\begin{enumerate}[(1)]
+\item\label{AbschaetzungEinesGammafunktionsquotienten1} 
+ $\forall \, n \in \N: a_n\cdot a_{n+1} = n$
+\item\label{AbschaetzungEinesGammafunktionsquotienten2}
+ $\forall \, n \in \N: a_n \le \sqrt n$
+\item\label{AbschaetzungEinesGammafunktionsquotienten3}
+ $\forall \, n \in \N: a_n \ge \frac{n}{\sqrt{n+1}}$
+ \item\label{AbschaetzungEinesGammafunktionsquotienten4}
+ $\forall\, n \in \N: \sqrt{\frac 2 \pi} \sqrt n \le a_n$
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Nach~\refclaim{ElementareEigenschaftenDerGammafunktion}
+{ElementareEigenschaftenDerGammafunktion1} ist für alle $n \in \N$: 
+$\Gamma\left(\frac n 2 \right) > 0$ und $\Gamma(\frac{n+1}2)> 0$.\\
+Daher ist für alle $n \in \N$: $a_n > 0$.\\
+(1) Sei also $n \in \N$. Dann gilt:
+\begin{align*}
+a_n a_{n+1} &= 
+\sqrt 2 \frac{\Gamma\left(\frac{n+1}2 \right)} {\Gamma\left(\frac n 2 \right)}
+\cdot
+\sqrt 2\frac{\Gamma\left(\frac{n+2}2 \right)}{\Gamma\left(\frac{n+1}2\right)}
+= 2 \frac{\Gamma\left(\frac{n+2}2 \right)}{\Gamma\left(\frac n 2 \right)}
+= 2 \frac{\Gamma\left(\frac n 2 + 1\right)}{\Gamma\left(\frac n 2 \right)}
+\overset{\refclaim{ElementareEigenschaftenDerGammafunktion}
+{ElementareEigenschaftenDerGammafunktion2}}= 
+2\frac n2 \frac{\Gamma\left(\frac n2\right)}{\Gamma\left(\frac n2\right)}\\
+&=n\text.
+\end{align*}
+(2)/(4) Sei $n \in \N$.\\
+Dann gibt es nach ~\refclaim{ExistenzFVerteilterZufallsgroessen}
+{ExistenzFVerteilterZufallsgroessen2}  einen Wahrscheinlichkeitsraum
+$(\Omega', \mfa', \Prim')$ und ein
+$\gamma: \Omega' \rightarrow \R^n$ unabhängig und $N(0, 1)$--verteilt.\\
+Nach~\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses} gilt
+dann $\E\left(\norm\cdot_{2, n} \circ \gamma \right) = a(n)$.\\
+Da $\gamma$ unabhängig und $N(0,1)$--verteilt ist, ist es auch
+unkorreliert, zentriert und $L_2-$normiert, sodass mit
+\refclaim{ElementareEigenschaftenQuadratintegrierbarerAbbildungen}
+{ElementareEigenschaftenQuadratintegrierbarerAbbildungen4} auch
+$a(n) = \E\left(\norm\cdot_{2, n} \circ \gamma \right) \le \sqrt n$ gilt.\\
+Außerdem gilt nach~\refclaim{AequivalenzkonstantenFuerPNormen}
+{AequivalenzkonstantenFuerPNormen1}: $\frac 1 {\sqrt n} \norm\cdot_{1,n}
+\le \norm\cdot_{2, n}$.\hfill$(\ast)$\\
+Also gilt $0\le\frac 1{\sqrt n}\norm\cdot_{1,n}\circ\gamma\le\norm\cdot_{2,n}
+\circ \gamma$ und nach~\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses} ist
+$\norm\cdot_{2, n} \circ \gamma$
+integrierbar, also nach~\refclaim{Integrierbarkeitskriterien}
+{Integrierbarkeitskriterien1} auch $\norm\cdot_{1,n} \circ \gamma$.\\
+Ferner ist $\E(\abs{\gamma_1}) = \sqrt{\nicefrac 2 \pi}$ und da die
+Komponentenfunktionen von $\gamma$ jeweils
+$N(0,1)$--verteilt sind, gilt: $\E(\norm\cdot_{1,n} \circ \gamma) 
+= \sqrt{\nicefrac 2 \pi}\cdot n$.\\
+Somit gilt nach~\refclaim{Integrierbarkeitskriterien}
+{Integrierbarkeitskriterien1}
+\begin{align*}\E\left(\norm\cdot_{2,n} \circ \gamma \right)
+ \overset{(\ast)}\ge \E \left(\frac 1 {\sqrt n} \norm\cdot_{1,n}
+\circ \gamma \right) = \frac 1 {\sqrt n} \E \left(\norm\cdot_{1,n}\circ \gamma
+\right)
+= \frac 1 {\sqrt n} \sqrt{\frac 2 \pi} n = \sqrt{\frac 2 \pi} \sqrt n\text.
+\end{align*}
+(3) Sei $n \in \N$. 
+Dann gilt: 
+$a_n \overset{\eqref{AbschaetzungEinesGammafunktionsquotienten1}}= 
+\frac n {a_{n+1}}
+\overset{\eqref{AbschaetzungEinesGammafunktionsquotienten2}}\ge 
+\frac n {\sqrt{n+1}}$.\\
+\end{proof}

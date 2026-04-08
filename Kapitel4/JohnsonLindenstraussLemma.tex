@@ -1,0 +1,106 @@
+\begin{satz}{Johnson--Lindenstrauss--Lemma}{JohnsonLindenstraussLemma}
+Seien $\eps \in\!\  ]0,1[$, $m, n, N \in \N$ mit $n \ge 2$ und
+$\log(n) \le \eps^2 \frac 1{4\left(2+\nicefrac 4 {\log(2)} \right)}\cdot
+\frac{N^2}{N+1}\text{,}$ sowie $v : \haken n \rightarrow \R^m$ injektiv.\\
+Dann existiert ein $A\in L(\ell_2^m, \ell_2^N)$ mit
+\[\forall\, i, j \in \haken n: i \neq j \folgt
+1 - \eps \le \frac{\norm{A(v(i)) - A(v(j))}_{2,N}}{\norm{v(i)-v(j)}_{2,m}}
+\le 1 + \eps\]
+\end{satz}
+\begin{proof}
+Seien $(E, \norm\cdot_E)\coloneqq  \ell_2^N$, $x \coloneqq  (e_i^N)_{i=1}^N$ und
+\[T\coloneqq  \mengea{\frac{v(i)-v(j)}{\norm{v(i)-v(j)}_{2,m}}}{i, j \in \haken n,
+\, i \neq j}\text{.}\]
+Dann ist $\bprod \cdot x_N = \id_{\R^N}$ und damit $x \neq 0$ und
+$\norm\cdot_E\circ \bprod \cdot x _N = \norm\cdot_{2, N}$. \hfill $(a)$\\
+Wegen $n\ge 2$ ist $T\neq \emptyset$, $T \subseteq S^{m-1}$ und $T=-T$. 
+\hfill$(b)$\\
+Seien $k \coloneqq  \abs T$, $\alpha \coloneqq  (N, m, mN, k)$,
+\begin{align*}
+\bigg((\Omega,\mfa,\Prim),(\gamma,\delta,\widetilde g,\eta),\alpha\bigg)
+\text{ ein }(N(0,1), 4)\text{--Tupel zu }(4,\alpha)\end{align*}
+ (existiert nach~\ref{ExistenzNormalNTupel}), sowie $(Z_{\gamma, x}, M_{\delta, T})$ das
+Auswertungspaar zu $(\gamma, \delta, x, T)$.\\
+F¸r jedes $s \in T$ ist die Abbildung $\bprod s \delta_m$ nach
+\refclaim{IntegrierbarkeitUndVerteilungVonLinearkombinationen}
+{IntegrierbarkeitUndVerteilungVonLinearkombinationen4} wegen $s \in S^{m-1}$
+ebenfalls $N(0,1)$--verteilt.\\
+Wegen~\ref{MaximumZentrierterNormalverteilterZufallsgroessen} (mit
+$\sigma_i\coloneqq 1$ f¸r alle $i \in \haken k$) gilt daher
+\begin{align}\E\left(\sup_{t \in T} \bprod t \delta_m \right) \le
+\sqrt 2 \E\left(\max_{i \in \haken k}\eta_i \right)\text. \label{jlleq:1}
+\end{align}
+Außerdem gilt
+\begin{align}
+\max_{i \in \haken k}\eta_i \le \max_{i \in \haken k}\abs{\eta_i}
+= \norm\cdot_{\infty, k} \circ \eta \overset{\ref{Ordnungsstatistik}}
+= \eta_1^\ast \text.\label{jlleq:2}
+\end{align}
+Es ist:
+\begin{align}
+k = \abs{T} \le n^2\text{ und da } n \ge 2\text{ und }
+v\text{ injektiv auch } k \ge 2\text.\label{jlleq:3}
+\end{align}
+Somit gilt:
+\begin{align*}
+\E(M_{\delta, T}) & = \E\left(\sup_{t \in T}\bprod t \delta_m \right)
+\overset{\eqref{jlleq:1}}\le 
+\sqrt 2 \E\left(\max_{i \in \haken k}\eta_i \right)
+\overset{\eqref{jlleq:2}}\le \sqrt 2 \E\left(\eta_1^\ast \right)\\
+&\overset{\refclaim
+{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik}{ObereAbschaetzungDesErwartungswertsDerKtenAbsolutenN01Ordnungsstatistik4}}
+\le \sqrt 2 \sqrt{2+\frac 4{\log(2)}}
+	\sqrt{\log\left(k \right)}\overset{\eqref{jlleq:3}}\le
+	\sqrt 2 \sqrt{2+\frac 4{\log(2)}}
+	\sqrt{\log\left(n^2 \right)}\\
+&=
+	\sqrt 2 \sqrt{2+\frac 4{\log(2)}}
+	\sqrt{2\log\left(n \right)}
+	= 2 \sqrt{2+\frac 4{\log(2)}}\sqrt{\log(n)}\\
+	&\overset{\substack{\text{Vor.}\\ \text{an }n}}\le
+	2 \sqrt{2+\frac 4{\log(2)}} \eps \frac 1 {2 \sqrt{2+\frac 4{\log(2)}}}\cdot
+	\frac N {\sqrt{N+1}} = \eps \frac N {\sqrt{N+1}}\\
+	&\overset{\refclaim{AbschaetzungEinesGammafunktionsquotienten}
+	{AbschaetzungEinesGammafunktionsquotienten3}}\le \eps a_N
+	\overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}=
+	\eps\E\left(\norm\cdot_{2, N} \circ \gamma \right) \overset{(a)}=
+	\eps \E\left( \norm\cdot_E \circ \bprod\cdot x_N \circ \gamma\right)\\
+	&= \eps \E(Z_{\gamma, x})\text. \tag{$c$}
+\end{align*}
+Wegen $(a), (b), (c)$ sind die Voraussetzungen von~\ref{ExistenzEingeschraenkterFastIsometrien} erf¸llt und daher existiert ein
+$\emptyset \neq \mcb \subseteq L(\ell_2^m, \ell_2^N)$ mit:
+\begin{align}
+\forall\, B \in \mcb: \inf_{t \in T} \norm{Bt}_{2,N} > 0 \quad \wedge \quad
+\frac{\sup\menge{\norm{Bt}_{2,N}}{t\in T}}{\inf\menge{\norm{Bt}_{2,N}}{t\in T}}
+\le \frac{1+\eps}{1-\eps}\text. \label{jlleq:4}
+\end{align}
+Sei nun
+$\mca \coloneqq  \menge{\frac{1-\eps}{\inf\menge{\norm{Bt}_{2,N}}{t \in T}}B}
+{B \in \mcb}$.\\
+Offensichtlich ist auch $\emptyset \neq \mca \subseteq L(\ell_2^m,\ell_2^N)$.\\
+Sei $A \in \mca$. Dann gibt es ein $B \in \mcb$ mit
+$A = (\nicefrac{(1-\eps)}{\inf\menge{\norm{Bt}_{2,N}}{t \in T}})B$.\\
+Seien $\alpha\coloneqq  \inf\menge{\norm{Bt}_{2,N}}{t \in T}$ und $i, j \in \haken n$
+mit $i \neq j$.\\
+Dann ist $t_{ij}\coloneqq  \frac{v(i)-v(j)}{\norm{v(i)-v(j)}_{2,m}} \in T$ und es gilt:
+\begin{align*}
+&\,\frac{\norm{A(v(i)) - A(v(j))}_{2,N}}{\norm{v(i)-v(j)}_{2,m}}=
+\norma{A\left(\frac{v(i)-v(j)}{\norm{v(i)-v(j)}_{2,m}} \right)}_{2, N}
+= \norm{A(t_{ij})}_{2, N}\\
+=&\, \frac {1-\eps}\alpha \norm{B(t_{ij})}_{2,N}
+\le \frac {1-\eps}\alpha \sup_{t \in T}\,\norm{Bt}_{2,N}
+\overset{\text{Def. }\alpha}=(1-\eps)
+\frac{\sup\menge{\norm{Bt}_{2,N}}{t \in T}}
+           {\inf\menge{\norm{Bt}_{2,N}}{t \in T}}\\
+\overset{\eqref{jlleq:4}}\le&\, 
+(1 - \eps)\frac{1+\eps}{1-\eps} = (1+ \eps)\text.
+\end{align*}
+Außerdem gilt vollkommen analog:
+\begin{align*}
+&\,\frac{\norm{A(v(i)) - A(v(j))}_{2,N}}{\norm{v(i)-v(j)}_{2,m}}=
+\frac {1-\eps}\alpha \norm{B(t_{ij})}_{2,N}
+\ge \frac {1-\eps}\alpha \inf_{t \in T}\,\norm{Bt}_{2,N}
+= 1-\eps\text.
+\end{align*}
+Da $\mca$ nichtleer ist, ist damit die Behauptung gezeigt.
+\end{proof}

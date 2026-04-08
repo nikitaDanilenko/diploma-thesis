@@ -1,0 +1,48 @@
+\begin{lemma}{Summen von Logarithmen}{SummenVonLogarithmen}
+Seien $p \in \!\ ]0,1]$, $k, n \in \N$ mit $k \le \frac n {\exp(1)}$.\\
+Dann gilt
+\[k\left(\log\left(\frac n k \right) \right)^p
+\le \sum_{j=1}^k \left(\log\left(\frac n j \right) \right)^p
+\le 2^p \cdot k \cdot \left(\log\left(\frac n k \right) \right)^p\text.\]
+\end{lemma}
+\begin{proof}
+Die erste Ungleichung ist trivial.\\
+Wegen $\exp(k)\ge\frac{k^k}{k!}$ ist
+\begin{align}
+k!\ge\left(\frac k{\exp(1)}\right)^k\text.\label{svleq:1}
+\end{align}
+Außerdem ist mit $\frac n k \ge \exp(1)$ auch
+\begin{align}
+\log\left(\frac n k \right) \ge 1\label{svleq:2}
+\end{align}
+Somit gilt:
+\begin{align}
+\sum_{j=1}^k \log\left(\nicefrac n j \right) &=
+\log\left(\frac{n^k}{k!} \right) \overset{\eqref{svleq:1}}\le
+\log\left(\frac{n^k}{\left(\nicefrac{k}{\exp(1)} \right)^k} \right)
+= k \log\left(\frac n k \exp(1) \right)\notag\\
+&= k\left(\log\left(\nicefrac n k\right) + 1 \right)
+\overset{\eqref{svleq:2}}\le 2k\log\left(\nicefrac n k \right)\text.
+\label{svleq:3}
+\end{align}
+Da $p \in \!\ ]0, 1]$, ist $\frac 1 p \in [1, \infty[$ und damit ist
+$\norm\cdot_{\frac 1 p, k}$ eine Norm auf dem $\R^k$.\\
+Daher gilt weiter
+\begin{align*}
+&\sum_{j=1}^k \left(\log\left(\nicefrac n j \right) \right)^p
+=\norma{\left(\left(\log\left(\nicefrac nj\right)\right)^p\right)_
+{j\in \haken k}}_{1,k}\\
+\overset{\refclaim{AequivalenzkonstantenFuerPNormen}
+{AequivalenzkonstantenFuerPNormen1}}\le &\,
+k^{\frac{\frac 1 p -1}{\frac 1 p}}
+\norma{\left(\left(\log\left(\nicefrac nj\right)\right)^p\right)
+_{j\in\haken k}}_{\frac 1p,k}
+= k^{1-p}\left(\sum_{j=1}^k \left( \left(
+\log\left(\nicefrac nj\right)\right)^p\right)^{\frac 1 p} \right)^p\\
+=&\, k^{1-p}\left(\sum_{j=1}^k \log\left(\nicefrac n j \right) \right)^p
+\overset{\eqref{svleq:3}}\le
+k^{1-p}\cdot 2^p \cdot k^p \cdot 
+\left(\log\left(\nicefrac nk \right) \right)^p\\
+=&\, 2^p k \left(\log\left(\nicefrac n k \right) \right)^p\text.
+\end{align*}
+\end{proof}

@@ -1,0 +1,45 @@
+\begin{lemma}{Eigenschaften der Erweiterung im normierten Fall}
+             {EigenschaftenDerErweiterungImNormiertenFall}
+Seien $(V, \norm\cdot_V)$, $(W, \norm\cdot_W)$ normierte $\K$--Vektorräume,
+$\varphi \in L(V, W)$, $p \in [1, \infty[$ und $n \in \N$. $V^n$ sei mit
+$\norm\cdot_{p, n, V}$ und $W^n$ mit $\norm\cdot_{p, n, W}$ ausgestattet.\\
+Dann gilt für alle $v \in V^n$:
+    $\norm{\pfeil \varphi n(v)}_{p, n, W}
+    \le \norm{\varphi}_{V \rightarrow W}\cdot \norm{v}_{p, n, V}$\\
+Insbesondere ist $\pfeil \varphi n \in L(V^n, W^n)$
+und $\opnorm{\pfeil \varphi n}{V^n}{W^n} = \opnorm{\varphi} V W$, also
+\[\pfeil \cdot n: L(V, W) \rightarrow L(V^n, W^n), 
+  \alpha \mapsto \pfeil \alpha n\]
+eine lineare Isometrie (bezüglich der obigen Normwahl).
+\end{lemma}
+\begin{proof}
+Nach~\ref{EigenschaftenDerErweiterungImVektorraumfall} ist $\pfeil\varphi n$
+linear.\\
+Wegen $p \ge 1$ sind $\norm \cdot_{p, n, V}$ und $\norm\cdot_{p,n,W}$ Normen.\\
+Sei $v \in V^n$.
+Dann gilt\[
+       \norm{\pfeil \varphi n (v)}_{p, n, W}^p
+   =   \sum_{i=1}^n \norm{\varphi(v_i)}_W^p
+   \le \sum_{i=1}^n \opnorm\varphi V W^p \norm{v_i}_V^p
+   =   \opnorm \varphi V W ^p \cdot \norm v _{p, n, V}^p\text.\]
+Damit ist einerseits die erste Aussage gezeigt und andererseits ist 
+$\pfeil \varphi n$ nach bekannten Charakterisierungen der Stetigkeit linearer
+Abbildungen bereits stetig mit
+$\opnorm {\pfeil \varphi n}{V^n}{W^n} \le \opnorm \varphi V W$.\\
+Sei nun $\eps \in \R_{>0}$.\\
+Dann existiert ein $v_\eps \in \overline K_V(0,1)$ mit
+$\opnorm \varphi V W - \norm{\varphi(v_\eps)}_W< \eps$.\\
+Sei
+\[v' :\haken n \rightarrow V, i \mapsto \begin{cases}v_\eps & : i=1\\
+0 &: \text{ sonst} \end{cases}\text.\]
+Dann ist offenbar $\norm {v'}_{p, n, V} = \norm {v_\eps}_V \le 1$ und
+$\norm {\pfeil \varphi n (v')}_{p, n, W} = \norm{\varphi(v_\eps)}_W$.\\
+Also ist $
+ \opnorm{\pfeil \varphi n}{V^n}{W^n} - \norm{\pfeil \varphi n (v')}
+ \le \opnorm \varphi V W - \norm{\varphi(v_\eps)} < \eps$.\\
+Damit ist $\opnorm \varphi V W
+ = \sup\menge{\norm{\pfeil \varphi n (x)}_{p,n,W}}{x \in \overline K_{V^n}(0,1)}
+ = \opnorm{\pfeil \varphi n}{V^n}{W^n}$.\\
+Wegen $L(V, W) \le \Hom(V, W)$ ist $\pfeil \cdot n$ nach~\ref{EigenschaftenDerErweiterungImVektorraumfall} linear.
+Die Isometrieeigenschaft ist genau das \enquote{Insbesondere}.
+\end{proof}
