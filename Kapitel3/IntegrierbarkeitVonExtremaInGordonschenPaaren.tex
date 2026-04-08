@@ -84,21 +84,21 @@ Analog ist
 {BeschraenktheitGordonscherPaare4}}=
 \inf_{t \in T}\sup_{v\in V'}X'(t, v) \text{ integrierbar.}\]
 Seien nun $(E, \norm\cdot_E)$ ein normierter $\R$-Vektorraum, $x \in E^N$,
-$T'\coloneqq  \meng 0$, sowie $V''\coloneqq  \menge{\pfeil \vi N (x)}{\vi \in \kabg{E'}01}$.\\
+$T'\coloneqq  \meng 0$, sowie $V''\coloneqq  \menge{\pfeil \varphi N (x)}{\varphi \in \kabg{E'}01}$.\\
 Wegen
-\[\forall\, \vi \in \kabg{E'}01: \abs{\pfeil\vi N (x)}
+\[\forall\, \varphi \in \kabg{E'}01: \abs{\pfeil\varphi N (x)}
 \overset{\ref{EigenschaftenDerErweiterungImNormiertenFall}}\le
-\opnorm \vi E \R \norm x _{1, N, E} \le \norm x _{1, N, E}\]
+\opnorm \varphi E \R \norm x _{1, N, E} \le \norm x _{1, N, E}\]
 ist $V''$ beschränkt und offensichtlich nichtleer.\\
 Also gilt für alle $\omega \in \Omega$
 \begin{align*}
 &\,\left(\norm\cdot_E \circ \bprod \cdot x \circ \gamma \right)(\omega)
 =\norm{\bprod {\gamma(\omega)} x_N}_E
  \overset{\ref{NormUndDualeNorm}}= 
-\sup_{\vi \in \kabg{E'}01}\vi\left(\bprod{\gamma(\omega)}x_N \right)\\
+\sup_{\varphi \in \kabg{E'}01}\varphi\left(\bprod{\gamma(\omega)}x_N \right)\\
 \overset{\refclaim{EigenschaftenDesLinearkombinators}
 {EigenschaftenDesLinearkombinators2}}= &\,
-\sup_{\vi \in \kabg{E'}01}\sprod{\gamma(\omega)}{\pfeil \vi N (x)}_N
+\sup_{\varphi \in \kabg{E'}01}\sprod{\gamma(\omega)}{\pfeil \varphi N (x)}_N
 = \sup_{v \in V''}\sprod{\gamma(\omega)}v_N
 =  \sup_{v \in V''}\sprod v{\gamma(\omega)}_N\\
 =&\, \left(\sup_{v \in V''}\bprod v \gamma_N\right)(\omega)
@@ -148,16 +148,16 @@ Dann gilt:
 Somit ist auch (2) (ohne den Zusatz) gezeigt.\\
 Seien $(E, \norm\cdot_E)$ ein normierter $\R$--Vektorraum, $x \in E^N$ und
 $G_x$ der Gauß'sche Operator zum Tupel $(x,g)$.\\
-Sei $V''\coloneqq  \menge{\pfeil \vi N(x)}{\vi \in \kabg{E'}01}$.\\
+Sei $V''\coloneqq  \menge{\pfeil \varphi N(x)}{\varphi \in \kabg{E'}01}$.\\
 Wie im Beweis des Zusatzes von (1) gesehen, ist $V''$ beschränkt und
 nichtleer.\\
 Es gilt für alle $s\in T$ und alle $\omega \in \Omega$:
 \begin{align*}
 \sup_{v \in V''}Y(s,v) &= \sup_{v\in V''}\sprod{g(\omega)s}{v}_N
-=\sup_{\vi \in \kabg{E'}01}\sprod{g(\omega)s}{\pfeil\vi N (x)}_N\\
+=\sup_{\varphi \in \kabg{E'}01}\sprod{g(\omega)s}{\pfeil\varphi N (x)}_N\\
 &\overset{\refclaim{EigenschaftenDesLinearkombinators}
 {EigenschaftenDesLinearkombinators2}}=
-\sup_{\vi \in \kabg{E'}01}\vi\left(\bprod{g(\omega)s}x_N \right)
+\sup_{\varphi \in \kabg{E'}01}\varphi\left(\bprod{g(\omega)s}x_N \right)
 \overset{\ref{NormUndDualeNorm}}= \norm{\bprod{g(\omega)s}x_N}_E\\
 &= \norm{G_x(\omega)s}_E 
 = \left(\norm\cdot_E\circ ev(s,\cdot)\circ G_x\right)(\omega)\text.

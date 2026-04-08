@@ -1,11 +1,11 @@
 \begin{lemma}{Norm und duale Norm}{NormUndDualeNorm}
 Seien $(E, \norm\cdot_E)$ ein normierter $\K$--Vektorraum und $x \in E$.\\
-Dann existiert ein $\vi \in \kran{E'}01$ 
-mit $\norm x_E = \vi(x)$.\\
+Dann existiert ein $\varphi \in \kran{E'}01$
+mit $\norm x_E = \varphi(x)$.\\
 Insbesondere ist damit $\opnorm {ev(x, \cdot)} {E'} \K  = \norm x_E$.\\
 Für alle $K \in \meng{\kabg{E'}01, \kran{E'}01}$
-gilt daher $\norm x _ E = \sup\menge{\abs{\vi(x)}}{\vi \in K}$.\\
-Für $\K = \R$ gilt außerdem $\norm x _ E = \sup\menge{\vi(x)}{\vi \in K}$.
+gilt daher $\norm x _ E = \sup\menge{\abs{\varphi(x)}}{\varphi \in K}$.\\
+Für $\K = \R$ gilt außerdem $\norm x _ E = \sup\menge{\varphi(x)}{\varphi \in K}$.
 \end{lemma}
 \begin{proof}
 Wir verwenden den folgenden Spezialfall des Satzes von Hahn--Banach:
@@ -26,8 +26,8 @@ Also existiert nach obigem Satz ein $L \in E'$ mit $L \vert_ F = l$ und
 $\opnorm L E \K = 1$.\\
 Wegen $x \in F$ gilt weiter $L(x) = L(\norm x_E \cdot x') = \norm x_E$, womit
 der erste Teil der Behauptung gezeigt ist.\\
-Seien $K \in \meng{\kabg{E'}01, \kran{E'}01}$ und $\vi \in K$.\\
-Dann gilt $\abs{\vi(x)} \le \opnorm \vi E \K \cdot \norm x_E \le \norm x_E$.\\
+Seien $K \in \meng{\kabg{E'}01, \kran{E'}01}$ und $\varphi \in K$.\\
+Dann gilt $\abs{\varphi(x)} \le \opnorm \varphi E \K \cdot \norm x_E \le \norm x_E$.\\
 Damit ist bereits $\opnorm {ev(x, \cdot)} {E'} \K \le \norm x _E$.\\
 Da aber weiter $L \in K$ ist, gilt auch Gleichheit, denn nach Definition und
 einer aus dem Grundstudium bekannten Rechnung ist

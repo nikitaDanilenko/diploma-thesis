@@ -55,17 +55,17 @@ Nach \cite{K2} (dort Abschnitt 6.6) gilt:
 \int_{-\infty}^\infty \exp(-t^2)dt = 2 \int_0^\infty \exp(-t^2)dt = \sqrt \pi
 \label{mzngeq:3}\text.
 \end{align}
-Seien $\Phi$ die Verteilung und $\vi$ die Dichte von $N(0,1)$, sowie
+Seien $\Phi$ die Verteilung und $\varphi$ die Dichte von $N(0,1)$, sowie
 $f$ die Dichte von $\max\meng{Y_1, Y_2}$.\\
 Nach \refclaim{EigenschaftenVonOrdnungsstatistiken}
-{EigenschaftenVonOrdnungsstatistiken4} gilt dann: $f = 2\Phi\vi$,
-sodass wir wegen $\forall\, t \in \R: \vi'(t) = -t\vi(t)$ erhalten:
+{EigenschaftenVonOrdnungsstatistiken4} gilt dann: $f = 2\Phi\varphi$,
+sodass wir wegen $\forall\, t \in \R: \varphi'(t) = -t\varphi(t)$ erhalten:
 \begin{align}
 \E\left(\max_{i \in \haken 2}Y_i \right)&=
-\int_{-\infty}^\infty t f(t)dt = 2\int_{-\infty}^\infty \Phi(t)t\vi(t)dt
-= - 2\int_{-\infty}^\infty \Phi(t)\vi'(t)dt\notag\\
-&= -2\left([\Phi(t)\vi(t)]_{t=-\infty}^\infty - 
-\int_{-\infty}^\infty \vi(t)^2dt \right)
+\int_{-\infty}^\infty t f(t)dt = 2\int_{-\infty}^\infty \Phi(t)t\varphi(t)dt
+= - 2\int_{-\infty}^\infty \Phi(t)\varphi'(t)dt\notag\\
+&= -2\left([\Phi(t)\varphi(t)]_{t=-\infty}^\infty -
+\int_{-\infty}^\infty \varphi(t)^2dt \right)
 = 2 \int_{-\infty}^\infty \frac 1 {2\pi}\exp\left(-t^2\right)dt\notag\\
 &= \frac 1 \pi \int_{-\infty}^\infty \exp\left(-t^2\right)dt
 \overset{\eqref{mzngeq:3}}= \frac 1 \pi \sqrt \pi = \sqrt{\frac 1 \pi}\text.
