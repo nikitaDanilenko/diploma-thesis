@@ -36,7 +36,7 @@ Seien nun $T\coloneqq S^{m-1}$,
 \text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach~\ref{ExistenzNormalNTupel}), $G_x \coloneqq  \bprod \cdot x_N \circ g$ und $(Z_{\gamma, x}, M_{\delta,T})$ das
 Auswertungspaar zu $(\gamma, \delta, x, T)$.\\
 Seien weiter
-\[f: = \inf_{t \in T} \, \norm\cdot_E \circ \bprod \cdot x _N \circ G_x,
+\[f \coloneqq \inf_{t \in T} \, \norm\cdot_E \circ \bprod \cdot x _N \circ G_x,
 \quad
 h\coloneqq  \sup_{t \in T} \, \norm\cdot_E \circ \bprod \cdot x _N \circ G_x\text.\]
 Nach~\ref{IntegrierbarkeitVonExtremaInGordonschenPaaren} sind
@@ -177,12 +177,13 @@ Wir erhalten also insgesamt:
 \end{align*}
 Da $f \ge 0, h \ge 0$ und beide integrierbar sind, gibt es nach~\ref{Erwartungswertlemma} ein $\omega_0 \in \Omega$ mit
 $f(\omega_0)>0$ und $\frac{h(\omega_0)}{f(\omega_0)} \le \frac{3a_m}\alpha$.\\
-Sei $A\coloneqq  G_x(\omega_0)$. Dann ist $A \in L(\ell_2^m, E)$ und es gilt:
+Sei $A\coloneqq  G_x(\omega_0)$.
+Dann ist $A \in L(\ell_2^m, E)$ und es gilt:
 \[\inf_{t \in S^{m-1}}\norm{At}_E =
   \inf_{t \in T} \norm{G_x(\omega_0)t}_E =
   \left(\inf_{t \in T} \norm\cdot_E \circ ev(t, \cdot) \circ G_x\right)
   (\omega_0) = f(\omega_0) > 0\]
-und damit ist $A$ nach~\ref{InjektivitätLinearerAbbildungenZwischenNormiertenRäumen} injektiv.\\
+und damit ist $A$ nach~\ref{InjektivitaetLinearerAbbildungenZwischenNormiertenRaeumen} injektiv.\\
 Sei $F\coloneqq  \Bild A$. Da $A$ injektiv ist, ist $\dim F = m$ und da jeder
 endlichdimensionale normierte Raum vollständig ist, gilt:
 \begin{align*}
