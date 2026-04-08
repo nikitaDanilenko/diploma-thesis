@@ -1,8 +1,8 @@
-\begin{lemma}{Beschr‰nktheit Gordon'scher Paare}
+\begin{lemma}{Beschränktheit Gordon'scher Paare}
              {BeschraenktheitGordonscherPaare}
 Seien $c \in \R$ und $(X, Y)$ das Gordon'sche Paar zu $(\gamma,\delta,g,c)$.\\
-Seien $\emptyset \neq T \subseteq \R^m$ beschr‰nkt,
-$\emptyset \neq V \subseteq \R^N$ beschr‰nkt und $\omega \in \Omega$.\\
+Seien $\emptyset \neq T \subseteq \R^m$ beschränkt,
+$\emptyset \neq V \subseteq \R^N$ beschränkt und $\omega \in \Omega$.\\
 Dann gilt:
 \begin{enumerate}[(1)]
 	\item \label{BeschraenktheitGordonscherPaare1}
@@ -13,7 +13,7 @@ Dann gilt:
 	\le \opnorm{g(\omega)}{\R^m}{\R^N}\norm s_{2, m} \norm u_{2, N}$\absatz
 	Insbesondere sind 
 	$\menge{X(t, v)(\omega)}{t \in T, v \in V}$ und 
-	$\menge{Y(t, v)(\omega)}{t \in T, v \in V}$ beschr‰nkt.
+	$\menge{Y(t, v)(\omega)}{t \in T, v \in V}$ beschränkt.
   \item \label{BeschraenktheitGordonscherPaare2}
   Die folgenden Abbildungen sind wohldefiniert und $\R$--wertig:
   \[\inf_{t \in T}\sup_{v \in V}X(t, v), \  
@@ -33,8 +33,8 @@ Dann gilt:
   + \left(\sup_{v \in V}\sprod v {\gamma(\omega)}_N \right)\]
 \end{enumerate}
 \end{lemma}
-\begin{proof} Da $T$ beschr‰nkt ist, gibt es ein $a \in \R_{>0}$ mit 
-$\forall\, t \in T: \norm t_{2, m} \le a$ und da auch $V$ beschr‰nkt ist, gibt
+\begin{proof} Da $T$ beschränkt ist, gibt es ein $a \in \R_{>0}$ mit
+$\forall\, t \in T: \norm t_{2, m} \le a$ und da auch $V$ beschränkt ist, gibt
 es ein $b \in \R_{>0}$ mit $\forall\, v \in V: \norm v_{2, N} \le b$.\\
 (1) Seien $t \in T$ und $v \in V$. Dann gilt:
 \begin{align*}
@@ -54,11 +54,11 @@ ist auch
 \le \opnorm{g(\omega)} {\R^m}{\R^N} a b\text.
 \end{align*}
 Die Ungleichungen aus $(1)$ ergeben sich durch die jeweils vorletzte
-Absch‰tzung.\\
+Abschätzung.\\
 Da $\norm{\gamma(\omega)}_{2, N}$, $\norm{\delta(\omega)}_{2,m}$ und
 $\opnorm{g(\omega)} {\R^m}{\R^N}$ nach Voraussetzung endlich sind, sind die
-beiden genannten Mengen beschr‰nkt.\\
-(2) Folgt unmittelbar aus der Beschr‰nktheit der in (1) angegebenen Mengen.\\
+beiden genannten Mengen beschränkt.\\
+(2) Folgt unmittelbar aus der Beschränktheit der in (1) angegebenen Mengen.\\
 (3)/(4) Sei $s \in T$. Dann ist
 \begin{align*}\sup_{v \in V}X(s, v)(\omega) 
 = \sup_{v\in V}\left(c\sprod s {\delta(\omega)}_m 
@@ -78,7 +78,7 @@ Somit ist
 &=\left(\sup_{t \in T}(c\sprod t {\delta(\omega)} _m) \right)
   + \left(\sup_{v \in V}\sprod v {\gamma(\omega)}_N \right)\text.
 \end{align*}
-Schlieﬂlich gilt auch
+Schließlich gilt auch
 \begin{align*}
 \sup_{v \in V}\inf_{t\in T}X(t, v)(\omega) &=
 \sup_{v \in V}\inf_{t \in T}(c\sprod t {\delta(\omega)}_m 
