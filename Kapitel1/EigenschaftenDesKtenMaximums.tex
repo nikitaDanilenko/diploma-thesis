@@ -66,7 +66,7 @@ Seien also $a, b \in \R$ mit $a < b$ und $k \in \haken n$. Dann gilt:
 =\,&\bigcup_{\substack{A \subseteq \haken n,\\ \abs A \ge k}}
 \bigcap_{i \in \haken A}\menge{x \in \R^n}{x_i> a}
 = \bigcup_{\substack{A \subseteq \haken n,\\ \abs A \ge k}}
-\bigcap_{i \in \haken A} \pr_i\inv(]a, \infty[) =: G\text.
+\bigcap_{i \in \haken A} \pr_i\inv(]a, \infty[) \eqqcolon G\text.
 \end{align*}
 Da $\pr_i$ für alle $i \in \haken n$ unabhängig von der Norm stetig sind, ist
 $G$ als Vereinigung endlicher Schnitte offener Mengen offen.\\
@@ -78,9 +78,10 @@ Analog gilt:
 =&\bigcup_{\substack{B \subseteq \haken n,\\ \abs B > n - k}}
 \bigcap_{i \in \haken B}\menge{x \in \R^n}{x_i< b}
 = \bigcup_{\substack{B \subseteq \haken n,\\ \abs B > n - k}}
-\bigcap_{i \in \haken B} \pr_i\inv(]-\infty, b[) =: K\text.
+\bigcap_{i \in \haken B} \pr_i\inv(]-\infty, b[) \eqqcolon K\text.
 \end{align*}
-Auch $K$ ist (mit dem gleichen Argument wie $G$) offen. Außerdem ist
+Auch $K$ ist (mit dem gleichen Argument wie $G$) offen.
+Außerdem ist
 \[\mu_{k,n}\inv(]a,b[) = \menge{x \in \R^n}{\mu_{k,n}(x) > a \wedge
 \mu_{k,n}(x) < b} = G \cap K\]
 und damit offen, weil $G$ und $K$ es sind.\\
