@@ -1,5 +1,5 @@
 \begin{satz}{Satz von Milman--Schechtman}{SatzVonMilmanSchechtman}
-Es gibt ein $C_{BS} \in [1, \infty[$ derart, dass für alle $m, n \in \N$
+Es gibt ein $C_{BS} \in [1, \infty[$ derart, dass fÃ¼r alle $m, n \in \N$
 mit $\frac 1 {10} \log(n) \le m \le n$ und jeden $n$--dimensionalen normierten
 $\R$--Vektorraum $(E, \norm\cdot_E)$ ein $F \le E$ existiert mit $\dim F = m$
 und
@@ -9,8 +9,8 @@ und
 \sqrt{\frac m {\log\left(1+ \frac n m \right)}}\text.\]
 \end{satz}
 \begin{proof}
-Nach \cite{BS} (dort: Theorem 2) gibt es ein $C_{BS} \in \R_{>0}$, sodass für
-alle normierten Räume $(X, \norm\cdot_X)$ ein $M \in \N$ mit
+Nach \cite{BS} (dort: Theorem 2) gibt es ein $C_{BS} \in \R_{>0}$, sodass fÃ¼r
+alle normierten RÃ¤ume $(X, \norm\cdot_X)$ ein $M \in \N$ mit
 $M > \frac 1 2 \dim X$ und $y \in X^M$ existieren mit
 $\norm\cdot_{\infty,M}\le\norm\cdot_X\circ\bprod\cdot y_M
 \le C_{BS}\norm\cdot_{2,M}$.\\
@@ -24,13 +24,13 @@ $\norm\cdot_{\infty,\widetilde M}
 \le C_{BS}\norm\cdot_{2,\widetilde M}$.\\
 Sei $N := \floor{\frac n 2}$. Dann ist $N \le \frac n 2 < \widetilde M$ und
 daher $x:=\left(\frac 1{C_{BS}}\widetilde y_i \right)_{i=1}^N$ wohldefiniert
-und es gilt (durch Auffüllung mit Nullen auf den Indizes ab $N+1$):
+und es gilt (durch AuffÃ¼llung mit Nullen auf den Indizes ab $N+1$):
 \begin{align}\frac 1{C_{BS}}
 \norm\cdot_{\infty, N} \le \norm\cdot_E \circ \bprod\cdot x_N \le
 \norm\cdot_{2,N} \text.\label{svmseq:1}\end{align}
 Damit ist $x \neq 0$, sogar $x_i \neq 0$, da
 $\frac 1 {C_{BS}} = \frac 1 {C_{BS}} \norm{e_i^N}_{\infty,N} \le \norm{x_i}_E$
-für alle $i \in \haken N$.\\
+fÃ¼r alle $i \in \haken N$.\\
 Seien nun $T:=S^{m-1}$,
 \[\bigg((\Omega, \mfa, \Prim), (\gamma,\delta,\widetilde g),(N, m, mN)\bigg)
 \text{ ein }(N(0,1), 3)\text{--Tupel zu }(3,(N,m,mN))\] (existiert nach
@@ -46,7 +46,7 @@ f, h\text{ integrierbar und es ist } f \le h\text.\label{svmseq:2}
 \end{align}
 \underline{1. Fall:} $m \le \frac 2 {13}(N+1)$\absatz
 \underline{1.1. Fall:} $\E(Z_{\gamma, x}) < 2a_m$\absatz
-Seien $\mu_{j, N}$ für alle $j \in \haken N$ gemäß \ref{ktesMaximum},
+Seien $\mu_{j, N}$ fÃ¼r alle $j \in \haken N$ gemÃ¤ÃŸ \ref{ktesMaximum},
 \[\norm\cdot_{(m)}:\R^N \rightarrow [0, \infty[, v \mapsto
 \frac 1 m \sum_{i=1}^m \mu_{i, N}\left(\pfeil {\abs\cdot}N (v)\right)\]
 und
@@ -55,7 +55,7 @@ und
     \wedge \left(\abs{\menge{i \in \haken N}{\abs{z_i} \neq 0}}\le m \right)}
     \text.\]
 Dann ist $V \subseteq \R^N$, nichtleer,
-beschränkt (da endlich) und es ist $0 \notin V$. \hfill $(a)$\\
+beschrÃ¤nkt (da endlich) und es ist $0 \notin V$. \hfill $(a)$\\
 Nach \refclaim{Sortierungsnorm}{Sortierungsnorm3} ist
 \begin{align}
 \norm\cdot_{(m)}\text{ eine
@@ -68,7 +68,7 @@ und nach \refclaim{Sortierungsnorm}{Sortierungsnorm2}
 \begin{align}
 \forall\, w \in \R^N: \sup_{v \in V}\sprod w v_N = \norm w_{(m)}\text.\tag{$c$}
 \end{align}
-Für alle $s \in \R^m$ und alle $\omega \in \Omega$ gilt:
+FÃ¼r alle $s \in \R^m$ und alle $\omega \in \Omega$ gilt:
 \begin{align}
 &\,(\bprod \cdot x \circ ev(s, \cdot) \circ g)(\omega)
 = \bprod {g(\omega)s}x_N = (\bprod \cdot x_N \circ g(\omega))(s)\notag\\
@@ -116,8 +116,8 @@ $1+\frac{N+1}m \ge 1+\frac{13}2 = \frac{15}2$ gilt weiter:
 Seien $E_1:= \R^N$, $\norm\cdot_{E_1}:= \norm\cdot_{(m)}$,
 $x_1 := (e_i^N)_{i=1}^N$ und $G_{x_1}:= \bprod \cdot {x_1}_N \circ g = g$.\\
 Wegen $(a), (b), (c)$ sind die Voraussetzungen von
-\ref{GordonschePaareUndNormiterierendeMengen} für $(E_1, \norm\cdot_{E_1})$,
-$x_1$, $T$, $V$ und $c:=\frac 1 {\sqrt{m}}$ erfüllt und damit gilt:
+\ref{GordonschePaareUndNormiterierendeMengen} fÃ¼r $(E_1, \norm\cdot_{E_1})$,
+$x_1$, $T$, $V$ und $c:=\frac 1 {\sqrt{m}}$ erfÃ¼llt und damit gilt:
 \begin{align}
 \E\left(\norm\cdot_{(m)} \circ \gamma \right) - \frac {a_m}{\sqrt m}
 & \overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}
@@ -131,9 +131,9 @@ $x_1$, $T$, $V$ und $c:=\frac 1 {\sqrt{m}}$ erfüllt und damit gilt:
 \E\left(\inf_{t \in T}\, \norm\cdot_{(m)}\circ ev(t,\cdot)\circ G_{x_1} \right)
 \text.\label{svmseq:7}
 \end{align}
-Außerdem sind wegen $x \neq 0$ und \eqref{svmseq:1} auch die Voraussetzungen
-von \ref{GordonschePaareUndSubeuklidischeBildhalbnormen} für
-$(E, \norm\cdot_E)$, $x$ und $T$ erfüllt, sodass gilt:
+AuÃŸerdem sind wegen $x \neq 0$ und \eqref{svmseq:1} auch die Voraussetzungen
+von \ref{GordonschePaareUndSubeuklidischeBildhalbnormen} fÃ¼r
+$(E, \norm\cdot_E)$, $x$ und $T$ erfÃ¼llt, sodass gilt:
 \begin{align}
 \E\left(\sup_{t \in T}\, \norm\cdot_{E}\circ ev(t,\cdot)\circ G_{x} \right)
 &\overset{
@@ -186,9 +186,9 @@ Sei $A:= G_x(\omega_0)$. Dann ist $A \in L(\ell_2^m, E)$ und es gilt:
   \left(\inf_{t \in T} \norm\cdot_E \circ ev(t, \cdot) \circ G_x\right)
   (\omega_0) = f(\omega_0) > 0\]
 und damit ist $A$ nach
-\ref{InjektivitätLinearerAbbildungenZwischenNormiertenRäumen} injektiv.\\
+\ref{InjektivitÃ¤tLinearerAbbildungenZwischenNormiertenRÃ¤umen} injektiv.\\
 Sei $F:= \Bild A$. Da $A$ injektiv ist, ist $\dim F = m$ und da jeder
-endlichdimensionale normierte Raum vollständig ist, gilt:
+endlichdimensionale normierte Raum vollstÃ¤ndig ist, gilt:
 \begin{align*}
 &\,d_{BM}\bigg((F, \norm\cdot_E\vert_F), \ell_2^m \bigg)
 \le \opnorm A {\ell_2^m}{F} \opnorm{A\inv}{F}{\ell_2^m}
@@ -215,18 +215,18 @@ endlichdimensionale normierte Raum vollständig ist, gilt:
 \end{align*}
 Damit ist der Fall dieser Fall abgeschlossen.\absatz
 \underline{1.2. Fall:} $\E(Z_{\gamma, x}) \ge 2 a_m$\absatz
-Sei dann zusätzlich $\eps := \frac 1 2$.\\
+Sei dann zusÃ¤tzlich $\eps := \frac 1 2$.\\
 Wegen \eqref{svmseq:1} ist $x \neq 0$ und 
 $\norm\cdot_E\circ \bprod \cdot x_N \le \norm\cdot_{2,N}$. \hfill $(a')$\\
 Ferner ist $T\neq \emptyset$, $T \subseteq S^{m-1}$ und $T=-T$. \hfill $(b')$\\
-Schließlich gilt:
+SchlieÃŸlich gilt:
 \begin{align}\E(M_{\delta, T}) \overset{\ref{IterierteEuklidischeNorm}}=
  \E\left(\norm\cdot_{2,m} \circ \delta \right)
  \overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}=
  a_m = \frac 1 2 2a_m \le \eps\E(Z_{\gamma,x})\text. \tag{$c'$}
  \end{align}
 Wegen $(a'), (b'), (c')$ sind die Voraussetzungen von
-\ref{ExistenzEingeschraenkterFastIsometrien} erfüllt und es gibt ein 
+\ref{ExistenzEingeschraenkterFastIsometrien} erfÃ¼llt und es gibt ein 
 $A \in L(\ell_2^m, E)$ injektiv mit
 \begin{align}
 \opnorm A {\ell_2^m} E \opnorm{A\inv}{A(E)}{\ell_2^m} \le
@@ -234,7 +234,7 @@ $A \in L(\ell_2^m, E)$ injektiv mit
 \label{svmseq:9}
 \end{align}
 Sei nun $\vi:\!\ ]1,\infty[\rightarrow\R,s\mapsto\frac{\log(s)}{\log(1+s)}$.\\
-Dann ist $\vi$ offenbar stetig differenzierbar und es gilt für alle
+Dann ist $\vi$ offenbar stetig differenzierbar und es gilt fÃ¼r alle
 $z\in\!\ ]1,\infty[$:
 \[\vi'(z)=\frac{\frac{\log(1+z)}{z}-\frac{\log(z)}{1+z}}{\log(1+z)^2}>0\text,\]
 also $\vi$ monoton wachsend, sodass wegen $n \ge 2$ und

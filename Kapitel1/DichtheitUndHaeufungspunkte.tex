@@ -1,30 +1,30 @@
-\begin{lemma}{Dichtheit und H‰ufungspunkte}
+\begin{lemma}{Dichtheit und H√§ufungspunkte}
              {DichtheitUndHaeufungspunkte}
 Seien $(M, d)$ ein metrischer Raum, $x_0\in M$
-ein H‰ufungspunkt von $M$, sowie $D \subseteq M$ dicht in $M$.\\
+ein H√§ufungspunkt von $M$, sowie $D \subseteq M$ dicht in $M$.\\
 Dann gilt:
 \begin{enumerate}[(1)]
 	\item \label{DichtheitUndHaeufungspunkte1}
-	Es gibt $A \subseteq M\setminus\meng{x_0}$ abz‰hlbar, sodass
+	Es gibt $A \subseteq M\setminus\meng{x_0}$ abz√§hlbar, sodass
 	$(D\setminus\meng{x_0}) \cup A$ dicht in $M$ ist.
 	\item \label{DichtheitUndHaeufungspunkte2}
-	Ist $D$ abz‰hlbar, so gibt es $D'' \subseteq M$ abz‰hlbar und dicht in
+	Ist $D$ abz√§hlbar, so gibt es $D'' \subseteq M$ abz√§hlbar und dicht in
 	$M$ mit $x_0 \notin D''$.
 \end{enumerate}
 \end{lemma}
 \begin{proof}
-Da $x_0$ ein H‰ufungspunkt von $M$ ist, gibt es eine gegen $x_0$ konvergente
+Da $x_0$ ein H√§ufungspunkt von $M$ ist, gibt es eine gegen $x_0$ konvergente
 Folge $\folge xn\N\in(M\setminus\meng{x_0})^\N$.\\Dann ist
-$A:=\menge{x_n}{n\in \N} \subseteq M\setminus\meng{x_0}$ und abz‰hlbar.\\
+$A:=\menge{x_n}{n\in \N} \subseteq M\setminus\meng{x_0}$ und abz√§hlbar.\\
 Sei $D':= \left(D \setminus \meng{x_0} \right) \cup A$.\\
-Dann ist $x_0\notin D'$ und falls $D$ abz‰hlbar ist, ist auch $D'$ als endliche
-Vereinigung abz‰hlbarer Mengen abz‰hlbar.\\
+Dann ist $x_0\notin D'$ und falls $D$ abz√§hlbar ist, ist auch $D'$ als endliche
+Vereinigung abz√§hlbarer Mengen abz√§hlbar.\\
 Da $\folge x n \N$ gegen $x_0$ konvergiert, ist
 $\menge{x_n}{n \in \N} \cup \meng{x_0}$ kompakt und damit insbesondere
 abgeschlossen, also 
 $\overline{\menge{x_n}{n\in\N}}\subseteq\menge{x_n}{n\in\N}\cup\meng{x_0}$.\\
-Offenbar ist $x_0$ als Grenzwert von $\folge x n \N$ wegen $x_n\neq x_0$ f¸r
-alle $n \in \N$ ein H‰ufungspunkt von $\menge{x_n}{n \in \N}$ und damit 
+Offenbar ist $x_0$ als Grenzwert von $\folge x n \N$ wegen $x_n\neq x_0$ f√ºr
+alle $n \in \N$ ein H√§ufungspunkt von $\menge{x_n}{n \in \N}$ und damit 
 $\overline{\menge{x_n}{n\in\N}}\supseteq\menge{x_n}{n\in\N}\cup\meng{x_0}$.\\
 Also $\overline{\menge{x_n}{n\in\N}}=\menge{x_n}{n\in\N}\cup\meng{x_0}$.\\
 Es gilt weiter:
@@ -35,7 +35,7 @@ Es gilt weiter:
 &\supseteq D \setminus \meng{x_0} \cup \menge{x_n}{n \in \N}\cup\meng{x_0}
 = D \cup\menge{x_n}{n \in \N}\text.
 \end{align*}
-Da $\overline {D'}$ abgeschlossen ist, enth‰lt es auch den Abschluss von
+Da $\overline {D'}$ abgeschlossen ist, enth√§lt es auch den Abschluss von
 $D \cup\menge{x_n}{n \in \N}$. Somit gilt wegen der Dichtheit von $D$ in M:
 \[\overline{D'} \supseteq \overline{D \cup\menge{x_n}{n \in \N}} \supseteq
 \overline D = M\text.\]

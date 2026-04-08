@@ -1,6 +1,6 @@
-\begin{satz}{Injektivität linearer Operatoren und Operatornorm der Inversen}
-            {InjektivitätLinearerOperatorenUndOperatornormDerInversen}
-Seien $(E,\norm\cdot_E),(F,\norm\cdot_F)$ $\K$--Banachräume, $T\in L(E,F)$
+\begin{satz}{InjektivitÃ¤t linearer Operatoren und Operatornorm der Inversen}
+            {InjektivitÃ¤tLinearerOperatorenUndOperatornormDerInversen}
+Seien $(E,\norm\cdot_E),(F,\norm\cdot_F)$ $\K$--BanachrÃ¤ume, $T\in L(E,F)$
 injektiv und $T(E)$ sei abgeschlossen in $F$.\\
 Dann gilt \[\inf\menge{\norm{Tx}_F}{x \in\kran E 0 1}>0\text.\]
 Weiter ist $T\inv$ eine Abbildung, $T\inv \in L(T(E), E)$
@@ -11,10 +11,10 @@ und es gilt \[
 \end{satz}
 \begin{proof}
 Sei $G:=T(E)$.\\
-Dann ist $G$ wegen der Linearität von $T$ ein Vektorraum.\\
+Dann ist $G$ wegen der LinearitÃ¤t von $T$ ein Vektorraum.\\
 Offenbar ist $\norm\cdot_G:=\restrict{\norm\cdot_F}G$ eine Norm auf $G$.\\
 Da $G$ nach Voraussetzung abgeschlossen in $F$ ist, ist $G$ als abgeschlossene
-Menge eines vollständigen metrischen Raums selbst vollständig und damit
+Menge eines vollstÃ¤ndigen metrischen Raums selbst vollstÃ¤ndig und damit
 insgesamt ein Banachraum.\\
 Sei $S : E \rightarrow G, x \mapsto Tx$.\\
 Dann ist $S$ bijektiv (weil $T$ injektiv ist), insbesondere surjektiv.\\
@@ -23,7 +23,7 @@ Nach dem Satz von der offenen Abbildung ist damit $S$ offen.\\
 Nun ist $S$ aber auch invertierbar, sodass damit auch $S\inv$ stetig ist.\\
 Da $T$ als Relation links-- und rechtseindeutig ist, ist es auch $T\inv$.\\
 Damit ist $T\inv$ eine injektive Abbildung von $T(E)$ nach $E$ und stimmt als
-solche mit $S\inv$ überein, ist also inbesondere linear und stetig.\\
+solche mit $S\inv$ Ã¼berein, ist also inbesondere linear und stetig.\\
 Seien $c:= \opnorm {S\inv} G E$ und $x \in \kran E 0 1$.\\
 Dann ist $c > 0$ und es gilt:
 \[1 =\norm x _E = \norm{S\inv(Sx)}_E \le \opnorm{S\inv} G E \norm{Tx}_G 
@@ -33,7 +33,7 @@ $\menge{\norm{Tz}_F}{z\in\kran E01}$, sodass auch
 $\inf\menge{\norm{Tz}_F}{z\in\kran E01} \ge \frac 1 c > 0$ gilt.\\
 Offenbar ist 
 $\menge{\frac{Tz}{\norm{Tz}_F}}{z \in \kran E 0 1} \subseteq \kran G01$,
-während für $w \in \kran G01$ mit der Setzung 
+wÃ¤hrend fÃ¼r $w \in \kran G01$ mit der Setzung 
 $v:=\frac{S\inv w}{\norm{S\inv w}_E}$ gilt:
 $\norm v_E = 1$ und
 \[\frac{Tv}{\norm{Tv}_F} = \frac{T\left(\frac{S\inv w}{\norm{S\inv w}_E} \right)}{\norma{T\left(\frac{S\inv w}{\norm{S\inv w}_E}\right)}_F}

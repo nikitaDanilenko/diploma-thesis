@@ -7,18 +7,18 @@ Dann gilt
 \begin{enumerate}[(1)]
  \item\label{InvertierbarkeitDesGrenzwertsInvertierbarerOperatoren1}
  $\left(T_n\inv\right)_{n \in \N}$ ist konvergent $\iff$
- $\left(T_n\inv\right)_{n \in \N}$ ist beschränkt.
+ $\left(T_n\inv\right)_{n \in \N}$ ist beschrÃ¤nkt.
  \item\label{InvertierbarkeitDesGrenzwertsInvertierbarerOperatoren2}
- Ist eine der äquivalenten Bedingungen aus (1) erfüllt, so ist
+ Ist eine der Ã¤quivalenten Bedingungen aus (1) erfÃ¼llt, so ist
  $T$ invertierbar und $T\inv = \Limes n \infty T_n\inv$.
 \end{enumerate}
 \end{lemma}
-\begin{proof} (1) Da konvergente Folgen stets beschränkt sind, ist lediglich
+\begin{proof} (1) Da konvergente Folgen stets beschrÃ¤nkt sind, ist lediglich
 die Umkehrung zu zeigen.\\
-Sei also $\left(T_n\inv\right)_{n \in \N}$ beschränkt.\\
+Sei also $\left(T_n\inv\right)_{n \in \N}$ beschrÃ¤nkt.\\
 Dann gibt es ein $c \in \R_{>0}$ mit
 $\forall\, n \in \N: \opnorm{T_n\inv}F E \le c$.\\
-Da $(E, \norm\cdot_E)$ vollständig ist, ist $(L(F, E), \opnorm \cdot F E)$ 
+Da $(E, \norm\cdot_E)$ vollstÃ¤ndig ist, ist $(L(F, E), \opnorm \cdot F E)$ 
 ein Banachraum, sodass es ausreicht zu zeigen, dass $\folge {T\inv} n \N$ eine
 Cauchyfolge ist.\\
 Sei also $\eps \in \R_{>0}$.\\
@@ -36,13 +36,13 @@ Seien $n, m \in \N_{\ge n_0}$. Dann gilt:
    & \le c^2 \opnorm{T_m - T_n}EF < \eps
 \end{align*}
 Damit ist die erste Aussage gezeigt.\absatz
-(2) Sei also $\left(T_n\inv\right)_{n \in \N}$ beschränkt. Nach (1) ist diese
+(2) Sei also $\left(T_n\inv\right)_{n \in \N}$ beschrÃ¤nkt. Nach (1) ist diese
 Folge dann konvergent gegen ein $T_0 \in L(X, Y)$.\\
 Sei $L(F,E) \times L(E, F)$ mit der Produktnorm ausgestattet und
 \[\alpha : L(F, E) \times L(E, F) \rightarrow L(E, E), (A,B) \mapsto AB\text,\]
 \[\beta  : L(F, E) \times L(E, F) \rightarrow L(F, F), (A,B) \mapsto BA\text.\]
 Diese beiden Abbildungen sind offensichtlich bilinear und wegen der
-Submultiplikativität der Operatornorm stetig.\\
+SubmultiplikativitÃ¤t der Operatornorm stetig.\\
 Dann gilt mit $(1)$: $\left( \alpha(T_n\inv, T_n)\right)_{n \in \N}$ ist
 konvergent und
 \begin{align*}

@@ -1,21 +1,21 @@
-Seien $n,m\in \N$, $p \in [1, \infty[$, $K$ ein Körper, $\K\in\meng{\R, \C}$.\\
+Seien $n,m\in \N$, $p \in [1, \infty[$, $K$ ein KÃ¶rper, $\K\in\meng{\R, \C}$.\\
 Wenn wir von einem normierten Vektorraum reden, setzen wir implizit voraus,
 dass dieser nicht der Nullvektorraum ist.
 
 \begin{enumerate}[(1)]
  \item \label{Bez1}
-       Wir schreiben verkürzend $\haken n := \N_{\le n}$ und 
+       Wir schreiben verkÃ¼rzend $\haken n := \N_{\le n}$ und 
        $\haken n _0:=\haken n \cup \meng 0$.
  \item \label{Bez2}
-       Wir nennen eine Menge $M$ abzählbar, genau dann, wenn sie endlich oder
-       abzählbar unendlich ist.
+       Wir nennen eine Menge $M$ abzÃ¤hlbar, genau dann, wenn sie endlich oder
+       abzÃ¤hlbar unendlich ist.
  \item \label{Bez3}
        Ist $A$ eine Menge und $a \in A^n$, so fassen wir $a$ als Abbildung 
-       $a : \haken n \rightarrow A$, für die wir wiederum die
+       $a : \haken n \rightarrow A$, fÃ¼r die wir wiederum die
        Familienschreibweise nutzen. Spielt die Reihenfolge eine Rolle, so
        schreiben wir $a = (a_i)_{i=1}^n$ anstelle von $a=(a_i)_{i\in\haken n}$.
  \item \label{Bez13}
-       Für eine Menge $M$ sei 
+       FÃ¼r eine Menge $M$ sei 
        $\Pot_{ne}(M):=\menge{A\in\Pot(M)}{A\neq\emptyset,\,A\text{ endlich}}$.
  \item \label{Bez4}
        Mit $(e^n_i)_{i =1}^n$ bezeichnen wir die kanonische Basis des
@@ -30,32 +30,32 @@ dass dieser nicht der Nullvektorraum ist.
  \item \label{Bez6}
        $\sprod{\cdot}{\cdot\cdot}_n$ sei das Standardskalarprodukt auf $K^n$.
  \item \label{Bez7}
-       Ist $\Omega$ eine Menge und $f:\Omega \rightarrow \R^n$, so seien für
+       Ist $\Omega$ eine Menge und $f:\Omega \rightarrow \R^n$, so seien fÃ¼r
        alle $i \in \haken n$: $f_i := \text{pr}_i \circ f$, wobei $\text{pr}_i$
-       die Projektion in die $i$--te Komponente sei. Wir werden dann häufig $f$
+       die Projektion in die $i$--te Komponente sei. Wir werden dann hÃ¤ufig $f$
        mit $(f_i)_{i=1}^n$ identifizieren.
  \item \label{Bez8}
        Mit $K^{n \times m}$ bezeichnen wir den Raum der $n\times m$--Matrizen,
        wobei $n$ die Anzahl der Spalten und $m$ die der Zeilen ist.
        
-       Für $A\in K^{n\times m}$ definieren wir $A_i := A e_i^n$ und 
-       $A_{i,j}:=\sprod{A_i}{e_j^m}_m$ für alle $i\in\haken n$, 
+       FÃ¼r $A\in K^{n\times m}$ definieren wir $A_i := A e_i^n$ und 
+       $A_{i,j}:=\sprod{A_i}{e_j^m}_m$ fÃ¼r alle $i\in\haken n$, 
        $j\in\haken m$, d. h. $A_i$ ist die $i$--te Spalte von $A$ und $A_{i,j}$
        ist der $j$--te Eintrag in der $i$--ten Spalten von $A$.\\
        Ist analog $\Omega$ eine Menge und 
-       $\alpha:\Omega \rightarrow K^{m\times n}$, so bezeichnen wir für alle 
+       $\alpha:\Omega \rightarrow K^{m\times n}$, so bezeichnen wir fÃ¼r alle 
        $i \in \haken n$ und alle $j \in \haken m$
        \[\alpha_i: \Omega \rightarrow K^n, \omega \mapsto \alpha(\omega)_i
        \quad \text{und} \quad
        \alpha_{i,j}:\Omega\rightarrow K,\omega\mapsto\alpha(\omega)_{i,j}
        \text.\]
  \item \label{Bez9}
-       Die $p$--Norm auf den $L_p$-- (bzw. $\mcl_p$--) Räumen bezeichnen wir
+       Die $p$--Norm auf den $L_p$-- (bzw. $\mcl_p$--) RÃ¤umen bezeichnen wir
        mit $\norm\cdot_p$ und die $p$--Norm auf dem $\K^n$ speziell als 
        $\norm\cdot_{p, n}$.
  \item \label{Bez10}
        Sind $(X, \norm\cdot_X)$ und $(Y, \norm\cdot_Y)$ normierte
-       $\K$--Vektorräume, so sei
+       $\K$--VektorrÃ¤ume, so sei
        \[ ev : X \times L(X, Y) \rightarrow Y, (x, T) \mapsto Tx \]
        der Einsetzungshomomorphismus.\\
        Ferner sei
@@ -68,10 +68,10 @@ dass dieser nicht der Nullvektorraum ist.
        Sei 
 \[\Mat_{m,n}: \R^{mn} \rightarrow \R^{m \times n}, (x_i)_{i=1}^{mn} \mapsto
 {\left(x_{m\cdot (i-1) + j}\right)_{i=1}^n}_{j=1}^m\text,\]
-d. h. durch $\Mat_{m,n}$ können wir einen Vektor aus dem $\R^{mn}$ als Matrix
+d. h. durch $\Mat_{m,n}$ kÃ¶nnen wir einen Vektor aus dem $\R^{mn}$ als Matrix
 im $\R^{m \times n}$ auffassen. Offensichtlich ist $\Mat_{m,n}$ linear,
-bijektiv und aufgrund der endlichen Dimension der beiden Räume auch stetig,
-wenn man beide Räume mit Normen ausstattet.
+bijektiv und aufgrund der endlichen Dimension der beiden RÃ¤ume auch stetig,
+wenn man beide RÃ¤ume mit Normen ausstattet.
  \item \label{Bez14} Ist $(M,d)$ ein metrischer Raum, $x \in M$ und $r \in
   \R_{>0}$, so seien
   \[\koff M x r := \menge{y \in X}{d(x,y) < r}\text{ und }

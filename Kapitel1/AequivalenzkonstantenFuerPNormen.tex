@@ -1,4 +1,4 @@
-\begin{lemma}{ƒquivalenzkonstanten f¸r p--Normen}
+\begin{lemma}{√Ñquivalenzkonstanten f√ºr p--Normen}
              {AequivalenzkonstantenFuerPNormen}
 Seien $n \in \N$ und $p \in [1, \infty[$.\\
 Dann gilt:
@@ -7,7 +7,7 @@ Dann gilt:
  $\norm\cdot_{\infty, n} \le \norm\cdot_{p, n} 
      \le n^{\frac 1 p}\norm\cdot_{\infty, n}$.
 \item\label{AequivalenzkonstantenFuerPNormen3}
- Ist zus‰tzlich $q \in [1, \infty[$ mit $p \le q$, so gilt
+ Ist zus√§tzlich $q \in [1, \infty[$ mit $p \le q$, so gilt
 $\norm\cdot_{q,n}\le\norm\cdot_{p,n}\le n^{\frac 1p-\frac 1q}\norm\cdot_{q,n}$.
 \item\label{AequivalenzkonstantenFuerPNormen1}
  $\norm\cdot_{p,n}\le\norm\cdot_{1, n}\le n^{\frac{p-1}p}\norm\cdot_{p,n}$.
@@ -15,22 +15,22 @@ $\norm\cdot_{q,n}\le\norm\cdot_{p,n}\le n^{\frac 1p-\frac 1q}\norm\cdot_{q,n}$.
 Ferner sind alle Ungleichungen optimal.
 \end{lemma}
 \begin{proof}
-Offensichtlich gelten alle Aussagen f¸r den Nullvektor.\\
+Offensichtlich gelten alle Aussagen f√ºr den Nullvektor.\\
 Sei $x \in \K^n\setminus\meng 0$.\\
 (1)
 Da $f: \R_{>0} \rightarrow \R, t \mapsto t^{\frac 1 p}$ monoton wachsend
-ist, gilt f¸r alle $j \in \haken n$:
+ist, gilt f√ºr alle $j \in \haken n$:
 \[\abs{x_j} = \left(\abs{x_j}^p \right)^{\frac 1p}
 \le \left(\sum_{i=1}^n \abs{x_i}^p\right)^{\frac 1 p}\]
 und damit $\norm x _{\infty, n} \le \norm x _{p,n}$.
-Auﬂerdem gilt\[
+Au√üerdem gilt\[
 \norm x _{p, n}^p = \sum_{i=1}^n \abs{x_i}^p \le 
 \sum_{i=1}^n \max\menge{\abs{x_i}}{i\in\haken n}^p=n \norm x _{\infty, n}^p
 \text.\]
 Damit ist auch $\norm \cdot_{p, n} \le n^{\frac 1 p}\norm\cdot_{\infty, n}$
 gezeigt.\\
 (2) Sei $q \in [1, \infty[$ mit $p \le q$.\\
-Falls $p=q$ ist nichts zu zeigen, sodass wir $p < q$ annehmen kˆnnen.\\
+Falls $p=q$ ist nichts zu zeigen, sodass wir $p < q$ annehmen k√∂nnen.\\
 Dann gilt:
 \begin{align*}
 \norm x _{q,n}^q&= \sum_{i=1}^n \abs{x_i}^q
@@ -46,7 +46,7 @@ Also auch $\norm x _{q, n} \le \norm x _{p, n}$.\\
 Seien nun $p':=\frac qp$ und $q':= \frac q{q-p}$ (wohldefiniert wegen $p<q$).\\
 Dann gilt
 \[\frac 1 {p'} + \frac 1 {q'} = \frac p q + \frac{q-p}q = 1\text{.}\]
-Also liefert die diskrete Hˆlderungleichung
+Also liefert die diskrete H√∂lderungleichung
 \begin{align*}
 \norm x _{p,n}^p &= \sum_{i=1}^n \abs{x_i}^p \cdot 1 \le
 \left(\sum_{i=1}^n \left(\abs{x_i}^p\right)^{p'} \right)^{\frac 1 {p'}}
@@ -63,6 +63,6 @@ und damit
 \[\norm\cdot_{p,n} \le \norm\cdot_{1, n} 
 \le n^{1 - \frac 1 p}\norm \cdot_{p,n}
 = n ^{\frac {p-1}p}\norm \cdot_{p,n}\text.\]
-Die Optimalit‰t der ersten Ungleichung in allen drei Punkten liefert $e_1^n$,
+Die Optimalit√§t der ersten Ungleichung in allen drei Punkten liefert $e_1^n$,
 jede der zweiten $\sum_{i=1}^n e_i^n$.
 \end{proof}

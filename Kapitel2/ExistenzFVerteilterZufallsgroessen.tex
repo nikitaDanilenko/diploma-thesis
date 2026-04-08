@@ -1,18 +1,18 @@
-\begin{lemma}{Existenz (unabh‰ngiger) F--verteilter Zufallsgrˆﬂen}
-             {ExistenzFVerteilterZufallsgrˆssen}
+\begin{lemma}{Existenz (unabh√§ngiger) F--verteilter Zufallsgr√∂√üen}
+             {ExistenzFVerteilterZufallsgr√∂ssen}
 Seien $F: \R \rightarrow [0,1]$ eine Verteilungsfunktion und $n \in \N$.
 Dann gilt:
 \begin{enumerate}[(1)]
-	\item \label{ExistenzFVerteilterZufallsgrˆssen1}
+	\item \label{ExistenzFVerteilterZufallsgr√∂ssen1}
 	Es gibt einen Wahrscheinlichkeitsraum $(\Omega_1, \mfc, \Prim_1)$
 	und $\xi \in \mcm(\Omega_1, \mfc, \R)$, sodass $\xi$ $F$--verteilt
 	 ist.\\
 	Insbesondere ist $\xi$ sicher endlich.
-	\item \label{ExistenzFVerteilterZufallsgrˆssen2}
+	\item \label{ExistenzFVerteilterZufallsgr√∂ssen2}
 	Es gibt einen Wahrscheinlichkeitsraum $(\Omega_2, \mfd, \Prim_2)$ und
 	$\eta \in \mcm_n(\Omega_2, \mfd, \R^n)$ derart, dass $\eta$ $F$--verteilt  
-	und unabh‰ngig ist (im Sinne von \ref{Unabh‰ngigIdentischVerteilt}).\\
-	Insbesondere ist $\eta_i$ sicher endlich f¸r alle $i \in \haken n$.
+	und unabh√§ngig ist (im Sinne von \ref{Unabh√§ngigIdentischVerteilt}).\\
+	Insbesondere ist $\eta_i$ sicher endlich f√ºr alle $i \in \haken n$.
 \end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -21,13 +21,13 @@ $F$ monoton wachsend, rechtsseitig stetig und es gilt
 \[\Limes t {-\infty}F(t) = 0\text{, sowie }\Limes t \infty F(t) = 1\text.\]
 (1) Aus \cite{Irle}, dort Beweis von 6.6, geht hervor, dass gilt:
 \[G:\!\  ]0,1[ \rightarrow \R, p \mapsto \inf\menge{x \in \R}{F(x) \ge p}\]
-ist wohldefiniert und gen¸gt der ƒquivalenz
+ist wohldefiniert und gen√ºgt der √Ñquivalenz
 \begin{align}
 \forall\,t\in\R\,\forall\,s\in\!\ ]0,1[:
 G(s)\le t\iff s\le F(t)\text.\label{efvzeq:1}
 \end{align}
 Seien $\Omega_1:=\!\ ]0,1[$, $\mfc := \Pot(]0,1[)\: \cap\: \mfb$ und
-$\Prim_1:=\lambda\vert_{\mfc}$, wobei $\lambda$ das eindimensionale Lebesguemaﬂ
+$\Prim_1:=\lambda\vert_{\mfc}$, wobei $\lambda$ das eindimensionale Lebesguema√ü
 bezeichne.\\
 Sei $t \in \R$.\\
 Dann ist
@@ -40,12 +40,12 @@ Damit wurde ein Wahrscheinlichkeitsraum und eine Abbildung wie behauptet
 gefunden.\absatz
 (2) Seien $\Omega_2:=\!\ ]0,1[^n$, $\mfd:=\Pot\left(]0,1[^n\right) \cap \mfb_n$
 und $\Prim_2:= \lambda_n\vert_\mfd$, wobei $\lambda_n$ das $n$--dimensionale
-Lebesguemaﬂ bezeichne.\\
+Lebesguema√ü bezeichne.\\
 Nach (1) existiert ein $F$--verteiltes $\xi:\!\ ]0,1[\rightarrow\R$.\\
 Sei $\eta: \Omega_2 \rightarrow \R^n, \omega \mapsto \pfeil \xi n (\omega)$.\\
-Offenbar gilt dann f¸r alle $j \in \haken n$ und alle $\omega \in \Omega_2$:
+Offenbar gilt dann f√ºr alle $j \in \haken n$ und alle $\omega \in \Omega_2$:
 $\eta_j(\omega) = \xi(\omega_j)$.\\
-Wir kˆnnen o. B. d. A. annehmen, dass $n > 1$ ist, denn f¸r $n = 1$ sagt (2)
+Wir k√∂nnen o. B. d. A. annehmen, dass $n > 1$ ist, denn f√ºr $n = 1$ sagt (2)
 dasselbe aus, wie (1).\\
 Seien $i \in \haken n$ und $t \in \R$.\\
 Falls $1<i<n$, so gilt:
@@ -68,7 +68,7 @@ und falls $i = n$:
  = \menge{\omega \in \Omega_2}{\xi(\omega_n) \le t}\\
  &=\!\  ]0,1[^{n-1} \times \menge{x \in \!\ ]0,1[}{\xi(x) \le t}  \in \mfd
 \end{align*}
-Auﬂerdem gilt
+Au√üerdem gilt
 \begin{align}
 \Prim_2(\eta_i \le t) & = \lambda_n(\eta_i \le t) \notag\\
 &= \begin{cases} 
@@ -101,27 +101,27 @@ Sei nun $s \in \R^n$. Dann gilt:
 \overset{(1)}=&\, \prod_{k=1}^n F(s_k) \overset{\eqref{efvzeq:2}}= 
 \prod_{k=1}^n \Prim_2(\eta_k \le s_k)
 \end{align*}
-Damit ist $\eta$ auch unabh‰ngig und die Behauptung gezeigt.
+Damit ist $\eta$ auch unabh√§ngig und die Behauptung gezeigt.
 
-%(1) Seien zun‰chst $\Omega_1:=]0,1[$, $\mfc := \Pot(]0,1[) \cap \mfb$ und
-%$\Prim_1:=\lambda\vert_{\mfc}$, wobei $\lambda$ das eindimensionale %Lebesguemaﬂ
+%(1) Seien zun√§chst $\Omega_1:=]0,1[$, $\mfc := \Pot(]0,1[) \cap \mfb$ und
+%$\Prim_1:=\lambda\vert_{\mfc}$, wobei $\lambda$ das eindimensionale %Lebesguema√ü
 %bezeichne.\\
 %Seien $p \in ]0, 1[$ und $M_p:=\menge{x \in \R}{F(x) \ge p}$.\\
 %Da $F$ eine Verteilungsfunktion ist, gilt
 %\[\Limes y \infty F(y) = 1\]
 %Also existiert ein $\delta \in \R_{>0}$ mit
 %$\forall\, y \in ]\delta, \infty[: 1-F(y)= \abs{1 - F(y)} < 1 - p$.\\
-%Daher gilt f¸r alle $y \in ]\delta, \infty[: F(t) > p$ und damit ist 
+%Daher gilt f√ºr alle $y \in ]\delta, \infty[: F(t) > p$ und damit ist 
 %$M_p \neq \emptyset$.\\
-%Weiterhin ist $M_p$ nach unten beschr‰nkt, denn w‰re dem nicht so, so g‰lte
+%Weiterhin ist $M_p$ nach unten beschr√§nkt, denn w√§re dem nicht so, so g√§lte
 %$\forall\, c \in \R\, \exists\, x \in \R: F(x) \ge p \wedge x < c$.\\
 %Sei dann $c\in \R$. Dann existiert ein $x \in \R$ mit $F(x) \ge p$ und %$x<c$.\\
 %Da $F$ eine Verteilungsfunktion ist, gilt auch $F(x)\le F(c)$ und damit 
 %$p\le F(c)$.\\
-%Das hieﬂe aber insbesondere: $\forall\, d \in \R: p \le F(d)$, was wegen
+%Das hie√üe aber insbesondere: $\forall\, d \in \R: p \le F(d)$, was wegen
 %\[\Limes d {-\infty} F(d) = 0 \quad \text{ und } \quad p > 0\]
 %nicht sein kann.\\
-%Somit ist $M_p$ nach unten beschr‰nkt und nichtleer.\\
+%Somit ist $M_p$ nach unten beschr√§nkt und nichtleer.\\
 %Also ist die Abbildung
 %\[G: \Omega_1 \rightarrow \R, t \mapsto \inf\menge{z \in \R}{F(z) \ge t}\]
 %wohldefiniert.\\

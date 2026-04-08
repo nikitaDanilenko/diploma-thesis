@@ -36,7 +36,7 @@ Nach (1) gilt: $\forall\,j\in\haken k: \mu_{j, n}(x) \ge \mu_{k, n}(x)\ge a$.\\
 Es gibt $\iota: \haken k \rightarrow \haken n$ injektiv mit
 $\forall\, j \in \haken k: x_{\iota(j)}= \mu_{j,n}(x)$.\\
 Ferner gilt $\iota(\haken k) \subseteq \menge{i \in \haken n}{x_i \ge a}$ und
-damit wegen der Injektivität von $\iota$
+damit wegen der InjektivitÃ¤t von $\iota$
 \[k = \abs{\iota(\haken k)} \le \abs{\menge{i \in \haken n}{x_i \ge a} }.\]
 "`$\Leftarrow$:"' Es gelte $\mu_{k,n}(x) < a$.\\
 Es gibt ein $j \in \haken n$ mit $x_j = \mu_{k,n}(x) < a$.\\
@@ -57,7 +57,7 @@ Offensichtlich gilt auch:
   \abs{\menge{i \in \haken n}{x_i < a}} > n-k\text.\]
 Damit ist (3) gezeigt.\\
 (4) Analog zu (2).\\
-(5) Es genügt zu zeigen, dass Urbilder offener Intervalle offen sind.\\
+(5) Es genÃ¼gt zu zeigen, dass Urbilder offener Intervalle offen sind.\\
 Seien also $a, b \in \R$ mit $a < b$ und $k \in \haken n$. Dann gilt:
 \begin{align*}
 &\menge{x \in \R^n}{\mu_{k, n}(x)> a}
@@ -68,7 +68,7 @@ Seien also $a, b \in \R$ mit $a < b$ und $k \in \haken n$. Dann gilt:
 = \bigcup_{\substack{A \subseteq \haken n,\\ \abs A \ge k}}
 \bigcap_{i \in \haken A} \pr_i\inv(]a, \infty[) =: G\text.
 \end{align*}
-Da $\pr_i$ für alle $i \in \haken n$ unabhängig von der Norm stetig sind, ist
+Da $\pr_i$ fÃ¼r alle $i \in \haken n$ unabhÃ¤ngig von der Norm stetig sind, ist
 $G$ als Vereinigung endlicher Schnitte offener Mengen offen.\\
 Analog gilt:
 \begin{align*}
@@ -80,7 +80,7 @@ Analog gilt:
 = \bigcup_{\substack{B \subseteq \haken n,\\ \abs B > n - k}}
 \bigcap_{i \in \haken B} \pr_i\inv(]-\infty, b[) =: K\text.
 \end{align*}
-Auch $K$ ist (mit dem gleichen Argument wie $G$) offen. Außerdem ist
+Auch $K$ ist (mit dem gleichen Argument wie $G$) offen. AuÃŸerdem ist
 \[\mu_{k,n}\inv(]a,b[) = \menge{x \in \R^n}{\mu_{k,n}(x) > a \wedge
 \mu_{k,n}(x) < b} = G \cap K\]
 und damit offen, weil $G$ und $K$ es sind.\\

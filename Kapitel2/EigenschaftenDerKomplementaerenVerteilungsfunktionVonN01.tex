@@ -1,9 +1,9 @@
 \begin{satz}
-{Eigenschaften der komplementären \textsl{N}(0,1)--Verteilungsfunktion}
+{Eigenschaften der komplementÃ¤ren \textsl{N}(0,1)--Verteilungsfunktion}
 {EigenschaftenDerKomplementaerenVerteilungsfunktionVonN01}
 Seien $\gamma: \Omega \rightarrow \R$ $N(0,1)$--verteilt,
 $u:\R_{\ge 0} \rightarrow [0,1], t \mapsto \Prim(\abs \gamma > t)$ und
-schließlich
+schlieÃŸlich
 $\Phi: \R \rightarrow\!\  ]0,1[$ die Verteilungsfunktion von $N(0,1)$.\\
 Dann gilt:
 \begin{enumerate}[(1)]
@@ -56,17 +56,17 @@ u\left(\Phi\inv\left(1- \frac y 2 \right) \right) = 2(1-(1-\frac y 2))=y\text.
 Damit ist $\Bild u =\!\  ]0,1]$.\\
 Da $\Phi$ streng monoton wachsend ist, ist $u$ streng monoton fallend und somit
 insbesondere injektiv, besitzt also ein Inverses auf $]0,1]$\\
-Wegen $\eqref{edkvvneq:1}$ ist für alle $z\in\!\ ]0,1]$: 
+Wegen $\eqref{edkvvneq:1}$ ist fÃ¼r alle $z\in\!\ ]0,1]$: 
 $u(\Phi\inv(1-\frac z2))=z$, also $u\inv(z) = \Phi\inv(1- \frac z 2)$.\\
 (2) Es ist $\Phi$ stetig differenzierbar auf $\R$ mit
 \[\forall\,t\in\R:\Phi'(t)=\frac 1{\sqrt{2\pi}}\exp\left(-\frac{t^2}2
  \right)\text.\]
-Daher gilt für alle $t \in \R_{>0}:$
+Daher gilt fÃ¼r alle $t \in \R_{>0}:$
 \[u'(t)\overset{(1)}= 2(-\Phi'(t))=-\frac 2{\sqrt{2\pi}}\exp\left(-\frac{t^2}2
 \right)=-\sqrt{\frac 2 \pi}\exp\left(-\frac{t^2}2 \right)\text.\]
 (3) Sei $\erf: \R \rightarrow \R,
 x \mapsto \frac 2 {\sqrt \pi}\int_0^x\exp(-t^2)dt$.\\
-Dann gilt für alle $x \in \R$:
+Dann gilt fÃ¼r alle $x \in \R$:
 \begin{align*}
 &\, \frac 1 2 + \frac 1 2 \erf\left(\frac x {\sqrt 2} \right)
 = \frac 1 2 + \frac 1 {\sqrt \pi}\int_0^{\frac x {\sqrt 2}}\exp(-t^2)dt\\
@@ -80,7 +80,7 @@ d. h.
 \begin{align}
 \erf = 2\Phi(\sqrt 2 \cdot) - 1\text. \label{edkvvneq:2}
 \end{align}
-Für alle $\alpha\in\!\ ]-1,1[$ ist $\beta:=\frac 12(\alpha+1)\in\!\ ]0,1[$,
+FÃ¼r alle $\alpha\in\!\ ]-1,1[$ ist $\beta:=\frac 12(\alpha+1)\in\!\ ]0,1[$,
 also gibt es ein $t \in \R$ mit $\Phi(t) = \beta$ und damit
 \[\erf\left(\frac 1 {\sqrt 2}t \right) \overset{\eqref{edkvvneq:2}}= 2\Phi(t)-1
 = 2\left(\frac 1 2 (\alpha +1)\right) -1 = \alpha \text.\]
@@ -105,7 +105,7 @@ $1 = (\erf\inv)' \cdot \erf' \circ \erf\inv$, also:
 \forall\, p \in \!\ ]-1,1[: (\erf\inv)'(p) = \frac 1 {\erf' ( \erf \inv(p))} 
 =\frac {\sqrt \pi}2 \exp(\erf\inv(p)^2)\text. \label{edkvvneq:4}
 \end{align}
-Damit gilt aber auch für alle $p \in\!\  ]-1,1[$:
+Damit gilt aber auch fÃ¼r alle $p \in\!\  ]-1,1[$:
 \begin{align*}(\erf\inv)''(p) &\overset{\eqref{edkvvneq:4}}=
 2\cdot\frac{\sqrt \pi}2 \erf\inv(p)(\erf\inv)'(p)
 \exp\left(\erf\inv(p)^2\right)\\
@@ -117,16 +117,16 @@ gilt nach \refclaim{GeradeUndUngeradeFunktionen}{GeradeUndUngeradeFunktionen5}:
 (\erf\inv)^{(2k+1)}(0) \ge 0 \text.\label{edkvvneq:5}
 \end{align}
 Nach \cite{Dom} (dort Abschnitt 4) ist die Taylorreihe von $\erf\inv$ mit
-Entwicklungspunkt $0$ auf $]-1,1[$ konvergent. Wegen der Analytizität von
+Entwicklungspunkt $0$ auf $]-1,1[$ konvergent. Wegen der AnalytizitÃ¤t von
 $\erf\inv$ stellt die besagte Reihe also auf $]-1,1[$ bereits $\erf\inv$ dar.\\
-Also liefert die Taylorentwicklung um $0$ für alle $p \in \!\ ]-1,1[$:
+Also liefert die Taylorentwicklung um $0$ fÃ¼r alle $p \in \!\ ]-1,1[$:
 \begin{align}
 \erf\inv(p) = \sum_{l=0}^\infty \frac{(\erf\inv)^{(l)}(0)}{l!}p^l
 \overset{\eqref{edkvvneq:3}}=\sum_{l=0}^\infty
 \frac{(\erf\inv)^{(2l+1)}(0)}{(2l+1)!}p^{2l+1}\text.\label{edkvvneq:6}
 \end{align}
 Wegen \eqref{edkvvneq:2} gilt weiter: $\Phi\inv=\sqrt 2\erf\inv(2\cdot -1)$.\\
-Damit für alle $q \in \!\ ]0,1]$ wegen $1-\frac q 2 \in\!\  ]-1,1[$:
+Damit fÃ¼r alle $q \in \!\ ]0,1]$ wegen $1-\frac q 2 \in\!\  ]-1,1[$:
 \begin{align*}
 u\inv(q) &\overset{(1)}= \Phi\inv\left(1- \frac q 2\right)
 = \sqrt 2 \erf\inv\left(2\left(1-\frac q 2 \right)-1 \right)
@@ -166,7 +166,7 @@ V_0\left(\frac 1 {\sqrt 2} t \right) =
 \sqrt{\frac 2 \pi}\exp\left(\frac {t^2} 2 \right)
 \int_{t}^\infty \exp\left(- \frac{s^2}2 \right)ds
 \overset{(1)}= \exp\left( \frac{t^2} 2 \right) u(t)\text,\end{align*}
-also nach Umstellung und Kürzung:
+also nach Umstellung und KÃ¼rzung:
 \[\frac{\sqrt{2\pi}}{(\pi-1)t+\sqrt{t^2+2\pi}}\exp\left(-\frac{t^2}2\right)
  \le u(t)\text.\]
 Weiter gilt auch:

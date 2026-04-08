@@ -1,11 +1,11 @@
 \begin{korollar}{Erwartungswert des Infimums integrierbarer Funktionen}
                 {EndlicheDarstellungDesInfimumsIntegrierbarerFunktionen}
-Seien $I$ eine nichtleere, abzählbare Menge und 
+Seien $I$ eine nichtleere, abzÃ¤hlbare Menge und 
 $\folge X i I \in L_1(\Omega, \mfa,\Prim,\R)^I$.\\
 Es gelte:
 \begin{enumerate}[(a)]
- \item für alle $\omega \in \Omega$ ist $\menge{X_i(\omega)}{i \in I}$
-       nach unten beschränkt,
+ \item fÃ¼r alle $\omega \in \Omega$ ist $\menge{X_i(\omega)}{i \in I}$
+       nach unten beschrÃ¤nkt,
  \item $\Inf{i\in I} X_i \in L_1(\Omega, \mfa,\Prim,\R)$ (wohldefiniert
        wegen (a) und $I \neq \emptyset$).
 \end{enumerate}
@@ -13,21 +13,21 @@ Dann gilt:
 \begin{enumerate}[(1)]
  \item\label{EndlicheDarstellungDesInfimumsIntegrierbarerFunktionen1}
       $\menge{\E\left(\Inf{i\in E}X_i\right)}{E\in\Pot_{ne}(I)}$ ist nichtleer
-      und nach unten beschränkt.
+      und nach unten beschrÃ¤nkt.
  \item\label{EndlicheDarstellungDesInfimumsIntegrierbarerFunktionen2}
       $\inf\menge{\E\left( \Inf{i\in E} X_i\right)}{E\in\Pot_{ne}(I)} 
       = \E\left(\Inf{i\in I}X_i \right)$.
 \end{enumerate}
 \end{korollar}
 \begin{proof}
-Für alle $i \in I$ sei $Y_i := -X_i$.\\
-Für alle $i \in I$ ist dann $Y_i$ als Vielfaches einer integrierbaren Funktion
+FÃ¼r alle $i \in I$ sei $Y_i := -X_i$.\\
+FÃ¼r alle $i \in I$ ist dann $Y_i$ als Vielfaches einer integrierbaren Funktion
 auch integrierbar.\\
 Sei $\omega \in \Omega$. 
 Dann ist
 $ \menge{Y_i(\omega)}{i \in I} = \menge{-X_i(\omega)}{i \in I}
  = -\menge{X_i(\omega)}{i \in I}$.
-Daher ist $\menge{Y_i(\omega)}{i \in I}$ wegen $(a)$ nach oben beschränkt.\\
+Daher ist $\menge{Y_i(\omega)}{i \in I}$ wegen $(a)$ nach oben beschrÃ¤nkt.\\
 Sei $A\in\Pot_{ne}(I)$. Wegen $A \neq \emptyset$, gibt es ein $a \in A$, sodass
 gilt:
 \[X_a \ge \inf_{i \in A}X_i \ge \inf_{i \in I}X_i\]
@@ -39,13 +39,13 @@ Somit gilt:
 $\forall\,E\in\Pot_{ne}(I)\cup\meng{I}:\Sup{i \in A}Y_i = -\Inf{i\in A}X_i
 \text{ integrierbar}$. \hfill $(\ast)$\\
 Also sind die Voraussetzungen von
-\ref{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen} erfüllt, sodass
+\ref{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen} erfÃ¼llt, sodass
 gilt:
 \[\menge{\E\left(\inf_{i\in E}X_i\right)}{E\in\Pot_{ne}(I)}
  \overset{(\ast)}= -\menge{\E\left(\sup_{i\in E}Y_i\right)}{E\in\Pot_{ne}(I)}\]
 ist nach \refclaim{EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen}
 {EndlicheDarstellungDesSupremumsIntegrierbarerFunktionen1} nach unten
-beschränkt und
+beschrÃ¤nkt und
 \begin{align*}
 &\, \E\left( \inf_{i \in I} X_i\right)  \overset{(\ast)}{=}
  - \E\left( \sup_{i \in I} Y_i \right)
