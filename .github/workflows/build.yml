@@ -19,7 +19,7 @@ jobs:
 
       - name: Determine Version
         id: version
-        uses: paulhatch/semantic-version@a8f8f59fd7f0625188492e945240f12d7ad2dca3
+        uses: paulhatch/semantic-version@9f72830310d5ed81233b641ee59253644cd8a8fc
         with:
           tag_prefix: "v"
           major_pattern: "(?i)\\(major\\)"
