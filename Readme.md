@@ -27,6 +27,7 @@ However, there are also some interesting things inside:
 # How to compile?
 
 The usual `pdflatex` + `biblatex` + `pdflatex` + `pdflatex` should do the trick.
+Alternatively, you can use `lualatex --bibtex "Diplom.tex"`.
 The packages are mostly standard, so they should be available in any TeX distribution.
 
 # How is the LaTeX?
