@@ -18,13 +18,10 @@ jobs:
         uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b
         with:
           root_file: Diplom.tex
-          latexmk_use_lualatex: true
-          latexmk_shell_escape: true
-          args: -bibtex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: Diplom
-          path: Diplom.pdf
+          path: out/Diplom.pdf
 
