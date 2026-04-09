@@ -59,49 +59,4 @@ d_{BM}\left(\ell_2^m, \left(F, \restrict{\norm\cdot_E}F\right) \right)
 & \le \opnorm {A_0} {\ell_2^m}E \opnorm{{A_0}\inv}{F}{\ell_2^m}
 \le \frac {1+\eps}{1-\eps}\text.
 \end{align*}
-%Für alle $\omega \in \Omega$ gilt dann:
-%5\begin{align*}
-%(\norm\cdot_E \circ \bprod \cdot x_N\circ \gamma )(\omega)
-%&= \norm{\bprod{\gamma(\omega)}x_N}_E \\
-%&\overset{(\ast)}\ge 
-%\frac 1 d \norm{\gamma(\omega)}_{2, N} = 
-%\left(\frac 1 d \norm\cdot_{2, N} \circ \gamma \right)(\omega) \quad (\ast\ast)
-%\end{align*}
-%und
-%\begin{align*}\sup_{t \in S^{m-1}}\bprod t \delta_m
-% \overset{IterierteEuklidischeNorm}= \norm\cdot_{2, m}\circ \delta\quad 
-%(\ast\ast\ast)\end{align*}
-%Die jeweils ersten Abbildungen in den (Un)Gleichungen sind nach
-%\refclaim{IntegrierbarkeitVonExtremaInGordonschenPaaren}
-%{IntegrierbarkeitVonExtremaInGordonschenPaaren1} integrierbar, die jeweils
-%letztgenannten sind es nach
-%\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}.\\
-%Wegen $(\ast)$ ist insbesondere $\norm\cdot_E\circ \bprod \cdot x_N \le
-%\norm\cdot_{2, N}$.\\
-%Ferner gilt $S^{m-1}= -S^{m-1}$ und
-%\begin{align*}
-%\E\left(\sup_{t \in S^{m-1}}\bprod t \delta_m \right)
-%&%\overset{
-%\substack{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses},
-%\\(\ast\ast\ast)}}=
-%a_m \overset{\refclaim{AbschaetzungEinesGammafunktionsquotienten}
-%{AbschaetzungEinesGammafunktionsquotienten2}}\le \sqrt m \le
-%\sqrt {\frac 1 2}\sqrt N \frac{\eps}d 
-% \overset{\refclaim{AbschaetzungEinesGammafunktionsquotienten}
-%{AbschaetzungEinesGammafunktionsquotienten4}}\le \eps \frac 1 d a_N\\
-%&
-%\overset{\ref{ErwartungswertDer2NormEinesStandardnormalverteiltenProzesses}}=
-%\E\left(\eps \frac 1 d \norm\cdot_{2, N}\circ \gamma  \right)
-%\overset{(\ast\ast)}\le \eps\E(\norm\cdot_E\circ \bprod \cdot x_N \circ \gamma)
-%\end{align*}
-%Damit sind die Voraussetzungen von~\ref{ExistenzBanachMazurnaherAbbildungen}
-%erfüllt und es gibt ein $A \in L(\R^m, E)$ injektiv mit
-%$\opnorm A {\R^m}E\opnorm{A\inv}{A(\R^m)} {\R^m} \le \frac {1+\eps}{1-\eps}$.\\
-%Sei $F\coloneqq \Bild A$. Dann ist $F \le E$ und da $A$ injektiv ist, ist $\dim F=m$.\\
-%Ferner gilt wegen der Surjektivität von $A$ auf $F$:
-%\begin{align*}
-%d_{BM}((F, \norm\cdot_E\vert_{F}), l_2^m) &= 
-%\inf\menge{ \opnorm{B}{\R^m}F \opnorm {B \inv}F {\R^m}}{B \in \Inv(F, \R^m)}\\
-%&\le \opnorm A {\R^m}E\opnorm{A\inv}{A(\R^m)} {\R^m} \le \frac {1+\eps}{1-\eps}
-%\end{align*}
 \end{proof}

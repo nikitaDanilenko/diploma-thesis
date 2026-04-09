@@ -187,7 +187,7 @@ und damit ist $A$ nach~\ref{InjektivitaetLinearerAbbildungenZwischenNormiertenRa
 Sei $F\coloneqq  \Bild A$. Da $A$ injektiv ist, ist $\dim F = m$ und da jeder
 endlichdimensionale normierte Raum vollständig ist, gilt:
 \begin{align*}
-&\,d_{BM}\bigg((F, \norm\cdot_E\vert_F), \ell_2^m \bigg)
+&\,d_{BM}\bigg((F, \restrict{\norm\cdot_E}{F}), \ell_2^m \bigg)
 \le \opnorm A {\ell_2^m}{F} \opnorm{A\inv}{F}{\ell_2^m}
 \overset{\ref{OperatornormDerInversen}}=
 \frac{\Sup{t \in T} \norm{At}_E}{\Inf{t \in T}\norm{At}_E}\\
@@ -246,8 +246,8 @@ Ferner gilt:
 \end{align}
 Sei nun $F\coloneqq  \Bild A$. Dann gilt:
 \begin{align*}
-d_{BM}\bigg((F, \norm\cdot_E\vert_F), \ell_2^m \bigg)
-&\le \opnorm A {\ell_2^m} F \opnorm{A\inv}{F}{\ell_2^m} 
+d_{BM}\bigg((F, \restrict{\norm\cdot_E}{F}), \ell_2^m \bigg)
+&\le \opnorm A {\ell_2^m} F \opnorm{A\inv}{F}{\ell_2^m}
 \overset{\eqref{svmseq:9}}\le 3
 \overset{C_{BS}\ge 1}\le 3C_{BS}\\
 &\overset{\eqref{svmseq:11}}< 3\frac{\sqrt{2 \log\left(\frac {15}2 \right)}}
