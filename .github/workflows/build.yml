@@ -22,8 +22,8 @@ jobs:
         uses: paulhatch/semantic-version@a8f8f59fd7f0625188492e945240f12d7ad2dca3
         with:
           tag_prefix: "v"
-          major_pattern: "/\\(MAJOR\\)/i"
-          minor_pattern: "/\\(MINOR\\)/i"
+          major_pattern: "(?i)\\(major\\)"
+          minor_pattern: "(?i)\\(minor\\)"
           version_format: "${major}.${minor}.${patch}"
 
       - name: Compile LaTeX document
