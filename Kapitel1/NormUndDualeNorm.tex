@@ -12,7 +12,7 @@ Wir verwenden den folgenden Spezialfall des Satzes von Hahn--Banach:
 \begin{quote}
 Seien $(X, \norm\cdot)$ ein normierter $\K$--Vektorraum, $Y \le X$ und
 $l \in Y'$.\\
-Dann existiert ein $L \in X'$ mit $L\vert _Y = l$ und $\opnorm L X \K = \opnorm l Y \K$.
+Dann existiert ein $L \in X'$ mit $\restrict{L}{Y} = l$ und $\opnorm L X \K = \opnorm l Y \K$.
 \end{quote}
 Falls $x = 0$, so ist nichts zu tun, denn es gibt stetige Funktionale außer dem
 Nullfunktional (wegen $E \neq 0$ kann man $y \in E\setminus \meng 0$ wählen
@@ -22,7 +22,7 @@ Seien $F\coloneqq \erz {x'}_\K$ und $\iota : \K \rightarrow F, k \mapsto k\cdot 
 Dann ist $\iota$ wegen $\norm{x'}_E=1$ eine bijektive, lineare Isometrie.\\
 Sei nun $l \coloneqq  \iota\inv$. Dann ist $l$ ebenfalls eine lineare Isometrie, also
 $\opnorm l F \K = 1$.\\
-Also existiert nach obigem Satz ein $L \in E'$ mit $L \vert_ F = l$ und
+Also existiert nach obigem Satz ein $L \in E'$ mit $\restrict{L}{F} = l$ und
 $\opnorm L E \K = 1$.\\
 Wegen $x \in F$ gilt weiter $L(x) = L(\norm x_E \cdot x') = \norm x_E$, womit
 der erste Teil der Behauptung gezeigt ist.\\

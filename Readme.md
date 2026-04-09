@@ -5,7 +5,9 @@ Aside from styling and typos, the contents are the same as in the version that I
 
 # Why is that here?
 
-I was reminded of a theorem by a recent trick that was employed in improving LLM model sizes.
+I was reminded of the [Johnson-Lindenstrauss Lemma](https://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma) 
+by a recent trick that was employed in improving LLM model sizes.
+A [slightly differently phrased variant](./Kapitel4/JohnsonLindenstraussLemma.tex) of the lemma is proved in the thesis.
 It was unnecessarily tricky to compile everything, so I decided to improve that with the help of Copilot,
 and to make it available for anytime later.
 
@@ -25,6 +27,7 @@ However, there are also some interesting things inside:
 # How to compile?
 
 The usual `pdflatex` + `biblatex` + `pdflatex` + `pdflatex` should do the trick.
+Alternatively, you can use `lualatex --bibtex "Diplom.tex"`.
 The packages are mostly standard, so they should be available in any TeX distribution.
 
 # How is the LaTeX?

@@ -32,10 +32,10 @@ Dann ist $c^2=4\pi\rho \left(\frac{\log\left(\frac{\pi\rho}2\right)}{\log(2)}+1\
 Falls $N=m$ gilt, ist die Aussage trivial, sodass wir $N<m$ annehmen können.\\
 \underline{1. Fall:} $m \le 2 t_\eta$.\\
 Sei $F \coloneqq  \left\langle \menge{e_i^m}{i \in \haken {m-N}}\right\rangle$.\\
-Offenbar ist dann $(F,\norm\cdot_1\vert_{F})$ isometrisch isomorph zu
+Offenbar ist dann $(F,\restrict{\norm\cdot_1}{F})$ isometrisch isomorph zu
 $\ell_1^{m-N}$ und damit nach~\refclaim{EigenschaftenDesBanachMazurAbstands}
 {EigenschaftenDesBanachMazurAbstands2}:
-$d_{BM}((F,\norm\cdot_1\vert_{F}), \ell_1^{m-N}) = 1$.\\
+$d_{BM}((F,\restrict{\norm\cdot_1}{F}), \ell_1^{m-N}) = 1$.\\
 Weiter gilt nach
 \refclaim{AequivalenzkonstantenFuerPNormen}{AequivalenzkonstantenFuerPNormen1}
 $\norm\cdot_{2, m-N} \le\norm\cdot_{1, m-N} \le \sqrt{m-N}\norm\cdot_{2, m-N}$
@@ -47,7 +47,7 @@ Somit gilt
 d_{BM}\left((F,\restrict{\norm\cdot_1}F), \ell_2^{m-N}\right)
 &\overset{\refclaim{EigenschaftenDesBanachMazurAbstands}
 {EigenschaftenDesBanachMazurAbstands1}}\le
-d_{BM}((F,\norm\cdot_1\vert_{F}), \ell_1^{m-N})d_{BM}
+d_{BM}((F,\restrict{\norm\cdot_1}{F}), \ell_1^{m-N})d_{BM}
 (\ell_1^{m-N}, \ell_2^{m-N})\\
 & \le \sqrt{m-N} \le \sqrt{m - (1-\eps)m} = \sqrt{\eps m} < \sqrt{m}
 \le \sqrt{2t_\eta}\\
@@ -73,12 +73,12 @@ $\norm\cdot_E\circ\bprod\cdot x _N=\norm\cdot_{2,N}$. \hfill $(a)$\\
 Offenbar gilt $T \neq \emptyset$ (wegen $k \ge 1$ ist $e_1^m \in T$),
 $T \subseteq S^{m-1}$, $T=-T$. \hfill $(b)$\\
 Ferner ist $T$ als Schnitt $1$--symmetrischer Mengen selbst $1$--symmetrisch
-und damit gilt ($\mu_{i,n}$ f¸r alle $i \in \haken m$ gemäß~\ref{ktesMaximum})
+und damit gilt ($\mu_{i,n}$ für alle $i \in \haken m$ gemäß~\ref{ktesMaximum})
 \begin{align}
 \forall\ a \in \R^m : \sup_{t \in T} \sprod t a_m = \sup_{t \in T} \sprod
 t {((\mu_{i,n}\circ \pfeil {\abs\cdot} m)(a))_{i=1}^m}_m \text.\label{svgeq:2}
 \end{align}
-Sei $\omega \in \Omega$. Dann gilt f¸r alle $s \in T$:
+Sei $\omega \in \Omega$. Dann gilt für alle $s \in T$:
 \begin{align}
  \sum_{i=k+1}^m s_i\delta_i^\ast(\omega) 
 &\le \sum_{i=k+1}^m \abs{s_i}\delta_i^\ast(\omega) 
