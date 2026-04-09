@@ -1,0 +1,28 @@
+name: Build Document
+
+on:
+  push:
+    branches:
+      - main
+      - adjust
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b
+        with:
+          root_file: Diplom.tex
+          latexmk_use_lualatex: true
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Diplom
+          path: Diplom.pdf
+
