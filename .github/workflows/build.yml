@@ -4,24 +4,38 @@ on:
   push:
     branches:
       - main
-      - adjust
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Check Out
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          fetch-depth: 0
+
+      - name: Determine Version
+        id: version
+        uses: paulhatch/semantic-version@a8f8f59fd7f0625188492e945240f12d7ad2dca3
+        with:
+          tag_prefix: "v"
+          major_pattern: "/\\(MAJOR\\)/i"
+          minor_pattern: "/\\(MINOR\\)/i"
+          version_format: "${major}.${minor}.${patch}"
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b
         with:
           root_file: Diplom.tex
 
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      - name: Create Release
+        uses: softprops/action-gh-release@c95fe1489396fe8a9eb87c0abf8aa5b2ef267fda
         with:
-          name: Diplom
-          path: out/Diplom.pdf
+          tag_name: v${{ steps.version.outputs.version }}
+          name: Release v${{ steps.version.outputs.version }}
+          files: out/Diplom.pdf
+          generate_release_notes: true
 
