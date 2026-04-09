@@ -20,10 +20,8 @@ jobs:
         id: version
         uses: paulhatch/semantic-version@9f72830310d5ed81233b641ee59253644cd8a8fc
         with:
-          tag_prefix: "v"
-          major_pattern: '(MAJOR)'
-          minor_pattern: '(MINOR)'
-          version_format: "${major}.${minor}.${patch}"
+          major_pattern: '/(major)/i'
+          minor_pattern: '/(major)/i'
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b
