@@ -1,8 +1,14 @@
 \documentclass[a4paper]{report}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{mathpazo}
+\usepackage{iftex}
+\ifluatex
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Pagella}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{mathpazo}
+\fi
 \usepackage[ngerman]{babel}
 \usepackage[german=quotes]{csquotes}  % Proper German quotation marks with \enquote{}
 \usepackage{altstyle}
