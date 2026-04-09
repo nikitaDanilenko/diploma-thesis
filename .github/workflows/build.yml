@@ -19,6 +19,8 @@ jobs:
         with:
           root_file: Diplom.tex
           latexmk_use_lualatex: true
+          latexmk_shell_escape: true
+          args: -bibtex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
